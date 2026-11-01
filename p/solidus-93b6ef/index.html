@@ -28,7 +28,9 @@ h1{font-family:Georgia,serif;font-size:clamp(2rem,5.5vw,3.6rem);line-height:1.1;
 .hero p{font-size:clamp(1.05rem,2vw,1.25rem);max-width:34rem;margin:0 0 1.75rem;color:#e4ebe9}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.7rem 1.6rem;border-radius:999px;background:var(--accent);color:var(--brand);font-weight:700;text-decoration:none;transition:transform .2s}
 .btn:hover{transform:translateY(-2px)}
-.ph{border-radius:18px;background:repeating-linear-gradient(135deg,#2f4a48,#2f4a48 14px,#34524f 14px,#34524f 28px);aspect-ratio:4/3;display:grid;place-items:center;color:#9db3b0;font-size:.9rem;text-align:center;padding:1rem;border:1px dashed #5a7673}
+.heroimg{width:100%;max-width:480px;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:18px;justify-self:center}
+.gal{display:grid;gap:.75rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr))}
+.gal img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:14px;display:block}
 section{padding-block:clamp(2.5rem,6vw,4.5rem)}
 h2{font-family:Georgia,serif;font-size:clamp(1.6rem,3.5vw,2.3rem);margin:0 0 1.5rem}
 .cats{list-style:none;margin:0;padding:0;display:grid;gap:.75rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr))}
@@ -64,8 +66,19 @@ footer{background:var(--brand);color:#c9d6d4;padding-block:1.5rem;font-size:.9re
     <p>Весь каталог каменів і виробів у вашому телефоні: знайдіть потрібне та зв'яжіться з нами за хвилину.</p>
     <a class="btn" href="http://solidus.com.ua" rel="noopener">Дивитись каталог</a>
   </div>
-  <div class="ph" role="img" aria-label="Місце для фото каменів Solidus">Тут будуть ваші фото каменів</div>
+  <img class="heroimg" src="photos/01.jpg" width="200" height="150" alt="Галтовані камені різних кольорів">
 </div></div>
+
+<section><div class="wrap">
+  <h2>З нашого каталогу</h2>
+  <div class="gal">
+    <img src="photos/02.jpg" width="200" height="150" alt="Плоскі галтовані камені" loading="lazy">
+    <img src="photos/05.jpg" width="200" height="150" alt="Необроблене каміння" loading="lazy">
+    <img src="photos/06.jpg" width="200" height="150" alt="Зрізи агатів" loading="lazy">
+    <img src="photos/07.jpg" width="200" height="150" alt="Друза аметисту" loading="lazy">
+    <img src="photos/08.jpg" width="200" height="150" alt="Кристал гірського кришталю" loading="lazy">
+  </div>
+</div></section>
 
 <section id="catalog"><div class="wrap">
   <h2>Категорії каталогу</h2>
@@ -105,9 +118,7 @@ footer{background:var(--brand);color:#c9d6d4;padding-block:1.5rem;font-size:.9re
       <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/solidus__ua/" rel="noopener">@solidus__ua</a></dd></div>
       <div><dt>Адреса</dt><dd>вул. Львівська 17, офіс 314, Київ</dd></div>
     </dl>
-    <div class="ph" style="background:repeating-linear-gradient(135deg,#e4dccb,#e4dccb 14px,#ebe4d4 14px,#ebe4d4 28px);color:#5d6967;border-color:#b9ae96">
-      <a class="link" href="https://www.google.com/maps/place/?q=place_id:ChIJq6Fi3I7M1EARM7mRm3tvFYs" rel="noopener">Відкрити на карті →</a>
-    </div>
+    <div><a class="btn" href="https://www.google.com/maps/place/?q=place_id:ChIJq6Fi3I7M1EARM7mRm3tvFYs" rel="noopener">Відкрити на карті</a></div>
   </div>
 </div></section>
 </main>
