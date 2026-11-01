@@ -8,7 +8,7 @@
 <meta name="description" content="Тихі номери з усім потрібним, вісім хвилин пішки від метро Голосіївська. Просп. Голосіївський, 90, Київ.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5d46'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-weight='700' text-anchor='middle' fill='%23f6f1e7'%3E%D0%9F%3C/text%3E%3C/svg%3E">
 <style>
-:root{--green:#2f5d46;--green-d:#234634;--cream:#f6f1e7;--ink:#1d2a24;--gold:#e0b34a;--line:#d9d2c0;--pad:clamp(20px,5vw,64px)}
+:root{--green:#2f5d46;--cream:#f6f1e7;--ink:#1d2a24;--gold:#e0b34a;--line:#d9d2c0;--pad:clamp(20px,5vw,64px)}
 *{box-sizing:border-box}
 html{scroll-behavior:auto}
 body{margin:0;font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--cream);overflow-wrap:break-word}
@@ -29,20 +29,24 @@ header.top{background:var(--green);color:var(--cream)}
 .hero .wrap{display:grid;gap:36px;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));align-items:center}
 .hero h1{font-size:clamp(32px,5vw,58px)}
 .hero p{font-size:clamp(18px,2vw,21px);margin:20px 0 28px;max-width:34em;opacity:.92}
-.ph{background:repeating-linear-gradient(135deg,#e7dfcb,#e7dfcb 14px,#ded5bd 14px,#ded5bd 28px);border-radius:18px;display:flex;align-items:center;justify-content:center;color:#6b6652;font-size:14px;text-align:center;padding:12px}
-.hero .ph{aspect-ratio:4/3;background:#3d7058;color:#cfe3d7}
+.heroimg{width:100%;height:auto;border-radius:18px;display:block}
 section{padding-block:clamp(44px,7vw,88px)}
 h2{font-size:clamp(26px,3.6vw,40px);margin-bottom:12px}
 .lead{max-width:40em;margin:0 0 32px;color:#46544c}
 .rooms{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
 .card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
-.card .ph{aspect-ratio:3/2;border-radius:0}
-.card div.in{padding:20px 22px 24px}
+.card .in{padding:20px 22px 24px}
 .card h3{font-size:22px;margin-bottom:10px}
 .card ul{margin:0;padding-left:20px}
+.cimg{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.crop{overflow:hidden;border-radius:18px;background:#fff;aspect-ratio:418/238}
+.crop img{display:block;width:155.5%;max-width:none;height:auto;margin-left:-55.5%}
+.gal{display:grid;gap:20px;margin-top:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
 .band{background:#fff;border-block:1px solid var(--line)}
 .two{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
 .box{border:1px solid var(--line);border-radius:18px;padding:26px;background:var(--cream)}
+.box--w{background:#fff}
+.box .cimg{border-radius:12px;margin-bottom:18px}
 .price{font-family:Georgia,serif;font-size:clamp(34px,5vw,52px);color:var(--green);margin:6px 0}
 .nums{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 8px;padding:0;list-style:none}
 .nums li{padding:8px 16px;border:1px solid var(--green);border-radius:999px;color:var(--green);font-weight:600}
@@ -73,7 +77,7 @@ footer{padding:22px 0;font-size:14px;color:#5b655f;text-align:center}
         <p>Тихі номери з усім потрібним, вісім хвилин пішки від метро Голосіївська, бронювання в кілька дотиків просто з телефона.</p>
         <a class="btn" href="https://parkhotel.kiev.ua/ua/" rel="noopener">Бронювати номер</a>
       </div>
-      <div class="ph" role="img" aria-label="Тут буде фото готелю">Фото готелю — місце для знімка</div>
+      <img class="heroimg" src="photos/07.jpg" width="900" height="453" alt="Номер міні-готелю з телевізором, робочим столом і м’яким кріслом">
     </div>
   </div>
 
@@ -83,7 +87,7 @@ footer{padding:22px 0;font-size:14px;color:#5b655f;text-align:center}
       <p class="lead">Двомісні та тримісні номери. У номерах є все потрібне для спокійного відпочинку.</p>
       <div class="rooms">
         <article class="card">
-          <div class="ph" role="img" aria-label="Тут буде фото номера">Фото номера</div>
+          <img class="cimg" src="photos/03.png" width="400" height="204" alt="Номер із зеленими стінами та двоспальним ліжком" loading="lazy">
           <div class="in">
             <h3>Двомісні та тримісні номери</h3>
             <ul>
@@ -97,7 +101,7 @@ footer{padding:22px 0;font-size:14px;color:#5b655f;text-align:center}
           </div>
         </article>
         <article class="card">
-          <div class="ph" role="img" aria-label="Тут буде фото номера">Фото номера</div>
+          <img class="cimg" src="photos/01.jpg" width="310" height="193" alt="Номер із жовтими стінами та кріслом" loading="lazy">
           <div class="in">
             <h3>Тиша, всі зручності</h3>
             <p style="margin:0 0 14px">Меблі виготовлені для цього номера. Чайник, міні-бар.</p>
@@ -107,6 +111,11 @@ footer{padding:22px 0;font-size:14px;color:#5b655f;text-align:center}
             <p style="margin:0;font-size:15px;color:#5b655f">Усього 7 номерів</p>
           </div>
         </article>
+      </div>
+      <div class="gal">
+        <div class="crop"><img src="photos/04.jpg" width="650" height="238" alt="Світлий номер з двома ліжками та кріслом" loading="lazy"></div>
+        <div class="crop"><img src="photos/05.jpg" width="650" height="238" alt="Номер із двома ліжками та жовтим кріслом" loading="lazy"></div>
+        <div class="crop"><img src="photos/06.jpg" width="650" height="238" alt="Номер із двома ліжками, холодильником і кріслом" loading="lazy"></div>
       </div>
       <p style="margin-top:28px"><a class="btn btn--ghost" href="https://parkhotel.kiev.ua/ua/" rel="noopener">Подивитися номери</a></p>
     </div>
@@ -129,12 +138,13 @@ footer{padding:22px 0;font-size:14px;color:#5b655f;text-align:center}
 
   <section class="reveal">
     <div class="wrap two">
-      <div class="box" style="background:#fff">
+      <div class="box box--w">
+        <img class="cimg" src="photos/02.jpg" width="310" height="198" alt="Накритий стіл у банкетній залі" loading="lazy">
         <h2>Банкетна зала</h2>
         <p style="margin:0 0 20px">Замовлення банкетної зали.</p>
         <a class="btn btn--ghost" href="https://parkhotel.kiev.ua/ua/" rel="noopener">Замовити залу</a>
       </div>
-      <div class="box" style="background:#fff">
+      <div class="box box--w">
         <h2>Доставка обідів</h2>
         <p style="margin:0 0 20px">Комплексні обіди до всіх офісів міста Києва. Обширне меню, що включає понад 40 страв.</p>
         <a class="btn btn--ghost" href="https://parkhotel.kiev.ua/ua/" rel="noopener">Замовити обід</a>
@@ -145,8 +155,7 @@ footer{padding:22px 0;font-size:14px;color:#5b655f;text-align:center}
   <section class="band reveal">
     <div class="wrap">
       <h2>3D-тур і відео</h2>
-      <p class="lead" style="margin-bottom:20px">Огляньте готель віддалено: 3D-тур готелем і відео є на сайті.</p>
-      <div class="ph" style="aspect-ratio:16/7" role="img" aria-label="Тут буде відео або 3D-тур">Місце для відео / 3D-туру</div>
+      <p class="lead" style="margin-bottom:0">Огляньте готель віддалено: 3D-тур готелем і відео є на сайті.</p>
     </div>
   </section>
 
