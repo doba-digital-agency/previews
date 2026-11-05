@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solidus — мінерали, каміння та вироби з них, Київ</title>
+<meta name="description" content="Solidus: каталог мінералів — галтовка, необроблене каміння, агати, аметист, гірський кришталь, прикраси та сувеніри. Київ, вул. Львівська 17.">
+<meta property="og:title" content="Solidus — мінерали, каміння та вироби з них">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0e1015">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230e1015'/%3E%3Cpath d='M32 8 52 24 44 52H20L12 24Z' fill='%23e3b43a'/%3E%3Cpath d='M32 8 38 24 32 52 26 24Z' fill='%234a2c8c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.css">
+<style>
+:root{
+  --paper:#eef0f4; --white:#fff; --ink:#15171e; --muted:#4b5060;
+  --night:#0e1015; --night-2:#171a22; --night-text:#e9ebf1; --night-muted:#a9afbf;
+  --violet:#4a2c8c; --violet-soft:#e3dcf3; --citrine:#e3b43a; --line:#c9cdd7; --line-night:#2c3040;
+  --serif:'Literata',Georgia,serif; --mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;
+  --pad:clamp(20px,5vw,72px); --rail:84px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--serif);overflow-wrap:break-word}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,ul,figure{margin:0}
+ul{padding:0;list-style:none}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--citrine);outline-offset:3px}
+.skip{position:absolute;left:8px;top:-60px;background:var(--citrine);color:var(--night);padding:10px 14px;z-index:100;font:500 14px var(--mono)}
+.skip:focus{top:8px}
+.label{font:500 12.5px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+
+/* rail (desktop) + topbar (tablet, phone) */
+.rail{display:none}
+.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px var(--pad);background:var(--night);color:var(--night-text);border-bottom:1px solid var(--line-night)}
+.word{font:500 22px/1 var(--serif);letter-spacing:.02em;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.word svg{width:26px;height:26px}
+.burger{font:500 13px var(--mono);letter-spacing:.06em;text-transform:uppercase;min-height:44px;padding:0 16px;background:transparent;color:inherit;border:1px solid var(--night-muted);cursor:pointer}
+.menu{position:fixed;inset:0;z-index:60;background:var(--violet);color:#fff;padding:20px var(--pad) 32px;display:flex;flex-direction:column;overflow:auto}
+.menu__top{display:flex;justify-content:space-between;align-items:center}
+.menu ul{margin:auto 0;display:grid}
+.menu li a{display:flex;gap:16px;align-items:baseline;text-decoration:none;font:400 clamp(34px,9vw,60px)/1.15 var(--serif);padding:10px 0;border-bottom:1px solid rgba(255,255,255,.25)}
+.menu li a span{font:500 12px var(--mono);opacity:.8}
+.menu__tel{font:500 18px var(--mono);text-decoration:none}
+
+/* hero */
+.hero{background:var(--night);color:var(--night-text);padding:clamp(40px,7vw,96px) var(--pad) clamp(48px,7vw,96px);display:grid;gap:48px;position:relative;overflow:hidden}
+.hero__kick{color:var(--citrine);display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.hero h1{font-weight:500;font-size:clamp(66px,17vw,230px);line-height:.92;letter-spacing:-.035em}
+.hero h1 small{display:block;margin-top:22px;font:italic 400 clamp(22px,3.2vw,38px)/1.2 var(--serif);letter-spacing:0;color:var(--night-text);max-width:18ch}
+.hero__lead{margin-top:30px;max-width:46ch;font-size:clamp(17px,1.6vw,20px);color:var(--night-muted)}
+.actions{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;background:var(--citrine);color:var(--night);font:500 14px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:0;transition:background .2s,transform .2s}
+.btn:hover{background:#f1c75a}
+.btn:active{transform:translateY(1px)}
+.tlink{font:500 14px var(--mono);letter-spacing:.06em;text-transform:uppercase;text-underline-offset:6px;text-decoration-thickness:1px;min-height:44px;display:inline-flex;align-items:center}
+.board{display:grid;grid-template-columns:repeat(6,1fr);gap:18px 14px;width:min(100%,400px);position:relative}
+.board figure:nth-child(1){grid-column:1/5}
+.board figure:nth-child(2){grid-column:3/7}
+.board figure:nth-child(3){grid-column:1/4}
+.board img{border:1px solid var(--line-night);background:var(--night-2)}
+.board figcaption{font:400 12px/1.3 var(--mono);color:var(--night-muted);margin-top:8px;letter-spacing:.04em}
+.board b{color:var(--citrine);font-weight:500}
+
+/* sections */
+.sec{padding:clamp(56px,8vw,112px) var(--pad)}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 40px;margin-bottom:clamp(28px,4vw,56px);padding-bottom:20px;border-bottom:2px solid var(--ink)}
+.head .label{color:var(--violet)}
+h2{font:500 clamp(34px,5vw,60px)/1.08 var(--serif);letter-spacing:-.02em}
+.head p{max-width:34ch;color:var(--muted)}
+
+.group{display:grid;gap:24px;padding:clamp(24px,3vw,40px) 0;border-bottom:1px solid var(--line)}
+.group:last-of-type{border-bottom:0}
+.group__intro h3{font:500 clamp(26px,3vw,36px)/1.15 var(--serif);margin:8px 0 16px}
+.group__intro img{border:1px solid var(--line);width:100%;max-width:260px}
+.group__intro .cap{font-size:14px;color:var(--muted);margin-top:8px}
+.tiles{display:grid;gap:22px 14px;grid-template-columns:repeat(2,1fr)}
+.tile h4{overflow-wrap:anywhere}
+.tile img{width:100%;border:1px solid var(--line);background:var(--white);transition:transform .35s ease}
+.tile:hover img{transform:translateY(-4px)}
+.tile h4{font:500 19px/1.25 var(--serif);margin:12px 0 4px}
+.tile p{font-size:14.5px;color:var(--muted);line-height:1.45}
+.tile .label{color:var(--violet)}
+.tile{transition:transform .2s}
+
+.more{background:var(--violet);color:#fff;padding:clamp(40px,6vw,80px) var(--pad)}
+.more .label{color:var(--citrine)}
+.more h2{margin:8px 0 clamp(24px,4vw,44px)}
+.more ol{list-style:none;padding:0;margin:0;display:grid;gap:0 clamp(24px,5vw,72px);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.more li{border-top:1px solid rgba(255,255,255,.3)}
+.more li a{display:flex;align-items:baseline;gap:16px;padding:16px 0;text-decoration:none;font:400 clamp(21px,2.2vw,27px)/1.25 var(--serif);transition:padding .25s}
+.more li a:hover{padding-left:12px}
+.more li span{font:500 12px var(--mono);color:var(--citrine);min-width:2ch}
+
+.split{display:grid}
+.split a{display:flex;flex-direction:column;justify-content:space-between;gap:48px;min-height:260px;padding:clamp(28px,4vw,56px) var(--pad);text-decoration:none;transition:background .25s}
+.split a:nth-child(1){background:var(--violet-soft)}
+.split a:nth-child(2){background:var(--citrine)}
+.split a:hover{background:var(--white)}
+.split h2{font-size:clamp(32px,4.4vw,56px)}
+.split .arrow{font:500 14px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+
+.info{display:grid;gap:clamp(32px,5vw,72px)}
+.info h2{margin-bottom:18px}
+.ph{border:1.5px dashed var(--muted);padding:24px;color:var(--muted);font-size:16px}
+.ph .label{display:block;margin-bottom:10px;color:var(--violet)}
+.info p.plain{max-width:44ch}
+.info a{text-underline-offset:4px}
+.info.info--one{grid-template-columns:1fr!important}
+
+.contacts{background:var(--night);color:var(--night-text);padding:clamp(56px,8vw,112px) var(--pad) 40px}
+.contacts h2{margin-bottom:clamp(28px,4vw,56px)}
+.contacts .label{color:var(--citrine)}
+.crow{display:grid;gap:36px 56px}
+.crow dl{margin:0;display:grid;gap:22px}
+.crow dt{font:500 12.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--night-muted);margin-bottom:4px}
+.crow dd{margin:0}
+.big{font:500 clamp(30px,5.4vw,58px)/1.1 var(--serif);letter-spacing:-.02em;text-decoration:none;display:block}
+.big small{font:400 13px var(--mono);letter-spacing:.04em;color:var(--night-muted);margin-left:8px}
+.big:hover{color:var(--citrine)}
+.mid{font:400 clamp(20px,2.4vw,26px)/1.35 var(--serif);text-decoration:none;word-break:break-word}
+.mid:hover{color:var(--citrine)}
+footer{margin-top:clamp(40px,6vw,80px);padding-top:20px;border-top:1px solid var(--line-night);font:400 13px/1.5 var(--mono);color:var(--night-muted)}
+
+/* motion */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.tile:hover img,.more li a:hover{transform:none;padding-left:0}*{scroll-behavior:auto!important}}
+
+/* tablet */
+@media (min-width:700px){
+  .hero{grid-template-columns:1.25fr 1fr;align-items:end}
+  .board{width:100%;max-width:340px;justify-self:end}
+  .tiles{grid-template-columns:repeat(3,1fr)}
+  .group__intro{display:grid;grid-template-columns:1fr 200px;gap:0 24px;align-items:end}
+  .group__intro .label,.group__intro h3{grid-column:1}
+  .group__intro img{grid-column:2;grid-row:1/3}
+  .split{grid-template-columns:1fr 1fr}
+  .info{grid-template-columns:1fr 1fr}
+  .crow{grid-template-columns:1.3fr 1fr}
+}
+/* desktop with the side rail */
+@media (min-width:1024px){
+  .topbar{display:none}
+  body{padding-left:var(--rail)}
+  .rail{display:flex;flex-direction:column;align-items:center;justify-content:space-between;position:fixed;inset:0 auto 0 0;width:var(--rail);background:#090b0f;color:var(--night-text);padding:22px 0;z-index:50;border-right:1px solid var(--line-night)}
+  .rail .word svg{width:34px;height:34px}
+  .rail nav ul{display:flex;flex-direction:column;gap:6px;align-items:center}
+  .rail nav a{writing-mode:vertical-rl;transform:rotate(180deg);font:500 13px var(--mono);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:14px 12px;display:flex;gap:10px;align-items:center;color:var(--night-muted);transition:color .2s}
+  .rail nav a:hover,.rail nav a[aria-current="true"]{color:var(--citrine)}
+  .rail__tel{writing-mode:vertical-rl;transform:rotate(180deg);font:500 13px var(--mono);letter-spacing:.06em;text-decoration:none;padding:8px 10px}
+  .hero{grid-template-columns:1.5fr 1fr;min-height:100svh;align-items:center}
+  .board{padding-left:30px;max-width:380px}
+  .board::before{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;background:repeating-linear-gradient(to bottom,var(--night-muted) 0 1px,transparent 1px 8px);opacity:.55;-webkit-mask:linear-gradient(90deg,#000 100%,#000 0)}
+  .group{grid-template-columns:260px 1fr;gap:48px}
+  .group--r{grid-template-columns:1fr 260px}
+  .group--r .group__intro{order:2}
+  .group__intro{display:block}
+  .group__intro img{max-width:260px}
+  .info{grid-template-columns:1.1fr 1fr}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">До змісту</a>
+
+<aside class="rail" aria-label="Навігація">
+  <a class="word" href="#top" aria-label="Solidus, на початок"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 56 22 46 60H18L8 22Z" fill="#e3b43a"/><path d="M32 4 40 22 32 60 24 22Z" fill="#4a2c8c"/></svg></a>
+  <nav aria-label="Розділи сторінки">
+    <ul>
+      <li><a href="#catalog">01 Каталог</a></li>
+      <li><a href="#lore">02 Властивості</a></li>
+      <li><a href="#delivery">03 Доставка</a></li>
+      <li><a href="#contacts">04 Контакти</a></li>
+    </ul>
+  </nav>
+  <a class="rail__tel" href="tel:+380508252624">050 825 26 24</a>
+</aside>
+
+<header class="topbar" id="top">
+  <a class="word" href="#top"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 56 22 46 60H18L8 22Z" fill="#e3b43a"/><path d="M32 4 40 22 32 60 24 22Z" fill="#4a2c8c"/></svg>Solidus</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Меню</button>
+</header>
+<div class="menu" id="menu" hidden data-lenis-prevent>
+  <div class="menu__top"><span class="word">Solidus</span><button class="burger" id="close">Закрити</button></div>
+  <ul>
+    <li><a href="#catalog"><span>01</span>Каталог</a></li>
+    <li><a href="#lore"><span>02</span>Властивості</a></li>
+    <li><a href="#delivery"><span>03</span>Доставка</a></li>
+    <li><a href="#contacts"><span>04</span>Контакти</a></li>
+  </ul>
+  <a class="menu__tel" href="tel:+380508252624">050 825 26 24</a>
+</div>
+
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+  <div>
+    <p class="label hero__kick"><span>Київ</span><span>·</span><span>Каталог мінералів</span></p>
+    <h1 id="h1">Solidus<small>Мінерали, каміння та вироби з них</small></h1>
+    <p class="hero__lead">Галтовка, необроблене каміння, прикраси, сувеніри — каталог, у якому зручно вибирати і з телефона, і з комп'ютера.</p>
+    <div class="actions">
+      <a class="btn" href="#catalog">Каталог</a>
+      <a class="tlink" href="tel:+380508252624">Зателефонувати</a>
+    </div>
+  </div>
+  <div class="board" aria-label="Зразки з каталогу">
+    <figure><img src="photos/07.jpg" width="200" height="150" alt="Друза аметисту на білій основі"><figcaption><b>№07</b> Аметист</figcaption></figure>
+    <figure><img src="photos/06.jpg" width="200" height="150" alt="Зрізи агату різних відтінків"><figcaption><b>№06</b> Агати</figcaption></figure>
+    <figure><img src="photos/08.jpg" width="200" height="150" alt="Кристал гірського кришталю"><figcaption><b>№08</b> Гірський кришталь</figcaption></figure>
+  </div>
+</section>
+
+<section class="sec" id="catalog" aria-labelledby="h-cat">
+  <div class="head rv">
+    <div><p class="label">01 / Каталог</p><h2 id="h-cat">Розділи каталогу</h2></div>
+    <p>Фото розділів — з каталогу solidus.com.ua.</p>
+  </div>
+
+  <div class="group rv">
+    <div class="group__intro">
+      <p class="label">Розділ A</p>
+      <h3>Галтовка</h3>
+      <img src="photos/01.jpg" width="200" height="150" alt="Галтовані камені різних кольорів" loading="lazy">
+    </div>
+    <ul class="tiles">
+      <li class="tile"><a href="http://solidus.com.ua" style="text-decoration:none"><img src="photos/02.jpg" width="200" height="150" alt="Плоска галтовка: гладенькі плескаті камені" loading="lazy"><h4>Галтовка плоска</h4></a></li>
+      <li class="tile"><a href="http://solidus.com.ua" style="text-decoration:none"><img src="photos/03.jpg" width="200" height="150" alt="Дрібна галтовка-крихта на лінійці" loading="lazy"><h4>Галтовка дрібна крихта</h4></a></li>
+      <li class="tile"><a href="http://solidus.com.ua" style="text-decoration:none"><img src="photos/04.jpg" width="200" height="150" alt="Великий темний полірований камінь на лінійці" loading="lazy"><h4>Галтовка велика</h4></a></li>
+    </ul>
+  </div>
+
+  <div class="group group--r rv">
+    <div class="group__intro">
+      <p class="label">Розділ B</p>
+      <h3>Необроблене каміння</h3>
+      <img src="photos/05.jpg" width="200" height="150" alt="Необроблені зразки каміння різних порід" loading="lazy">
+    </div>
+    <ul class="tiles">
+      <li class="tile"><a href="http://solidus.com.ua" style="text-decoration:none"><img src="photos/06.jpg" width="200" height="150" alt="Зрізи агату" loading="lazy"><h4>Агати</h4><p>зрізи, горбушки, жеоди</p></a></li>
+      <li class="tile"><a href="http://solidus.com.ua" style="text-decoration:none"><img src="photos/07.jpg" width="200" height="150" alt="Друза аметисту" loading="lazy"><h4>Аметист, цитрин</h4><p>друзи, кристали, жеоди</p></a></li>
+      <li class="tile"><a href="http://solidus.com.ua" style="text-decoration:none"><img src="photos/08.jpg" width="200" height="150" alt="Кристал гірського кришталю" loading="lazy"><h4>Гір. кришталь, раухтопаз</h4><p>друзи, кристали, жеоди</p></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="more" aria-labelledby="h-more">
+  <p class="label">Також у каталозі</p>
+  <h2 id="h-more">Ще дев'ять розділів</h2>
+  <ol>
+    <li><a href="http://solidus.com.ua"><span>09</span>Кулі та яйця</a></li>
+    <li><a href="http://solidus.com.ua"><span>10</span>Скам'янілості (фосілії)</a></li>
+    <li><a href="http://solidus.com.ua"><span>11</span>Колекційні зразки</a></li>
+    <li><a href="http://solidus.com.ua"><span>12</span>Прикраси</a></li>
+    <li><a href="http://solidus.com.ua"><span>13</span>Сувеніри та вироби</a></li>
+    <li><a href="http://solidus.com.ua"><span>14</span>Бронзові фігурки</a></li>
+    <li><a href="http://solidus.com.ua"><span>15</span>Масажери, маятники</a></li>
+    <li><a href="http://solidus.com.ua"><span>16</span>Аксесуари</a></li>
+    <li><a href="http://solidus.com.ua"><span>17</span>Кабошони</a></li>
+  </ol>
+</section>
+
+<section class="split" id="lore" aria-label="Властивості мінералів і знаки зодіаку">
+  <a href="http://solidus.com.ua"><div><p class="label">02 / Читати</p><h2>Властивості мінералів</h2></div><span class="arrow">Перейти до розділу →</span></a>
+  <a href="http://solidus.com.ua"><div><p class="label">02 / Читати</p><h2>Знаки зодіаку</h2></div><span class="arrow">Перейти до розділу →</span></a>
+</section>
+
+<section class="sec info info--one" id="delivery" aria-label="Доставка та оплата">
+  <div class="rv">
+    <p class="label" style="color:var(--violet)">03 / Умови</p>
+    <h2>Доставка та оплата</h2>
+    <p class="plain">Умови доставки й оплати описані в розділі «Доставка та оплата» на <a href="http://solidus.com.ua">solidus.com.ua</a>. Уточнити їх можна за телефоном.</p>
+  </div>
+</section>
+</main>
+
+<section class="contacts" id="contacts" aria-labelledby="h-con">
+  <p class="label">04 / Контакти</p>
+  <h2 id="h-con">Зателефонуйте або напишіть</h2>
+  <div class="crow">
+    <dl>
+      <div><dt>Телефони</dt>
+        <dd><a class="big" href="tel:+380508252624">050 825 26 24<small>Vodafone</small></a></dd>
+        <dd><a class="big" href="tel:+380980110314">098 011 03 14<small>Kyivstar</small></a></dd></div>
+    </dl>
+    <dl>
+      <div><dt>E-mail</dt><dd><a class="mid" href="mailto:a.solidus72@gmail.com">a.solidus72@gmail.com</a></dd></div>
+      <div><dt>Instagram</dt><dd><a class="mid" href="https://www.instagram.com/solidus__ua/" rel="noopener">@solidus__ua</a></dd></div>
+      <div><dt>Адреса</dt><dd class="mid">вулиця Львівська 17, офіс 314, Київ<br><a class="tlink" href="https://www.google.com/maps/place/?q=place_id:ChIJq6Fi3I7M1EARM7mRm3tvFYs" rel="noopener">Відкрити на карті ↗</a></dd></div>
+    </dl>
+  </div>
+  <footer>Попередній концепт від Doba Digital - не опублікований сайт</footer>
+</section>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var menu=document.getElementById('menu'),b=document.getElementById('burger'),c=document.getElementById('close');
+  function setM(o){menu.hidden=!o;b.setAttribute('aria-expanded',o);if(window.lenis){o?lenis.stop():lenis.start()}document.body.style.overflow=o?'hidden':'';if(o)c.focus();else b.focus()}
+  b.addEventListener('click',function(){setM(true)});
+  c.addEventListener('click',function(){setM(false)});
+  menu.addEventListener('click',function(e){if(e.target.closest('a')){menu.hidden=true;b.setAttribute('aria-expanded',false);document.body.style.overflow='';if(window.lenis)lenis.start()}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden)setM(false)});
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
+  var links=document.querySelectorAll('.rail nav a'),secs=['catalog','lore','news','contacts'].map(function(i){return document.getElementById(i)});
+  addEventListener('scroll',function(){var y=scrollY+innerHeight*.4,cur=-1;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});links.forEach(function(l,i){i===cur?l.setAttribute('aria-current','true'):l.removeAttribute('aria-current')})},{passive:true});
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+<script>
+if(window.Lenis&&!matchMedia('(prefers-reduced-motion: reduce)').matches){window.lenis=new Lenis({anchors:true,autoRaf:true});}
+</script>
+</body>
+</html>
