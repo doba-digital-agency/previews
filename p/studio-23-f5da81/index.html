@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio 23 — зачіски, макіяж, нігті в Ужгороді</title>
+<meta name="description" content="Studio 23 в Ужгороді: зачіски, макіяж і нігті. Пн-Сб 09:00-20:00, Нд 09:00-15:00. вулиця Національної гвардії, 32. Запис за номером 099 023 9339.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23d81b6a'/%3E%3Ctext x='32' y='45' font-size='34' font-family='Georgia,serif' text-anchor='middle' fill='%23fff'%3E23%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Mulish:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1a1426; --fuchsia:#d81b6a; --fuchsia-d:#b0125a; --rose:#ff9cc6;
+  --lilac:#e6defa; --mist:#f6f4fb; --white:#fff; --text:#1a1426; --muted:#5b5272;
+  --head:'Prata',Georgia,serif; --body:'Mulish',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px); --max:1320px; --hh:72px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:auto}
+body{font-family:var(--body);color:var(--text);background:var(--mist);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--fuchsia);outline-offset:3px}
+.dark :focus-visible{outline-color:var(--rose)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;font:800 15px/1 var(--body);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:2px solid var(--fuchsia-d);background:var(--fuchsia-d);color:#fff;border-radius:2px;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn--ghost:hover{background:var(--ink);color:#fff}
+.label{font:800 13px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--fuchsia-d)}
+.dark .label{color:var(--rose)}
+h1,h2,h3{font-family:var(--head);font-weight:400;line-height:1.1}
+
+/* header: corner mark + nav + booking */
+.hdr{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:2px solid var(--ink);display:flex;align-items:stretch;height:var(--hh)}
+.hdr__mark{display:flex;align-items:center;gap:14px;text-decoration:none;background:var(--fuchsia-d);color:#fff;padding:0 24px;min-width:0}
+.hdr__mark b{font:400 38px/1 var(--head)}
+.hdr__mark span{font:800 12px/1.25 var(--body);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid rgba(255,255,255,.6);padding-left:14px}
+.hdr__nav{display:flex;align-items:center;gap:clamp(18px,3vw,44px);padding:0 var(--pad);margin-right:auto}
+.hdr__nav a{font:700 14px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:8px 0;border-bottom:2px solid transparent}
+.hdr__nav a:hover{border-color:var(--fuchsia)}
+.hdr__nav .m-cta{display:none}
+.hdr__status{display:flex;align-items:center;gap:8px;font:700 13px var(--body);padding:0 20px;white-space:nowrap}
+.hdr__status i{width:9px;height:9px;border-radius:50%;background:#7d7596}
+.hdr__status[data-open="1"] i{background:#12a150}
+.hdr__cta{display:flex;align-items:center;padding:0 28px;background:var(--ink);color:#fff;text-decoration:none;font:800 14px var(--body);letter-spacing:.08em;text-transform:uppercase}
+.hdr__cta:hover{background:var(--fuchsia-d)}
+.burger{display:none;width:var(--hh);border:0;border-left:2px solid var(--ink);background:var(--white);cursor:pointer;position:relative}
+.burger span,.burger span::before,.burger span::after{position:absolute;left:50%;width:24px;height:2px;background:var(--ink);content:"";transform:translateX(-50%);transition:.2s}
+.burger span{top:50%}.burger span::before{top:-8px}.burger span::after{top:8px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{top:0;transform:translateX(-50%) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{top:0;transform:translateX(-50%) rotate(-45deg)}
+
+/* hero: split screen */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;min-height:min(760px,calc(100svh - var(--hh)))}
+.hero__l{background:var(--lilac);color:var(--ink);padding:clamp(40px,6vw,88px) var(--pad);display:flex;flex-direction:column;justify-content:space-between;gap:40px;position:relative;overflow:hidden}
+.hero__l h1{font-size:clamp(46px,7.2vw,112px);letter-spacing:-.01em;margin:22px 0 24px}
+.hero__l h1 em{font-style:normal;color:var(--fuchsia-d)}
+.hero__slogan{font:400 clamp(20px,2.2vw,28px)/1.3 var(--head);max-width:16em}
+.hero__act{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.hero__num{font:400 clamp(160px,24vw,360px)/.8 var(--head);color:transparent;-webkit-text-stroke:2px var(--fuchsia-d);align-self:flex-end;margin-right:-.05em;user-select:none}
+.hero__r{background:var(--ink);color:#fff;display:flex;flex-direction:column}
+.hero__r .label{padding:28px var(--pad) 18px;display:block}
+.idx{list-style:none;padding:0;flex:1;display:flex;flex-direction:column}
+.idx li{flex:1;border-top:1px solid rgba(255,255,255,.22)}
+.idx a{height:100%;min-height:96px;display:flex;align-items:center;gap:clamp(14px,2vw,28px);padding:0 var(--pad);text-decoration:none;transition:background .25s}
+.idx a:hover{background:var(--fuchsia-d)}
+.idx small{font:800 14px var(--body);color:var(--rose);width:2ch}
+.idx a:hover small{color:#fff}
+.idx strong{font:400 clamp(34px,4.4vw,64px)/1 var(--head)}
+.idx svg{margin-left:auto;width:30px;height:30px;flex:none;stroke:currentColor;fill:none;stroke-width:2}
+
+section{padding:clamp(64px,9vw,128px) 0}
+.head{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:start;margin-bottom:clamp(36px,5vw,64px);border-top:2px solid var(--ink);padding-top:20px}
+.head h2{font-size:clamp(34px,4.6vw,60px);max-width:16em}
+
+.svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+.svc article{padding:30px 28px 34px;border-right:1px solid rgba(26,20,38,.25)}
+.svc article:first-child{padding-left:0}
+.svc article:last-child{border-right:0}
+.svc h3{font-size:clamp(30px,3.2vw,44px);margin:16px 0 14px}
+.svc p{color:var(--muted);max-width:26em}
+.svc .price{margin-top:22px;font:800 13px var(--body);letter-spacing:.08em;text-transform:uppercase;border-top:1px dashed var(--muted);padding-top:14px;color:var(--ink)}
+
+.about{background:var(--ink);color:#fff}
+.about__g{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,96px);align-items:end}
+.about blockquote{font:400 clamp(34px,5vw,68px)/1.08 var(--head)}
+.about blockquote em{font-style:normal;color:var(--rose)}
+.facts{margin:0}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-top:1px solid rgba(255,255,255,.25)}
+.facts div:last-child{border-bottom:1px solid rgba(255,255,255,.25)}
+.facts dt{color:var(--rose);font:800 13px var(--body);letter-spacing:.1em;text-transform:uppercase}
+.facts dd{margin:0;text-align:right;font-weight:600}
+
+.gal{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;align-items:start}
+.ph{background:repeating-linear-gradient(135deg,var(--lilac) 0 12px,#efe9fc 12px 24px);border:1px dashed var(--fuchsia-d);display:flex;align-items:flex-end;padding:14px;font:700 13px/1.35 var(--body);color:var(--ink)}
+.ph:nth-child(1){grid-column:span 5;aspect-ratio:4/5}
+.ph:nth-child(2){grid-column:span 4;aspect-ratio:1/1}
+.ph:nth-child(3){grid-column:span 3;aspect-ratio:3/4}
+.ph:nth-child(4){grid-column:span 7;aspect-ratio:16/8}
+.ph:nth-child(5){grid-column:span 5;aspect-ratio:4/3}
+.gal-note{margin-top:20px;color:var(--muted);font-size:15px}
+
+.hours{background:var(--fuchsia-d);color:#fff}
+.hours .label{color:#fff}
+.hours .head{border-color:#fff}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:clamp(6px,1.4vw,18px);align-items:end;height:clamp(280px,32vw,380px)}
+.day{display:flex;flex-direction:column;justify-content:flex-end;height:100%;text-align:center}
+.day__bar{background:#fff;color:var(--ink);padding:12px 4px 10px;display:flex;flex-direction:column;justify-content:space-between;height:100%}
+.day[data-d="Sun"] .day__bar{height:68%}
+.day__bar b{font:400 clamp(16px,2.2vw,28px)/1.1 var(--head);display:block}
+.day__n{font:800 14px var(--body);letter-spacing:.1em;text-transform:uppercase;padding-top:12px}
+.day.today .day__bar{background:var(--ink);color:#fff}
+.hours__sum{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:36px;font-weight:600;font-size:18px}
+
+.cont{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px)}
+.dl{margin:0}
+.dl div{padding:20px 0;border-top:1px solid var(--ink);display:grid;grid-template-columns:150px 1fr;gap:16px}
+.dl div:last-child{border-bottom:1px solid var(--ink)}
+.dl dt{font:800 13px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--fuchsia-d);padding-top:6px}
+.dl dd{margin:0;font-weight:600;font-size:19px;overflow-wrap:anywhere}
+.dl dd.big{font:400 clamp(28px,3.4vw,42px)/1.1 var(--head)}
+.dl a{text-decoration:none;border-bottom:2px solid var(--fuchsia)}
+.dl a:hover{background:var(--lilac)}
+.map{min-height:420px;background:var(--lilac);border:2px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:24px;position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map p{max-width:22em;color:var(--muted);font-size:15px}
+.rate{display:flex;align-items:baseline;gap:14px;margin-top:28px}
+.rate b{font:400 64px/1 var(--head);color:var(--fuchsia-d)}
+
+footer{background:var(--ink);color:#d9d1ea;padding:36px 0 44px;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer .concept{width:100%;border-top:1px solid rgba(255,255,255,.2);padding-top:18px;font-size:13px;color:#cfc6e4}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{transition:none!important}}
+
+@media (max-width:1100px){
+  .hdr__status{display:none}
+  .svc{grid-template-columns:1fr}
+  .svc article,.svc article:first-child{padding:26px 0;border-right:0;border-bottom:1px solid rgba(26,20,38,.25)}
+  .about__g,.cont{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  :root{--hh:64px}
+  .hdr__nav,.hdr__cta{display:none}
+  .burger{display:block;margin-left:auto}
+  .hdr__nav.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--white);border-bottom:2px solid var(--ink);padding:0;margin:0}
+  .hdr__nav.open a{padding:18px var(--pad);border-top:1px solid var(--lilac);font-size:16px}
+  .hdr__nav.open a.m-cta{display:block;background:var(--fuchsia-d);color:#fff}
+  .hero{grid-template-columns:1fr}
+  .hero__num{position:absolute;right:-.03em;bottom:-.1em;opacity:.45}
+  .hero__l{min-height:520px}
+  .head{grid-template-columns:1fr;gap:12px}
+  .gal{grid-template-columns:repeat(6,1fr)}
+  .ph:nth-child(n){grid-column:span 3;aspect-ratio:1/1}
+  .ph:nth-child(5){grid-column:span 6;aspect-ratio:16/8}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .hdr__mark{padding:0 16px}.hdr__mark b{font-size:32px}
+  .hero__act .btn{flex:1 1 100%}
+  .idx a{min-height:84px}
+  .days{gap:5px;height:300px}
+  .day__bar{padding:8px 0}
+  .day__bar b{font-size:14px}
+  .day__n{font-size:12px;letter-spacing:0}
+  .dl div{grid-template-columns:1fr;gap:4px}
+  .ph:nth-child(n){grid-column:span 6;aspect-ratio:4/3}
+  .hours__sum{flex-direction:column}
+  .facts div{flex-direction:column;gap:4px}.facts dd{text-align:left}
+}
+</style>
+</head>
+<body>
+<header class="hdr" id="top">
+  <a class="hdr__mark" href="#top" title="На початок"><b>23</b> <span>Studio <br>Ужгород</span></a>
+  <nav class="hdr__nav" id="nav" aria-label="Основне меню">
+    <a href="#poslugy">Послуги</a>
+    <a href="#pro">Про салон</a>
+    <a href="#roboty">Роботи</a>
+    <a href="#hodyny">Години</a>
+    <a href="#kontakty">Контакти</a>
+    <a class="m-cta" href="tel:0990239339">Записатися: 099 023 9339</a>
+  </nav>
+  <div class="hdr__status" id="status" data-open="0"><i></i><span id="statusText">Пн-Сб 9-20, Нд 9-15</span></div>
+  <a class="hdr__cta" href="tel:0990239339">Записатися</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Меню"><span></span></button>
+</header>
+
+<main>
+<div class="hero dark">
+  <div class="hero__l">
+    <div>
+      <span class="label" style="color:var(--fuchsia-d)">Зачіски · Макіяж · Нігті · Ужгород</span>
+      <h1>Studio <em>23</em></h1>
+      <p class="hero__slogan">Місце, яке робить Тебе щасливою</p>
+      <div class="hero__act">
+        <a class="btn" href="tel:0990239339">Записатися · 099 023 9339</a>
+        <a class="btn btn--ghost" href="https://www.instagram.com/studio23.uzh/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="hero__num" aria-hidden="true">23</div>
+  </div>
+  <div class="hero__r">
+    <span class="label">Що ми робимо</span>
+    <ul class="idx">
+      <li><a href="#poslugy"><small>01</small><strong>Зачіски</strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li><a href="#poslugy"><small>02</small><strong>Макіяж</strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li><a href="#poslugy"><small>03</small><strong>Нігті</strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+    </ul>
+  </div>
+</div>
+
+<section id="poslugy">
+  <div class="wrap">
+    <div class="head"><span class="label">01 — Послуги</span><h2 class="rv">Три напрямки, одне місце</h2></div>
+    <div class="svc">
+      <article class="rv"><span class="label">01</span><h3>Зачіски</h3><p>Зачіски в Studio 23 в Ужгороді.</p><div class="price">Вартість — уточнюйте при записі</div></article>
+      <article class="rv"><span class="label">02</span><h3>Макіяж</h3><p>Макіяж у Studio 23 в Ужгороді.</p><div class="price">Вартість — уточнюйте при записі</div></article>
+      <article class="rv"><span class="label">03</span><h3>Нігті</h3><p>Нігті у Studio 23 в Ужгороді.</p><div class="price">Вартість — уточнюйте при записі</div></article>
+    </div>
+  </div>
+</section>
+
+<section class="about dark" id="pro">
+  <div class="wrap about__g">
+    <div>
+      <span class="label">02 — Про салон</span>
+      <blockquote class="rv" style="margin-top:20px">Місце, яке робить <em>Тебе</em> щасливою.</blockquote>
+    </div>
+    <dl class="facts">
+      <div><dt>Назва</dt><dd>Studio 23</dd></div>
+      <div><dt>Де</dt><dd>Ужгород, вул. Національної гвардії, 32</dd></div>
+      <div><dt>Напрямки</dt><dd>Зачіски, макіяж, нігті</dd></div>
+      <div><dt>Оцінка Google</dt><dd>4,7 · 20 відгуків</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="roboty">
+  <div class="wrap">
+    <div class="head"><span class="label">03 — Роботи</span><h2 class="rv">Галерея робіт</h2></div>
+    <div class="gal">
+      <div class="ph" role="img" aria-label="Місце для фото: зачіска">Місце для фото · зачіски</div>
+      <div class="ph" role="img" aria-label="Місце для фото: макіяж">Місце для фото · макіяж</div>
+      <div class="ph" role="img" aria-label="Місце для фото: нігті">Місце для фото · нігті</div>
+      <div class="ph" role="img" aria-label="Місце для фото: салон">Місце для фото · салон</div>
+      <div class="ph" role="img" aria-label="Місце для фото: роботи майстрів">Місце для фото · роботи майстрів</div>
+    </div>
+    <p class="gal-note">Тут з’являться власні фото салону. Більше — в <a href="https://www.instagram.com/studio23.uzh/" target="_blank" rel="noopener">Instagram studio23.uzh</a>.</p>
+  </div>
+</section>
+
+<section class="hours" id="hodyny">
+  <div class="wrap">
+    <div class="head"><span class="label">04 — Години роботи</span><h2 class="rv">Працюємо щодня</h2></div>
+    <div class="days" id="days">
+      <div class="day" data-d="Mon"><div class="day__bar"><b>09</b><b>20</b></div><div class="day__n">Пн</div></div>
+      <div class="day" data-d="Tue"><div class="day__bar"><b>09</b><b>20</b></div><div class="day__n">Вт</div></div>
+      <div class="day" data-d="Wed"><div class="day__bar"><b>09</b><b>20</b></div><div class="day__n">Ср</div></div>
+      <div class="day" data-d="Thu"><div class="day__bar"><b>09</b><b>20</b></div><div class="day__n">Чт</div></div>
+      <div class="day" data-d="Fri"><div class="day__bar"><b>09</b><b>20</b></div><div class="day__n">Пт</div></div>
+      <div class="day" data-d="Sat"><div class="day__bar"><b>09</b><b>20</b></div><div class="day__n">Сб</div></div>
+      <div class="day" data-d="Sun"><div class="day__bar"><b>09</b><b>15</b></div><div class="day__n">Нд</div></div>
+    </div>
+    <div class="hours__sum"><span>Пн-Сб 09:00-20:00</span><span>Нд 09:00-15:00</span></div>
+  </div>
+</section>
+
+<section id="kontakty">
+  <div class="wrap">
+    <div class="head"><span class="label">05 — Контакти</span><h2 class="rv">Запис і як нас знайти</h2></div>
+    <div class="cont">
+      <div>
+        <dl class="dl">
+          <div><dt>Запис</dt><dd class="big"><a href="tel:0990239339">099 023 9339</a></dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/studio23.uzh/" target="_blank" rel="noopener">@studio23.uzh</a></dd></div>
+          <div><dt>Пошта</dt><dd><a href="mailto:studio23.uz@gmail.com">studio23.uz@gmail.com</a></dd></div>
+          <div><dt>Адреса</dt><dd>вулиця Національної гвардії, 32, Ужгород, Закарпатська область, 88000</dd></div>
+          <div><dt>Години</dt><dd>Пн-Сб 09:00-20:00<br>Нд 09:00-15:00</dd></div>
+        </dl>
+        <div class="rate"><b>4,7</b><span>оцінка в Google за 20 відгуками</span></div>
+      </div>
+      <div class="map" id="map">
+        <p>Мапа завантажується після натискання, щоб не передавати дані Google без вашої згоди.</p>
+        <button class="btn" id="mapBtn" type="button">Показати мапу</button>
+        <a class="btn btn--ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJzWMTKrcZOUcRliXBQKfcnag" target="_blank" rel="noopener">Відкрити в Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Studio 23 · вулиця Національної гвардії, 32, Ужгород</span>
+    <span><a href="tel:0990239339">099 023 9339</a> · <a href="https://www.instagram.com/studio23.uzh/" target="_blank" rel="noopener">Instagram</a></span>
+    <p class="concept">Попередній концепт від Doba Digital - не опублікований сайт</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(window.Lenis&&!reduce){
+    window.lenis=new Lenis({autoRaf:true});
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click',function(e){
+        var id=a.getAttribute('href');if(id.length<2)return;
+        var t=document.querySelector(id);if(!t)return;
+        e.preventDefault();window.lenis.scrollTo(t,{offset:-70});
+      });
+    });
+  }
+  var nav=document.getElementById('nav'),b=document.getElementById('burger');
+  function setMenu(o){nav.classList.toggle('open',o);b.setAttribute('aria-expanded',o);}
+  b.addEventListener('click',function(){setMenu(!nav.classList.contains('open'));});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+
+  var parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Kyiv',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+  var g=function(t){return parts.find(function(p){return p.type===t}).value};
+  var wd=g('weekday'),mins=(+g('hour'))*60+(+g('minute'));
+  var end=wd==='Sun'?15*60:20*60,open=mins>=9*60&&mins<end;
+  var st=document.getElementById('status');st.dataset.open=open?1:0;
+  document.getElementById('statusText').textContent=open?'Відчинено до '+(wd==='Sun'?'15:00':'20:00'):'Зачинено · Пн-Сб 9-20, Нд 9-15';
+  var d=document.querySelector('.day[data-d="'+wd+'"]');if(d)d.classList.add('today');
+
+  document.getElementById('mapBtn').addEventListener('click',function(){
+    var box=document.getElementById('map');
+    var f=document.createElement('iframe');
+    f.src='https://www.google.com/maps?q='+encodeURIComponent('вулиця Національної гвардії, 32, Ужгород')+'&output=embed';
+    f.title='Мапа: Studio 23, вулиця Національної гвардії, 32, Ужгород';f.loading='lazy';
+    box.innerHTML='';box.appendChild(f);
+  });
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
