@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ЛУ ЧУАН — китайська кухня на Голосіївському проспекті, Київ</title>
+<meta name="description" content="Китайська кухня за автентичними рецептами: шашлики, пельмені, локшина, гарячі страви. Голосіївський проспект 130/57, щодня 12:00–22:00. Замовлення через ChoiceQR.">
+<link rel="icon" href="img/logo.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="js/vendor/lenis/lenis.css">
+<style>
+:root{
+  --ink:#140d0e; --ink2:#1f1415; --coral:#e07b7b; --brand:#d46666; --chili:#8e1f24; --chili-d:#74171c;
+  --paper:#f4f1f1; --white:#fff; --text:#1c1213; --mute:#6b5557; --line:rgba(255,255,255,.18); --line-d:rgba(20,13,14,.2);
+  --hf:'Oswald','Arial Narrow',Impact,sans-serif; --bf:'Commissioner',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px); --hd:64px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:var(--hd)}
+body{font-family:var(--bf);font-size:17px;line-height:1.6;color:var(--text);background:var(--paper);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+[hidden]{display:none!important}
+.wrap{width:100%;max-width:1360px;margin-inline:auto;padding-inline:var(--pad)}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.eyebrow{font:600 13px/1.3 var(--hf);letter-spacing:.14em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--hf);font-weight:600;line-height:1.05;text-wrap:balance}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;font:600 16px/1 var(--hf);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;border-radius:2px;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn--hot{background:var(--coral);color:var(--ink)}
+.btn--hot:hover{background:#fff}
+.btn--line{border-color:rgba(255,255,255,.55);color:#fff}
+.btn--line:hover{background:#fff;color:var(--ink)}
+.btn--ink{background:var(--ink);color:#fff}
+.btn--ink:hover{background:var(--chili)}
+.btn:active{transform:translateY(1px)}
+
+/* header: ticker + bar with a flush CTA tab */
+.hd{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;border-bottom:1px solid var(--line)}
+.hd__in{display:flex;align-items:stretch;height:var(--hd);gap:28px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 22px/1 var(--hf);letter-spacing:.06em}
+.brand img{width:42px;height:42px;border-radius:50%}
+.nav{display:flex;align-items:center;gap:26px;margin-left:auto}
+.nav a{font:500 15px/1 var(--hf);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:8px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--coral)}
+.status{display:flex;align-items:center;gap:8px;font:500 13px/1 var(--hf);letter-spacing:.08em;text-transform:uppercase;color:#d9c9c9;white-space:nowrap}
+.status i{width:9px;height:9px;border-radius:50%;background:#8a7777}
+.status[data-open="1"] i{background:#4fd27b}
+.hd__cta{display:flex;align-items:center;padding:0 var(--pad) 0 28px;margin-right:calc(-1 * var(--pad));background:var(--coral);color:var(--ink);text-decoration:none;font:700 15px/1 var(--hf);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.hd__cta:hover{background:#fff}
+.burger{display:none;margin-left:auto;align-self:center;width:48px;height:48px;background:none;border:1px solid var(--line);color:#fff;border-radius:2px;cursor:pointer}
+.burger span{display:block;width:20px;height:2px;background:currentColor;margin:5px auto;transition:transform .2s,opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.drawer{display:none}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero__grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;padding-block:clamp(36px,6vw,80px) clamp(40px,6vw,88px);min-height:calc(100svh - var(--hd));align-items:end}
+.hero__txt{grid-column:1/8;position:relative;z-index:2}
+.hero__kicker{display:flex;align-items:center;gap:14px;color:var(--coral);margin-bottom:20px}
+.hero__kicker::before{content:"";width:44px;height:2px;background:var(--coral)}
+.hero h1{font-size:clamp(76px,13.5vw,214px);font-weight:700;line-height:.86;letter-spacing:.01em;text-transform:uppercase}
+.hero h1 span{display:block;color:var(--coral)}
+.hero__lead{max-width:30em;font-size:clamp(18px,1.6vw,21px);margin:28px 0 32px;color:#ecdede}
+.hero__btns{display:flex;flex-wrap:wrap;gap:14px}
+.hero__meta{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-size:15px;color:#d9c9c9}
+.hero__meta b{font:600 13px/1 var(--hf);letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-right:8px}
+.hero__pics{grid-column:8/13;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-self:stretch;padding-block:0}
+.hero__pics figure{overflow:hidden;border-radius:2px;background:var(--ink2)}
+.hero__pics img{width:100%;height:100%;object-fit:cover}
+.hero__pics figure:nth-child(1){grid-row:1/3;margin-top:8%}
+.hero__pics figure:nth-child(2){aspect-ratio:3/4}
+.hero__pics figure:nth-child(3){aspect-ratio:1/1;margin-bottom:8%}
+.hero__ghost{position:absolute;right:calc(var(--pad) * .5);top:8px;writing-mode:vertical-rl;font:700 clamp(90px,12vw,190px)/1 'Noto Sans SC','Microsoft YaHei','PingFang SC',sans-serif;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.14);pointer-events:none;z-index:1;user-select:none}
+
+/* about */
+.about{background:var(--paper);padding-block:clamp(64px,9vw,128px)}
+.about__grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:40px}
+.about__lab{grid-column:1/4;color:var(--chili)}
+.about__lab b{display:block;font:700 clamp(64px,8vw,120px)/.9 var(--hf);color:var(--chili);margin-bottom:10px}
+.about__main{grid-column:4/13}
+.about h2{font-size:clamp(34px,4.6vw,64px);max-width:16em;margin-bottom:28px}
+.about p{max-width:36em;color:#3a2a2c}
+.idx{padding:0;margin-top:44px;border-top:2px solid var(--ink);display:grid;grid-template-columns:repeat(2,1fr);column-gap:48px}
+.idx li{list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--line-d);font:500 20px/1.2 var(--hf);letter-spacing:.04em;text-transform:uppercase}
+.idx li span{font:400 15px/1 var(--bf);letter-spacing:0;text-transform:none;color:var(--mute);white-space:nowrap}
+
+/* dishes rail */
+.dishes{background:var(--ink);color:#fff;padding-block:clamp(64px,8vw,112px) clamp(56px,7vw,96px)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.sec-head h2{font-size:clamp(38px,5.4vw,76px)}
+.sec-head p{max-width:26em;color:#cdbcbc;font-size:15px}
+.rail{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad) 24px max(var(--pad),calc((100vw - 1360px) / 2 + var(--pad)));scroll-padding-inline:var(--pad);align-items:flex-start;scrollbar-color:var(--coral) transparent;scrollbar-width:thin}
+.dish{flex:0 0 clamp(264px,28vw,400px);scroll-snap-align:start;display:flex;flex-direction:column}
+.dish:nth-child(even){margin-top:44px}
+.dish__ph{position:relative;overflow:hidden;border-radius:2px;background:var(--ink2);aspect-ratio:4/5}
+.dish:nth-child(3n+2) .dish__ph{aspect-ratio:1/1}
+.dish:nth-child(3n) .dish__ph{aspect-ratio:3/4}
+.dish__ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.dish:hover .dish__ph img{transform:scale(1.05)}
+.dish__no{position:absolute;left:0;top:0;background:var(--coral);color:var(--ink);font:700 15px/1 var(--hf);padding:8px 12px;letter-spacing:.06em}
+.dish__zh{margin-top:14px;font:500 15px/1 'Noto Sans SC','Microsoft YaHei','PingFang SC',sans-serif;color:var(--coral)}
+.dish h3{font-size:24px;line-height:1.15;margin:8px 0 12px;font-weight:500;text-wrap:pretty}
+.dish__row{margin-top:4px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:12px;font-size:14px;color:#cdbcbc}
+.dish__row strong{font:600 28px/1 var(--hf);color:#fff}
+.dish__row em{font-style:normal;margin-right:12px}
+.dishes__foot{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;margin-top:32px}
+.dishes__foot p{font-size:14px;color:#cdbcbc;max-width:34em}
+
+/* find */
+.find{background:var(--chili);color:#fff;padding-block:clamp(64px,8vw,112px)}
+.find__grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:40px}
+.find__l{grid-column:1/7}
+.find .eyebrow{color:#ffd9d9}
+.hours{font:700 clamp(64px,9.5vw,148px)/.92 var(--hf);margin:14px 0 6px;letter-spacing:.005em}
+.hours small{display:block;font:500 clamp(20px,2.4vw,32px)/1.2 var(--hf);letter-spacing:.14em;text-transform:uppercase;margin-top:10px;color:#ffd9d9}
+.addr{margin-top:36px;border-top:1px solid rgba(255,255,255,.35)}
+.addr div{display:flex;gap:20px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.35)}
+.addr dt{flex:none;width:96px;font:600 13px/1.7 var(--hf);letter-spacing:.12em;text-transform:uppercase;color:#ffd9d9}
+.addr dd{font-size:18px}
+.find__r{grid-column:7/13}
+.map{position:relative;background:var(--chili-d);min-height:420px;height:100%;border-radius:2px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;overflow:hidden}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map__ph{max-width:24em;display:flex;flex-direction:column;align-items:center;gap:16px}
+.map__ph p{font-size:15px;color:#ffe3e3}
+.find .btn--ink:hover{background:#fff;color:var(--ink)}
+
+/* rating + contacts */
+.proof{background:var(--paper);padding-block:clamp(56px,8vw,112px)}
+.proof__grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:56px;align-items:start}
+.rate{grid-column:1/6;border-top:2px solid var(--ink);padding-top:22px}
+.rate .rate__n{margin-top:0;letter-spacing:0;text-transform:none;font:700 clamp(110px,15vw,220px)/.85 var(--hf);color:var(--chili)}
+.rate .rate__n sup{font-size:.4em;vertical-align:top;line-height:1;margin-left:6px;color:var(--ink)}
+.rate p{font:500 22px/1.3 var(--hf);letter-spacing:.04em;text-transform:uppercase;margin-top:18px}
+.rate a{display:inline-block;margin-top:14px;font-size:15px;color:var(--chili);font-weight:500}
+.contacts{grid-column:7/13;border-top:2px solid var(--ink);padding-top:22px}
+.contacts h2{font-size:clamp(32px,4vw,52px);margin-bottom:24px}
+.contacts ul{list-style:none;padding:0}
+.contacts li{display:flex;align-items:baseline;gap:20px;padding:14px 0;border-bottom:1px solid var(--line-d)}
+.contacts li span{flex:none;width:96px;font:600 13px/1 var(--hf);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.contacts li a{font:500 clamp(20px,2.4vw,30px)/1.2 var(--hf);letter-spacing:.02em;text-decoration:none;overflow-wrap:anywhere}
+.contacts li a:hover{color:var(--chili)}
+.contacts .btn{margin-top:28px}
+
+.ft{background:var(--ink);color:#bfaeae;padding-block:28px 96px;font-size:14px}
+.ft .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 32px}
+.ft strong{font-family:var(--hf);letter-spacing:.08em;color:#fff}
+
+/* phone dock */
+.dock{display:none}
+
+[data-r]{opacity:0;transform:translateY(22px);transition:opacity .5s cubic-bezier(.16,1,.3,1),transform .5s cubic-bezier(.16,1,.3,1)}
+[data-r].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){[data-r]{opacity:1;transform:none;transition:none}*{scroll-behavior:auto!important}}
+
+@media (max-width:1100px){
+  .nav a:nth-child(n+4){display:none}
+  .hero__txt{grid-column:1/8}
+  .hero__pics{grid-column:8/13;gap:12px}
+}
+@media (max-width:900px){
+  :root{--hd:60px}
+  .nav,.hd__cta,.status{display:none}
+  .burger{display:block}
+  .drawer{position:absolute;left:0;right:0;top:100%;background:var(--ink);border-bottom:1px solid var(--line);padding:8px var(--pad) 24px}
+  .drawer:not([hidden]){display:block}
+  .drawer a{display:block;padding:16px 0;border-bottom:1px solid var(--line);font:500 20px/1 var(--hf);letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+  .drawer .status{display:flex;margin-top:18px}
+  .hero__grid{display:flex;flex-direction:column;align-items:stretch;min-height:0;gap:36px}
+  .hero__pics{order:-1;grid-template-columns:1.2fr 1fr;gap:10px}
+  .hero__pics figure:nth-child(1){margin-top:0;aspect-ratio:3/4;grid-row:1/3}
+  .hero__pics figure:nth-child(2){aspect-ratio:1/1}
+  .hero__pics figure:nth-child(3){aspect-ratio:1/1;margin-bottom:0}
+  .hero__ghost{display:none}
+  .about__lab,.about__main,.find__l,.find__r,.rate,.contacts{grid-column:1/-1}
+  .idx{grid-template-columns:1fr}
+  .map{min-height:320px}
+  .dock{display:grid;grid-template-columns:1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);border-top:1px solid var(--line)}
+  .dock a{display:flex;align-items:center;justify-content:center;min-height:56px;font:700 15px/1 var(--hf);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:#fff}
+  .dock a+a{background:var(--coral);color:var(--ink)}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .hero h1{font-size:clamp(72px,26vw,120px)}
+  .btn{width:100%}
+  .dish{flex-basis:78vw}
+  .dish:nth-child(even){margin-top:0}
+  .addr div,.contacts li{flex-direction:column;gap:4px}
+  .addr dt,.contacts li span{width:auto}
+  .hero__meta{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header class="hd">
+  <div class="wrap hd__in">
+    <a class="brand" href="#top" aria-label="ЛУ ЧУАН — на початок"><img src="img/logo.jpeg" width="42" height="42" alt="">ЛУ ЧУАН</a>
+    <nav class="nav" aria-label="Основна навігація">
+      <a href="#about">Кухня</a><a href="#dishes">Страви</a><a href="#find">Як знайти</a><a href="#contacts">Контакти</a>
+      <span class="status" data-status><i></i><span>12:00–22:00</span></span>
+    </nav>
+    <a class="hd__cta" href="https://lu-chuan-cafe.choiceqr.com/" target="_blank" rel="noopener">Меню та замовлення</a>
+    <button class="burger" aria-expanded="false" aria-controls="drawer" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+  <div class="drawer" id="drawer" hidden>
+    <a href="#about">Кухня</a><a href="#dishes">Страви</a><a href="#find">Як знайти</a><a href="#contacts">Контакти</a>
+    <span class="status" data-status><i></i><span>12:00–22:00</span></span>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <span class="hero__ghost" aria-hidden="true" lang="zh">撸串儿</span>
+  <div class="wrap hero__grid">
+    <div class="hero__txt">
+      <p class="hero__kicker eyebrow">Китайська кухня · Київ</p>
+      <h1>Лу <span>Чуан</span></h1>
+      <p class="hero__lead">Китайська кухня на Голосіївському проспекті: шашлики з мангала, пельмені, локшина та гарячі страви.</p>
+      <div class="hero__btns">
+        <a class="btn btn--hot" href="https://lu-chuan-cafe.choiceqr.com/" target="_blank" rel="noopener">Меню та замовлення</a>
+        <a class="btn btn--line" href="tel:+380954240966">Зателефонувати</a>
+      </div>
+      <p class="hero__meta"><span><b>Щодня</b>12:00–22:00</span><span><b>Адреса</b>Голосіївський проспект, 130/57</span></p>
+    </div>
+    <div class="hero__pics">
+      <figure><img src="img/sudak.webp" width="1024" height="768" alt="Філе судака під червоним кисло-солодким соусом на тарілці" fetchpriority="high"></figure>
+      <figure><img src="img/shashlik.webp" width="1024" height="768" alt="Шашлик з яловичини зі спеціями"></figure>
+      <figure><img src="img/guobao.webp" width="1024" height="768" alt="Свинина в хрусткій паніровці під кисло-солодким соусом"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about__grid">
+    <div class="about__lab" data-r><b>01</b><span class="eyebrow">Про кухню</span></div>
+    <div class="about__main" data-r>
+      <h2>Традиційні страви за автентичними рецептами</h2>
+      <p>Тут готують китайську кухню: шашлики на мангалі зі східними спеціями, пельмені, локшину власного приготування та гарячі страви. Усе меню — на ChoiceQR, звідти ж можна замовити доставку або взяти з собою.</p>
+      <ul class="idx" aria-label="Розділи меню">
+        <li>Салати та холодні страви <span>7 позицій</span></li>
+        <li>Шашлики та овочі гриль <span>12 позицій</span></li>
+        <li>Гарячі страви <span>17 позицій</span></li>
+        <li>Гарніри, пельмені, локшина <span>12 позицій</span></li>
+        <li>Супи <span>2 позиції</span></li>
+        <li>Десерти <span>4 позиції</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="dishes" id="dishes">
+  <div class="wrap sec-head">
+    <h2 data-r>Популярні страви</h2>
+    <p data-r>Шість позицій із меню на ChoiceQR, ціни в гривнях. Актуальні ціни й повне меню — за кнопкою нижче.</p>
+  </div>
+  <div class="rail" data-lenis-prevent tabindex="0" role="region" aria-label="Страви з меню, гортайте вбік">
+    <article class="dish"><div class="dish__ph"><img src="img/sudak.webp" width="1024" height="768" loading="lazy" alt="Філе судака «Червона ґрона удачі»"><span class="dish__no">21</span></div><p class="dish__zh" lang="zh">葡萄鱼</p><h3>Філе судака «Червона ґрона удачі»</h3><p class="dish__row"><span><em>300 г</em></span><strong>348 ₴</strong></p></article>
+    <article class="dish"><div class="dish__ph"><img src="img/guobao.webp" width="1024" height="768" loading="lazy" alt="Свинина під кисло-солодким соусом «Гуобао»"><span class="dish__no">58</span></div><p class="dish__zh" lang="zh">锅包肉</p><h3>Свинина під кисло-солодким соусом «Гуобао»</h3><p class="dish__row"><span><em>300 г</em></span><strong>268 ₴</strong></p></article>
+    <article class="dish"><div class="dish__ph"><img src="img/gongbao.webp" width="1024" height="768" loading="lazy" alt="Курочка Гон-Бао з арахісом і овочами"><span class="dish__no">60</span></div><p class="dish__zh" lang="zh">宫保鸡丁</p><h3>Курочка Гон-Бао</h3><p class="dish__row"><span><em>300 г</em></span><strong>228 ₴</strong></p></article>
+    <article class="dish"><div class="dish__ph"><img src="img/pelmeni.webp" width="1024" height="768" loading="lazy" alt="Китайські відварні пельмені зі свининою"><span class="dish__no">24</span></div><p class="dish__zh" lang="zh">猪肉洋葱水饺</p><h3>Китайські відварні пельмені зі свининою</h3><p class="dish__row"><span><em>300 г</em></span><strong>185 ₴</strong></p></article>
+    <article class="dish"><div class="dish__ph"><img src="img/shashlik.webp" width="1024" height="768" loading="lazy" alt="Шашлик з яловичини"><span class="dish__no">2</span></div><p class="dish__zh" lang="zh">牛肉串</p><h3>Шашлик з яловичини</h3><p class="dish__row"><span><em>30 г · за 1 шт, від 5 шт</em></span><strong>50 ₴</strong></p></article>
+    <article class="dish"><div class="dish__ph"><img src="img/lokshyna.webp" width="1024" height="768" loading="lazy" alt="Смажена локшина з м'ясом та овочами"><span class="dish__no">31</span></div><p class="dish__zh" lang="zh">炒面</p><h3>Смажена локшина власного приготування з м'ясом та овочами</h3><p class="dish__row"><span><em>250 г</em></span><strong>198 ₴</strong></p></article>
+  </div>
+  <div class="wrap dishes__foot">
+    <p>Фото й ціни взято зі сторінки меню на ChoiceQR.</p>
+    <a class="btn btn--hot" href="https://lu-chuan-cafe.choiceqr.com/" target="_blank" rel="noopener">Переглянути меню і замовити на ChoiceQR</a>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap find__grid">
+    <div class="find__l" data-r>
+      <p class="eyebrow">02 · Як нас знайти</p>
+      <p class="hours">12:00–22:00<small>Щодня, без вихідних</small></p>
+      <dl class="addr">
+        <div><dt>Адреса</dt><dd>Голосіївський проспект, 130/57, Київ, 03127</dd></div>
+        <div><dt>Телефон</dt><dd><a href="tel:+380954240966">+380 95 424 0966</a></dd></div>
+        <div><dt>Зараз</dt><dd><span class="status" data-status style="color:#fff;font:500 18px/1.2 var(--bf);letter-spacing:0;text-transform:none"><i></i><span>12:00–22:00</span></span></dd></div>
+      </dl>
+    </div>
+    <div class="find__r" data-r>
+      <div class="map" id="map">
+        <div class="map__ph">
+          <p>Карту завантажимо після натискання: так Google не отримує даних про вас без вашої дії.</p>
+          <button class="btn btn--ink" type="button" id="mapBtn">Показати карту</button>
+          <a href="https://www.google.com/maps/place/?q=place_id:ChIJLTJhNwDJ1EARsRDTE5cq0Tc" target="_blank" rel="noopener" style="font-size:15px">Відкрити в Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof" id="contacts">
+  <div class="wrap proof__grid">
+    <div class="rate" data-r>
+      <p class="eyebrow" style="color:var(--mute)">Оцінка гостей</p>
+      <p class="rate__n">4.8<sup aria-hidden="true">★</sup></p>
+      <p>Рейтинг у Google · 143 відгуки</p>
+      <a href="https://www.google.com/maps/place/?q=place_id:ChIJLTJhNwDJ1EARsRDTE5cq0Tc" target="_blank" rel="noopener">Читати відгуки на Google Maps</a>
+    </div>
+    <div class="contacts" data-r>
+      <h2>Контакти</h2>
+      <ul>
+        <li><span>Телефон</span><a href="tel:+380954240966">+380 95 424 0966</a></li>
+        <li><span>Instagram</span><a href="https://www.instagram.com/lu_chuan_cafe/" target="_blank" rel="noopener">@lu_chuan_cafe</a></li>
+        <li><span>E-mail</span><a href="mailto:zangyulin1970@gmail.com">zangyulin1970@gmail.com</a></li>
+      </ul>
+      <a class="btn btn--ink" href="https://lu-chuan-cafe.choiceqr.com/" target="_blank" rel="noopener">Меню та замовлення</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap"><span><strong>ЛУ ЧУАН</strong> · Голосіївський проспект, 130/57, Київ</span><span>Попередній концепт від Doba Digital - не опублікований сайт</span></div>
+</footer>
+
+<nav class="dock" aria-label="Швидкі дії"><a href="tel:+380954240966">Дзвінок</a><a href="https://lu-chuan-cafe.choiceqr.com/" target="_blank" rel="noopener">Меню та замовлення</a></nav>
+
+<script type="module">
+import { smoothScroll } from './js/smooth-scroll.js?manual';
+smoothScroll({ anchors: { offset: -64 }, autoRaf: true });
+</script>
+<script>
+(function(){
+  var b=document.querySelector('.burger'),d=document.getElementById('drawer');
+  function close(){b.setAttribute('aria-expanded','false');d.hidden=true}
+  b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));d.hidden=o});
+  d.addEventListener('click',function(e){if(e.target.tagName==='A')close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  // open/closed status, Kyiv time, daily 12:00-22:00
+  var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Kyiv',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+  var h=+p.find(function(x){return x.type==='hour'}).value%24,m=+p.find(function(x){return x.type==='minute'}).value;
+  var open=h>=12&&h<22;
+  document.querySelectorAll('[data-status]').forEach(function(s){s.dataset.open=open?'1':'0';s.querySelector('span').textContent=open?'Відчинено до 22:00':'Зачинено · відчиняємось о 12:00'});
+  // click-to-load map
+  document.getElementById('mapBtn').addEventListener('click',function(){
+    var box=document.getElementById('map'),f=document.createElement('iframe');
+    f.src='https://maps.google.com/maps?q='+encodeURIComponent('Голосіївський проспект 130/57, Київ')+'&output=embed&hl=uk';
+    f.title='Карта: Голосіївський проспект, 130/57, Київ';f.loading='lazy';
+    box.innerHTML='';box.appendChild(f);
+  });
+  // reveals
+  var els=document.querySelectorAll('[data-r]');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
