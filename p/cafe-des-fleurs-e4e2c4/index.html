@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cafe des fleurs — затишне кафе на Голосіївському проспекті, 110</title>
+<meta name="description" content="Cafe des fleurs у Києві: літня тераса, меню, замовлення на винос, банкети й весілля. Щодня 10:00–23:00. Забронюйте столик онлайн.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2315131a'/%3E%3Ctext x='32' y='46' font-size='44' text-anchor='middle' fill='%23ff6a5c' font-family='cursive'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Manrope:wght@400;500;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
+<style>
+:root{
+  --night:#15131a; --night-2:#1f1c26; --neon:#ff6a5c; --red:#c92a24; --red-text:#b3221c;
+  --grey:#eceef2; --white:#ffffff; --ink:#1b1a21; --ink-soft:#4a4852; --line:rgba(255,255,255,.18); --line-d:rgba(27,26,33,.18);
+  --pad:clamp(20px,5vw,72px); --max:1280px;
+  --script:'Bad Script','Segoe Script',cursive; --sans:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:84px}
+body{font-family:var(--sans);font-size:16px;line-height:1.6;color:var(--ink);background:var(--grey);-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--neon);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+[hidden]{display:none!important}
+
+/* header: booking-focused sticky bar */
+.hdr{position:sticky;top:0;z-index:50;background:var(--night);color:var(--white);border-bottom:1px solid var(--line)}
+.hdr__in{display:flex;align-items:center;gap:20px;min-height:68px}
+.brand{font-family:var(--script);font-size:28px;color:var(--neon);text-decoration:none;line-height:1;white-space:nowrap}
+.nav{display:flex;gap:26px;margin-left:auto;font-size:14px;font-weight:500}
+.nav a{text-decoration:none;opacity:.85;padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover{opacity:1;border-color:var(--neon)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;font:700 15px/1 var(--sans);text-decoration:none;border:1.5px solid transparent;border-radius:2px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn--red{background:var(--red);color:#fff}
+.btn--red:hover{background:#e03a33}
+.btn--line{border-color:currentColor;background:transparent}
+.btn--line:hover{background:rgba(255,255,255,.1)}
+.btn--ink{color:var(--ink)}.btn--ink:hover{background:rgba(27,26,33,.07)}
+.hdr .btn{min-height:42px;padding:0 18px;font-size:14px}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);background:none;color:#fff;border-radius:2px;cursor:pointer;position:relative}
+.burger span,.burger span::before,.burger span::after{position:absolute;left:12px;right:12px;height:2px;background:#fff;content:"";top:21px}
+.burger span::before{left:0;right:0;top:-6px}.burger span::after{left:0;right:0;top:6px}
+.burger span{left:12px;right:12px}
+
+/* hero */
+.hero{background:var(--night);color:#fff;padding-top:clamp(40px,6vw,88px)}
+.hero__top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,300px);gap:40px;align-items:end}
+.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--neon);display:flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:34px;height:1px;background:currentColor}
+h1{font-family:var(--script);font-weight:400;color:var(--neon);font-size:clamp(62px,12.5vw,196px);line-height:.95;margin:clamp(28px,4vw,56px) 0 0 -.04em;text-shadow:0 0 28px rgba(255,74,61,.35)}
+h1 span{display:block;margin-left:clamp(0px,8vw,130px)}
+.hero__lead{font-size:18px;color:#d8d6de;max-width:300px;padding-bottom:12px}
+.hero__lead b{display:block;color:#fff;font-size:15px;margin-bottom:6px}
+.hero__photo{margin-top:clamp(32px,4vw,56px);position:relative}
+.hero__photo img{width:100%;aspect-ratio:21/8;object-fit:cover;object-position:50% 62%}
+.ticket{position:absolute;right:var(--pad);bottom:-56px;background:var(--grey);color:var(--ink);padding:22px 26px;width:min(380px,calc(100% - 2*var(--pad)));border-top:4px solid var(--red);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.ticket__row{display:flex;justify-content:space-between;gap:14px;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line-d)}
+.ticket__row b{font-weight:800}
+.ticket .btn{width:100%;margin-top:16px}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700}
+.chip i{width:9px;height:9px;border-radius:50%;background:#8a8892;display:inline-block}
+.chip.is-open i{background:#1f9d55}.chip.is-closed i{background:var(--red)}
+.hero__pad{height:80px;background:var(--grey)}
+.hero{padding-bottom:0}
+.hero__bg{position:relative}
+.hero__bg::after{content:"";position:absolute;left:0;right:0;bottom:0;height:56px;background:var(--grey)}
+.hero__bg .hero__photo{position:relative;z-index:1}
+
+/* shared section */
+.sec{padding:clamp(64px,9vw,128px) 0}
+.sec--night{background:var(--night);color:#fff}
+.sec--red{background:var(--red);color:#fff}
+.label{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--red-text);display:flex;gap:12px;align-items:center;margin-bottom:18px}
+.sec--night .label{color:var(--neon)}.sec--red .label{color:#fff}
+.label::before{content:"";width:34px;height:1px;background:currentColor}
+h2{font-size:clamp(30px,4.2vw,52px);line-height:1.1;font-weight:800;letter-spacing:-.01em;max-width:18ch}
+h2 em{font-family:var(--script);font-style:normal;font-weight:400;color:var(--red-text)}
+.sec--night h2 em{color:var(--neon)}.sec--red h2 em{color:#fff}
+h3{font-size:22px;line-height:1.25;font-weight:800}
+p+p{margin-top:12px}
+.lead{font-size:18px;max-width:56ch;margin-top:18px;color:var(--ink-soft)}
+.sec--night .lead,.sec--red .lead{color:#e2e0e8}
+
+/* atmosphere collage */
+.collage{display:grid;grid-template-columns:1.5fr 1fr .8fr;grid-template-rows:auto auto;gap:20px;margin-top:48px;align-items:start}
+.collage figure:nth-child(1){grid-row:1/3}
+.collage figure:nth-child(3){grid-column:3;grid-row:1/3}
+.collage img{width:100%;object-fit:cover}
+.collage figure:nth-child(1) img{aspect-ratio:4/4.4}
+.collage figure:nth-child(2) img{aspect-ratio:3/2}
+.collage figure:nth-child(3) img{aspect-ratio:2/3.1}
+figcaption{font-size:13px;color:var(--ink-soft);margin-top:8px}
+.facts{grid-column:2;grid-row:2;list-style:none;padding:0;border-top:2px solid var(--ink)}
+.facts li{padding:12px 0;border-bottom:1px solid var(--line-d);font-size:15px}
+.facts b{display:block;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--red-text)}
+
+/* menu */
+.menu{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
+.menu__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.menu__photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px}
+.menu__photos img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.dishes{list-style:none;padding:0;border-top:1px solid var(--line)}
+.dish{display:grid;grid-template-columns:48px minmax(0,1fr);gap:8px 16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.dish__n{font-family:var(--script);color:var(--neon);font-size:26px;line-height:1.2}
+.dish p{color:#cfcdd6;font-size:15px;margin-top:4px}
+.menu__note{font-size:13px;color:#a9a6b3;margin-top:16px}
+
+/* events */
+.events{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.rows{list-style:none;padding:0;border-top:2px solid var(--ink)}
+.rows li{display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line-d)}
+.rows p{color:var(--ink-soft)}
+.contactline{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+
+/* visit */
+.visit{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:start}
+.week{display:flex;gap:6px;margin:26px 0 10px;flex-wrap:wrap}
+.week span{min-width:44px;text-align:center;padding:8px 0;border:1px solid rgba(255,255,255,.55);font-weight:700;font-size:14px}
+.hoursbig{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.1}
+.dl{margin-top:30px;border-top:1px solid rgba(255,255,255,.4)}
+.dl div{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.4)}
+.dl dt{font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:800}
+.dl dd{margin:0}
+.map{background:var(--night);min-height:380px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:32px;gap:14px;color:#fff;position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map p{color:#cfcdd6;font-size:14px;max-width:44ch}
+.map p+p{margin:0}
+
+/* footer */
+.foot{background:var(--night);color:#fff;padding:clamp(48px,7vw,88px) 0 28px}
+.foot__grid{display:grid;grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,1fr));gap:32px}
+.foot .brand{font-size:44px;display:block;margin-bottom:10px}
+.foot h3{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--neon);margin-bottom:12px}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
+.foot a:hover{border-color:var(--neon)}
+.foot p,.foot li{font-size:15px;color:#e2e0e8}
+.foot ul{list-style:none;padding:0;display:grid;gap:8px}
+.concept{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:#b5b2bf}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+
+/* tablet */
+@media (max-width:1024px){
+  .nav{gap:16px;font-size:13px}
+  .hero__top{grid-template-columns:1fr}
+  .hero__lead{max-width:52ch}
+  .hero__photo img{aspect-ratio:16/8}
+  .collage{grid-template-columns:1fr 1fr}
+  .collage figure:nth-child(1){grid-row:auto;grid-column:1/3}
+  .collage figure:nth-child(1) img{aspect-ratio:16/9}
+  .collage figure:nth-child(2){grid-column:1}
+  .collage figure:nth-child(3){grid-column:2;grid-row:auto}
+  .facts{grid-column:1/3;grid-row:auto;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
+  .menu,.events,.visit{grid-template-columns:1fr}
+  .foot__grid{grid-template-columns:1fr 1fr}
+}
+/* phone */
+@media (max-width:760px){
+  .burger{display:block;margin-left:auto}
+  .hdr .btn{display:none}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--night);border-bottom:1px solid var(--line);padding:8px var(--pad) 20px}
+  .nav.open{display:flex}
+  .nav a{padding:14px 0;font-size:17px;border-bottom:1px solid var(--line)}
+  .nav .nav__cta{display:inline-flex;margin-top:16px;border:0;background:var(--red);justify-content:center;min-height:48px;align-items:center;font-weight:700;opacity:1}
+  .hero__photo img{aspect-ratio:4/3;object-position:50% 70%}
+  .ticket{position:static;width:auto;margin:0 var(--pad);transform:translateY(-28px)}
+  .hero__bg::after{display:none}
+  .hero__photo{margin-bottom:0}
+  .hero{padding-bottom:0}
+  .hero__pad{display:none}
+  .collage{grid-template-columns:1fr;gap:28px}
+  .collage figure,.collage figure:nth-child(n){grid-column:auto!important;grid-row:auto!important}
+  .collage figure:nth-child(1) img{aspect-ratio:4/3.4}
+  .week{gap:4px}.week span{min-width:40px}
+  .collage figure:nth-child(3) img{aspect-ratio:4/5}
+  .facts{grid-template-columns:1fr;grid-column:auto}
+  .rows li{grid-template-columns:1fr;gap:6px}
+  .dl div{grid-template-columns:1fr;gap:2px}
+  .foot__grid{grid-template-columns:1fr}
+  .btn{width:100%}
+  .menu__cta .btn,.contactline .btn{width:100%}
+}
+@media (min-width:761px){.nav .nav__cta{display:none}}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="#top" aria-label="Cafe des fleurs — на початок">Cafe des fleurs</a>
+    <nav class="nav" id="nav" aria-label="Основна навігація">
+      <a href="#atmosphere">Атмосфера</a>
+      <a href="#menu">Меню</a>
+      <a href="#events">Банкети</a>
+      <a href="#visit">Як знайти</a>
+      <a class="nav__cta" href="https://reservation.dish.co/widget/hydra-b788a140-7640-11e9-9f79-319205061a67" target="_blank" rel="noopener">Забронювати столик</a>
+    </nav>
+    <a class="btn btn--red" href="https://reservation.dish.co/widget/hydra-b788a140-7640-11e9-9f79-319205061a67" target="_blank" rel="noopener">Забронювати столик</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Меню"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero__top">
+      <div>
+        <p class="kicker">Київ · Голосіївський проспект, 110</p>
+        <h1 id="h1">Cafe <span>des fleurs</span></h1>
+      </div>
+      <p class="hero__lead"><b>Затишне кафе з літнім майданчиком</b>Смачні страви, свіжа кава й атмосфера, яка не залишає байдужими.</p>
+    </div>
+  </div>
+  <div class="hero__bg">
+    <div class="wrap hero__photo">
+      <img src="photos/02.jpg" width="800" height="600" alt="Фасад кафе Cafe des fleurs увечері: вікна з рослинами та неоновий напис" fetchpriority="high">
+      <aside class="ticket" aria-label="Години та бронювання">
+        <div class="ticket__row"><span>Щодня</span><b>10:00–23:00</b></div>
+        <div class="ticket__row"><span>Адреса</span><b>Голосіївський пр., 110</b></div>
+        <div class="ticket__row"><span>Зараз</span><span class="chip" id="chip"><i></i><span id="chipt">10:00–23:00</span></span></div>
+        <a class="btn btn--red" href="https://reservation.dish.co/widget/hydra-b788a140-7640-11e9-9f79-319205061a67" target="_blank" rel="noopener">Забронювати столик</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="atmosphere" aria-labelledby="h-atm" style="padding-top:clamp(72px,10vw,140px)">
+  <div class="wrap">
+    <p class="label">Атмосфера</p>
+    <h2 id="h-atm" class="rv">Літній майданчик і <em>тепло</em> всередині</h2>
+    <p class="lead rv">У сонячні дні літній майданчик — перепочинок у чистому вигляді. Усередині затишно навіть у спеку: приміщення обладнані кондиціонерами.</p>
+    <div class="collage">
+      <figure class="rv"><img src="photos/05.jpg" width="800" height="600" loading="lazy" alt="Червоні квіти у вазі на столі літнього майданчика, за ним цегляна стіна й зелень"><figcaption>Літній майданчик</figcaption></figure>
+      <figure class="rv"><img src="photos/03.jpg" width="800" height="600" loading="lazy" alt="Накритий стіл у залі з яскравою скатертю та маленькою ялинкою"><figcaption>У залі</figcaption></figure>
+      <figure class="rv"><img src="photos/06.jpg" width="800" height="1203" loading="lazy" alt="Склянка на барній стійці перед рядом пляшок"><figcaption>Напої</figcaption></figure>
+      <ul class="facts rv">
+        <li><b>Кава</b>Свіжа кава та широкий вибір напоїв</li>
+        <li><b>Інтернет</b>Безплатний інтернет</li>
+        <li><b>З собою</b>Страви можна замовити на винос</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--night" id="menu" aria-labelledby="h-menu">
+  <div class="wrap menu">
+    <div>
+      <p class="label">Меню</p>
+      <h2 id="h-menu" class="rv">Страви на <em>всі смаки</em></h2>
+      <p class="lead rv">Повне меню — у PDF. Хочете смакувати вдома? Замовте на винос.</p>
+      <div class="menu__cta">
+        <a class="btn btn--red" href="https://cdn.website.dish.co/media/6f/1c/4059818/Cafe-des-fleurs.pdf" target="_blank" rel="noopener">Меню (PDF)</a>
+        <a class="btn btn--line" href="https://cafe-des-fleurs.eatbu.com/" target="_blank" rel="noopener">Замовити на винос</a>
+      </div>
+      <div class="menu__photos">
+        <figure><img src="photos/04.jpg" width="800" height="600" loading="lazy" alt="Гриль-салат з грибами, перцем і баклажаном на чорній тарілці"></figure>
+        <figure><img src="photos/08.jpg" width="800" height="600" loading="lazy" alt="Шашлик із цибулею на білій тарілці"></figure>
+      </div>
+    </div>
+    <div>
+      <ol class="dishes rv">
+        <li class="dish"><span class="dish__n">01</span><div><h3>Гриль-салат</h3><p>Листя салату, гриби, болгарський перець, айсберг, баклажан і черрі під гірчично-соєвим соусом.</p></div></li>
+        <li class="dish"><span class="dish__n">02</span><div><h3>Грецький салат</h3><p>Один із найлегших салатів — той самий «хоріатики» з Греції.</p></div></li>
+        <li class="dish"><span class="dish__n">03</span><div><h3>Фрикасе з курки</h3><p>Ніжне куряче філе, тушковане у вершковому соусі з овочами.</p></div></li>
+        <li class="dish"><span class="dish__n">04</span><div><h3>Штрудель</h3><p>Яблука з корицею — свіжий до ранкової кави.</p></div></li>
+        <li class="dish"><span class="dish__n">05</span><div><h3>Плов щопонеділка</h3><p>День Плова: за унікальним рецептом, привезеним з Узбекистану.</p></div></li>
+      </ol>
+      <p class="menu__note">Ціни та повний перелік страв — у меню (PDF).</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="events" aria-labelledby="h-ev">
+  <div class="wrap events">
+    <div>
+      <p class="label">Банкети та вечірки</p>
+      <h2 id="h-ev" class="rv">Ваше свято — <em>у нас</em></h2>
+      <p class="lead rv">Ми організуємо приватні торжества й спеціалізуємося на масових заходах. Для деталей і бронювання — зв’яжіться з нами.</p>
+      <div class="contactline">
+        <a class="btn btn--red" href="tel:+380442580554">Зателефонувати</a>
+        <a class="btn btn--line btn--ink" href="mailto:deafleurs@ukr.net">Написати на пошту</a>
+      </div>
+    </div>
+    <ul class="rows rv">
+      <li><h3>Приватна вечірка</h3><p>Зарезервуйте столик і домовтеся про вечір для своєї компанії.</p></li>
+      <li><h3>Банкет</h3><p>Масові заходи — наша спеціалізація; уточнюйте умови за телефоном.</p></li>
+      <li><h3>Весілля</h3><p>Відсвяткуйте весілля в кафе — зробимо все, щоб цей день був неймовірним.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec sec--red" id="visit" aria-labelledby="h-vis">
+  <div class="wrap visit">
+    <div>
+      <p class="label">Як знайти</p>
+      <h2 id="h-vis" class="rv">Приходьте <em>щодня</em></h2>
+      <p class="hoursbig" style="margin-top:22px">10:00–23:00</p>
+      <div class="week" aria-label="Дні роботи: щодня"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Нд</span></div>
+      <dl class="dl">
+        <div><dt>Адреса</dt><dd>Голосіївський проспект, 110, Київ, 03127</dd></div>
+        <div><dt>Оплата</dt><dd>Готівка, безконтактна оплата, Mastercard, VISA</dd></div>
+        <div><dt>Google</dt><dd>4,7 з 5 · 416 відгуків</dd></div>
+      </dl>
+      <div class="menu__cta"><a class="btn btn--line" style="color:#fff" href="https://reservation.dish.co/widget/hydra-b788a140-7640-11e9-9f79-319205061a67" target="_blank" rel="noopener">Забронювати столик</a></div>
+    </div>
+    <div class="map" id="map">
+      <p><strong>Карта Google</strong></p>
+      <p>Після натискання ваша IP-адреса буде передана Google Maps.</p>
+      <button class="btn btn--red" id="loadmap" type="button" style="background:#fff;color:var(--ink)">Показати карту</button>
+      <p><a href="https://www.google.com/maps/place/?q=place_id:ChIJYb88KbXJ1EARZ7oGvIfCyw0" target="_blank" rel="noopener" style="color:#fff">Відкрити в Google Maps</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div><a class="brand" href="#top" style="border:0">Cafe des fleurs</a><p>Голосіївський проспект, 110<br>Київ, 03127</p></div>
+      <div><h3>Контакти</h3><ul><li><a href="tel:+380442580554">+380 44 258 0554</a></li><li><a href="mailto:deafleurs@ukr.net">deafleurs@ukr.net</a></li><li><a href="https://www.instagram.com/desfleurs.kiev/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+      <div><h3>Години</h3><p>Щодня<br>10:00–23:00</p></div>
+      <div><h3>Меню</h3><ul><li><a href="https://cdn.website.dish.co/media/6f/1c/4059818/Cafe-des-fleurs.pdf" target="_blank" rel="noopener">Меню (PDF)</a></li><li><a href="https://cafe-des-fleurs.eatbu.com/" target="_blank" rel="noopener">Замовлення на винос</a></li></ul></div>
+    </div>
+    <p class="concept">Попередній концепт від Doba Digital - не опублікований сайт</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(window.Lenis&&!reduce){window.lenis=new Lenis({autoRaf:true});}
+  var nav=document.getElementById('nav'),b=document.getElementById('burger');
+  b.addEventListener('click',function(){var o=nav.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  nav.addEventListener('click',function(e){if(e.target.closest('a')){nav.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+  // open/closed, Kyiv time
+  try{
+    var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Kyiv',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var h=+p.find(function(x){return x.type==='hour'}).value%24,m=+p.find(function(x){return x.type==='minute'}).value,t=h*60+m;
+    var open=t>=600&&t<1380,c=document.getElementById('chip');
+    c.className='chip '+(open?'is-open':'is-closed');
+    document.getElementById('chipt').textContent=open?'Відчинено до 23:00':'Зачинено · відчиняємо о 10:00';
+  }catch(e){}
+  // click-to-load map
+  document.getElementById('loadmap').addEventListener('click',function(){
+    var m=document.getElementById('map'),f=document.createElement('iframe');
+    f.src='https://www.google.com/maps?q=50.387416,30.491922&z=16&output=embed';
+    f.title='Карта: Cafe des fleurs, Голосіївський проспект, 110';f.loading='lazy';
+    m.textContent='';m.appendChild(f);
+  });
+  // reveal
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }else els.forEach(function(e){e.classList.add('in')});
+})();
+</script>
+</body>
+</html>
