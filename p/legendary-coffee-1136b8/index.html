@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Legendary Coffee — кав'ярня на Міському озері</title>
+<meta name="description" content="Legendary Coffee — легендарна кав'ярня на Міському озері в Івано-Франківську. Щодня з 9:00 до 21:00, вулиця Гетьмана Мазепи, 114. Як дістатися та години роботи.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a2a3b'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='32' text-anchor='middle' fill='%23ff8a3d'%3ELC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lake:#0a2a3b; --deep:#06202e; --mist:#e6eff2; --foam:#f7fafb; --ink:#0c2230;
+  --crema:#ff8a3d; --crema-d:#a94a05; --line:rgba(12,34,48,.2); --muted:#43616f;
+  --h:'Jost','Arial',sans-serif; --b:'Golos Text','Arial',sans-serif;
+  --pad:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:auto}
+body{font:400 17px/1.6 var(--b);color:var(--ink);background:var(--foam);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--crema);outline-offset:3px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.eyebrow{font:500 13px/1.3 var(--b);letter-spacing:.14em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:.6em;min-height:48px;padding:0 26px;font:500 16px var(--b);text-decoration:none;background:var(--crema);color:var(--deep);border:2px solid var(--crema);border-radius:2px;transition:background .2s,color .2s}
+.btn:hover{background:transparent;color:var(--crema)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn.ghost:hover{background:var(--crema);border-color:var(--crema);color:var(--deep)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* header: overlay, stamp logo left, nav right, hours chip */
+header{position:absolute;inset:0 0 auto 0;z-index:20;color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px}
+.stamp{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 15px/1.1 var(--h);letter-spacing:.12em;text-transform:uppercase}
+.stamp i{display:grid;place-items:center;width:46px;height:46px;border:2px solid var(--crema);border-radius:50%;font:700 17px var(--h);color:var(--crema);letter-spacing:0;font-style:normal}
+nav ul{display:flex;gap:30px;list-style:none;padding:0}
+nav a{text-decoration:none;font:500 15px var(--b);padding:8px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--crema)}
+.chip{font:500 13px var(--b);padding:7px 12px;border:1px solid rgba(255,255,255,.4);border-radius:2px;white-space:nowrap}
+.chip b{display:inline-block;width:8px;height:8px;border-radius:50%;background:#7a8c96;margin-right:8px}
+.chip.open b{background:#58d68d}
+
+/* hero */
+.hero{background:var(--lake);color:#fff;position:relative;padding:150px 0 0;overflow:hidden}
+.hero .tag{color:var(--crema);margin-bottom:18px}
+.word{font:700 clamp(54px,13.4vw,200px)/.86 var(--h);text-transform:uppercase;letter-spacing:-.02em}
+.word span{display:block}
+.word span+span{color:transparent;-webkit-text-stroke:2px #fff;padding-left:.35em}
+.hero-row{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin-top:40px}
+.hero p.lead{font:400 clamp(20px,2.2vw,28px)/1.35 var(--h);max-width:24em;color:#d3e4ea}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap}
+.waves{margin-top:56px;height:90px;display:block;width:100%}
+.facts{background:var(--mist);border-bottom:1px solid var(--line)}
+.facts dl{display:grid;grid-template-columns:repeat(3,1fr)}
+.facts dl>div{padding:28px 28px 28px 0}
+.facts dl>div+div{padding-left:28px;border-left:1px solid var(--line)}
+.facts dt{color:var(--muted)}
+.facts dd{font:500 clamp(22px,2.4vw,32px)/1.2 var(--h);margin-top:6px}
+
+section{padding:clamp(64px,9vw,128px) 0}
+h2{font:700 clamp(36px,5vw,64px)/1.05 var(--h);letter-spacing:-.01em}
+.head{display:grid;grid-template-columns:200px 1fr;gap:24px;margin-bottom:48px;align-items:start}
+.head .eyebrow{color:var(--crema-d);padding-top:14px}
+
+/* about */
+.about p.big{font:400 clamp(26px,3.6vw,48px)/1.2 var(--h);max-width:20em}
+.about p.big em{font-style:normal;color:var(--crema-d)}
+.about .src{margin-top:28px;color:var(--muted);font-size:14px}
+
+/* menu placeholder */
+.menu{background:var(--deep);color:#fff}
+.menu .head .eyebrow{color:var(--crema)}
+.rows{list-style:none;padding:0;border-top:1px solid rgba(255,255,255,.25)}
+.rows li{display:grid;grid-template-columns:60px 1fr 120px;gap:20px;align-items:center;min-height:68px;border-bottom:1px solid rgba(255,255,255,.25);color:#a9c0ca}
+.rows li span:first-child{font:500 14px var(--b);color:var(--crema)}
+.rows li i{display:block;height:0;border-top:2px dashed rgba(255,255,255,.28)}
+.note{margin-top:26px;max-width:36em;font-size:16px;color:#d3e4ea}
+.note b{color:var(--crema);font-weight:600}
+
+/* hours */
+.hours .scale{position:relative;margin-top:12px}
+.track{display:grid;grid-template-columns:repeat(24,1fr);height:76px;border:2px solid var(--ink);border-radius:2px;overflow:hidden}
+.track span{border-left:1px solid var(--line)}
+.track span:first-child{border-left:0}
+.track .on{background:var(--crema);grid-column:10/22;border:0;display:grid;place-items:center;font:700 clamp(20px,3vw,34px) var(--h);color:var(--deep)}
+.ticks{display:grid;grid-template-columns:repeat(24,1fr);margin-top:8px;font-size:13px;color:var(--muted)}
+.ticks span:nth-child(3n+1){visibility:visible}
+.ticks span{visibility:hidden;white-space:nowrap}
+.ticks span:nth-child(1),.ticks span:nth-child(7),.ticks span:nth-child(13),.ticks span:nth-child(19){visibility:visible}
+.hours .days{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:34px;font:500 clamp(20px,2.4vw,30px) var(--h)}
+.hours .days small{font:400 15px var(--b);color:var(--muted);display:block}
+
+/* find */
+.find{background:var(--mist)}
+.find-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,4vw,64px);align-items:stretch}
+.addr{font:500 clamp(28px,3.4vw,44px)/1.15 var(--h)}
+.addr small{display:block;font:400 17px var(--b);color:var(--muted);margin-top:14px}
+.find .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.find .btn.ghost{color:var(--ink)}
+.map{position:relative;min-height:380px;background:var(--lake);color:#fff;border-radius:2px;overflow:hidden}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map .gate{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:16px;padding:clamp(24px,4vw,48px)}
+.map .gate p{max-width:26em;color:#d3e4ea;font-size:15px}
+.map svg.w{position:absolute;right:-10%;bottom:-6%;width:70%;opacity:.25}
+
+/* instagram */
+.social .grid{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.social .grid>*{padding:clamp(28px,4vw,56px) 0;text-decoration:none}
+.social .grid>*+*{padding-left:clamp(24px,4vw,56px);border-left:2px solid var(--ink)}
+.score{font:700 clamp(72px,11vw,150px)/.9 var(--h);color:var(--crema-d)}
+.score small{font-size:.38em;color:var(--ink);margin-left:6px}
+.social .handle{font:700 clamp(28px,4vw,52px)/1.05 var(--h);word-break:break-word}
+.social a.handle-box:hover .handle{color:var(--crema-d)}
+.social p{color:var(--muted);margin-top:12px}
+
+/* contacts + footer */
+footer{background:var(--lake);color:#fff;padding:clamp(56px,8vw,96px) 0 28px}
+.ct{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px 48px}
+.ct h2{font-size:clamp(36px,5vw,64px);color:var(--crema)}
+.ct dt{color:#9fb8c3;margin-bottom:4px}
+.ct dd{font-size:18px;margin-bottom:18px}
+.ct a{text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+.legal{margin-top:56px;padding-top:20px;border-top:1px solid rgba(255,255,255,.25);font-size:13px;color:#9fb8c3}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* tablet */
+@media (max-width:980px){
+  .head{grid-template-columns:1fr;gap:8px;margin-bottom:32px}
+  .head .eyebrow{padding-top:0}
+  .find-grid{grid-template-columns:1fr}
+  .ct{grid-template-columns:1fr 1fr}
+  .ct>div:first-child{grid-column:1/-1}
+  .hero-row{grid-template-columns:1fr}
+  .chip{display:none}
+}
+/* phone: nav becomes bottom dock */
+@media (max-width:720px){
+  body{font-size:16px;padding-bottom:64px}
+  nav{position:fixed;inset:auto 0 0 0;z-index:30;background:var(--deep);border-top:2px solid var(--crema)}
+  nav ul{gap:0;justify-content:space-around}
+  nav li{flex:1;text-align:center}
+  nav a{display:block;padding:0;line-height:62px;border:0;font-size:14px}
+  nav li:last-child a{background:var(--crema);color:var(--deep);font-weight:600}
+  .hero{padding-top:110px}
+  .stamp span{font-size:13px}
+  .word span+span{padding-left:.15em;-webkit-text-stroke-width:1.5px}
+  .facts dl{grid-template-columns:1fr}
+  .facts dl>div,.facts dl>div+div{padding:18px 0;border-left:0}
+  .facts dl>div+div{border-top:1px solid var(--line)}
+  .rows li{grid-template-columns:36px 1fr 60px;gap:12px}
+  .social .grid{grid-template-columns:1fr}
+  .social .grid>*+*{padding-left:0;border-left:0;border-top:2px solid var(--ink)}
+  .ct{grid-template-columns:1fr}
+  .track{height:56px}
+  .hero .acts .btn,.find .acts .btn{flex:1 1 100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="stamp" href="#top"><i>LC</i><span>Legendary<br>Coffee</span></a>
+    <nav aria-label="Основне">
+      <ul>
+        <li><a href="#about">Про заклад</a></li>
+        <li><a href="#menu">Меню</a></li>
+        <li><a href="#hours">Години</a></li>
+        <li><a href="#find">Як знайти</a></li>
+      </ul>
+    </nav>
+    <span class="chip" id="chip"><b></b><span>Щодня 9:00–21:00</span></span>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <p class="eyebrow tag">Івано-Франківськ · Міське озеро</p>
+    <h1 class="word"><span>Legendary</span><span>Coffee</span></h1>
+    <div class="hero-row">
+      <p class="lead">Легендарна кав'ярня на Міському озері.</p>
+      <div class="acts">
+        <a class="btn" href="#find">Як знайти</a>
+        <a class="btn ghost" href="#hours">Години роботи</a>
+      </div>
+    </div>
+  </div>
+  <svg class="waves" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d="M0 40 Q90 10 180 40 T360 40 T540 40 T720 40 T900 40 T1080 40 T1260 40 T1440 40 V90 H0Z" fill="#06202e" opacity=".55"/>
+    <path d="M0 62 Q120 34 240 62 T480 62 T720 62 T960 62 T1200 62 T1440 62 V90 H0Z" fill="#e6eff2"/>
+  </svg>
+</div>
+<div class="facts"><div class="wrap"><dl>
+  <div><dt class="eyebrow">Відчинено</dt><dd>щодня 9:00–21:00</dd></div>
+  <div><dt class="eyebrow">Адреса</dt><dd>вул. Гетьмана Мазепи, 114</dd></div>
+  <div><dt class="eyebrow">Google</dt><dd>4.2 ★ · 83 відгуки</dd></div>
+</dl></div></div>
+
+<section class="about" id="about"><div class="wrap">
+  <div class="head"><span class="eyebrow">01 · Про заклад</span><h2 class="rv">Кава та атмосфера біля води</h2></div>
+  <p class="big rv">Ароматна кава й атмосфера <em>на Міському озері</em> — так заклад описує себе в Instagram.</p>
+  <p class="src">Текст — лише з біо сторінки @legendarycoffee.ua. Докладніше розповість сам заклад.</p>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="head"><span class="eyebrow">02 · Меню</span><h2 class="rv">Меню</h2></div>
+  <ul class="rows" aria-hidden="true">
+    <li><span>01</span><i></i><i></i></li>
+    <li><span>02</span><i></i><i></i></li>
+    <li><span>03</span><i></i><i></i></li>
+    <li><span>04</span><i></i><i></i></li>
+  </ul>
+  <p class="note"><b>Ілюстративна заглушка.</b> Позиції та ціни буде додано після отримання від закладу — ми нічого не вигадуємо.</p>
+</div></section>
+
+<section class="hours" id="hours"><div class="wrap">
+  <div class="head"><span class="eyebrow">03 · Години роботи</span><h2 class="rv">Кожного дня, без вихідних</h2></div>
+  <div class="scale rv" role="img" aria-label="Шкала доби: відчинено з 9:00 до 21:00">
+    <div class="track"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on">9:00 – 21:00</span></div>
+    <div class="ticks" aria-hidden="true"><span>0:00</span><span></span><span></span><span></span><span></span><span></span><span>6:00</span><span></span><span></span><span></span><span></span><span></span><span>12:00</span><span></span><span></span><span></span><span></span><span></span><span>18:00</span></div>
+  </div>
+  <div class="days"><span>Пн–Нд<small>щодня 9:00–21:00</small></span></div>
+</div></section>
+
+<section class="find" id="find"><div class="wrap">
+  <div class="head"><span class="eyebrow">04 · Як знайти</span><h2 class="rv">Знайти нас просто</h2></div>
+  <div class="find-grid">
+    <div>
+      <p class="addr">вулиця Гетьмана Мазепи, 114<small>Івано-Франківськ, 76018</small></p>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/place/?q=place_id:ChIJWcho1uTBMEcRcGjIQiDnEX8" target="_blank" rel="noopener">Відкрити в Google Картах</a>
+      </div>
+    </div>
+    <div class="map" id="map">
+      <svg class="w" viewBox="0 0 400 120" aria-hidden="true" focusable="false"><path d="M0 40 Q50 10 100 40 T200 40 T300 40 T400 40M0 70 Q50 40 100 70 T200 70 T300 70 T400 70M0 100 Q50 70 100 100 T200 100 T300 100 T400 100" fill="none" stroke="#fff" stroke-width="3"/></svg>
+      <div class="gate">
+        <span class="eyebrow" style="color:var(--crema)">Мапа</span>
+        <p>Мапа завантажується лише після натискання — до цього Google не отримує жодних даних.</p>
+        <button class="btn" type="button" id="loadmap">Показати мапу</button>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="social" id="social"><div class="wrap">
+  <div class="head"><span class="eyebrow">05 · Гості про нас</span><h2 class="rv">Оцінка та Instagram</h2></div>
+  <div class="grid">
+    <div><div class="score">4.2<small>★</small></div><p>Рейтинг у Google Картах · 83 відгуки</p></div>
+    <a class="handle-box" href="https://www.instagram.com/legendarycoffee.ua/" target="_blank" rel="noopener"><div class="handle">@legendarycoffee.ua</div><p>Заклад в Instagram →</p></a>
+  </div>
+</div></section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ct">
+      <div><h2>Заходьте</h2></div>
+      <dl>
+        <dt class="eyebrow">Адреса</dt><dd>вулиця Гетьмана Мазепи, 114,<br>Івано-Франківськ</dd>
+        <dt class="eyebrow">Години</dt><dd>щодня 9:00–21:00</dd>
+      </dl>
+      <dl>
+        <dt class="eyebrow">Пошта</dt><dd><a href="mailto:legendarycoffee.com.ua@gmail.com">legendarycoffee.com.ua@gmail.com</a></dd>
+        <dt class="eyebrow">Instagram</dt><dd><a href="https://www.instagram.com/legendarycoffee.ua/" target="_blank" rel="noopener">@legendarycoffee.ua</a></dd>
+      </dl>
+    </div>
+    <p class="legal">Попередній концепт від Doba Digital - не опублікований сайт</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(window.Lenis&&!reduce){
+    var l=new Lenis({autoRaf:true,anchors:{offset:0}});window.lenis=l;
+  }
+  // reveal
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15});
+    els.forEach(function(el){io.observe(el)});
+  }else els.forEach(function(el){el.classList.add('in')});
+  // open status (Kyiv time)
+  try{
+    var h=+new Intl.DateTimeFormat('en-GB',{hour:'numeric',hour12:false,timeZone:'Europe/Kyiv'}).format(new Date());
+    var c=document.getElementById('chip');
+    if(h>=9&&h<21){c.classList.add('open');c.lastChild.textContent='Відчинено · до 21:00'}
+    else c.lastChild.textContent='Зачинено · відчиняємо о 9:00';
+  }catch(e){}
+  // map after click
+  document.getElementById('loadmap').addEventListener('click',function(){
+    var m=document.getElementById('map');
+    var f=document.createElement('iframe');
+    f.title='Мапа: Legendary Coffee, вулиця Гетьмана Мазепи, 114';
+    f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';
+    f.src='https://maps.google.com/maps?q=place_id:ChIJWcho1uTBMEcRcGjIQiDnEX8&q=Legendary+Coffee,+Гетьмана+Мазепи+114,+Івано-Франківськ&output=embed';
+    m.innerHTML='';m.appendChild(f);
+  });
+})();
+</script>
+</body>
+</html>
