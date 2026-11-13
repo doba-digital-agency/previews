@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simple — кава й десерти на площі Корятовича, Ужгород</title>
+<meta name="description" content="Simple: меню з цінами, години роботи й адреса кав'ярні на площі Корятовича 11/2 в Ужгороді. Кава, матча, чай, какао, холодні напої, десерти та веган цукерки.">
+<link rel="canonical" href="https://example.com/">
+<meta property="og:title" content="Simple — кава й десерти на площі Корятовича, Ужгород">
+<meta property="og:description" content="Меню, години роботи й адреса кав'ярні Simple на одній сторінці.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://example.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2317130f'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-weight='700' font-size='44' text-anchor='middle' fill='%23f2d13a'%3Es.%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/Bitter-800-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/InterTight-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{
+  --ink:#17130f; --ink2:#241e18; --lemon:#f2d13a; --paper:#eef0ec; --mint:#cde6d3; --line:#17130f33; --mute:#5a544c;
+  --head:'Bitter',Georgia,serif; --body:'Inter Tight',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px); --hh:64px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:auto}
+body{font-family:var(--body);font-size:17px;line-height:1.55;color:var(--ink);background:var(--paper);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lemon);outline-offset:3px;box-shadow:0 0 0 5px var(--ink)}
+.wrap{max-width:1360px;margin:0 auto;padding-inline:var(--pad)}
+.btn{display:inline-flex;align-items:center;gap:.5em;min-height:48px;padding:0 24px;border:2px solid var(--ink);font:700 16px var(--body);text-decoration:none;cursor:pointer;border-radius:2px;transition:background .2s,color .2s,transform .2s}
+.btn--y{background:var(--lemon);color:var(--ink);border-color:var(--lemon)}
+.btn--y:hover{background:#fff;border-color:#fff}
+.btn--o{background:transparent;color:#fff;border-color:#ffffff88}
+.btn--o:hover{border-color:#fff;background:#ffffff18}
+.btn--d{background:var(--ink);color:#fff}
+.btn--d:hover{background:var(--ink2);transform:translateY(-1px)}
+
+/* header: centred wordmark between two wings */
+.hd{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;height:var(--hh)}
+.hd__in{height:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+.hd__l{display:flex;align-items:center;gap:18px;font-size:14px}
+.hd__r{display:flex;justify-content:flex-end;align-items:center;gap:22px;font-size:15px}
+.hd__r a{text-decoration:none}
+.hd__r a:not(.btn):hover{color:var(--lemon)}
+.logo{font:800 28px/1 var(--head);text-decoration:none;color:var(--lemon);letter-spacing:.02em;white-space:nowrap}
+.logo i{font-style:normal;color:#fff}
+.chip{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.chip::before{content:"";width:9px;height:9px;border-radius:50%;background:#9a948b}
+.chip.is-open::before{background:#4be07a}
+.hd__r .btn{min-height:40px;padding:0 18px;font-size:15px}
+.burger{display:none;width:48px;height:48px;background:none;border:2px solid #ffffff55;color:#fff;border-radius:2px;cursor:pointer}
+.burger span{display:block;width:20px;height:2px;background:currentColor;margin:5px auto;transition:.2s}
+.drop{display:none}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding-top:clamp(36px,6vw,80px)}
+.hero__top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(24px,5vw,80px);align-items:start}
+.kick{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--lemon);font-weight:500;margin-bottom:18px}
+h1{font:800 clamp(34px,5vw,64px)/1.08 var(--head);max-width:16ch;text-wrap:balance}
+h1 em{font-style:normal;color:var(--lemon)}
+.lead{font-size:clamp(17px,1.5vw,20px);color:#e6e2da;max-width:46ch;margin:22px 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.board{border:2px solid #ffffff44;padding:22px 24px;font-size:15px;align-self:end}
+.board h2{font:500 12px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--lemon);margin-bottom:12px}
+.board dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px}
+.board dt{color:#bdb7ad}
+.board dd{text-align:right;font-variant-numeric:tabular-nums}
+.board hr{border:0;border-top:1px solid #ffffff33;margin:14px 0}
+.board p{color:#e6e2da}
+.mark{font:800 clamp(64px,26vw,430px)/.78 var(--head);color:var(--lemon);letter-spacing:-.02em;margin:clamp(24px,4vw,56px) 0 0 -.04em;white-space:nowrap;user-select:none;transform:translateY(.12em)}
+
+/* menu */
+.sec{padding-block:clamp(56px,8vw,120px)}
+.sec__h{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,56px)}
+h2.t{font:800 clamp(32px,4.4vw,56px)/1.08 var(--head)}
+.sec__n{font-size:14px;color:var(--mute);max-width:36ch}
+.menu{display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.idx{position:sticky;top:calc(var(--hh) + 24px)}
+.idx ol{list-style:none;padding:0;border-top:2px solid var(--ink)}
+.idx a{display:flex;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px solid var(--line);text-decoration:none;font-weight:500;transition:padding .2s,background .2s}
+.idx a span{color:var(--mute);font-variant-numeric:tabular-nums;font-size:14px}
+.idx a:hover{padding-left:12px}
+.idx a.on{background:var(--lemon);padding-left:12px;font-weight:700}
+.idx a.on span{color:var(--ink)}
+.grp{scroll-margin-top:calc(var(--hh) + 24px);margin-bottom:clamp(36px,5vw,64px)}
+.grp h3{font:800 clamp(24px,2.6vw,32px)/1.15 var(--head);display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:10px}
+.grp h3 small{font:500 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.sub{font:700 13px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin:26px 0 2px}
+.row{display:flex;align-items:baseline;gap:10px;padding:11px 0}
+.row b{font-weight:500;flex:0 1 auto}
+.row .note{display:block;font-size:14px;color:var(--mute);line-height:1.35;font-weight:400}
+.row::after{content:"";order:1;flex:1 1 20px;border-bottom:2px dotted #17130f55;transform:translateY(-4px);min-width:16px}
+.row > div{order:0;max-width:78%}
+.row .p{order:2;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sp{background:var(--lemon);padding:clamp(20px,3vw,36px);margin-bottom:clamp(36px,5vw,64px);scroll-margin-top:calc(var(--hh) + 24px)}
+.sp h3{border-color:var(--ink)}
+.new{display:inline-block;background:var(--ink);color:var(--lemon);font:700 11px var(--body);letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:2px;margin-right:8px;vertical-align:middle}
+.sp .row::after{border-color:#17130f77}
+.sp .row .note{color:#3b352c}
+.wifi{margin-top:8px;font-size:15px;color:var(--mute)}
+.wifi b{color:var(--ink);font-weight:700}
+
+/* hours */
+.hours{background:var(--mint)}
+.hours__g{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:center}
+.big{white-space:nowrap;font:800 clamp(56px,8.4vw,128px)/.95 var(--head);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.big small{display:block;font:500 14px var(--body);letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.days{list-style:none;padding:0;border-top:2px solid var(--ink)}
+.days li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 8px;border-bottom:1px solid var(--line);font-size:clamp(18px,2vw,24px)}
+.days li b{font:800 clamp(22px,2.6vw,34px) var(--head);font-variant-numeric:tabular-nums}
+.days li.today{background:var(--ink);color:#fff}
+.days li.today::after{content:"сьогодні";order:-1;font:700 11px var(--body);letter-spacing:.12em;text-transform:uppercase;background:var(--lemon);color:var(--ink);padding:3px 8px;border-radius:2px;align-self:center}
+.days li div{flex:1;white-space:nowrap}
+
+/* find */
+.find{background:var(--paper)}
+.find__g{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,80px)}
+.dl{border-top:2px solid var(--ink)}
+.dl div{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.dl dt{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);padding-top:4px}
+.dl dd{font-size:19px}
+.dl a{text-underline-offset:4px;text-decoration-thickness:2px}
+.dl a:hover{background:var(--lemon)}
+.map{position:relative;min-height:380px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;border-radius:2px;overflow:hidden}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map p{font-size:15px;color:#d8d3ca;max-width:30ch;margin:0 auto 18px}
+.ft{background:var(--ink);color:#d8d3ca;padding:28px 0;font-size:14px}
+.ft .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.ft .logo{font-size:22px}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{transition:none!important}}
+
+@media (max-width:1100px){
+  .hero__top{grid-template-columns:1fr}
+  .board{max-width:480px}
+  .hours__g,.find__g{grid-template-columns:1fr}
+  .hd__l .chip{display:none}
+  .hd__r a:not(.btn){display:none}
+}
+@media (max-width:860px){
+  :root{--hh:60px}
+  .hd__in{grid-template-columns:auto 1fr auto}
+  .hd__l{display:none}
+  .hd__r{gap:10px}
+  .burger{display:block}
+  .drop{display:block;position:absolute;left:0;right:0;top:100%;background:var(--ink2);border-top:1px solid #ffffff22;max-height:0;overflow:hidden;transition:max-height .3s}
+  .drop.open{max-height:420px}
+  .drop a{display:block;padding:16px var(--pad);color:#fff;text-decoration:none;border-bottom:1px solid #ffffff1a;font-size:18px}
+  .drop .chip{padding:16px var(--pad);color:#d8d3ca;font-size:14px}
+  .menu{grid-template-columns:minmax(0,1fr);gap:0}
+  .idx{min-width:0}
+  .idx{position:sticky;top:var(--hh);z-index:20;margin:0 calc(var(--pad)*-1) 24px;background:var(--paper)}
+  .idx ol{display:flex;overflow-x:auto;border-top:0;border-bottom:2px solid var(--ink);scrollbar-width:none}
+  .idx li{flex:none}
+  .idx a{padding:14px 16px;border:0;white-space:nowrap;gap:8px;min-height:48px;align-items:center}
+  .idx a:hover,.idx a.on{padding-left:16px}
+  .grp,.sp{scroll-margin-top:calc(var(--hh) + 64px)}
+  .row > div{max-width:72%}
+  .dl div{grid-template-columns:1fr;gap:4px}
+  .days li{padding:16px 8px}
+}
+@media (max-width:480px){
+  body{font-size:16px}
+  .btn{width:100%;justify-content:center}
+  .hd__r .btn{width:auto}
+  .logo{font-size:24px}
+  .sp{padding:18px}
+  .grp h3 small{display:none}
+}
+</style>
+</head>
+<body>
+<header class="hd">
+  <div class="wrap hd__in">
+    <div class="hd__l"><span class="chip" id="st">Перевіряємо години…</span></div>
+    <a class="logo" href="#top" aria-label="Simple — на початок">simple<i>.</i></a>
+    <div class="hd__r">
+      <a href="#menu">Меню</a><a href="#hours">Години</a><a href="#find">Як знайти</a>
+      <a class="btn btn--y" href="#find">Мапа</a>
+      <button class="burger" id="bg" aria-label="Відкрити навігацію" aria-expanded="false" aria-controls="drop"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="drop" id="drop" aria-label="Розділи">
+    <a href="#menu">Меню</a><a href="#hours">Години роботи</a><a href="#find">Як знайти</a>
+    <span class="chip" id="st2"></span>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__top">
+      <div>
+        <p class="kick">Кав'ярня · Ужгород</p>
+        <h1>Simple — кава й десерти <em>на площі Корятовича</em></h1>
+        <p class="lead">Кава, матча, какао, холодні напої й десерти, які не потрібно пояснювати. Меню, години й адреса — на одній сторінці.</p>
+        <div class="cta">
+          <a class="btn btn--y" href="#menu">Меню</a>
+          <a class="btn btn--o" href="#find">Знайти нас на мапі</a>
+        </div>
+      </div>
+      <aside class="board" aria-label="Коротко">
+        <h2>Коротко</h2>
+        <dl>
+          <dt>Пн–Пт</dt><dd>08:00–19:00</dd>
+          <dt>Сб–Нд</dt><dd>08:30–18:00</dd>
+        </dl>
+        <hr>
+        <p>Корятовича 11/2, Ужгород</p>
+        <p>Google: 4,8 · 65 відгуків</p>
+      </aside>
+    </div>
+    <div class="mark" aria-hidden="true">simple.</div>
+  </div>
+</section>
+
+<section class="sec" id="menu" aria-labelledby="mh">
+  <div class="wrap">
+    <div class="sec__h rv"><h2 class="t" id="mh">Меню</h2><p class="sec__n">Ціни в гривнях — з поточного меню кав'ярні. Два числа через скісну риску — два розміри.</p></div>
+    <div class="menu">
+      <nav class="idx" aria-label="Категорії меню"><ol>
+        <li><a href="#m-special">Осіннє special <span>4</span></a></li>
+        <li><a href="#m-coffee">Кава <span>18</span></a></li>
+        <li><a href="#m-matcha">Матча <span>7</span></a></li>
+        <li><a href="#m-cocoa">Какао <span>6</span></a></li>
+        <li><a href="#m-cold">Холодні напої <span>10</span></a></li>
+        <li><a href="#m-dessert">Десерти <span>7</span></a></li>
+        <li><a href="#m-vegan">Веган цукерки <span>1</span></a></li>
+      </ol></nav>
+      <div>
+        <section class="sp" id="m-special"><div class="grp" style="margin:0"><h3><span><span class="new">New</span>Осіннє special</span><small>Чай і какао</small></h3>
+          <div class="row"><div><b>Какао натуральне з солоною карамеллю</b><span class="note">на рослинному / безлактозному — 180 / 160</span></div><span class="p">140</span></div>
+          <div class="row"><div><b>Імбирно-малиновий чай</b></div><span class="p">130</span></div>
+          <div class="row"><div><b>Смородиновий рубін чай</b></div><span class="p">130</span></div>
+          <div class="row"><div><b>Мандариновий чай</b></div><span class="p">120</span></div>
+        </div></section>
+
+        <section class="grp" id="m-coffee"><h3>Кава <small>грн</small></h3>
+          <p class="sub">Чорна</p>
+          <div class="row"><div><b>Еспресо</b></div><span class="p">50</span></div>
+          <div class="row"><div><b>Допіо</b></div><span class="p">85</span></div>
+          <div class="row"><div><b>Фільтр 200 мл</b></div><span class="p">80</span></div>
+          <div class="row"><div><b>Половинка фільтра 100 мл</b></div><span class="p">50</span></div>
+          <div class="row"><div><b>V60</b></div><span class="p">75</span></div>
+          <div class="row"><div><b>Кава без кофеїну</b></div><span class="p">60</span></div>
+          <p class="sub">З молоком</p>
+          <div class="row"><div><b>Еспресо + молоко</b></div><span class="p">65</span></div>
+          <div class="row"><div><b>Кортадо</b></div><span class="p">65</span></div>
+          <div class="row"><div><b>Капучино</b></div><span class="p">70 / 130</span></div>
+          <div class="row"><div><b>Лате</b></div><span class="p">85 / 110</span></div>
+          <div class="row"><div><b>Флет уайт</b></div><span class="p">95</span></div>
+          <p class="sub">На рослинному <span style="text-transform:none;letter-spacing:0;font-weight:400">(кокосове, бананове, вівсяне)</span></p>
+          <div class="row"><div><b>Капучино на рослинному</b></div><span class="p">110</span></div>
+          <div class="row"><div><b>Лате на рослинному</b></div><span class="p">125</span></div>
+          <div class="row"><div><b>Кортадо на рослинному</b></div><span class="p">90</span></div>
+          <div class="row"><div><b>Флет уайт на рослинному</b></div><span class="p">130</span></div>
+          <div class="row"><div><b>Капучино на безлактозному</b></div><span class="p">90</span></div>
+          <div class="row"><div><b>Лате на безлактозному</b></div><span class="p">115</span></div>
+        </section>
+
+        <section class="grp" id="m-matcha"><h3>Матча <small>грн</small></h3>
+          <div class="row"><div><b>Матча капучино</b></div><span class="p">130</span></div>
+          <div class="row"><div><b>Матча капучино на рослинному</b><span class="note">кокосове, бананове, вівсяне</span></div><span class="p">160</span></div>
+          <div class="row"><div><b>Матча капучино на безлактозному</b></div><span class="p">140</span></div>
+          <div class="row"><div><b>Матча лате</b></div><span class="p">140</span></div>
+          <div class="row"><div><b>Матча лате на безлактозному</b></div><span class="p">150</span></div>
+          <div class="row"><div><b>Матча лате на рослинному</b><span class="note">кокосове, бананове, вівсяне</span></div><span class="p">180</span></div>
+          <div class="row"><div><b>Матча шот на воді</b></div><span class="p">150</span></div>
+        </section>
+
+        <section class="grp" id="m-cocoa"><h3>Какао <small>грн</small></h3>
+          <div class="row"><div><b>Звичайне какао</b></div><span class="p">80</span></div>
+          <div class="row"><div><b>Звичайне какао на рослинному</b></div><span class="p">130</span></div>
+          <div class="row"><div><b>Звичайне какао на безлактозному</b></div><span class="p">110</span></div>
+          <div class="row"><div><b>Натуральне какао</b></div><span class="p">100</span></div>
+          <div class="row"><div><b>Натуральне какао на рослинному</b></div><span class="p">140</span></div>
+          <div class="row"><div><b>Натуральне какао на безлактозному</b></div><span class="p">120</span></div>
+        </section>
+
+        <section class="grp" id="m-cold"><h3>Кавові й холодні напої <small>грн</small></h3>
+          <div class="row"><div><b>Ice latte</b></div><span class="p">75</span></div>
+          <div class="row"><div><b>Ice latte веган</b></div><span class="p">130</span></div>
+          <div class="row"><div><b>Cold brew</b></div><span class="p">85</span></div>
+          <div class="row"><div><b>Cold brew тонік</b></div><span class="p">135</span></div>
+          <div class="row"><div><b>Cold brew на апельсиновому соку</b></div><span class="p">150</span></div>
+          <div class="row"><div><b>Cold brew з молоком</b></div><span class="p">90</span></div>
+          <div class="row"><div><b>Еспресо-тонік</b></div><span class="p">90</span></div>
+          <div class="row"><div><b>Допіо-тонік</b></div><span class="p">100</span></div>
+          <div class="row"><div><b>Еспресо з апельсиновим соком (джміль)</b></div><span class="p">135</span></div>
+          <div class="row"><div><b>Вода</b></div><span class="p">45</span></div>
+          <div class="row"><div><b>Березовий сік</b></div><span class="p">80</span></div>
+        </section>
+
+        <section class="grp" id="m-dessert"><h3>Десерти <small>грн</small></h3>
+          <div class="row"><div><b>Горішки зі згущеним молоком</b></div><span class="p">55</span></div>
+          <div class="row"><div><b>Кекс банановий</b></div><span class="p">180</span></div>
+          <div class="row"><div><b>Морквяний кекс</b></div><span class="p">150</span></div>
+          <div class="row"><div><b>Наполеон</b></div><span class="p">180</span></div>
+          <div class="row"><div><b>Кекс лимонно-маковий</b></div><span class="p">170</span></div>
+          <div class="row"><div><b>Матча печиво</b></div><span class="p">100</span></div>
+          <div class="row"><div><b>Фісташкове печиво</b></div><span class="p">100</span></div>
+        </section>
+
+        <section class="grp" id="m-vegan"><h3>Веган цукерки <small>грн</small></h3>
+          <div class="row"><div><b>Веган цукерки</b></div><span class="p">70</span></div>
+          <p class="wifi">Wi-Fi у кав'ярні: пароль <b>Simplecafestore</b></p>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec hours" id="hours" aria-labelledby="hh">
+  <div class="wrap hours__g">
+    <div class="rv"><h2 class="t" id="hh" style="margin-bottom:28px">Години роботи</h2>
+      <div class="big"><small>Пн–Пт</small>08<span style="color:#17130f77">—</span>19</div>
+    </div>
+    <ul class="days rv" id="days">
+      <li data-d="1,2,3,4,5"><div>Пн–Пт</div><b>08:00–19:00</b></li>
+      <li data-d="0,6"><div>Сб–Нд</div><b>08:30–18:00</b></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec find" id="find" aria-labelledby="fh">
+  <div class="wrap find__g">
+    <div class="rv"><h2 class="t" id="fh" style="margin-bottom:28px">Як знайти</h2>
+      <dl class="dl">
+        <div><dt>Адреса</dt><dd>площа Корятовича, 11/2, Ужгород, Закарпатська область, 88000</dd></div>
+        <div><dt>Телефон</dt><dd><a href="tel:+380994402178">099 440 2178</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/simple.cafe.store/" target="_blank" rel="noopener">@simple.cafe.store</a></dd></div>
+        <div><dt>Google</dt><dd>4,8 · 65 відгуків</dd></div>
+      </dl>
+      <p style="margin-top:24px"><a class="btn btn--d" href="https://www.google.com/maps/place/?q=place_id:ChIJM2QZc4oZOUcR42KIlBO4h_k" target="_blank" rel="noopener">Відкрити в Google Maps</a></p>
+    </div>
+    <div class="map rv" id="map">
+      <div><p>Мапа завантажується лише після натискання — так сторінка швидша.</p>
+      <button class="btn btn--y" id="mapbtn" type="button">Показати мапу</button></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft"><div class="wrap">
+  <a class="logo" href="#top">simple<i>.</i></a>
+  <span>Попередній концепт від Doba Digital - не опублікований сайт</span>
+</div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lenis = null;
+  if (window.Lenis && !reduce) { lenis = new Lenis({autoRaf:true}); window.lenis = lenis; }
+  function hh(){ return document.querySelector('.hd').offsetHeight + (innerWidth<=860 ? 56 : 0); }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#"]'); if(!a) return;
+    var id = a.getAttribute('href'); var t = id==='#top' ? document.body : document.querySelector(id);
+    if(!t) return; e.preventDefault();
+    var y = id==='#top' ? 0 : t.getBoundingClientRect().top + scrollY - (t.classList.contains('grp')||t.classList.contains('sp') ? hh()+8 : document.querySelector('.hd').offsetHeight);
+    if(lenis) lenis.scrollTo(y); else scrollTo({top:y});
+    drop.classList.remove('open'); bg.setAttribute('aria-expanded','false');
+    if(id!=='#top') history.replaceState(null,'',id);
+  });
+  var bg = document.getElementById('bg'), drop = document.getElementById('drop');
+  bg.addEventListener('click', function(){ var o = drop.classList.toggle('open'); bg.setAttribute('aria-expanded', o); });
+
+  // live status, Kyiv time
+  function kyiv(){
+    var p = new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Kyiv',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var o={}; p.forEach(function(x){o[x.type]=x.value});
+    var d={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+    return {d:d, m:(+o.hour%24)*60 + +o.minute};
+  }
+  var k = kyiv(), wk = k.d>=1 && k.d<=5, a = wk?480:510, b = wk?1140:1080;
+  var open = k.m>=a && k.m<b;
+  var txt = open ? 'Відчинено до '+(wk?'19:00':'18:00') : (k.m<a ? 'Зачинено · відчиняємось о '+(wk?'08:00':'08:30') : 'Зачинено зараз');
+  ['st','st2'].forEach(function(i){ var e=document.getElementById(i); e.textContent=txt; e.classList.toggle('is-open',open); });
+  document.querySelectorAll('#days li').forEach(function(li){ if(li.dataset.d.split(',').indexOf(String(k.d))>-1) li.classList.add('today'); });
+
+  // scroll spy
+  var links = [].slice.call(document.querySelectorAll('.idx a'));
+  var secs = links.map(function(l){return document.querySelector(l.getAttribute('href'))});
+  function spy(){ var cur=0, line=hh()+80; secs.forEach(function(s,i){ if(s.getBoundingClientRect().top<line) cur=i; });
+    links.forEach(function(l,i){ l.classList.toggle('on',i===cur); });
+    if(innerWidth<=860){ var on=links[cur]; if(on){ var ol=on.closest('ol'); ol.scrollLeft = on.offsetLeft - 20; } } }
+  addEventListener('scroll',spy,{passive:true}); spy();
+
+  // reveal
+  var rv=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window && !reduce){ var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1}); rv.forEach(function(e){io.observe(e)}); }
+  else rv.forEach(function(e){e.classList.add('in')});
+
+  // click-to-load map
+  document.getElementById('mapbtn').addEventListener('click', function(){
+    var m=document.getElementById('map'); m.innerHTML='<iframe title="Мапа: Simple, площа Корятовича 11/2, Ужгород" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%20%D0%9A%D0%BE%D1%80%D1%8F%D1%82%D0%BE%D0%B2%D0%B8%D1%87%D0%B0%2011%2F2%2C%20%D0%A3%D0%B6%D0%B3%D0%BE%D1%80%D0%BE%D0%B4&output=embed"></iframe>';
+  });
+})();
+</script>
+</body>
+</html>
