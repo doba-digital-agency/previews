@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Made In: освітні курси в Ужгороді — крій, мови, комп'ютер</title>
+<meta name="description" content="Індивідуальне навчання крою та шиттю, англійській та угорській мовам і комп'ютерним курсам в Ужгороді. Майже двадцять років досвіду. Запис за телефоном.">
+<meta property="og:title" content="Made In: освітні курси в Ужгороді">
+<meta property="og:description" content="Індивідуальне навчання крою та шиттю, англійській, угорській мовам і комп'ютерним курсам.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="photos/01.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23fdc81a'/%3E%3Ctext x='32' y='47' text-anchor='middle' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='44' fill='%23c9301a'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#101c33; --ink-2:#1b2a4a; --muted:#46526b;
+  --paper:#f3f5f9; --white:#fff; --line:#cfd6e3;
+  --red:#c9301a; --blue:#1767bd; --yellow:#fdc81a; --green:#247a29;
+  --pad:clamp(20px,5vw,64px);
+  --max:1240px;
+  --font:'Nunito',system-ui,'Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:auto}
+body{font-family:var(--font);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+h1,h2,h3{font-weight:900;line-height:1.1;letter-spacing:-.01em;text-wrap:balance}
+.tape{height:14px;background:var(--yellow);
+  background-image:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 10px),repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 50px);
+  background-size:100% 6px,100% 11px;background-repeat:no-repeat;background-position:0 100%,0 100%}
+.btn{display:inline-flex;align-items:center;gap:.6em;min-height:48px;padding:.7em 1.4em;border-radius:2px;font-weight:800;text-decoration:none;font-size:1rem;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s}
+.btn--solid{background:var(--ink);color:#fff}
+.btn--solid:hover{background:var(--red);border-color:var(--red)}
+.btn--line{background:transparent;color:var(--ink)}
+.btn--line:hover{background:var(--ink);color:#fff}
+.btn--yellow{background:var(--yellow);color:var(--ink)}
+.btn--yellow:hover{background:#fff}
+
+/* header: tape + centred logo, nav split left / right */
+.hdr{position:sticky;top:0;z-index:50;background:#fff;border-bottom:2px solid var(--ink)}
+.hdr__row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;min-height:72px}
+.nav{display:flex;gap:clamp(16px,2.4vw,36px)}
+.nav a{font-weight:800;text-decoration:none;font-size:.95rem;padding:.4em 0;border-bottom:3px solid transparent}
+.nav a:hover{border-color:var(--red)}
+.logo img{height:46px;width:auto}
+.hdr__r{display:flex;justify-content:flex-end;align-items:center;gap:16px}
+.hdr__tel{font-weight:800;text-decoration:none;white-space:nowrap}
+.burger{display:none;width:48px;height:48px;border:2px solid var(--ink);background:#fff;border-radius:2px;cursor:pointer;padding:0}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px auto;transition:transform .2s,opacity .2s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.drop{display:none;background:#fff;border-bottom:2px solid var(--ink)}
+.drop.is-open{display:block}
+.drop a{display:block;padding:16px var(--pad);font-weight:800;text-decoration:none;border-top:1px solid var(--line)}
+.drop a:last-child{background:var(--yellow)}
+
+/* hero: centred type, thread across, four colour spools */
+.hero{position:relative;overflow:hidden;padding:clamp(48px,8vw,104px) 0 clamp(40px,6vw,72px);text-align:center;background:#fff}
+.hero__thread{position:absolute;left:0;right:0;top:50%;width:100%;height:220px;transform:translateY(-62%);pointer-events:none;opacity:.55}
+.hero__thread path{fill:none;stroke:var(--red);stroke-width:2.5;stroke-dasharray:9 9;stroke-linecap:round}
+.hero__in{position:relative;max-width:980px;margin:0 auto;padding-inline:var(--pad)}
+.eyebrow{display:inline-block;font-weight:800;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:#fff;padding:.4em .9em;border-radius:2px;margin-bottom:24px}
+.hero h1{font-size:clamp(2.3rem,6.2vw,4.4rem);margin-bottom:22px;display:block}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero__lead{font-size:clamp(1.05rem,1.8vw,1.3rem);max-width:640px;margin:26px auto 30px;color:var(--ink-2);background:#fff;padding:.2em}
+.hero__act{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.spools{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(44px,6vw,80px);text-align:left}
+.spool{display:flex;flex-direction:column;gap:6px;padding:22px clamp(16px,2vw,32px) 26px;text-decoration:none;color:#fff;min-height:150px;transition:padding-bottom .25s}
+.spool:hover{padding-bottom:42px}
+.spool small{font-weight:800;opacity:.9;font-size:.85rem;letter-spacing:.08em}
+.spool b{font-size:clamp(1.1rem,1.7vw,1.5rem);font-weight:900;line-height:1.15;margin-top:auto}
+.spool--r{background:var(--red)}.spool--b{background:var(--blue)}.spool--y{background:var(--yellow);color:var(--ink)}.spool--g{background:var(--green)}
+
+.sec{padding:clamp(56px,8vw,120px) 0}
+.lab{display:flex;align-items:center;gap:12px;font-weight:800;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.lab::before{content:"";width:34px;height:0;border-top:3px dashed var(--red)}
+.sec h2{font-size:clamp(1.9rem,4vw,3.2rem)}
+
+/* courses: ruled rows with a colour tab */
+.courses__head{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(32px,5vw,64px)}
+.courses__head p{color:var(--muted);font-size:1.1rem}
+.course{display:grid;grid-template-columns:4fr 8fr;gap:clamp(20px,5vw,72px);padding:clamp(28px,4vw,48px) 0;border-top:2px solid var(--ink);position:relative}
+.course:last-child{border-bottom:2px solid var(--ink)}
+.course__tab{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.course__no{font-weight:900;font-size:.9rem;color:#fff;padding:.25em .7em;border-radius:2px}
+.course--r .course__no{background:var(--red)}.course--b .course__no{background:var(--blue)}.course--y .course__no{background:var(--yellow);color:var(--ink)}.course--g .course__no{background:var(--green)}
+.course h3{font-size:clamp(1.6rem,2.8vw,2.3rem)}
+.course__body{display:grid;gap:18px;max-width:760px}
+.course__body p{font-size:1.08rem}
+.pieces{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:0 28px}
+.pieces li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:2px dotted var(--ink);font-weight:800}
+.pieces li span{color:var(--red)}
+.facts{padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.facts li{list-style:none;border:2px solid var(--ink);padding:.3em .8em;font-weight:800;font-size:.92rem;border-radius:2px;background:#fff}
+.course__img{display:flex;gap:18px;align-items:flex-end}
+.course__img figure{max-width:320px}
+.course__img img{border:2px solid var(--ink);background:#fff}
+.course__img figcaption{font-size:.85rem;color:var(--muted);margin-top:6px}
+.note{font-weight:800;color:var(--ink-2)}
+
+/* why: navy band with stitched dividers */
+.why{background:var(--ink);color:#fff}
+.why .lab{color:#b7c1d8}
+.why h2{max-width:760px}
+.why__grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(36px,5vw,72px)}
+.why__item{padding:0 clamp(18px,3vw,44px) 8px;border-left:3px dashed var(--yellow)}
+.why__item:first-child{padding-left:0;border-left:0}
+.why__big{font-size:clamp(3.4rem,7vw,6rem);font-weight:900;line-height:1;color:var(--yellow);margin-bottom:12px}
+.why__item h3{font-size:1.4rem;margin-bottom:10px}
+.why__item p{color:#d5dcec}
+.why__sum{margin-top:clamp(36px,5vw,64px);font-size:clamp(1.1rem,2vw,1.5rem);font-weight:800;max-width:900px;border-top:2px solid var(--yellow);padding-top:22px}
+
+/* contacts */
+.contacts{background:#fff}
+.contacts__grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(28px,6vw,96px);margin-top:clamp(28px,4vw,48px)}
+.hours{background:var(--yellow);padding:clamp(22px,3vw,36px);border:2px solid var(--ink);align-self:start}
+.hours__t{font-weight:900;font-size:clamp(2.4rem,5.6vw,4.4rem);line-height:1}
+.hours .tape{margin:16px 0;background-color:#fff;border:2px solid var(--ink);height:18px}
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.days span{background:var(--ink);color:#fff;text-align:center;font-weight:800;padding:.35em 0;border-radius:2px}
+.hours p{margin-top:14px;font-weight:800}
+.dl{display:grid;gap:0}
+.dl div{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:16px 0;border-bottom:2px solid var(--ink)}
+.dl div:first-child{border-top:2px solid var(--ink)}
+.dl dt{font-weight:800;color:var(--muted);font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;padding-top:.2em}
+.dl dd{font-weight:800;font-size:1.1rem;overflow-wrap:anywhere}
+.dl a{text-decoration-thickness:2px;text-underline-offset:4px}
+.rate{display:flex;align-items:baseline;gap:14px;margin-top:28px}
+.rate b{font-size:3.4rem;font-weight:900;line-height:1}
+.contacts__cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px}
+
+.foot{background:var(--ink);color:#c8d1e5;padding:28px 0;font-size:.9rem}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+.js-off .rv{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.hero__thread path{animation:none!important}}
+@keyframes stitch{to{stroke-dashoffset:-180}}
+.hero__thread path{animation:stitch 6s linear infinite}
+
+@media (max-width:1023px){
+  .nav,.hdr__tel{display:none}
+  .hdr__row{grid-template-columns:auto 1fr}
+  .hdr__r{justify-content:flex-end}
+  .burger{display:block}
+  .hdr__r .btn{display:none}
+  .spools{grid-template-columns:repeat(2,1fr)}
+  .courses__head,.course,.contacts__grid{grid-template-columns:1fr}
+  .why__grid{grid-template-columns:1fr;gap:34px}
+  .why__item{border-left:0;border-top:3px dashed var(--yellow);padding:26px 0 0}
+  .why__item:first-child{border-top:0;padding-top:0}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .logo img{height:38px}
+  .hdr__row{min-height:64px;gap:12px}
+  .spool{min-height:120px}
+  .pieces{grid-template-columns:1fr}
+  .dl div{grid-template-columns:1fr;gap:2px}
+  .hero__act .btn,.contacts__cta .btn{width:100%;justify-content:center}
+  .hero__thread{height:140px}
+}
+</style>
+</head>
+<body>
+<div class="tape" aria-hidden="true"></div>
+<header class="hdr">
+  <div class="wrap hdr__row">
+    <nav class="nav" aria-label="Головне меню">
+      <a href="#courses">Курси</a>
+      <a href="#why">Чому індивідуально</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <a class="logo" href="#top" aria-label="Made In — на початок"><img src="photos/01.jpg" alt="Made in — логотип школи" width="141" height="46"></a>
+    <div class="hdr__r">
+      <a class="hdr__tel" href="tel:+380509338563">050 933 85 63</a>
+      <a class="btn btn--yellow" href="tel:+380509338563">Записатися на курс</a>
+      <button class="burger" aria-expanded="false" aria-controls="drop" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="drop" id="drop">
+    <a href="#courses">Курси</a>
+    <a href="#why">Чому індивідуально</a>
+    <a href="#contacts">Контакти</a>
+    <a href="tel:+380509338563">Записатися на курс</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="hero__thread" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 130 C 160 20, 300 20, 460 120 S 760 220, 920 110 S 1220 10, 1460 110"/></svg>
+  <div class="hero__in">
+    <span class="eyebrow">Ужгород · майже двадцять років</span>
+    <h1>Освітні курси, <em>скроєні під вас</em></h1>
+    <p class="hero__lead">Індивідуальне навчання крою та шиттю, англійській та угорській мовам і комп'ютерним курсам — з міні-групами, гнучким графіком і увагою викладача лише до вас.</p>
+    <div class="hero__act">
+      <a class="btn btn--solid" href="tel:+380509338563">Записатися на курс</a>
+      <a class="btn btn--line" href="#courses">Дивитись курси</a>
+    </div>
+  </div>
+  <div class="spools">
+    <a class="spool spool--r" href="#c1"><small>01</small><b>Крій і шиття</b></a>
+    <a class="spool spool--b" href="#c2"><small>02</small><b>Англійська мова</b></a>
+    <a class="spool spool--y" href="#c3"><small>03</small><b>Угорська мова</b></a>
+    <a class="spool spool--g" href="#c4"><small>04</small><b>Комп'ютерні курси</b></a>
+  </div>
+</section>
+
+<section class="sec" id="courses">
+  <div class="wrap">
+    <div class="courses__head rv">
+      <div><div class="lab">Перелік курсів</div><h2>Чотири напрями — одна школа</h2></div>
+      <p>Двері школи відкриті для всіх, хто вирішив підвищити рівень знань або здійснити давню мрію. Програму добираємо під ваші цілі.</p>
+    </div>
+
+    <article class="course course--r rv" id="c1">
+      <div class="course__tab"><span class="course__no">01</span><h3>Крій і шиття</h3></div>
+      <div class="course__body">
+        <p>Швейна майстерня для тих, хто хоче шити одяг, самостійно обираючи фасон, розбиратися навіть у складних викрійках, підбирати тканини й матеріали — для одягу, речей для дому та аксесуарів.</p>
+        <p class="note">Формат інтенсиву: 6 днів, 48 годин практики.</p>
+        <ul class="pieces" aria-label="Базові вироби інтенсиву">
+          <li>Спідниця <span>✂</span></li><li>Сукня <span>✂</span></li><li>Блуза <span>✂</span></li><li>Жіночі брюки <span>✂</span></li>
+        </ul>
+        <ul class="facts"><li>Міні-групи 2–4 особи</li><li>Техніки моделювання фасонів</li><li>Робота з готовими викрійками</li></ul>
+        <p>Дати найближчого набору та вартість — за телефоном.</p>
+        <figure class="course__img"><div><img src="photos/04.jpg" alt="Оголошення школи про курси шиття для початківців і досвідчених" width="600" height="235" loading="lazy"></div></figure>
+      </div>
+    </article>
+
+    <article class="course course--b rv" id="c2">
+      <div class="course__tab"><span class="course__no">02</span><h3>Англійська мова</h3></div>
+      <div class="course__body">
+        <p>Навчання враховує індивідуальні потреби студента: у всіх різні цілі й можливості, тому традиційна класно-урочна система підходить не кожному.</p>
+        <ul class="facts"><li>Гнучкий графік</li><li>Індивідуальна програма</li><li>Орієнтація на результат</li></ul>
+        <figure class="course__img"><div><img src="photos/05.jpg" alt="Лондонська телефонна будка та Біг-Бен" width="280" height="250" loading="lazy"></div></figure>
+      </div>
+    </article>
+
+    <article class="course course--y rv" id="c3">
+      <div class="course__tab"><span class="course__no">03</span><h3>Угорська мова</h3></div>
+      <div class="course__body">
+        <p>Індивідуальні уроки — найефективніший спосіб почати. Вам не потрібно змагатися за увагу викладача: ви самі обираєте темп, а уроки будуються під ваші здібності, з контролем процесу, підтримкою та порадами.</p>
+        <ul class="facts"><li>Зручний графік без підлаштування під групу</li><li>Довірливе спілкування, більше запитань</li></ul>
+      </div>
+    </article>
+
+    <article class="course course--g rv" id="c4">
+      <div class="course__tab"><span class="course__no">04</span><h3>Комп'ютерні курси</h3></div>
+      <div class="course__body">
+        <p>Займайтеся у зручний для себе час або переносьте заняття на інший день — чого не передбачає групове навчання. Програму розробляють спеціально для вас: ви вивчаєте лише те, що вас справді цікавить.</p>
+        <ul class="facts"><li>Власний графік</li><li>Програма під ваші цілі</li></ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="lab rv">Чому індивідуально</div>
+    <h2 class="rv">Максимум уваги та ефективне засвоєння матеріалу</h2>
+    <div class="why__grid">
+      <div class="why__item rv"><div class="why__big">2–4</div><h3>Мініатюрні групи</h3><p>На інтенсиві крою та шиття — лише 2–4 особи, щоб увага дісталася кожному.</p></div>
+      <div class="why__item rv"><div class="why__big">∞</div><h3>Гнучкий графік</h3><p>Обирайте зручний час занять і не підлаштовуйтеся під розклад групи.</p></div>
+      <div class="why__item rv"><div class="why__big">♥</div><h3>Затишна атмосфера</h3><p>Довірливе спілкування та професійний підхід: потрібна лише ваша рішучість і старанність.</p></div>
+    </div>
+    <p class="why__sum rv">Майже двадцять років школа популяризує індивідуальне навчання. Найкраща рекомендація — успіхи сотень учнів, які завершили курси Made In.</p>
+  </div>
+</section>
+
+<section class="sec contacts" id="contacts">
+  <div class="wrap">
+    <div class="lab rv">Контакти</div>
+    <h2 class="rv">Чекаємо на ваші заявки</h2>
+    <div class="contacts__grid">
+      <div class="hours rv">
+        <div class="lab" style="color:var(--ink)">Години роботи</div>
+        <div class="hours__t">9:30 — 20:00</div>
+        <div class="tape" aria-hidden="true"></div>
+        <div class="days" aria-label="Пн–Пт"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span></div>
+        <p>Реєстрація за телефоном — кількість місць обмежена.</p>
+      </div>
+      <div class="rv">
+        <dl class="dl">
+          <div><dt>Телефон</dt><dd><a href="tel:+380509338563">050 933 85 63</a></dd></div>
+          <div><dt>Адреса</dt><dd>вул. Вільмоша Ковача, 15, Ужгород</dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:kriotis@gmail.com">kriotis@gmail.com</a></dd></div>
+          <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/madein.school" rel="noopener">facebook.com/madein.school</a></dd></div>
+          <div><dt>Адміністратор</dt><dd>Світлана Феєш</dd></div>
+        </dl>
+        <div class="rate"><b>5,0</b><span>оцінка в Google · 64 відгуки</span></div>
+        <div class="contacts__cta"><a class="btn btn--solid" href="tel:+380509338563">Записатися на курс</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap"><span>© Made in — школа в Ужгороді</span><span>Попередній концепт від Doba Digital - не опублікований сайт</span></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(window.Lenis && !rm){ window.lenis=new Lenis({autoRaf:true,anchors:{offset:-90}}); }
+  var b=document.querySelector('.burger'),d=document.getElementById('drop');
+  b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));d.classList.toggle('is-open',!o)});
+  d.addEventListener('click',function(e){if(e.target.tagName==='A'){b.setAttribute('aria-expanded','false');d.classList.remove('is-open')}});
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||rm){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
