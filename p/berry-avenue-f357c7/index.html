@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Berry Avenue — перша полунична кав'ярня в Україні, Дніпро</title>
+<meta name="description" content="Berry Avenue — перша полунична кав'ярня в Україні. Фініки в шоколаді, пончики з ягодами, макарони, торти. Дві адреси у Дніпрі, меню та замовлення на ChoiceQR.">
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="preload" href="fonts/rubik-lat.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Rubik;font-weight:500 800;font-display:swap;src:url(fonts/rubik-cyr.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Rubik;font-weight:500 800;font-display:swap;src:url(fonts/rubik-lat.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Onest;font-weight:400 600;font-display:swap;src:url(fonts/onest-cyr.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Onest;font-weight:400 600;font-display:swap;src:url(fonts/onest-lat.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{
+  --ink:#2a1015; --ink2:#43202a;
+  --red:#d3173f; --red-d:#a30f2e;
+  --snow:#fff6f7; --blush:#ffd9e0;
+  --pist:#d4e6a0; --pist-d:#3e5a12;
+  --white:#fff;
+  --f-h:Rubik,Arial,sans-serif; --f-b:Onest,Arial,sans-serif;
+  --pad:clamp(20px,4vw,56px); --maxw:1440px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{margin:0;font:400 17px/1.6 var(--f-b);color:var(--ink);background:var(--snow);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-h);margin:0;line-height:1.08}
+p{margin:0}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.dark :focus-visible,.red :focus-visible,.hdr :focus-visible{outline-color:var(--white)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+.btn{display:inline-flex;align-items:center;gap:.6em;min-height:52px;padding:.8em 1.5em;font:600 16px/1.2 var(--f-b);text-decoration:none;border:2px solid currentColor;border-radius:2px;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn--white{background:var(--white);color:var(--red-d);border-color:var(--white)}
+.btn--white:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.btn--red{background:var(--red);color:var(--white);border-color:var(--red)}
+.btn--red:hover{background:var(--ink);border-color:var(--ink)}
+.btn--ghost:hover{background:var(--white);color:var(--ink)}
+.label{font:600 13px/1 var(--f-b);letter-spacing:.08em;text-transform:uppercase}
+.seeds{background-image:radial-gradient(ellipse 3px 5px at 50% 50%,rgba(255,255,255,.22) 98%,transparent 100%);background-size:46px 46px;}
+
+/* header: red CTA block flush left, nav centre, phone right */
+.hdr{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--white);display:flex;align-items:stretch;min-height:64px}
+.hdr__cta{display:flex;align-items:center;gap:.6em;padding:0 clamp(16px,2.4vw,32px);background:var(--red);color:var(--white);text-decoration:none;font:600 15px/1.1 var(--f-b);white-space:nowrap}
+.hdr__cta:hover{background:var(--red-d)}
+.hdr__nav{display:flex;flex:1;justify-content:center;align-items:center;gap:clamp(18px,3vw,44px)}
+.hdr__nav a{text-decoration:none;font:500 15px/1 var(--f-b);padding:8px 0;border-bottom:2px solid transparent}
+.hdr__nav a:hover,.hdr__nav a.on{border-color:var(--pist)}
+.hdr__brand{display:none}
+.hdr__tel{display:flex;align-items:center;padding:0 clamp(16px,2.4vw,32px);text-decoration:none;font:600 15px/1 var(--f-b);border-left:1px solid var(--ink2);white-space:nowrap}
+.hdr__burger{display:none;width:64px;background:none;border:0;border-left:1px solid var(--ink2);color:var(--white);cursor:pointer}
+.hdr__burger span{display:block;width:22px;height:2px;background:currentColor;margin:5px auto;transition:transform .2s,opacity .2s}
+.hdr__burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hdr__burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.hdr__burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* hero */
+.hero{background-color:var(--red);color:var(--white);padding:clamp(28px,5vw,64px) 0 0;position:relative;overflow:hidden}
+.hero__top{display:flex;justify-content:space-between;gap:16px;margin-bottom:clamp(8px,1.5vw,20px)}
+.hero h1{white-space:nowrap;font-weight:800;font-size:clamp(30px,10.6vw,170px);letter-spacing:-.02em;line-height:1}
+.hero h1 em{font-style:normal;color:var(--pist)}
+.hero__body{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,4vw,64px);align-items:end;margin-top:clamp(20px,3vw,40px)}
+.hero__slogan{font:600 clamp(24px,3.2vw,44px)/1.12 var(--f-h)}
+.hero__lead{margin:18px 0 28px;max-width:46ch;font-size:clamp(17px,1.5vw,20px);color:var(--blush)}
+.hero__btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero__photos{display:grid;grid-template-columns:1fr 1.5fr;gap:12px;align-items:end}
+.hero__photos img{width:100%;object-fit:cover;border-radius:2px}
+.hero__photos .p1{aspect-ratio:3/4}
+.hero__photos .p2{aspect-ratio:4/5;margin-bottom:0}
+.hero__strip{margin-top:clamp(28px,4vw,56px);background:var(--ink);color:var(--white);padding:16px 0}
+.hero__strip .wrap{display:flex;flex-wrap:wrap;gap:8px 36px;align-items:center;font-size:15px}
+.hero__strip b{color:var(--pist);font-weight:600}
+
+/* hits */
+.sec{padding:clamp(56px,8vw,112px) 0}
+.sec__head{display:grid;grid-template-columns:1fr 1fr;gap:24px 48px;align-items:end;margin-bottom:clamp(32px,5vw,64px)}
+.sec h2{font-size:clamp(32px,4.4vw,60px);font-weight:700;letter-spacing:-.01em}
+.sec__note{max-width:48ch;color:var(--ink2)}
+.hits{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,2vw,28px);align-items:start}
+.hit:nth-child(2){margin-top:48px}.hit:nth-child(4){margin-top:48px}
+.hit__img{aspect-ratio:3/4;overflow:hidden;border-radius:2px;background:var(--blush)}
+.hit__img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.hit:hover img{transform:scale(1.05)}
+.hit__n{display:block;margin:14px 0 4px;color:var(--red-d);font:700 14px/1 var(--f-h)}
+.hit h3{font-size:clamp(20px,1.9vw,26px);font-weight:600}
+.hit p{margin-top:6px;font-size:15px;color:var(--ink2)}
+.news{margin-top:clamp(32px,5vw,56px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;padding:20px 24px;background:var(--blush);border-left:6px solid var(--red)}
+.news .label{color:var(--red-d)}
+.news p{font:600 clamp(18px,2vw,24px)/1.25 var(--f-h)}
+.news small{font-size:14px;color:var(--ink2);margin-left:auto}
+.news small a{text-underline-offset:3px}
+
+/* places */
+.places{background:var(--pist);color:var(--ink)}
+.places h2{color:var(--ink)}
+.addr{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:3px solid var(--ink)}
+.addr__item{padding:clamp(24px,3vw,40px) clamp(0px,2vw,32px) clamp(24px,3vw,40px) 0}
+.addr__item+.addr__item{border-left:1px solid var(--ink);padding-left:clamp(20px,3vw,40px)}
+.addr__n{font:800 clamp(56px,8vw,112px)/.9 var(--f-h);color:transparent;-webkit-text-stroke:2px var(--ink)}
+.addr h3{font-size:clamp(24px,2.6vw,36px);margin:14px 0 6px;font-weight:700}
+.addr__where{font-size:18px}
+.addr__hours{margin-top:18px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.addr__hours strong{font:700 clamp(28px,3vw,40px)/1 var(--f-h)}
+.chip{display:inline-block;padding:6px 10px;font:600 13px/1 var(--f-b);border:2px solid var(--ink);border-radius:2px}
+.chip.open{background:var(--ink);color:var(--pist)}
+.map{margin-top:clamp(28px,4vw,48px);border:2px solid var(--ink);background:var(--white);min-height:340px;position:relative}
+.map iframe{width:100%;height:420px;border:0;display:block}
+.map__ph{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:16px;min-height:340px;padding:clamp(24px,4vw,56px)}
+.map__ph p{max-width:46ch}
+
+/* orders */
+.dark{background:var(--ink);color:var(--white)}
+.dark h2{color:var(--white)}
+.order{display:grid;grid-template-columns:5fr 6fr;gap:clamp(28px,5vw,80px);align-items:center}
+.order__photos{display:grid;grid-template-columns:1.1fr 1fr;gap:12px;align-items:start}
+.order__photos img{width:100%;object-fit:cover;border-radius:2px}
+.order__photos .a{aspect-ratio:3/4}
+.order__photos .b{aspect-ratio:3/4;margin-top:56px}
+.order__lead{margin:18px 0 28px;color:var(--blush);font-size:19px;max-width:50ch}
+.steps{list-style:none;margin:0 0 32px;padding:0;counter-reset:s;border-top:1px solid var(--ink2)}
+.steps li{counter-increment:s;display:grid;grid-template-columns:64px 1fr;align-items:center;padding:18px 0;border-bottom:1px solid var(--ink2);font-size:18px}
+.steps li::before{content:counter(s,decimal-leading-zero);font:700 28px/1 var(--f-h);color:var(--pist)}
+
+/* contacts */
+.red{background-color:var(--red);color:var(--white)}
+.contacts{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,80px);align-items:end}
+.contacts h2{color:var(--white);font-size:clamp(34px,5.2vw,76px)}
+.dl{margin:0;border-top:2px solid var(--white)}
+.dl div{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.5);align-items:baseline}
+.dl dt{font:600 13px/1.2 var(--f-b);letter-spacing:.08em;text-transform:uppercase;color:var(--blush)}
+.dl dd{margin:0;font:600 clamp(20px,2.2vw,28px)/1.25 var(--f-h);overflow-wrap:anywhere}
+.dl a{text-decoration:none;border-bottom:2px solid var(--pist)}
+.dl a:hover{background:var(--white);color:var(--red-d)}
+.contacts__btns{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+
+.foot{background:var(--ink);color:#e9cfd5;padding:28px 0;font-size:14px}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1023px){
+  .hdr{flex-wrap:wrap}
+  .hdr__brand{display:flex;align-items:center;flex:1;padding:0 20px;font:700 18px/1 var(--f-h);text-decoration:none}
+  .hdr__cta{order:3;flex:1 0 100%;justify-content:center;min-height:52px}
+  .hdr__tel{display:none}
+  .hdr__burger{display:block;min-height:64px}
+  .hdr__nav{display:none;order:4;flex:1 0 100%;flex-direction:column;align-items:stretch;gap:0;background:var(--ink2)}
+  .hdr__nav.open{display:flex}
+  .hdr__nav a{padding:16px 20px;border-bottom:1px solid var(--ink);min-height:52px}
+  .hero__body{grid-template-columns:1fr}
+  .hero__photos{max-width:640px}
+  .hits{grid-template-columns:1fr 1fr}
+  .hit:nth-child(n){margin-top:0}.hit:nth-child(even){margin-top:40px}
+  .sec__head{grid-template-columns:1fr}
+  .order,.contacts{grid-template-columns:1fr}
+  .order__photos{max-width:560px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .addr{grid-template-columns:1fr}
+  .addr__item+.addr__item{border-left:0;border-top:1px solid var(--ink);padding-left:0}
+  .dl div{grid-template-columns:1fr;gap:4px}
+  .news small{margin-left:0}
+  .hero__photos{grid-template-columns:1fr 1fr}
+  .btn{width:100%;justify-content:center}
+  .hits{gap:12px}
+  .hit:nth-child(even){margin-top:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .hit img{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <a class="hdr__brand" href="#top">Berry Avenue</a>
+  <button class="hdr__burger" aria-expanded="false" aria-controls="nav" aria-label="Меню"><span></span><span></span><span></span></button>
+  <a class="hdr__cta" href="https://berry-avenue.choiceqr.com/" target="_blank" rel="noopener">Меню та замовлення <span aria-hidden="true">→</span></a>
+  <nav class="hdr__nav" id="nav" aria-label="Основна навігація">
+    <a href="#hits">Хіти</a>
+    <a href="#places">Адреси та години</a>
+    <a href="#orders">Торти під замовлення</a>
+    <a href="#contacts">Контакти</a>
+  </nav>
+  <a class="hdr__tel" href="tel:+380669142844">+380 66 914 2844</a>
+</header>
+
+<main id="top">
+<section class="hero seeds" aria-labelledby="h1">
+  <div class="wrap">
+    <h1 id="h1">Berry <em>Avenue</em></h1>
+    <div class="hero__body">
+      <div>
+        <p class="hero__slogan">перша полунична кав'ярня в Україні</p>
+        <p class="hero__lead">Завітайте та скуштуйте 🍓 Десерти, фініки в шоколаді, макарони й торти — у Дніпрі на двох адресах.</p>
+        <div class="hero__btns">
+          <a class="btn btn--white" href="https://berry-avenue.choiceqr.com/" target="_blank" rel="noopener">Меню та замовлення <span aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="#places">Де нас знайти</a>
+        </div>
+      </div>
+      <div class="hero__photos">
+        <img class="p1" src="img/dates.webp" width="900" height="1200" fetchpriority="high" alt="Фініки в шоколаді Berry Avenue, цілі та в розрізі, на таці з червоною стрічкою">
+        <img class="p2" src="img/slice.webp" width="900" height="1200" alt="Шоколадний торт із полуницею та лохиною, шматок у розрізі">
+      </div>
+    </div>
+  </div>
+  <div class="hero__strip">
+    <div class="wrap">
+      <span><b>Дніпро</b> · два місця</span>
+      <span>Андрія Фабра, 4 · <b>9:00–21:00</b></span>
+      <span>ТРЦ Cascade Plaza · <b>10:00–21:00</b></span>
+      <a href="tel:+380669142844">+380 66 914 2844</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="hits" aria-labelledby="h-hits">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <h2 id="h-hits">Хіти з нашого меню</h2>
+      <p class="sec__note">Чотири позиції, з яких гості починають. Повне меню та актуальні ціни — на сторінці замовлення.</p>
+    </div>
+    <div class="hits">
+      <article class="hit rv"><div class="hit__img"><img src="img/finik.webp" width="525" height="390" loading="lazy" alt="Фінік у бельгійському шоколаді з мигдалем"></div><span class="hit__n">01</span><h3>Фінік в шоколаді</h3><p>Королівський фінік у бельгійському шоколаді та з мигдалем всередині.</p></article>
+      <article class="hit rv"><div class="hit__img"><img src="img/poncik.webp" width="1024" height="769" loading="lazy" alt="Пончик з полуницею, лохиною та шоколадом"></div><span class="hit__n">02</span><h3>Пончик з ягодами</h3><p>Соковита полуниця та лохина з білим і молочним бельгійським шоколадом.</p></article>
+      <article class="hit rv"><div class="hit__img"><img src="img/macaron.webp" width="563" height="422" loading="lazy" alt="Макарон лаванда-чорниця в розрізі"></div><span class="hit__n">03</span><h3>Макарони</h3><p>Смаки: полуниця-бейліс, фісташка-малина, лаванда-чорниця, баунті та інші.</p></article>
+      <article class="hit rv"><div class="hit__img"><img src="img/tort.webp" width="520" height="390" loading="lazy" alt="Фісташковий торт у розрізі, прикрашений лохиною"></div><span class="hit__n">04</span><h3>Торти</h3><p>Фісташковий торт і груша-дорблю — з ніжним кремом, горіхами та конфітюром.</p></article>
+    </div>
+    <div class="news rv">
+      <span class="label">Новинка</span>
+      <p>Фінік з вишнею та маком</p>
+      <small>з Instagram, пост від 16.11 · <a href="https://www.instagram.com/p/Dfz0QNzkUe1/" target="_blank" rel="noopener">дивитись пост</a></small>
+    </div>
+  </div>
+</section>
+
+<section class="sec places" id="places" aria-labelledby="h-places">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <h2 id="h-places">Дві адреси у Дніпрі</h2>
+      <p class="sec__note">Кафе в центрі та корнер у торговому центрі. Години — на кожну адресу окремо.</p>
+    </div>
+    <div class="addr rv">
+      <div class="addr__item" data-open="9" data-close="21">
+        <div class="addr__n" aria-hidden="true">01</div>
+        <h3>Кафе</h3>
+        <p class="addr__where">вулиця Андрія Фабра, 4</p>
+        <p class="addr__hours"><strong>9:00–21:00</strong><span>щодня</span><span class="chip" data-status></span></p>
+      </div>
+      <div class="addr__item" data-open="10" data-close="21">
+        <div class="addr__n" aria-hidden="true">02</div>
+        <h3>Корнер</h3>
+        <p class="addr__where">ТРЦ Cascade Plaza, 2 поверх</p>
+        <p class="addr__hours"><strong>10:00–21:00</strong><span class="chip" data-status></span></p>
+      </div>
+    </div>
+    <div class="map rv" id="map">
+      <div class="map__ph">
+        <p>Карта завантажується лише після натискання — так Google не отримує дані про ваш візит заздалегідь.</p>
+        <button class="btn btn--red" type="button" id="loadmap">Показати карту (Андрія Фабра, 4)</button>
+        <a href="https://www.google.com/maps/place/?q=place_id:ChIJ18Nb-ODj20AR506Uz6qQKdk" target="_blank" rel="noopener">Відкрити в Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="orders" aria-labelledby="h-orders">
+  <div class="wrap order">
+    <div class="order__photos rv">
+      <img class="a" src="img/cakes.webp" width="900" height="1200" loading="lazy" alt="Чотири торти ручного декору: сині, рожеві й білі з кристалами">
+      <img class="b" src="img/dates.webp" width="900" height="1200" loading="lazy" alt="Фініки в шоколаді з різними начинками, подарункова червона коробка">
+    </div>
+    <div class="rv">
+      <h2 id="h-orders">Торти й подарунки під замовлення</h2>
+      <p class="order__lead">Ручний декор, кольорові акценти та кремові орнаменти. Торт чи подарунок створюємо саме під вас.</p>
+      <ol class="steps">
+        <li>Напишіть нам в Instagram-директ</li>
+        <li>Розкажіть, який торт або подарунок вам потрібен</li>
+        <li>Далі домовимось про деталі разом</li>
+      </ol>
+      <a class="btn btn--red" href="https://www.instagram.com/berry_avenue.dp/" target="_blank" rel="noopener">Написати в Instagram <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec red seeds" id="contacts" aria-labelledby="h-contacts">
+  <div class="wrap contacts">
+    <div class="rv">
+      <h2 id="h-contacts">Скуштуйте полуничне 🍓</h2>
+      <div class="contacts__btns">
+        <a class="btn btn--white" href="https://berry-avenue.choiceqr.com/" target="_blank" rel="noopener">Меню та замовлення <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <dl class="dl rv">
+      <div><dt>Телефон</dt><dd><a href="tel:+380669142844">+380 66 914 2844</a></dd></div>
+      <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/berry_avenue.dp/" target="_blank" rel="noopener">berry_avenue.dp</a></dd></div>
+      <div><dt>Кафе</dt><dd>Андрія Фабра, 4 · 9:00–21:00</dd></div>
+      <div><dt>Корнер</dt><dd>ТРЦ Cascade Plaza, 2 поверх · 10:00–21:00</dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Berry Avenue · Дніпро</span>
+    <span>Попередній концепт від Doba Digital - не опублікований сайт</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(window.Lenis&&!reduce){
+    window.lenis=new Lenis({autoRaf:true,anchors:{offset:-70}});
+  }
+  // burger
+  var b=document.querySelector('.hdr__burger'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));n.classList.toggle('open',!o)});
+  n.addEventListener('click',function(e){if(e.target.tagName==='A'){b.setAttribute('aria-expanded','false');n.classList.remove('open')}});
+  // live status, Kyiv time
+  function status(){
+    var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Kyiv',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var h=+p.find(function(x){return x.type==='hour'}).value%24,m=+p.find(function(x){return x.type==='minute'}).value,t=h+m/60;
+    document.querySelectorAll('.addr__item').forEach(function(el){
+      var c=el.querySelector('[data-status]'),o=t>=+el.dataset.open&&t<+el.dataset.close;
+      c.textContent=o?'Зараз відчинено':'Зараз зачинено';c.classList.toggle('open',o);
+    });
+  }
+  status();setInterval(status,60000);
+  // map on click
+  document.getElementById('loadmap').addEventListener('click',function(){
+    var box=document.getElementById('map');
+    box.innerHTML='<iframe title="Карта: Berry Avenue, Андрія Фабра 4, Дніпро" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%D0%90%D0%BD%D0%B4%D1%80%D1%96%D1%8F+%D0%A4%D0%B0%D0%B1%D1%80%D0%B0+4+%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE&output=embed"></iframe>';
+  });
+  // reveal
+  var els=document.querySelectorAll('.rv');
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})}
+})();
+</script>
+</body>
+</html>
