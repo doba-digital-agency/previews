@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Master Style — меблева фурнітура в Харкові</title>
+<meta name="description" content="Master Style — магазин меблевої фурнітури в Харкові: вул. Гвардійців-Широнінців, 30. Пн–Пт 9:00–18:00, Сб 9:00–15:00. Телефон +380 66 358 1972.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2317191c'/%3E%3Cpath d='M12 50V14h8l12 20 12-20h8v36h-8V30L32 48 20 30v20z' fill='%232fd3c0'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Unbounded:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17191c; --ink2:#22262b; --steel:#e8ebed; --white:#fff; --line:#c9cfd4;
+  --teal:#2fd3c0; --teal-d:#0a6b62; --muted:#5b646c; --muted-l:#a9b2b9;
+  --pad:clamp(20px,4vw,56px); --max:1320px;
+  --fh:'Unbounded','Arial Black',sans-serif; --fb:'Onest',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:76px}
+body{font:400 16px/1.6 var(--fb);color:var(--ink);background:var(--steel);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+[hidden]{display:none!important}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
+h1,h2,h3{font-family:var(--fh);line-height:1.1;overflow-wrap:break-word}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;padding:0 26px;border-radius:2px;font:700 15px/1 var(--fb);text-decoration:none;border:2px solid transparent;transition:background .2s,color .2s,transform .2s;cursor:pointer}
+.btn--teal{background:var(--teal);color:var(--ink)}
+.btn--teal:hover{background:#fff}
+.btn--line{border-color:#ffffff66;color:#fff}
+.btn--line:hover{border-color:var(--teal);color:var(--teal)}
+.btn--dark{background:var(--ink);color:#fff}
+.btn--dark:hover{background:var(--teal-d)}
+
+/* header: dark brand block flush left + tab nav */
+.hdr{position:sticky;top:0;z-index:50;display:flex;align-items:stretch;background:#fff;border-bottom:2px solid var(--ink);min-height:68px}
+.hdr__brand{display:flex;align-items:center;gap:12px;background:var(--ink);color:#fff;padding:0 28px 0 var(--pad);text-decoration:none;clip-path:polygon(0 0,100% 0,calc(100% - 22px) 100%,0 100%);padding-right:48px}
+.hdr__mark{width:34px;height:34px;flex:none}
+.hdr__name{font:700 14px/1.1 var(--fh);letter-spacing:.02em}
+.hdr__name small{display:block;font:500 11px/1.3 var(--fb);color:var(--muted-l);letter-spacing:.04em;margin-top:3px}
+.nav{display:flex;margin-left:auto}
+.nav a{display:flex;align-items:center;gap:8px;padding:0 20px;text-decoration:none;font-weight:500;font-size:15px;border-left:1px solid var(--line);transition:background .2s}
+.nav a b{font:700 11px var(--fh);color:var(--teal-d)}
+.nav a:hover{background:var(--steel)}
+.hdr__tel{display:flex;align-items:center;padding:0 var(--pad) 0 24px;background:var(--teal);font:700 15px var(--fb);text-decoration:none;white-space:nowrap}
+.hdr__tel:hover{background:var(--ink);color:#fff}
+.burger{display:none;margin-left:auto;width:60px;border:0;background:var(--steel);cursor:pointer}
+.burger span,.burger span::before,.burger span::after{display:block;width:22px;height:2px;background:var(--ink);margin:auto;position:relative;transition:transform .25s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+.burger[aria-expanded=true] span{background:transparent}
+.burger[aria-expanded=true] span::before{transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span::after{transform:translateY(-7px) rotate(-45deg)}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero__in{display:grid;grid-template-columns:7fr 5fr;gap:clamp(24px,4vw,64px);align-items:center;padding-block:clamp(48px,8vw,112px)}
+.eyebrow{font:500 13px/1.3 var(--fb);letter-spacing:.12em;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.eyebrow::before{content:"";width:36px;height:2px;background:var(--teal)}
+.hero h1{font-size:clamp(40px,7.2vw,104px);font-weight:900;letter-spacing:-.03em;line-height:.98}
+.hero h1 span{display:block;font-size:.34em;font-weight:500;letter-spacing:0;line-height:1.25;margin-top:.7em;color:var(--teal)}
+.hero p.lead{max-width:34em;font-size:clamp(17px,1.5vw,20px);color:#d5dadd;margin:28px 0 36px}
+.hero__btns{display:flex;flex-wrap:wrap;gap:12px}
+.draw{width:100%;height:auto;display:block}
+.draw text{font:500 11px var(--fb);fill:var(--muted-l)}
+.drawcap{font-size:12px;color:var(--muted-l);margin-top:10px;border-top:1px solid #ffffff22;padding-top:10px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #ffffff2a}
+.facts div{padding:22px 24px 26px 0;font-size:15px;color:#d5dadd}
+.facts div+div{padding-left:24px;border-left:1px solid #ffffff2a}
+.facts b{display:block;font:500 12px var(--fb);letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+
+/* sections */
+.sec{padding-block:clamp(56px,8vw,112px)}
+.sec__head{display:grid;grid-template-columns:200px 1fr;gap:24px;border-top:2px solid var(--ink);padding-top:18px;margin-bottom:clamp(28px,4vw,56px)}
+.sec__num{font:700 13px var(--fh);color:var(--teal-d)}
+.sec h2{font-size:clamp(28px,4vw,52px);font-weight:700;letter-spacing:-.02em;max-width:18em}
+.sec__note{grid-column:2;color:var(--muted);max-width:40em;margin-top:-6px}
+
+/* catalogue rows */
+.cat{list-style:none;padding:0;counter-reset:c}
+.cat li{display:grid;grid-template-columns:90px 1fr auto;align-items:center;gap:20px;padding:26px 0;border-bottom:1px solid var(--line);transition:padding .25s,background .25s}
+.cat li:first-child{border-top:1px solid var(--line)}
+.cat li:hover{background:#fff;padding-inline:20px}
+.cat__n{font:900 clamp(32px,4vw,52px)/1 var(--fh);color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.cat h3{font-size:clamp(19px,2.2vw,28px);font-weight:500}
+.cat__tag{font-size:13px;color:var(--muted);border:1px dashed var(--muted-l);padding:6px 12px;border-radius:2px;white-space:nowrap}
+
+/* why */
+.why{background:var(--ink2);color:#fff}
+.why .sec__head{border-color:var(--teal)}
+.why .sec__num{color:var(--teal)}
+.why__grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.why__grid>div{padding:8px 32px 8px 0}
+.why__grid>div+div{padding-left:32px;border-left:1px solid #ffffff2a}
+.why__grid h3{font-size:clamp(20px,2vw,26px);font-weight:500;margin-bottom:14px;line-height:1.2}
+.why__grid p{color:#c3cacf}
+.why__grid a{color:var(--teal)}
+
+/* hours */
+.hours{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,80px);align-items:start}
+.status{display:inline-flex;align-items:center;gap:10px;font-weight:700;border:2px solid var(--ink);padding:10px 16px;border-radius:2px;margin-bottom:24px}
+.status i{width:10px;height:10px;border-radius:50%;background:var(--muted-l)}
+.status.on i{background:#16a34a}
+.week{width:100%;border-collapse:collapse;background:#fff}
+.week th,.week td{padding:15px 20px;text-align:left;border-bottom:1px solid var(--line);font-weight:500}
+.week td{text-align:right;font-variant-numeric:tabular-nums}
+.week tr.today{background:var(--ink);color:#fff}
+.week tr.today th{border-left:5px solid var(--teal)}
+.week .off td{color:var(--muted)}
+.bar{margin-top:22px;height:36px;position:relative;background:repeating-linear-gradient(90deg,transparent 0 calc(100%/24 - 1px),var(--line) calc(100%/24 - 1px) calc(100%/24))}
+.bar i{position:absolute;top:0;bottom:0;background:var(--teal)}
+.bar-l{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:6px}
+.big{font:900 clamp(60px,9vw,132px)/.9 var(--fh);letter-spacing:-.04em}
+.big small{font:500 15px var(--fb);letter-spacing:0;display:block;margin-top:14px;color:var(--muted)}
+
+/* find */
+.find{background:#fff}
+.find__in{display:grid;grid-template-columns:5fr 6fr;gap:clamp(24px,4vw,64px)}
+dl.c{border-top:1px solid var(--ink)}
+dl.c div{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+dl.c dt{font:500 12px/1.8 var(--fb);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+dl.c dd{font-size:clamp(17px,1.6vw,20px);font-weight:500;overflow-wrap:anywhere}
+dl.c a{text-decoration-color:var(--teal);text-underline-offset:4px;text-decoration-thickness:2px}
+.map{position:relative;min-height:380px;background:var(--steel);border:2px solid var(--ink);display:grid;place-items:center;text-align:center;padding:24px;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:40px 40px}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map p{max-width:22em;margin:0 auto 18px;font-weight:500}
+.cta2{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+
+footer{background:var(--ink);color:#aab2b8;padding:36px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer b{color:#fff;font-family:var(--fh);font-weight:700}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .5s ease-out,transform .5s ease-out}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:1100px){
+  .nav a{padding:0 14px}
+  .hdr__tel{display:none}
+}
+@media(max-width:900px){
+  .hero__in,.hours,.find__in{grid-template-columns:1fr}
+  .draw-wrap{max-width:460px}
+  .why__grid{grid-template-columns:1fr;gap:28px}
+  .why__grid>div,.why__grid>div+div{padding:0;border:0}
+  .why__grid>div+div{border-top:1px solid #ffffff2a;padding-top:28px}
+  .sec__head{grid-template-columns:1fr;gap:8px}
+  .sec__note{grid-column:1}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;border-bottom:2px solid var(--ink);margin:0}
+  .nav.open{display:flex}
+  .nav a{min-height:56px;border-left:0;border-top:1px solid var(--line);padding:0 var(--pad)}
+  .burger{display:block}
+  .hdr__tel{display:flex;position:absolute;right:60px;top:0;bottom:0;padding:0 16px}
+}
+@media(max-width:620px){
+  .hdr__tel{display:none}
+  .hdr__brand{padding-right:40px}
+  .facts{grid-template-columns:1fr}
+  .facts div,.facts div+div{padding:16px 0;border-left:0}
+  .facts div+div{border-top:1px solid #ffffff2a}
+  .cat li{grid-template-columns:56px 1fr;gap:12px}
+  .cat__tag{grid-column:2;justify-self:start}
+  .cat li:hover{padding-inline:0;background:none}
+  dl.c div{grid-template-columns:1fr;gap:2px}
+  .btn{width:100%}
+  .map{min-height:300px}
+}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <a class="hdr__brand" href="#top">
+    <svg class="hdr__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#2fd3c0"/><path d="M12 50V14h8l12 20 12-20h8v36h-8V30L32 48 20 30v20z" fill="#17191c"/></svg>
+    <span class="hdr__name">MASTER STYLE<small>меблева фурнітура</small></span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Основне меню">
+    <a href="#offer"><b>01</b>Що пропонуємо</a>
+    <a href="#why"><b>02</b>Чому до нас</a>
+    <a href="#hours"><b>03</b>Години</a>
+    <a href="#find"><b>04</b>Як знайти</a>
+  </nav>
+  <a class="hdr__tel" href="tel:+380663581972">+380 66 358 1972</a>
+  <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Меню"><span></span></button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero__in">
+    <div>
+      <p class="eyebrow">Харків · вул. Гвардійців-Широнінців, 30</p>
+      <h1>Master Style<span>меблева фурнітура в Харкові</span></h1>
+      <p class="lead">Усе про магазин на одній сторінці: що ми пропонуємо, де знаходимось і коли працюємо.</p>
+      <div class="hero__btns">
+        <a class="btn btn--teal" href="#find">Як нас знайти ↓</a>
+        <a class="btn btn--line" href="tel:+380663581972">Зателефонувати</a>
+      </div>
+    </div>
+    <div class="draw-wrap">
+      <svg class="draw" viewBox="0 0 400 340" role="img" aria-label="Умовна схема меблевої петлі з розмірними лініями">
+        <g fill="none" stroke="#2fd3c0" stroke-width="2">
+          <circle cx="150" cy="150" r="78"/>
+          <circle cx="150" cy="150" r="52" stroke-dasharray="5 5" stroke="#ffffff66"/>
+          <rect x="228" y="118" width="130" height="64" rx="2"/>
+          <path d="M228 134h-30M228 166h-30"/>
+          <circle cx="262" cy="150" r="9"/><circle cx="324" cy="150" r="9"/>
+        </g>
+        <g stroke="#ffffff88" stroke-width="1" fill="none">
+          <path d="M72 262h156M72 252v20M228 252v20"/>
+          <path d="M72 72V30M228 118V30M72 36h156"/>
+          <path d="M380 118h-20M380 182h-20M376 118v64"/>
+          <path d="M150 20v110M150 170v90" stroke-dasharray="6 4" opacity=".45"/>
+        </g>
+        <text x="150" y="284" text-anchor="middle">A</text>
+        <text x="150" y="26" text-anchor="middle">B</text>
+        <text x="392" y="154">C</text>
+      </svg>
+      <p class="drawcap">Умовна схема-ілюстрація, не товар з асортименту.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="facts">
+      <div><b>Адреса</b>вул. Гвардійців-Широнінців, 30, Харків</div>
+      <div><b>Години</b>Пн–Пт 9:00–18:00, Сб 9:00–15:00</div>
+      <div><b>Телефон</b><a href="tel:+380663581972">+380 66 358 1972</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="offer">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <span class="sec__num">01</span>
+      <h2>Що пропонуємо</h2>
+      <p class="sec__note">Умовні категорії меблевої фурнітури — заготовки блоків. Точний асортимент і наявність уточнюйте по телефону.</p>
+    </div>
+    <ol class="cat rv">
+      <li><span class="cat__n">01</span><h3>Петлі та з’єднання дверцят</h3><span class="cat__tag">умовна категорія</span></li>
+      <li><span class="cat__n">02</span><h3>Напрямні для шухляд</h3><span class="cat__tag">умовна категорія</span></li>
+      <li><span class="cat__n">03</span><h3>Ручки та меблеві аксесуари</h3><span class="cat__tag">умовна категорія</span></li>
+      <li><span class="cat__n">04</span><h3>Опори, ніжки, кріплення</h3><span class="cat__tag">умовна категорія</span></li>
+      <li><span class="cat__n">05</span><h3>Механізми для меблів</h3><span class="cat__tag">умовна категорія</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <span class="sec__num">02</span>
+      <h2>Чому до нас</h2>
+    </div>
+    <div class="why__grid rv">
+      <div><h3>Магазин у Харкові</h3><p>Працюємо за адресою вул. Гвардійців-Широнінців, 30 — приходьте в робочий час.</p></div>
+      <div><h3>Працюємо й у суботу</h3><p>Пн–Пт 9:00–18:00, Сб 9:00–15:00 — шість днів на тиждень.</p></div>
+      <div><h3>Звʼязок без посередників</h3><p>Телефон <a href="tel:+380663581972">+380 66 358 1972</a>, пошта та <a href="https://www.instagram.com/masterkharkiv/" target="_blank" rel="noopener">Instagram @masterkharkiv</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="hours">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <span class="sec__num">03</span>
+      <h2>Години роботи</h2>
+    </div>
+    <div class="hours rv">
+      <div>
+        <div class="status" id="status" aria-live="polite"><i></i><span>Перевіряємо…</span></div>
+        <div class="big">9–18<small>Пн–Пт · у суботу 9–15 · неділя — вихідний</small></div>
+      </div>
+      <div>
+        <table class="week" id="week">
+          <caption class="sr" style="position:absolute;left:-9999px">Графік роботи</caption>
+          <tbody>
+            <tr data-d="1"><th scope="row">Понеділок</th><td>9:00–18:00</td></tr>
+            <tr data-d="2"><th scope="row">Вівторок</th><td>9:00–18:00</td></tr>
+            <tr data-d="3"><th scope="row">Середа</th><td>9:00–18:00</td></tr>
+            <tr data-d="4"><th scope="row">Четвер</th><td>9:00–18:00</td></tr>
+            <tr data-d="5"><th scope="row">Пʼятниця</th><td>9:00–18:00</td></tr>
+            <tr data-d="6"><th scope="row">Субота</th><td>9:00–15:00</td></tr>
+            <tr data-d="0" class="off"><th scope="row">Неділя</th><td>вихідний</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec find" id="find">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <span class="sec__num">04</span>
+      <h2>Як нас знайти</h2>
+    </div>
+    <div class="find__in rv">
+      <div>
+        <dl class="c">
+          <div><dt>Адреса</dt><dd>вул. Гвардійців-Широнінців, 30, Харків</dd></div>
+          <div><dt>Телефон</dt><dd><a href="tel:+380663581972">+380 66 358 1972</a></dd></div>
+          <div><dt>Пошта</dt><dd><a href="mailto:MasterStyle@i.ua">MasterStyle@i.ua</a></dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/masterkharkiv/" target="_blank" rel="noopener">@masterkharkiv</a></dd></div>
+          <div><dt>Години</dt><dd>Пн–Пт 9:00–18:00, Сб 9:00–15:00</dd></div>
+        </dl>
+        <div class="cta2">
+          <a class="btn btn--dark" href="tel:+380663581972">Зателефонувати</a>
+          <a class="btn btn--line" style="color:var(--ink);border-color:var(--ink)" href="mailto:MasterStyle@i.ua">Написати</a>
+        </div>
+        <p style="margin-top:16px;color:var(--muted);font-size:14px">Напишіть нам або зателефонуйте в робочий час.</p>
+      </div>
+      <div class="map" id="map">
+        <div><p>Карта завантажиться після натискання — так ми не передаємо ваші дані без потреби.</p>
+        <button class="btn btn--teal" id="mapbtn" type="button">Показати карту</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>MASTER STYLE</b> · Харків, вул. Гвардійців-Широнінців, 30</span>
+    <span>Попередній концепт від Doba Digital - не опублікований сайт</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(window.Lenis&&!reduce){
+    window.lenis=new Lenis({autoRaf:true});
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click',function(e){
+        var t=document.querySelector(a.getAttribute('href'));
+        if(t){e.preventDefault();window.lenis.scrollTo(t,{offset:-68});}
+      });
+    });
+  }
+  // burger
+  var b=document.querySelector('.burger'),nav=document.getElementById('nav');
+  function close(){nav.classList.remove('open');b.setAttribute('aria-expanded','false')}
+  b.addEventListener('click',function(){var o=nav.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))close()});
+  addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  // live status, Kyiv time
+  var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Kyiv',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()),g={};
+  p.forEach(function(x){g[x.type]=x.value});
+  var dn={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[g.weekday],m=(+g.hour%24)*60+(+g.minute);
+  var rng=dn>=1&&dn<=5?[540,1080]:dn===6?[540,900]:null,open=rng&&m>=rng[0]&&m<rng[1];
+  var st=document.getElementById('status');st.classList.toggle('on',!!open);
+  st.querySelector('span').textContent=open?'Зараз відчинено':'Зараз зачинено';
+  var row=document.querySelector('#week tr[data-d="'+dn+'"]');if(row)row.classList.add('today');
+  // map on click
+  document.getElementById('mapbtn').addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.src='https://www.google.com/maps?q='+encodeURIComponent('вулиця Гвардійців-Широнінців 30, Харків')+'&output=embed';
+    f.title='Карта: вул. Гвардійців-Широнінців, 30, Харків';f.loading='lazy';
+    var box=document.getElementById('map');box.textContent='';box.appendChild(f);
+  });
+  // reveal
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+    els.forEach(function(e){io.observe(e)});
+  }else els.forEach(function(e){e.classList.add('in')});
+})();
+</script>
+</body>
+</html>
