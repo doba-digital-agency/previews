@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pierre — солодкий бутік на Преображенській, 34, Одеса</title>
+<meta name="description" content="Pierre — солодкий бутік в Одесі: макаруни, тарти, шу, торти, кава з власними сиропами та подарункові коробки. Щодня 10:00–21:00, Преображенська, 34.">
+<meta name="theme-color" content="#3b69b9">
+<meta property="og:title" content="Pierre — солодкий бутік на Преображенській, 34">
+<meta property="og:description" content="Макаруни, десерти та кава в Одесі: меню, години роботи та адреса в одному місці.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/cover.webp">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/yeseva-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: 'Yeseva One'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/yeseva-cyrillic.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; } 
+@font-face { font-family: 'Yeseva One'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/yeseva-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } 
+@font-face { font-family: 'Golos Text'; font-style: normal; font-weight: 400 600; font-display: swap; src: url(fonts/golos-cyrillic.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; } 
+@font-face { font-family: 'Golos Text'; font-style: normal; font-weight: 400 600; font-display: swap; src: url(fonts/golos-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } 
+
+:root{
+  --ink:#17213b; --blue:#3b69b9; --blue-d:#254687; --powder:#e1ecf9; --rose-bg:#fce8ef; --rose:#b3265a;
+  --pist:#cfe39a; --white:#fff; --muted:#4a5472; --muted-l:#b4c0da; --line:#c4d2ea;
+  --rail:248px; --pad:clamp(20px,4vw,56px); --sec:clamp(56px,8vw,112px);
+  --head:'Yeseva One',Georgia,'Times New Roman',serif; --body:'Golos Text',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:auto}
+body{margin:0;font-family:var(--body);font-size:1rem;line-height:1.55;color:var(--ink);background:var(--white);overflow-wrap:break-word}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,h4,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.sec--drinks :focus-visible,.sec--boxes :focus-visible,.foot :focus-visible,.map :focus-visible{outline-color:var(--pist)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;z-index:100}
+.skip:focus{left:8px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border:2px solid var(--ink);border-radius:2px;font:600 .95rem/1.2 var(--body);text-decoration:none;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn--solid{background:var(--ink);color:#fff}
+.btn--solid:hover{background:var(--blue-d);border-color:var(--blue-d)}
+.btn--alt{background:var(--rose);border-color:var(--rose)}
+.btn--alt:hover{background:#8f1d47;border-color:#8f1d47}
+.btn--line{background:transparent;color:var(--ink)}
+.btn--line:hover{background:var(--ink);color:#fff}
+.btn:active{transform:translateY(1px)}
+
+/* status */
+.status{display:flex;align-items:center;gap:8px;font-size:.88rem;font-weight:500;line-height:1.3}
+.dot{width:10px;height:10px;border-radius:50%;background:#8a93aa;flex:none}
+.status.is-open .dot{background:#1c8a3d}
+.status.is-closed .dot{background:var(--rose)}
+
+/* rail (desktop) + top bar (tablet/phone) */
+.rail{display:none}
+.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:16px;height:64px;padding:0 var(--pad);background:#fff;border-bottom:2px solid var(--ink)}
+.topbar__brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:400 1.5rem/1 var(--head);margin-right:auto}
+.topbar__brand img{width:44px;height:44px;object-fit:contain}
+.burger{width:48px;height:48px;border:2px solid var(--ink);background:#fff;border-radius:2px;display:grid;place-content:center;gap:5px;cursor:pointer}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .25s,opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.drop{position:absolute;left:0;right:0;top:100%;display:flex;flex-direction:column;gap:0;padding:8px var(--pad) 20px;background:#fff;border-bottom:2px solid var(--ink);max-height:calc(100dvh - 64px);overflow:auto}
+.drop a:not(.btn){display:flex;gap:14px;align-items:center;min-height:52px;border-bottom:1px solid var(--line);text-decoration:none;font:400 1.25rem/1.2 var(--head)}
+.drop i,.rail__nav i{font:600 .75rem/1 var(--body);font-style:normal;color:var(--blue-d);letter-spacing:.06em}
+.drop .btn{margin-top:12px}
+
+/* hero */
+.hero{background:var(--powder);padding:clamp(40px,7vw,88px) var(--pad) 0;overflow:hidden}
+.hero__in{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 40px;align-items:end}
+.eyebrow{grid-column:1/-1;font:600 .8rem/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--blue-d)}
+.hero h1{grid-column:1/-1;font:400 clamp(1.8rem,5vw,4.6rem)/1.06 var(--head);max-width:16em;text-wrap:balance;overflow-wrap:normal;hyphens:manual}
+.lead{font-size:clamp(1.05rem,1.6vw,1.3rem);line-height:1.5;max-width:34ch}
+.cta__label{font-weight:600;margin-bottom:10px;font-size:.95rem}
+.cta__btns{display:flex;gap:10px;flex-wrap:wrap}
+.tray{display:flex;align-items:flex-end;margin:clamp(36px,5vw,64px) auto 0;max-width:980px;padding-inline:3%}
+.tray li{flex:1 1 0;aspect-ratio:1;margin-left:-3%;border-radius:50%;overflow:hidden;border:5px solid var(--powder);box-shadow:0 0 0 2px var(--ink);animation:rise .6s cubic-bezier(.2,.8,.2,1) both}
+.tray li:first-child{margin-left:0}
+.tray li:nth-child(odd){transform:translateY(0)}
+.tray li:nth-child(even){margin-bottom:clamp(14px,3vw,40px)}
+.tray li:nth-child(2){animation-delay:.07s}.tray li:nth-child(3){animation-delay:.14s}.tray li:nth-child(4){animation-delay:.21s}.tray li:nth-child(5){animation-delay:.28s}.tray li:nth-child(6){animation-delay:.35s}
+.tray img{width:100%;height:100%;object-fit:cover}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);margin:clamp(28px,4vw,48px) calc(var(--pad) * -1) 0;border-top:2px solid var(--ink);background:var(--ink);color:#fff}
+.facts div{padding:22px var(--pad);border-left:1px solid #3a4666}
+.facts div:first-child{border-left:0}
+.facts dt{font:600 .75rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--pist);margin-bottom:8px}
+.facts dd{font:400 clamp(1.05rem,1.7vw,1.4rem)/1.3 var(--head)}
+.facts a{text-decoration:none}
+.facts a:hover{text-decoration:underline}
+
+.band{background:var(--ink)}
+.band img{width:100%;aspect-ratio:3.1/1;object-fit:cover;object-position:50% 72%}
+
+/* sections */
+.sec{padding:var(--sec) var(--pad)}
+.sec__head{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:6px 22px;padding-bottom:18px;border-bottom:2px solid currentColor;margin-bottom:clamp(28px,4vw,52px)}
+.num{font:400 clamp(2.6rem,6vw,5rem)/.9 var(--head);color:var(--blue-d)}
+.sec h2{font:400 clamp(2rem,4.4vw,3.6rem)/1.05 var(--head)}
+.count{font-size:.95rem;color:var(--muted);text-align:right;max-width:30ch;padding-bottom:6px}
+.price{font:600 1.05rem/1.2 var(--body);color:var(--blue-d);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+.mlist{display:grid;grid-template-columns:repeat(2,1fr);column-gap:clamp(24px,5vw,72px)}
+.mrow{display:grid;grid-template-columns:clamp(72px,8vw,96px) 1fr auto;gap:18px;align-items:center;padding:16px 0;border-bottom:1px dashed #9db3d6}
+.mrow img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;box-shadow:0 0 0 2px var(--ink);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.mrow:hover img{transform:rotate(-6deg) scale(1.06)}
+.mrow h3{font:400 1.3rem/1.2 var(--head);margin-bottom:4px}
+.mrow p{font-size:.88rem;line-height:1.45;color:var(--muted)}
+
+.sec--dess{background:var(--rose-bg)}
+.sec--dess .num{color:var(--rose)}
+.tabs__list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:clamp(24px,3.5vw,44px)}
+.tabs__list button{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:10px 18px;border:2px solid var(--ink);border-radius:2px;background:transparent;color:var(--ink);font:600 .95rem/1 var(--body);cursor:pointer;transition:background .2s,color .2s}
+.tabs__list button span{font-size:.75rem;font-weight:500;opacity:.8}
+.tabs__list button:hover{background:#fff}
+.tabs__list button[aria-selected="true"]{background:var(--ink);color:#fff}
+.panel{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,4vw,64px);align-items:start}
+.panel[hidden]{display:none}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.shot img{width:100%;object-fit:cover}
+.shot--w{grid-column:1/-1}
+.shot--w img{aspect-ratio:16/10}
+.shot--s img{aspect-ratio:1}
+.shot figcaption{font-size:.82rem;color:var(--muted);margin-top:6px;line-height:1.3}
+.plist li{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:16px 0;border-top:1px solid #e3a9bf}
+.plist li:last-child{border-bottom:1px solid #e3a9bf}
+.plist h3{font:400 1.25rem/1.2 var(--head);margin-bottom:4px}
+.plist p{font-size:.9rem;line-height:1.45;color:var(--muted);max-width:60ch}
+.plist .price{color:var(--rose)}
+
+.sec--drinks{background:var(--ink);color:#eef2fb}
+.sec--drinks .num{color:var(--pist)}
+.sec--drinks .count{color:var(--muted-l)}
+.own{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,44px);margin-bottom:clamp(32px,4vw,56px)}
+.own__i{border-top:2px solid var(--pist);padding-top:16px}
+.own__i h3{font:400 clamp(1.7rem,3vw,2.4rem)/1.1 var(--head);color:var(--pist);margin-bottom:10px}
+.own__i p{color:#d6def0;font-size:.98rem;max-width:42ch}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.gal img{width:100%;object-fit:cover}
+.g1,.g3{aspect-ratio:4/5}.g2,.g4{aspect-ratio:1}
+.menu3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,56px)}
+.mh{font:400 1.5rem/1.2 var(--head);margin:0 0 6px;padding-top:6px;color:var(--pist)}
+.mh:not(:first-child){margin-top:36px}
+.mh--light{color:var(--ink);margin:32px 0 10px}
+.mlines li{padding:9px 0;border-bottom:1px solid #2c3a5c}
+.dl{display:flex;align-items:baseline;gap:8px}
+.dl h4{font:500 1rem/1.3 var(--body)}
+.dl i{flex:1;min-width:12px;border-bottom:1px dotted #6f7fa3;transform:translateY(-4px)}
+.sec--drinks .price{color:#fff}
+.mlines p{font-size:.84rem;line-height:1.4;color:var(--muted-l);margin-top:2px}
+.note{font-size:.92rem;color:#d6def0;max-width:40ch}
+
+.sec--boxes{background:var(--blue);color:#fff}
+.sec--boxes .num{color:#fff}
+.sec--boxes .count{color:#e6eefb}
+.boxes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px) clamp(16px,2.4vw,32px)}
+.box img{width:100%;aspect-ratio:4/3;object-fit:cover;border:2px solid #fff}
+.box__t{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding-top:12px;align-items:baseline}
+.box__t b{font:400 clamp(1.7rem,3vw,2.3rem)/1 var(--head);grid-column:1/-1}
+.box__t span:nth-child(2){font-size:.98rem}
+.sec--boxes .price{color:#fff}
+.foot-note{margin-top:28px;font-size:.92rem;color:#e6eefb}
+
+.sec--contacts{background:var(--powder)}
+.c-grid{display:grid;grid-template-columns:6fr 5fr;gap:clamp(28px,5vw,72px);align-items:start}
+.clist div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-top:1px solid #9db3d6}
+.clist div:last-child{border-bottom:1px solid #9db3d6}
+.clist dt{font:600 .78rem/1.6 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--blue-d)}
+.clist dd{font:400 1.2rem/1.35 var(--head);overflow-wrap:anywhere}
+.clist a{text-decoration-thickness:1px;text-underline-offset:4px}
+.clist a:hover{color:var(--blue-d)}
+.clist a[href^="mailto"]{font-size:clamp(.82rem,4vw,1.2rem)}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.week li{border:1px solid var(--ink);padding:10px 4px;text-align:center;font-size:.76rem;line-height:1.3;background:#fff}
+.week b{display:block;font-size:.95rem}
+.week li.is-today{background:var(--ink);color:#fff}
+.cta--c{margin-top:30px}
+.map{min-height:380px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:16px;padding:clamp(24px,3vw,40px);background:var(--ink);color:#eef2fb}
+.map p{max-width:36ch}
+.map .btn{background:#fff;color:var(--ink);border-color:#fff}
+.map .btn:hover{background:var(--pist);border-color:var(--pist)}
+.map__link{color:var(--pist);text-underline-offset:4px}
+.map iframe{width:100%;height:420px;border:0;display:block}
+.map.is-loaded{padding:0;display:block;min-height:0}
+
+.foot{background:var(--ink);color:#eef2fb;padding:32px var(--pad);display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;font-size:.9rem}
+.foot__tag{color:var(--muted-l)}
+
+/* tablet */
+@media (max-width:1180px){
+  .menu3{grid-template-columns:repeat(2,1fr)}
+  .menu3>div:last-child{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,1fr);gap:0 clamp(28px,4vw,56px);align-items:start}
+  .menu3>div:last-child .mh:not(:first-child){margin-top:0}
+}
+@media (min-width:1024px){
+  body{padding-left:var(--rail)}
+  .topbar{display:none}
+  .rail{position:fixed;inset:0 auto 0 0;width:var(--rail);z-index:40;display:flex;flex-direction:column;gap:26px;padding:26px 22px;background:#fff;border-right:2px solid var(--ink);overflow-y:auto}
+  .rail__logo img{width:112px;height:112px;object-fit:contain}
+  .rail__nav{display:flex;flex-direction:column}
+  .rail__nav a{display:flex;gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line);text-decoration:none;font:400 1.08rem/1.25 var(--head);transition:padding .2s,color .2s}
+  .rail__nav a:hover,.rail__nav a.is-active{padding-left:6px;color:var(--blue-d)}
+  .rail__nav a.is-active i{color:var(--rose)}
+  .rail__foot{margin-top:auto;display:flex;flex-direction:column;gap:10px}
+  .rail__foot .status{margin-bottom:6px}
+  .rail__lbl{font:600 .78rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--blue-d)}
+  .sec,.hero{scroll-margin-top:0}
+}
+@media (max-width:1023px){
+  .sec,#top{scroll-margin-top:64px}
+  .hero__in{grid-template-columns:minmax(0,1fr)}
+  .panel{grid-template-columns:1fr}
+  .own{grid-template-columns:1fr 1fr 1fr}
+}
+@media (max-width:900px){
+  .mlist{grid-template-columns:1fr}
+  .c-grid{grid-template-columns:1fr}
+  .boxes{grid-template-columns:repeat(2,1fr)}
+  .own{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .sec__head{grid-template-columns:auto 1fr}
+  .count{grid-column:1/-1;text-align:left;max-width:none;padding-bottom:0}
+}
+@media (max-width:760px){
+  .menu3,.menu3>div:last-child{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .facts div{border-left:0;border-top:1px solid #3a4666;padding-block:16px}
+  .facts div:first-child{border-top:0}
+  .week{grid-template-columns:1fr}
+  .week li{display:flex;justify-content:space-between;align-items:center;text-align:left;padding:12px 14px;font-size:.95rem}
+  .week b{display:inline}
+  .clist div{grid-template-columns:1fr;gap:2px}
+  .menu3>div:last-child .mh:not(:first-child){margin-top:36px}
+}
+@media (max-width:520px){
+  .boxes{grid-template-columns:1fr}
+  .mrow{grid-template-columns:64px 1fr auto;gap:14px}
+  .topbar .status{display:none}
+  .btn{width:100%}
+  .cta__btns .btn{flex:1 1 140px;width:auto}
+  .tray li{border-width:3px}
+  .hero h1{max-width:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Pierre La Sweet Boutique","address":{"@type":"PostalAddress","streetAddress":"вулиця Преображенська, 34","addressLocality":"Одеса","postalCode":"65000","addressCountry":"UA"},"telephone":"095 867 6387","email":"pierre.la.sweet.boutique@gmail.com","openingHours":"Mo-Su 10:00-21:00"}</script>
+</head>
+<body>
+<a class="skip" href="#main">До змісту</a>
+
+<aside class="rail" id="rail" aria-label="Навігація">
+  <a class="rail__logo" href="#top" aria-label="Pierre — на початок"><img src="img/logo.png" alt="Pierre La Sweet Boutique" width="140" height="140"></a>
+  <nav class="rail__nav" aria-label="Розділи сторінки">
+    <a href="#macarons"><i>01</i>Макаруни</a>
+    <a href="#desserts"><i>02</i>Десерти</a>
+    <a href="#drinks"><i>03</i>Кава та напої</a>
+    <a href="#boxes"><i>04</i>Подарункові коробки</a>
+    <a href="#contacts"><i>05</i>Контакти</a>
+  </nav>
+  <div class="rail__foot">
+    <p class="status" data-status><span class="dot" aria-hidden="true"></span><span data-status-text>Щодня 10:00–21:00</span></p>
+    <p class="rail__lbl">Напишіть нам</p>
+    <a class="btn btn--solid" href="viber://chat?number=%2B380958676387">Viber</a>
+    <a class="btn btn--line" href="https://t.me/+380958676387">Telegram</a>
+  </div>
+</aside>
+
+<header class="topbar" id="topbar">
+  <a class="topbar__brand" href="#top"><img src="img/logo.png" alt="" width="44" height="44"><span>Pierre</span></a>
+  <p class="status status--bar" data-status><span class="dot" aria-hidden="true"></span><span data-status-text>Щодня 10:00–21:00</span></p>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="drop" aria-label="Меню"><span></span><span></span><span></span></button>
+  <nav class="drop" id="drop" aria-label="Розділи сторінки" data-lenis-prevent hidden>
+    <a href="#macarons"><i>01</i>Макаруни</a>
+    <a href="#desserts"><i>02</i>Десерти</a>
+    <a href="#drinks"><i>03</i>Кава та напої</a>
+    <a href="#boxes"><i>04</i>Подарункові коробки</a>
+    <a href="#contacts"><i>05</i>Контакти</a>
+    <a class="btn btn--solid" href="viber://chat?number=%2B380958676387">Написати у Viber</a>
+    <a class="btn btn--line" href="https://t.me/+380958676387">Написати у Telegram</a>
+  </nav>
+</header>
+
+<div class="page" id="top">
+<main id="main">
+
+<section class="hero">
+  <div class="hero__in">
+    <p class="eyebrow">La Sweet Boutique · Одеса</p>
+    <h1>Pierre — солодкий бутік на Преображенській,&nbsp;34</h1>
+    <p class="lead">Макаруни, десерти та кава в Одесі: меню, години роботи та адреса в одному місці.</p>
+    <div class="cta">
+      <p class="cta__label">Напишіть нам у Telegram/Viber</p>
+      <div class="cta__btns">
+        <a class="btn btn--solid" href="https://t.me/+380958676387">Telegram</a>
+        <a class="btn btn--solid btn--alt" href="viber://chat?number=%2B380958676387">Viber</a>
+      </div>
+    </div>
+  </div>
+  <ul class="tray" aria-label="Макаруни з меню">
+<li><img src="img/mac13.webp" alt="Макарун «Лаванда - лохина»" width="360" height="270"></li>
+<li><img src="img/mac09.webp" alt="Макарун «Троянда»" width="360" height="270"></li>
+<li><img src="img/mac11.webp" alt="Макарун «Манго»" width="360" height="270" loading="lazy"></li>
+<li><img src="img/mac01.webp" alt="Макарун «Сир - фундук»" width="360" height="270" loading="lazy"></li>
+<li><img src="img/mac04.webp" alt="Макарун «Фісташка»" width="360" height="270" loading="lazy"></li>
+<li><img src="img/mac08.webp" alt="Макарун «Малина»" width="360" height="270" loading="lazy"></li>
+  </ul>
+  <dl class="facts">
+    <div><dt>Адреса</dt><dd>вулиця Преображенська, 34, Одеса</dd></div>
+    <div><dt>Години</dt><dd>щодня 10:00–21:00</dd></div>
+    <div><dt>Телефон</dt><dd><a href="tel:+380958676387">095 867 6387</a></dd></div>
+  </dl>
+</section>
+
+<figure class="band">
+  <img src="img/cover.webp" alt="Вивіска Pierre La Sweet Boutique під склепінням скляного даху пасажу" width="1136" height="429" loading="lazy">
+</figure>
+
+<section class="sec sec--mac" id="macarons">
+  <header class="sec__head">
+    <p class="num">01</p>
+    <h2>Макаруни</h2>
+    <p class="count">14 смаків у меню</p>
+  </header>
+  <ul class="mlist">
+<li class="mrow reveal">
+  <img src="img/mac01.webp" alt="Макарун «Сир - фундук»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Сир - фундук</h3><p>Фундучне праліне та маскарпоне, зі шматочками французського блакитного сиру бле д'овернь та лісовим горіхом</p></div>
+  <span class="price">55&nbsp;₴</span>
+</li>
+<li class="mrow reveal">
+  <img src="img/mac02.webp" alt="Макарун «Горгонзола»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Горгонзола</h3><p>Молочний шоколад з горгонзолою, центр з волоського горіха, бельгійської вафлі та молочного шоколаду</p></div>
+  <span class="price">55&nbsp;₴</span>
+</li>
+<li class="mrow reveal">
+  <img src="img/mac03.webp" alt="Макарун «Солона карамель»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Солона карамель</h3><p>Домашня солона карамель зі шматочками в'яленого яблука</p></div>
+  <span class="price">50&nbsp;₴</span>
+</li>
+<li class="mrow reveal">
+  <img src="img/mac04.webp" alt="Макарун «Фісташка»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Фісташка</h3><p>Домашня фісташкова паста та білково-масляний крем</p></div>
+  <span class="price">50&nbsp;₴</span>
+</li>
+<li class="mrow reveal">
+  <img src="img/mac05.webp" alt="Макарун «Снікерс»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Снікерс</h3><p>Шоколадні кришечки зі шматочками арахісу, начинка: солона карамель, арахісова паста та арахіс</p></div>
+  <span class="price">50&nbsp;₴</span>
+</li>
+<li class="mrow reveal">
+  <img src="img/mac06.webp" alt="Макарун «Шоколад - праліне»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Шоколад - праліне</h3><p>Шоколадні кришечки, ганаш на чорному та молочному шоколаді з фундучним праліне</p></div>
+  <span class="price">50&nbsp;₴</span>
+</li>
+<li class="mrow reveal">
+  <img src="img/mac07.webp" alt="Макарун «Кокос»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Кокос</h3><p>Кокосова стружка та білий шоколад</p></div>
+  <span class="price">50&nbsp;₴</span>
+</li>
+<li class="mrow reveal">
+  <img src="img/mac08.webp" alt="Макарун «Малина»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Малина</h3><p>Пюре малини та білий шоколад</p></div>
+  <span class="price">50&nbsp;₴</span>
+</li>
+<li class="mrow reveal">
+  <img src="img/mac09.webp" alt="Макарун «Троянда»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Троянда</h3><p>Варення з пелюсток троянди, маскарпоне, білий шоколад, рожевий перець</p></div>
+  <span class="price">50&nbsp;₴</span>
+</li>
+<li class="mrow reveal">
+  <img src="img/mac10.webp" alt="Макарун «Смородина»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Смородина</h3><p>Чорний шоколад та перетерті ягоди смородини</p></div>
+  <span class="price">50&nbsp;₴</span>
+</li>
+<li class="mrow reveal">
+  <img src="img/mac11.webp" alt="Макарун «Манго»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Манго</h3><p>Білий шоколад та пюре манго та маракуї</p></div>
+  <span class="price">55&nbsp;₴</span>
+</li>
+<li class="mrow reveal">
+  <img src="img/mac12.webp" alt="Макарун «Просеко»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Просеко</h3><p>Просеко, білий шоколад, цукати апельсина</p></div>
+  <span class="price">55&nbsp;₴</span>
+</li>
+<li class="mrow reveal">
+  <img src="img/mac13.webp" alt="Макарун «Лаванда - лохина»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Лаванда - лохина</h3><p>Маскарпоне, білий шоколад, лавандові вершки та свіжа ягода лохини</p></div>
+  <span class="price">55&nbsp;₴</span>
+</li>
+<li class="mrow reveal">
+  <img src="img/mac14.webp" alt="Макарун «Бейліс»" width="360" height="270" loading="lazy">
+  <div class="mrow__t"><h3>Бейліс</h3><p>Бейліс, білий шоколад та маскарпоне. Центр з бельгійської вафлі (роялтин) з білим шоколадом</p></div>
+  <span class="price">55&nbsp;₴</span>
+</li>
+  </ul>
+</section>
+
+<section class="sec sec--dess" id="desserts">
+  <header class="sec__head">
+    <p class="num">02</p>
+    <h2>Десерти</h2>
+    <p class="count">тарти, шу, торти, кремові десерти та печиво</p>
+  </header>
+  <div class="tabs" data-tabs>
+    <div class="tabs__list" role="tablist" aria-label="Категорії десертів">
+<button type="button" role="tab" id="tab-tarts" aria-controls="panel-tarts" aria-selected="true" tabindex="0">Тарти<span>4</span></button>
+<button type="button" role="tab" id="tab-chou" aria-controls="panel-chou" aria-selected="false" tabindex="-1">Шу<span>4</span></button>
+<button type="button" role="tab" id="tab-cakes" aria-controls="panel-cakes" aria-selected="false" tabindex="-1">Торти<span>5</span></button>
+<button type="button" role="tab" id="tab-cream" aria-controls="panel-cream" aria-selected="false" tabindex="-1">Кремові десерти<span>4</span></button>
+<button type="button" role="tab" id="tab-cookies" aria-controls="panel-cookies" aria-selected="false" tabindex="-1">Печиво<span>7</span></button>
+    </div>
+<div role="tabpanel" id="panel-tarts" aria-labelledby="tab-tarts" class="panel">
+  <div class="shots">
+    <figure class="shot shot--w"><img src="img/tart1.webp" alt="Тарта Лимон" width="520" height="390" loading="lazy"><figcaption>Тарта Лимон</figcaption></figure>
+    <figure class="shot shot--s"><img src="img/tart2.webp" alt="Тарта Фісташка - Малина" width="520" height="390" loading="lazy"><figcaption>Тарта Фісташка - Малина</figcaption></figure>
+    <figure class="shot shot--s"><img src="img/tart3.webp" alt="Тарта Апельсин" width="520" height="390" loading="lazy"><figcaption>Тарта Апельсин</figcaption></figure>
+  </div>
+  <ul class="plist">
+    <li><div><h3>Тарта Лимон</h3><p>Мигдальне саблє, лимонний франжипан, лимонний курд, італійська меренга</p></div><span class="price">135&nbsp;₴</span></li>
+    <li><div><h3>Тарта Фісташка - Малина</h3><p>Мигдальне саблє, фісташковий франжипан, свіжа малина (запечена у франжипані) та подрібнена фісташка</p></div><span class="price">155&nbsp;₴</span></li>
+    <li><div><h3>Тарта Яблучна</h3><p>Мигдальне саблє, франжипан з волоським горіхом, припущені яблука в карамелі з корицею, сфера з карамельного яблука з корицею, ганаш на білому шоколаді з додаванням ванільної пасти</p></div><span class="price">145&nbsp;₴</span></li>
+    <li><div><h3>Тарта Апельсин</h3><p>Мигдальне саблє, апельсиновий франжипан, апельсиновий курд, свіжий апельсин та меренга</p></div><span class="price">135&nbsp;₴</span></li>
+  </ul>
+</div>
+<div role="tabpanel" id="panel-chou" aria-labelledby="tab-chou" class="panel" hidden>
+  <div class="shots">
+    <figure class="shot shot--w"><img src="img/chou1.webp" alt="Шу Шоколад" width="520" height="390" loading="lazy"><figcaption>Шу Шоколад</figcaption></figure>
+    <figure class="shot shot--s"><img src="img/chou2.webp" alt="Шу Чорниця-Ваніль" width="520" height="390" loading="lazy"><figcaption>Шу Чорниця-Ваніль</figcaption></figure>
+    <figure class="shot shot--s"><img src="img/chou3.webp" alt="Шу Полуниця" width="520" height="390" loading="lazy"><figcaption>Шу Полуниця</figcaption></figure>
+  </div>
+  <ul class="plist">
+    <li><div><h3>Шу Шоколад</h3><p>Крем на основі молочного шоколаду + декор з міні плитки молочного шоколаду</p></div><span class="price">115&nbsp;₴</span></li>
+    <li><div><h3>Шу Чорниця-Ваніль</h3><p>Крем дипломат та чорничне кулі</p></div><span class="price">105&nbsp;₴</span></li>
+    <li><div><h3>Шу Полуниця</h3><p>Крем на основі білого шоколаду + полуничне кулі</p></div><span class="price">105&nbsp;₴</span></li>
+    <li><div><h3>Шу манго-маракуя</h3></div><span class="price">105&nbsp;₴</span></li>
+  </ul>
+</div>
+<div role="tabpanel" id="panel-cakes" aria-labelledby="tab-cakes" class="panel" hidden>
+  <div class="shots">
+    <figure class="shot shot--w"><img src="img/cake1.webp" alt="Чізкейк П'янка Вишня" width="520" height="390" loading="lazy"><figcaption>Чізкейк П'янка Вишня</figcaption></figure>
+    <figure class="shot shot--s"><img src="img/cake2.webp" alt="Десерт «Павлова»" width="520" height="390" loading="lazy"><figcaption>Десерт «Павлова»</figcaption></figure>
+    <figure class="shot shot--s"><img src="img/cake5.webp" alt="Наполеон Солона Карамель" width="520" height="390" loading="lazy"><figcaption>Наполеон Солона Карамель</figcaption></figure>
+  </div>
+  <ul class="plist">
+    <li><div><h3>Чізкейк П'янка Вишня</h3><p>Шоколадне саблє, основа з крем сиру та цілою п'янкою вишнею всередині, шоколадна сиркова маса на основі крем чізу, желе з п'янкою вишнею</p></div><span class="price">225&nbsp;₴</span></li>
+    <li><div><h3>Десерт «Павлова»</h3><p>Безе класичне, центр з апельсиново-лаймового курду, крем на основі маскарпоне та сезонні ягоди</p></div><span class="price">180&nbsp;₴</span></li>
+    <li><div><h3>Банановий Медівник</h3><p>Класичний торт медовик з медовими коржами та вершково-сметанковим кремом з бананом всередині</p></div><span class="price">165&nbsp;₴</span></li>
+    <li><div><h3>Чізкейк ягідний</h3><p>Основа з домашнього мигдалевого пісочного печива, чізкейк на вершковому сирі, малинове кулі, свіжі ягоди малини і лохини</p></div><span class="price">210&nbsp;₴</span></li>
+    <li><div><h3>Наполеон Солона Карамель</h3><p>Наполеон з додаванням солоної карамелі</p></div><span class="price">165&nbsp;₴</span></li>
+  </ul>
+</div>
+<div role="tabpanel" id="panel-cream" aria-labelledby="tab-cream" class="panel" hidden>
+  <div class="shots">
+    <figure class="shot shot--w"><img src="img/tira.webp" alt="Тірамісу" width="520" height="390" loading="lazy"><figcaption>Тірамісу</figcaption></figure>
+    <figure class="shot shot--s"><img src="img/tira2.webp" alt="Мандариновий Тірамісу" width="520" height="390" loading="lazy"><figcaption>Мандариновий Тірамісу</figcaption></figure>
+    <figure class="shot shot--s"><img src="img/sab.webp" alt="Крем Сабайон" width="520" height="390" loading="lazy"><figcaption>Крем Сабайон</figcaption></figure>
+  </div>
+  <ul class="plist">
+    <li><div><h3>Крем Сабайон</h3><p>Крем сабайон (заварний крем на білому вині та вершках), лимонний бісквіт, свіжа лохина, сир бле д'овернь, свіжа груша, кокосове безе</p></div><span class="price">165&nbsp;₴</span></li>
+    <li><div><h3>Тірамісу</h3><p>Домашнє печиво савоярді, еспресо з ромом. Крем з маскарпоне, вершків та жовтків, заварених цукровим сиропом, какао</p></div><span class="price">155&nbsp;₴</span></li>
+    <li><div><h3>Мандариновий Тірамісу</h3></div><span class="price">165&nbsp;₴</span></li>
+    <li><div><h3>Полуничний тірамісу</h3></div><span class="price">165&nbsp;₴</span></li>
+  </ul>
+</div>
+<div role="tabpanel" id="panel-cookies" aria-labelledby="tab-cookies" class="panel" hidden>
+  <div class="shots">
+    <figure class="shot shot--w"><img src="img/cook2.webp" alt="Печиво віночок" width="520" height="390" loading="lazy"><figcaption>Печиво віночок</figcaption></figure>
+    <figure class="shot shot--s"><img src="img/cook3.webp" alt="Печиво брауні" width="520" height="390" loading="lazy"><figcaption>Печиво брауні</figcaption></figure>
+    <figure class="shot shot--s"><img src="img/cook6.webp" alt="Печиво з розмарином" width="520" height="390" loading="lazy"><figcaption>Печиво з розмарином</figcaption></figure>
+  </div>
+  <ul class="plist">
+    <li><div><h3>Печиво лимон</h3><p>Пісочне тісто з додаванням цедри лимона</p></div><span class="price">75&nbsp;₴</span></li>
+    <li><div><h3>Фундучне безе</h3><p>Безе зі смаком лісового горіха</p></div><span class="price">75&nbsp;₴</span></li>
+    <li><div><h3>Печиво віночок</h3><p>Мигдальне пісочне тісто, лимонна глазур, декор з фісташки, в'яленої вишні і цедри апельсина (3 шт)</p></div><span class="price">95&nbsp;₴</span></li>
+    <li><div><h3>Печиво брауні</h3><p>Вологе печиво з великим вмістом чорного шоколаду і какао, в цукровій пудрі і з характерними тріщинками</p></div><span class="price">85&nbsp;₴</span></li>
+    <li><div><h3>Печиво безглютенове</h3><p>Борошно рисове, гречане, мигдалеве, лісовий горіх, чорний шоколад</p></div><span class="price">85&nbsp;₴</span></li>
+    <li><div><h3>Печиво бананове</h3><p>Ніжне печиво на цільнозерновому борошні і вівсяних пластівцях з пюре запеченого банана</p></div><span class="price">65&nbsp;₴</span></li>
+    <li><div><h3>Печиво з розмарином</h3><p>Пісочне печиво зі свіжим розмарином і морською сіллю</p></div><span class="price">55&nbsp;₴</span></li>
+  </ul>
+</div>
+  </div>
+</section>
+
+<section class="sec sec--drinks" id="drinks">
+  <header class="sec__head">
+    <p class="num">03</p>
+    <h2>Кава та напої</h2>
+    <p class="count">власні сиропи, матча, лимонади</p>
+  </header>
+  <div class="own">
+    <article class="own__i"><h3>Лаванда</h3><p>Лавандовий раф — з лавандовим сиропом власного виробництва, 120&nbsp;₴. Лимонад лавандовий — на натуральному лавандовому сиропі власного виробництва, 105&nbsp;₴.</p></article>
+    <article class="own__i"><h3>Солона карамель</h3><p>Лате солона карамель — 125&nbsp;₴. Айс лате солона карамель — із солоною карамеллю власного виробництва, 135&nbsp;₴.</p></article>
+    <article class="own__i"><h3>Матча</h3><p>Матча лате, блакитна матча, айс матча з манго чи полуницею, матча з тоніком та лимонад матча — на церемоніальній матчі.</p></article>
+  </div>
+  <div class="gal">
+    <img class="g1" src="img/icemango.webp" alt="Айс Матча + Манго" width="1024" height="768" loading="lazy">
+    <img class="g2" src="img/matcha.webp" alt="Матча лате" width="520" height="390" loading="lazy">
+    <img class="g3" src="img/icestraw.webp" alt="Айс Матча + Полуниця" width="1024" height="768" loading="lazy">
+    <img class="g4" src="img/cap.webp" alt="Капучино" width="520" height="390" loading="lazy">
+  </div>
+  <div class="menu3">
+    <div>
+      <h3 class="mh">Кава</h3>
+      <ul class="mlines">
+<li><div class="dl"><h4>Еспресо</h4><i aria-hidden="true"></i><span class="price">80&nbsp;₴</span></div><p>30 мл</p></li>
+<li><div class="dl"><h4>Допіо</h4><i aria-hidden="true"></i><span class="price">80&nbsp;₴</span></div><p>Double Espresso · 50 мл</p></li>
+<li><div class="dl"><h4>Фільтр кава</h4><i aria-hidden="true"></i><span class="price">90&nbsp;₴</span></div><p>200 мл</p></li>
+<li><div class="dl"><h4>Лонг блек</h4><i aria-hidden="true"></i><span class="price">90&nbsp;₴</span></div><p>150 мл</p></li>
+<li><div class="dl"><h4>Американо</h4><i aria-hidden="true"></i><span class="price">80&nbsp;₴</span></div><p>100 мл</p></li>
+<li><div class="dl"><h4>Американо з молоком</h4><i aria-hidden="true"></i><span class="price">90&nbsp;₴</span></div><p>150 мл</p></li>
+<li><div class="dl"><h4>Флет уайт</h4><i aria-hidden="true"></i><span class="price">105&nbsp;₴</span></div><p>180 мл</p></li>
+<li><div class="dl"><h4>Кортадо</h4><i aria-hidden="true"></i><span class="price">90&nbsp;₴</span></div><p>90 мл</p></li>
+<li><div class="dl"><h4>Капучино</h4><i aria-hidden="true"></i><span class="price">90&nbsp;₴</span></div><p>180 мл</p></li>
+<li><div class="dl"><h4>Капучино з кедровими горіхами</h4><i aria-hidden="true"></i><span class="price">125&nbsp;₴</span></div><p>180 мл</p></li>
+<li><div class="dl"><h4>Подвійний капучино</h4><i aria-hidden="true"></i><span class="price">125&nbsp;₴</span></div><p>360 мл</p></li>
+<li><div class="dl"><h4>Лате</h4><i aria-hidden="true"></i><span class="price">95&nbsp;₴</span></div><p>300 мл</p></li>
+<li><div class="dl"><h4>Лате солона карамель</h4><i aria-hidden="true"></i><span class="price">125&nbsp;₴</span></div><p>300 мл</p></li>
+<li><div class="dl"><h4>Фундучний лате</h4><i aria-hidden="true"></i><span class="price">125&nbsp;₴</span></div><p>Лате з фундучною пастою · 300 мл</p></li>
+<li><div class="dl"><h4>Раф кава</h4><i aria-hidden="true"></i><span class="price">120&nbsp;₴</span></div><p>кава, молоко, вершки, ванільний цукор · 300 мл</p></li>
+<li><div class="dl"><h4>Апельсиновий раф</h4><i aria-hidden="true"></i><span class="price">120&nbsp;₴</span></div><p>еспресо, вершки, молоко, цукор з цедрою апельсина · 300 мл</p></li>
+<li><div class="dl"><h4>Лавандовий раф</h4><i aria-hidden="true"></i><span class="price">120&nbsp;₴</span></div><p>еспресо, вершки, молоко, лавандовий сироп власного виробництва · 300 мл</p></li>
+<li><div class="dl"><h4>Арахісовий раф</h4><i aria-hidden="true"></i><span class="price">120&nbsp;₴</span></div><p>еспресо, вершки, молоко, арахісова паста, цукор · 300 мл</p></li>
+<li><div class="dl"><h4>Капуоранж</h4><i aria-hidden="true"></i><span class="price">165&nbsp;₴</span></div><p>Warm version · 250 мл</p></li>
+      </ul>
+      <h3 class="mh">Чай, матча, какао</h3>
+      <ul class="mlines">
+<li><div class="dl"><h4>Чай</h4><i aria-hidden="true"></i><span class="price">90&nbsp;₴</span></div><p>Чорний, зелений, зелений з жасміном, молочний улун, фруктовий, трав'яний · 400 мл</p></li>
+<li><div class="dl"><h4>Матча лате</h4><i aria-hidden="true"></i><span class="price">125&nbsp;₴</span></div><p>300 мл</p></li>
+<li><div class="dl"><h4>Блакитна матча лате</h4><i aria-hidden="true"></i><span class="price">125&nbsp;₴</span></div><p>300 мл</p></li>
+<li><div class="dl"><h4>Какао</h4><i aria-hidden="true"></i><span class="price">90&nbsp;₴</span></div><p>300 мл</p></li>
+<li><div class="dl"><h4>Какао з маршмелоу</h4><i aria-hidden="true"></i><span class="price">125&nbsp;₴</span></div><p>300 мл</p></li>
+<li><div class="dl"><h4>Апельсиновий фреш</h4><i aria-hidden="true"></i><span class="price">155&nbsp;₴</span></div><p>200 мл</p></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="mh">Прохолодні напої</h3>
+      <ul class="mlines">
+<li><div class="dl"><h4>Айс Матча + Манго</h4><i aria-hidden="true"></i><span class="price">180&nbsp;₴</span></div><p>Пюре манго+матча+молоко+лід</p></li>
+<li><div class="dl"><h4>Айс Матча + Полуниця</h4><i aria-hidden="true"></i><span class="price">170&nbsp;₴</span></div><p>Хіт цього літа, матча+молоко+полуничне кулі+лід = любов</p></li>
+<li><div class="dl"><h4>Айс Блакитна Матча + Полуниця</h4><i aria-hidden="true"></i><span class="price">180&nbsp;₴</span></div></li>
+<li><div class="dl"><h4>Айс Блакитна Матча + Манго</h4><i aria-hidden="true"></i><span class="price">190&nbsp;₴</span></div></li>
+<li><div class="dl"><h4>Колд Брю + Гранатовий сік</h4><i aria-hidden="true"></i><span class="price">145&nbsp;₴</span></div><p>Кава холодного заварювання та сік на основі гранатового фрешу · 320 мл</p></li>
+<li><div class="dl"><h4>Колд Брю</h4><i aria-hidden="true"></i><span class="price">105&nbsp;₴</span></div><p>Холодна, насичена за смаком чиста чорна кава</p></li>
+<li><div class="dl"><h4>Матча + Апельсиновий Фреш</h4><i aria-hidden="true"></i><span class="price">170&nbsp;₴</span></div><p>Матча Ямато з апельсиновим фрешем · 340 мл</p></li>
+<li><div class="dl"><h4>Матча + Тонік</h4><i aria-hidden="true"></i><span class="price">155&nbsp;₴</span></div><p>Церемоніальна матча та мінеральна вода з сиропом «Толік» власного виробництва · 340 мл</p></li>
+<li><div class="dl"><h4>Айс Лате Солона Карамель</h4><i aria-hidden="true"></i><span class="price">135&nbsp;₴</span></div><p>Те саме, що класика, але додаємо солону карамель власного виробництва · 340 мл</p></li>
+<li><div class="dl"><h4>Айс Лате</h4><i aria-hidden="true"></i><span class="price">110&nbsp;₴</span></div><p>Класичний холодний лате на основі допіо · 340 мл</p></li>
+<li><div class="dl"><h4>Еспресо + Тонік</h4><i aria-hidden="true"></i><span class="price">110&nbsp;₴</span></div><p>Еспресо та тонік Швепс · 340 мл</p></li>
+<li><div class="dl"><h4>Айс Какао</h4><i aria-hidden="true"></i><span class="price">110&nbsp;₴</span></div><p>Натуральний какао, молоко та лід. За бажанням можемо додати цукрового сиропу · 340 мл</p></li>
+<li><div class="dl"><h4>Еспресо + Апельсиновий Фреш</h4><i aria-hidden="true"></i><span class="price">160&nbsp;₴</span></div><p>340 мл</p></li>
+<li><div class="dl"><h4>Айс Матча Лате</h4><i aria-hidden="true"></i><span class="price">155&nbsp;₴</span></div><p>340 мл</p></li>
+<li><div class="dl"><h4>Айс Блакитна Матча Лате</h4><i aria-hidden="true"></i><span class="price">165&nbsp;₴</span></div><p>340 мл</p></li>
+<li><div class="dl"><h4>Лимонад класичний</h4><i aria-hidden="true"></i><span class="price">105&nbsp;₴</span></div><p>Класика жанру, але хтось каже, що схоже на мохіто · 400 мл</p></li>
+<li><div class="dl"><h4>Лимонад лавандовий</h4><i aria-hidden="true"></i><span class="price">105&nbsp;₴</span></div><p>Робимо на натуральному лавандовому сиропі власного виробництва з додаванням пелюсток клітореї (синього чаю), лимонний фреш та мінеральна вода · 400 мл</p></li>
+<li><div class="dl"><h4>Трояндовий лимонад</h4><i aria-hidden="true"></i><span class="price">105&nbsp;₴</span></div><p>Беремо найсмачніше трояндове варення у Наталії Петрівни на Новому ринку та додаємо трохи фрешу і мінеральну воду · 400 мл</p></li>
+<li><div class="dl"><h4>Лимонад манго - маракуя</h4><i aria-hidden="true"></i><span class="price">115&nbsp;₴</span></div><p>Додаємо натуральне пюре манго та маракуї з кісточкою та невеликою кількістю цукру · 400 мл</p></li>
+<li><div class="dl"><h4>Лимонад матча</h4><i aria-hidden="true"></i><span class="price">115&nbsp;₴</span></div><p>Церемоніальна матча Ямато, лимонний фреш та основа життя - вода</p></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="mh">Крафтові чаї</h3>
+      <ul class="mlines">
+<li><div class="dl"><h4>Чай імбирний</h4><i aria-hidden="true"></i><span class="price">95&nbsp;₴</span></div><p>Імбир, мед, лимон, кориця · 400 мл</p></li>
+<li><div class="dl"><h4>Чай обліпиховий</h4><i aria-hidden="true"></i><span class="price">95&nbsp;₴</span></div><p>Обліпиха, лимон, чебрець · 400 мл</p></li>
+<li><div class="dl"><h4>Чай журавлинний</h4><i aria-hidden="true"></i><span class="price">95&nbsp;₴</span></div><p>Журавлина, апельсин, чебрець · 400 мл</p></li>
+<li><div class="dl"><h4>Чай трояндовий</h4><i aria-hidden="true"></i><span class="price">95&nbsp;₴</span></div><p>Чорний чай, варення з пелюсток троянди · 400 мл</p></li>
+<li><div class="dl"><h4>Чай з шишками</h4><i aria-hidden="true"></i><span class="price">95&nbsp;₴</span></div><p>Чорний чай, варення з шишок · 400 мл</p></li>
+<li><div class="dl"><h4>Чай гречаний</h4><i aria-hidden="true"></i><span class="price">90&nbsp;₴</span></div><p>400 мл</p></li>
+<li><div class="dl"><h4>Чай манго-маракуйя</h4><i aria-hidden="true"></i><span class="price">95&nbsp;₴</span></div><p>Зелений чай, пюре манго та маракуї · 400 мл</p></li>
+<li><div class="dl"><h4>Чай ягідний</h4><i aria-hidden="true"></i><span class="price">95&nbsp;₴</span></div><p>Чорна смородина, малина та полуниця · 400 мл</p></li>
+      </ul>
+      <h3 class="mh">На рослинному молоці</h3>
+      <p class="note">Капучино, лате, американо з молоком, кортадо, флет уайт, матча лате, какао — на кокосовому, мигдальному, соєво-ванільному або соєво-банановому молоці Alpro Professional.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--boxes" id="boxes">
+  <header class="sec__head">
+    <p class="num">04</p>
+    <h2>Подарункові коробки</h2>
+    <p class="count">набори макарунів на різну кількість штук</p>
+  </header>
+  <ul class="boxes">
+<li class="box reveal">
+  <img src="img/box1.webp" alt="Коробочка на 1 шт" width="520" height="390" loading="lazy">
+  <div class="box__t"><b>на 1 шт</b><span>Коробочка</span><span class="price">5&nbsp;₴</span></div>
+</li>
+<li class="box reveal">
+  <img src="img/box5.webp" alt="Футляр на 5 шт" width="520" height="390" loading="lazy">
+  <div class="box__t"><b>на 5 шт</b><span>Футляр</span><span class="price">20&nbsp;₴</span></div>
+</li>
+<li class="box reveal">
+  <img src="img/box10.webp" alt="Подвійний футляр на 10 шт" width="520" height="390" loading="lazy">
+  <div class="box__t"><b>на 10 шт</b><span>Подвійний футляр</span><span class="price">32&nbsp;₴</span></div>
+</li>
+<li class="box reveal">
+  <img src="img/box15t.webp" alt="Трикутна коробка на 15 шт" width="520" height="390" loading="lazy">
+  <div class="box__t"><b>на 15 шт</b><span>Трикутна коробка</span><span class="price">40&nbsp;₴</span></div>
+</li>
+<li class="box reveal">
+  <img src="img/box15.webp" alt="Кругла коробка на 15 шт" width="520" height="390" loading="lazy">
+  <div class="box__t"><b>на 15 шт</b><span>Кругла коробка</span><span class="price">70&nbsp;₴</span></div>
+</li>
+<li class="box reveal">
+  <img src="img/box42.webp" alt="Квадратна коробка на 42 шт" width="520" height="390" loading="lazy">
+  <div class="box__t"><b>на 42 шт</b><span>Квадратна коробка</span><span class="price">55&nbsp;₴</span></div>
+</li>
+  </ul>
+  <p class="foot-note">Ціни — за подарункову упаковку, як у меню.</p>
+</section>
+
+<section class="sec sec--contacts" id="contacts">
+  <header class="sec__head">
+    <p class="num">05</p>
+    <h2>Контакти</h2>
+    <p class="count">Google: 4,9 · 714 відгуків</p>
+  </header>
+  <div class="c-grid">
+    <div class="c-main">
+      <dl class="clist">
+        <div><dt>Адреса</dt><dd>вулиця Преображенська, 34, Одеса, Одеська область, Україна, 65000</dd></div>
+        <div><dt>Телефон</dt><dd><a href="tel:+380958676387">095 867 6387</a></dd></div>
+        <div><dt>Telegram / Viber</dt><dd><a href="https://t.me/+380958676387">Telegram</a> · <a href="viber://chat?number=%2B380958676387">Viber</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:pierre.la.sweet.boutique@gmail.com">pierre.la.sweet.boutique@gmail.com</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/pierre_la_sweet_boutique/" rel="noopener" target="_blank">@pierre_la_sweet_boutique</a></dd></div>
+      </dl>
+      <h3 class="mh mh--light">Години роботи</h3>
+      <ul class="week" aria-label="Години роботи"><li data-d="1"><b>Пн</b><span>10:00–21:00</span></li><li data-d="2"><b>Вт</b><span>10:00–21:00</span></li><li data-d="3"><b>Ср</b><span>10:00–21:00</span></li><li data-d="4"><b>Чт</b><span>10:00–21:00</span></li><li data-d="5"><b>Пт</b><span>10:00–21:00</span></li><li data-d="6"><b>Сб</b><span>10:00–21:00</span></li><li data-d="0"><b>Нд</b><span>10:00–21:00</span></li></ul>
+      <div class="cta cta--c">
+        <p class="cta__label">Напишіть нам у Telegram/Viber</p>
+        <div class="cta__btns">
+          <a class="btn btn--solid" href="https://t.me/+380958676387">Telegram</a>
+          <a class="btn btn--solid btn--alt" href="viber://chat?number=%2B380958676387">Viber</a>
+        </div>
+      </div>
+    </div>
+    <div class="map" data-map>
+      <p>Карта завантажиться після натискання — так ми не передаємо дані Google, поки ви не вирішите.</p>
+      <button class="btn btn--solid" type="button" data-map-load>Показати карту</button>
+      <a class="map__link" href="https://www.google.com/maps/place/?q=place_id:ChIJqY6v_pYxxkARH5jBepiyJ54" rel="noopener" target="_blank">Відкрити в Google Maps</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <p class="foot__name">Pierre La Sweet Boutique · вулиця Преображенська, 34, Одеса</p>
+  <p class="foot__tag">Попередній концепт від Doba Digital - не опублікований сайт</p>
+</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var topbar = document.getElementById('topbar');
+
+  // Kyiv time: open/closed chip and today's day in the week strip
+  function kyiv() {
+    var p = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Kyiv', hour: '2-digit', minute: '2-digit', weekday: 'short', hour12: false }).formatToParts(new Date());
+    var o = {};
+    p.forEach(function (x) { o[x.type] = x.value; });
+    var map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+    return { h: parseInt(o.hour, 10) % 24, m: parseInt(o.minute, 10), d: map[o.weekday] };
+  }
+  function status() {
+    var t = kyiv(), open = t.h >= 10 && t.h < 21;
+    document.querySelectorAll('[data-status]').forEach(function (el) {
+      el.classList.toggle('is-open', open);
+      el.classList.toggle('is-closed', !open);
+      el.querySelector('[data-status-text]').textContent = open ? 'Відчинено до 21:00' : 'Зачинено · відчиняємось о 10:00';
+    });
+    document.querySelectorAll('.week li').forEach(function (li) { li.classList.toggle('is-today', +li.dataset.d === t.d); });
+  }
+  status();
+  setInterval(status, 60000);
+
+  // Lenis smooth scroll
+  var lenis = null;
+  if (!reduce && window.Lenis) {
+    lenis = new Lenis({ autoRaf: true });
+    window.lenis = lenis;
+  }
+
+  // burger
+  var burger = document.querySelector('.burger'), drop = document.getElementById('drop');
+  function closeMenu() { burger.setAttribute('aria-expanded', 'false'); drop.hidden = true; }
+  burger.addEventListener('click', function () {
+    var open = burger.getAttribute('aria-expanded') === 'true';
+    burger.setAttribute('aria-expanded', String(!open));
+    drop.hidden = open;
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !drop.hidden) { closeMenu(); burger.focus(); } });
+
+  // anchors (with Lenis when present)
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('href').slice(1), el = document.getElementById(id);
+      if (!el) return;
+      e.preventDefault();
+      closeMenu();
+      var off = topbar && getComputedStyle(topbar).display !== 'none' ? -topbar.offsetHeight : 0;
+      if (lenis) lenis.scrollTo(el, { offset: off });
+      else window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY + off, behavior: reduce ? 'auto' : 'smooth' });
+      history.replaceState(null, '', '#' + id);
+    });
+  });
+
+  // active section in the rail
+  var links = document.querySelectorAll('.rail__nav a');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (en.isIntersecting) links.forEach(function (l) { l.classList.toggle('is-active', l.getAttribute('href') === '#' + en.target.id); });
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    document.querySelectorAll('main .sec').forEach(function (s) { io.observe(s); });
+  }
+
+  // tabs
+  document.querySelectorAll('[data-tabs]').forEach(function (box) {
+    var tabs = Array.prototype.slice.call(box.querySelectorAll('[role=tab]'));
+    function pick(t, focus) {
+      tabs.forEach(function (x) {
+        var on = x === t;
+        x.setAttribute('aria-selected', String(on));
+        x.tabIndex = on ? 0 : -1;
+        document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) t.focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { pick(t); });
+      t.addEventListener('keydown', function (e) {
+        var n = null;
+        if (e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+        if (e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+        if (e.key === 'Home') n = tabs[0];
+        if (e.key === 'End') n = tabs[tabs.length - 1];
+        if (n) { e.preventDefault(); pick(n, true); }
+      });
+    });
+  });
+
+  // map on click
+  var map = document.querySelector('[data-map]');
+  map.querySelector('[data-map-load]').addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.google.com/maps?q=' + encodeURIComponent('вулиця Преображенська, 34, Одеса') + '&output=embed';
+    f.title = 'Карта: вулиця Преображенська, 34, Одеса';
+    f.loading = 'lazy';
+    f.referrerPolicy = 'no-referrer-when-downgrade';
+    map.innerHTML = '';
+    map.appendChild(f);
+    map.classList.add('is-loaded');
+  });
+})();
+
+</script>
+</body>
+</html>
