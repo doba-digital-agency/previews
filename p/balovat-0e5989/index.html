@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BALOVAT — косметичний салон у Харкові</title>
+<meta name="description" content="BALOVAT — косметичний салон у Харкові на вулиці Мистецтв, 7/9. Щодня 09:00–20:00, Google 4,7 (40 відгуків).">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%234a2fd0'/%3E%3Cellipse cx='32' cy='32' rx='17' ry='24' fill='none' stroke='%23d4f46a' stroke-width='5'/%3E%3Ctext x='32' y='42' font-family='serif' font-size='28' text-anchor='middle' fill='%23ffffff'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Commissioner:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ink:#15102e; --ink2:#2a2150; --violet:#4a2fd0; --violet-d:#3520a8; --lime:#d4f46a; --lime-d:#3d5a00;
+  --mist:#f0edfc; --white:#fff; --line:rgba(21,16,46,.22);
+  --pad:clamp(20px,5vw,64px); --max:1320px;
+  --serif:'Oranienbaum',Georgia,'Times New Roman',serif;
+  --sans:'Commissioner',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:auto}
+body{margin:0;font:400 17px/1.6 var(--sans);color:var(--ink);background:var(--white);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;box-shadow:0 0 0 5px var(--ink)}
+.wrap{width:100%;max-width:calc(var(--max) + 2*var(--pad));margin-inline:auto;padding-inline:var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:8px;top:-60px;background:var(--lime);color:var(--ink);padding:10px 14px;z-index:100}
+.skip:focus{top:8px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.08}
+h2{font-size:clamp(34px,5vw,64px)}
+.tag{font:600 13px/1.3 var(--sans);letter-spacing:.12em;text-transform:uppercase;margin:0 0 18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:2px;font:600 16px/1 var(--sans);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn--lime{background:var(--lime);color:var(--ink)}
+.btn--lime:hover{background:var(--white)}
+.btn--line{border-color:currentColor;background:transparent;color:inherit}
+.btn--line:hover{background:var(--white);color:var(--violet-d);border-color:var(--white)}
+.btn--ink{background:var(--ink);color:var(--white)}
+.btn--ink:hover{background:var(--violet)}
+
+/* header: wordmark + status left, CTA and full-screen menu right */
+.top{position:sticky;top:0;z-index:50;background:var(--violet);color:var(--white);border-bottom:1px solid rgba(255,255,255,.25)}
+.top__in{display:flex;align-items:center;gap:16px;min-height:68px}
+.logo{font:400 26px/1 var(--serif);letter-spacing:.14em;text-decoration:none;margin-right:auto}
+.status{display:inline-flex;align-items:center;gap:8px;font:500 14px/1 var(--sans)}
+.status i{width:9px;height:9px;border-radius:50%;background:#9aa;display:block}
+.status.is-open i{background:var(--lime)}
+.menu-btn{min-height:46px;padding:0 18px;background:transparent;color:inherit;border:2px solid var(--white);border-radius:2px;font:600 15px/1 var(--sans);cursor:pointer;display:inline-flex;align-items:center;gap:10px}
+.menu-btn span{display:block;width:18px;height:2px;background:currentColor;box-shadow:0 6px 0 currentColor;margin-bottom:6px}
+.top .btn{min-height:46px;padding:0 20px}
+.sheet{position:fixed;inset:0;z-index:60;background:var(--ink);color:var(--white);display:none;overflow:auto}
+.sheet.is-open{display:block}
+.sheet__in{min-height:100%;display:flex;flex-direction:column;padding-block:20px 40px}
+.sheet__bar{display:flex;justify-content:space-between;align-items:center;min-height:48px}
+.sheet ol{list-style:none;margin:6vh 0 0;padding:0;counter-reset:n}
+.sheet li{border-top:1px solid rgba(255,255,255,.22)}
+.sheet li:last-child{border-bottom:1px solid rgba(255,255,255,.22)}
+.sheet li a{display:flex;align-items:baseline;gap:20px;padding:14px 0;text-decoration:none;font:400 clamp(34px,7vw,76px)/1.1 var(--serif)}
+.sheet li a::before{counter-increment:n;content:"0" counter(n);font:600 14px var(--sans);color:var(--lime);letter-spacing:.1em}
+.sheet li a:hover{color:var(--lime)}
+.sheet__foot{margin-top:auto;padding-top:28px;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
+
+/* hero */
+.hero{background:var(--violet);color:var(--white);position:relative;overflow:hidden}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,340px);gap:32px clamp(24px,4vw,64px);align-items:end;padding-block:clamp(32px,6vw,72px) 0}
+.hero h1{font-size:clamp(34px,21vw,330px);white-space:nowrap;line-height:.95;letter-spacing:.02em;margin:0;grid-column:1/-1}
+.hero__lead{font-size:clamp(19px,2vw,24px);line-height:1.5;max-width:30em;margin:0 0 28px}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero__txt{padding-bottom:clamp(36px,5vw,64px)}
+.mirror{justify-self:end;width:min(100%,300px);aspect-ratio:3/4;border:6px solid var(--lime);border-radius:50% 50% 50% 50%/42% 42% 58% 58%;display:grid;place-content:center;text-align:center;margin-bottom:clamp(36px,5vw,64px);padding:20px;position:relative}
+.mirror::after{content:"";position:absolute;left:22%;top:12%;width:14%;height:30%;border-left:4px solid rgba(255,255,255,.55);border-radius:50%;transform:rotate(18deg)}
+.mirror b{font:400 clamp(72px,9vw,112px)/1 var(--serif);color:var(--lime);display:block}
+.mirror small{font:500 15px/1.4 var(--sans);display:block}
+.facts{background:var(--ink);color:var(--white)}
+.facts dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0}
+.facts dl>div{padding:22px 24px 22px 0;border-right:1px solid rgba(255,255,255,.2)}
+.facts dl>div+div{padding-left:24px}
+.facts dl>div:last-child{border:0}
+.facts dt{font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:8px}
+.facts dd{margin:0;font-size:17px;line-height:1.4}
+.facts a{text-decoration:none}
+
+/* services */
+.svc{padding-block:clamp(64px,9vw,128px)}
+.svc__grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px);align-items:start}
+.svc__head{position:sticky;top:100px}
+.svc__head p{max-width:24em;color:#4d4766}
+.list{list-style:none;margin:0;padding:0;counter-reset:s}
+.list li{counter-increment:s;display:grid;grid-template-columns:64px 1fr auto;gap:16px;align-items:center;padding:26px 0;border-top:2px solid var(--ink)}
+.list li:last-child{border-bottom:2px solid var(--ink)}
+.list li::before{content:counter(s,decimal-leading-zero);font:400 40px/1 var(--serif);color:transparent;-webkit-text-stroke:1px var(--violet)}
+.slot{height:14px;border-bottom:2px dashed var(--line);width:100%}
+.mark{font:600 12px/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:#5a5478;white-space:nowrap}
+
+/* about */
+.about{background:var(--mist);padding-block:clamp(64px,9vw,128px);overflow:hidden}
+.about__grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(24px,5vw,80px);align-items:center}
+.big{font:400 clamp(150px,26vw,380px)/.85 var(--serif);color:transparent;-webkit-text-stroke:2px var(--violet);margin:0;white-space:nowrap}
+.scale{display:flex;gap:6px;margin:22px 0 14px}
+.scale span{flex:1;height:14px;background:var(--violet)}
+.scale span:last-child{background:linear-gradient(90deg,var(--violet) 70%,#cfc8f3 70%)}
+.about p{margin:0 0 14px;max-width:28em}
+.about .btn{margin-top:10px}
+
+/* find */
+.find{background:var(--lime);padding-block:clamp(64px,9vw,128px)}
+.find__grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,5vw,80px)}
+.addr{font:400 clamp(30px,3.6vw,46px)/1.15 var(--serif);margin:0 0 28px}
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0;list-style:none;margin:20px 0 0;padding:0;border:2px solid var(--ink)}
+.week li{padding:12px 4px;text-align:center;border-right:1px solid var(--ink);font:500 13px/1.3 var(--sans)}
+.week li:last-child{border:0}
+.week b{display:block;font-weight:600;font-size:14px}
+.week li.is-today{background:var(--ink);color:var(--lime)}
+.hrs{font:500 18px/1.4 var(--sans);margin:0}
+.map{border:2px solid var(--ink);min-height:360px;background:var(--ink);color:var(--white);position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map__ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:28px;gap:14px}
+.map__ph p{margin:0;font:400 28px/1.15 var(--serif);max-width:12em}
+.map__ph small{max-width:30em;font-size:14px;opacity:.85}
+
+/* contacts */
+.contacts{background:var(--ink);color:var(--white);padding-block:clamp(64px,9vw,120px)}
+.contacts__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:end}
+.contacts h2 em{font-style:normal;color:var(--lime)}
+.cl{margin:0}
+.cl div{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:18px 0;border-top:1px solid rgba(255,255,255,.25)}
+.cl div:last-child{border-bottom:1px solid rgba(255,255,255,.25)}
+.cl dt{font:600 12px/1.6 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
+.cl dd{margin:0;font-size:20px;overflow-wrap:anywhere}
+.cl a{text-underline-offset:4px}
+.contacts .btn{margin-top:28px}
+.foot{background:#0d0a20;color:#cdc8e6;padding:22px 0;font-size:14px}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .5s cubic-bezier(.16,1,.3,1),transform .5s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.btn{transition:none}}
+
+@media (max-width:1000px){
+  .svc__grid,.about__grid,.find__grid,.contacts__grid{grid-template-columns:1fr}
+  .svc__head{position:static}
+  .hero__grid{grid-template-columns:1fr}
+  .mirror{justify-self:start;width:min(70%,240px);margin-top:-8px}
+  .hero__txt{padding-bottom:20px}
+}
+@media (max-width:700px){
+  body{font-size:16px}
+  .top .btn{display:none}
+  .status{font-size:13px}
+  .facts dl{grid-template-columns:1fr}
+  .facts dl>div,.facts dl>div+div{padding:16px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.2)}
+  .list li{grid-template-columns:48px 1fr}
+  .list li::before{font-size:32px}
+  .mark{grid-column:2;white-space:normal}
+  .cl div{grid-template-columns:1fr;gap:4px}
+  .week li{font-size:12px;padding:10px 0}
+  .btn{width:100%}
+  .sheet__foot .btn{width:auto}
+}
+@media (max-width:380px){.logo{font-size:22px}.status{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">До змісту</a>
+<header class="top">
+  <div class="wrap top__in">
+    <a class="logo" href="#top" aria-label="BALOVAT — на початок">BALOVAT</a>
+    <span class="status" id="status" aria-live="polite"><i></i><span>Щодня 09:00–20:00</span></span>
+    <a class="btn btn--lime" href="#contacts">Зв'язатися із салоном</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="sheet"><span aria-hidden="true"></span>Меню</button>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Меню" data-lenis-prevent>
+  <div class="wrap sheet__in">
+    <div class="sheet__bar">
+      <span class="logo">BALOVAT</span>
+      <button class="menu-btn" id="menuClose">Закрити</button>
+    </div>
+    <ol>
+      <li><a href="#services">Послуги</a></li>
+      <li><a href="#about">Про салон</a></li>
+      <li><a href="#find">Адреса й години</a></li>
+      <li><a href="#contacts">Контакти</a></li>
+    </ol>
+    <div class="sheet__foot">
+      <a class="btn btn--lime" href="tel:+380684284444">068 428 4444</a>
+      <span>вулиця Мистецтв, 7/9, Харків</span>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero__grid">
+    <p class="tag" style="grid-column:1/-1;margin:0">Косметичний салон · Харків</p>
+    <h1>BALOVAT</h1>
+    <div class="hero__txt">
+      <p class="hero__lead">Усе про салон в одному місці: послуги, адреса й години роботи.</p>
+      <div class="hero__cta">
+        <a class="btn btn--lime" href="#contacts">Зв'язатися із салоном</a>
+        <a class="btn btn--line" href="#find">Як нас знайти</a>
+      </div>
+    </div>
+    <div class="mirror" role="img" aria-label="Оцінка Google 4,7, 40 відгуків">
+      <div><b>4,7</b><small>Google · 40 відгуків</small></div>
+    </div>
+  </div>
+  <div class="facts">
+    <div class="wrap">
+      <dl>
+        <div><dt>Адреса</dt><dd>вулиця Мистецтв, 7/9, Харків</dd></div>
+        <div><dt>Години</dt><dd>Щодня 09:00–20:00</dd></div>
+        <div><dt>Телефон</dt><dd><a href="tel:+380684284444">068 428 4444</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="svc" id="services">
+  <div class="wrap svc__grid">
+    <div class="svc__head rv">
+      <p class="tag">01 · Послуги</p>
+      <h2>Що робить салон</h2>
+      <p style="margin-top:20px">Перелік послуг і ціни салон передасть для сайту. Тут залишено місце під список — без вигаданих позицій.</p>
+    </div>
+    <ol class="list rv" aria-label="Місце для списку послуг">
+      <li><span class="slot" aria-hidden="true"></span><span class="mark">Назва послуги — місце під текст</span></li>
+      <li><span class="slot" aria-hidden="true"></span><span class="mark">Назва послуги — місце під текст</span></li>
+      <li><span class="slot" aria-hidden="true"></span><span class="mark">Назва послуги — місце під текст</span></li>
+      <li><span class="slot" aria-hidden="true"></span><span class="mark">Назва послуги — місце під текст</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about__grid">
+    <p class="big rv" aria-hidden="true">4,7</p>
+    <div class="rv">
+      <p class="tag">02 · Про салон</p>
+      <h2 style="margin-bottom:6px">BALOVAT у Харкові</h2>
+      <div class="scale" role="img" aria-label="4,7 із 5"><span></span><span></span><span></span><span></span><span></span></div>
+      <p><strong>4,7 із 5</strong> — оцінка Google за 40 відгуками.</p>
+      <p>Косметичний салон на вулиці Мистецтв, 7/9. Працює щодня з 09:00 до 20:00.</p>
+      <a class="btn btn--ink" href="https://www.google.com/maps/place/?q=place_id:ChIJQdRFWcShJ0EReC16eBHJH5U" target="_blank" rel="noopener">Відгуки на Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap find__grid">
+    <div class="rv">
+      <p class="tag">03 · Адреса й години</p>
+      <p class="addr">вулиця Мистецтв, 7/9,<br>Харків, 61002</p>
+      <p class="hrs" id="hrs">Щодня 09:00–20:00</p>
+      <ul class="week" id="week" aria-label="Години роботи за днями">
+        <li><b>Пн</b>09–20</li><li><b>Вт</b>09–20</li><li><b>Ср</b>09–20</li><li><b>Чт</b>09–20</li><li><b>Пт</b>09–20</li><li><b>Сб</b>09–20</li><li><b>Нд</b>09–20</li>
+      </ul>
+    </div>
+    <div class="map rv" id="map">
+      <div class="map__ph">
+        <p>Карта завантажиться після кліку</p>
+        <small>Google Maps збирає дані відвідувача, тому карта не вантажиться, доки ви її не відкриєте.</small>
+        <button class="btn btn--lime" id="mapBtn" type="button">Показати карту</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contacts" id="contacts">
+  <div class="wrap contacts__grid">
+    <div class="rv">
+      <p class="tag" style="color:var(--lime)">04 · Контакти</p>
+      <h2>Зв'яжіться <em>із салоном</em></h2>
+      <a class="btn btn--lime" href="tel:+380684284444">Зателефонувати 068 428 4444</a>
+    </div>
+    <dl class="cl rv">
+      <div><dt>Телефон</dt><dd><a href="tel:+380684284444">068 428 4444</a></dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:info@balovat.com">info@balovat.com</a></dd></div>
+      <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/balovat.kh/" target="_blank" rel="noopener">instagram.com/balovat.kh</a></dd></div>
+      <div><dt>Адреса</dt><dd>вулиця Мистецтв, 7/9, Харків, 61002</dd></div>
+      <div><dt>Години</dt><dd>Щодня 09:00–20:00</dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+<footer class="foot"><div class="wrap">Попередній концепт від Doba Digital - не опублікований сайт</div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lenis=null;
+  if(window.Lenis&&!reduce){lenis=new Lenis({autoRaf:true,lerp:.12});window.lenis=lenis;}
+  // Kyiv time: status + today in week
+  function kyiv(){
+    var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Kyiv',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()),o={};
+    p.forEach(function(x){o[x.type]=x.value});
+    return {d:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].indexOf(o.weekday),m:(+o.hour%24)*60+ +o.minute};
+  }
+  var k=kyiv(),open=k.m>=540&&k.m<1200,st=document.getElementById('status');
+  st.classList.toggle('is-open',open);
+  st.lastChild.textContent=open?'Відчинено до 20:00':'Зачинено · відкриття о 09:00';
+  var wk=document.querySelectorAll('#week li');if(wk[k.d])wk[k.d].classList.add('is-today');
+  // menu
+  var sheet=document.getElementById('sheet'),mb=document.getElementById('menuBtn'),mc=document.getElementById('menuClose');
+  function setMenu(o){sheet.classList.toggle('is-open',o);mb.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';
+    if(lenis){o?lenis.stop():lenis.start();} (o?mc:mb).focus();}
+  mb.onclick=function(){setMenu(true)};mc.onclick=function(){setMenu(false)};
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&sheet.classList.contains('is-open'))setMenu(false)});
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){
+    var id=a.getAttribute('href');var t=id==='#top'?document.body:document.querySelector(id);if(!t)return;e.preventDefault();
+    if(sheet.classList.contains('is-open')){sheet.classList.remove('is-open');mb.setAttribute('aria-expanded','false');document.body.style.overflow='';if(lenis)lenis.start();}
+    if(lenis)lenis.scrollTo(id==='#top'?0:t,{offset:-68,duration:1});else t.scrollIntoView({behavior:'auto'});
+  })});
+  // map on click
+  document.getElementById('mapBtn').onclick=function(){
+    var m=document.getElementById('map'),f=document.createElement('iframe');
+    f.src='https://www.google.com/maps?q='+encodeURIComponent('вулиця Мистецтв 7/9, Харків')+'&output=embed';
+    f.title='Карта: BALOVAT, вулиця Мистецтв 7/9, Харків';f.loading='lazy';
+    m.innerHTML='';m.appendChild(f);
+  };
+  // reveal
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+    rv.forEach(function(r){io.observe(r)});
+  } else rv.forEach(function(r){r.classList.add('in')});
+})();
+</script>
+</body>
+</html>
