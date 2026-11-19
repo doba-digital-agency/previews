@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pekarskiy — кав'ярня й пекарня в Івано-Франківську</title>
+<meta name="description" content="Pekarskiy: кав'ярня й пекарня на вулиці Шевченка 64 в Івано-Франківську. Щодня з 10:00 до 21:00. Меню, години роботи, адреса, телефон +380686033113 і мапа в одному місці.">
+<meta name="theme-color" content="#1c2430">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f0701e'/%3E%3Cpath d='M18 52V12h16c9 0 14 5 14 13s-5 13-14 13H27v14z M27 20v10h7c4 0 6-2 6-5s-2-5-6-5z' fill='%231c2430' fill-rule='evenodd'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Commissioner:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.css">
+<style>
+:root{
+  --ink:#1c2430; --ink2:#2b3748; --crust:#f0701e; --crust-d:#a8420a;
+  --flour:#f3f6f9; --sky:#cfe3ee; --sesame:#f7d154; --white:#fff;
+  --muted:#4a5666; --line:#c3ccd6;
+  --head:'Oswald','Arial Narrow',Impact,sans-serif;
+  --body:'Commissioner',system-ui,Arial,sans-serif;
+  --hh:60px; --pad:clamp(20px,5vw,72px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:var(--hh)}
+body{margin:0;font:400 17px/1.6 var(--body);color:var(--ink);background:var(--white);overflow-x:hidden}
+img,svg{max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+h1,h2,h3,p,dl,dd,ul{margin:0}
+ul{padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--sesame);outline-offset:3px}
+.on-light :focus-visible,.sec--light :focus-visible,.sec--sky :focus-visible,.sec--crust :focus-visible,.hero__l :focus-visible{outline-color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 26px;border:2px solid var(--ink);border-radius:2px;font:600 16px/1.2 var(--body);text-decoration:none;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn--ink{background:var(--ink);color:var(--white)}
+.btn--ink:hover{background:var(--ink2);transform:translateY(-2px)}
+.btn--line{background:transparent;color:var(--ink)}
+.btn--line:hover{background:var(--ink);color:var(--white)}
+.btn--crust{background:var(--crust);color:var(--ink);border-color:var(--crust)}
+.btn--crust:hover{background:var(--sesame);border-color:var(--sesame)}
+
+/* header */
+.top{position:fixed;inset:0 0 auto 0;height:var(--hh);z-index:50;background:var(--ink);color:var(--white);display:flex;align-items:center;gap:16px;padding:0 var(--pad);border-bottom:3px solid var(--crust)}
+.top__name{font:700 26px/1 var(--head);text-decoration:none;letter-spacing:.02em;margin-right:auto}
+.status{display:inline-flex;align-items:center;gap:8px;font:500 14px/1.2 var(--body);white-space:nowrap}
+.status i{width:10px;height:10px;border-radius:50%;background:#8a96a6;flex:none}
+.status.is-open i{background:#5fd48a}
+.top__menu{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;background:var(--crust);color:var(--ink);border:0;border-radius:2px;font:600 15px/1 var(--body);cursor:pointer}
+.top__menu b{display:grid;gap:5px}
+.top__menu b::before,.top__menu b::after{content:"";width:20px;height:2px;background:var(--ink)}
+.top__menu:hover{background:var(--sesame)}
+.nav{position:fixed;inset:0;z-index:60;background:var(--ink);color:var(--white);display:flex;flex-direction:column;padding:calc(var(--hh) + 24px) var(--pad) 32px;overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+.nav.is-open{opacity:1;visibility:visible}
+.nav__close{position:absolute;top:8px;right:var(--pad);min-height:44px;padding:0 16px;background:transparent;color:var(--white);border:2px solid var(--white);border-radius:2px;font:600 15px/1 var(--body);cursor:pointer}
+.nav ol{list-style:none;margin:auto 0;padding:0;counter-reset:n}
+.nav li{border-top:1px solid var(--ink2)}
+.nav li:last-child{border-bottom:1px solid var(--ink2)}
+.nav li a{display:flex;align-items:baseline;gap:20px;padding:14px 0;font:600 clamp(36px,8vw,88px)/1.05 var(--head);text-transform:uppercase;text-decoration:none;transition:color .2s,padding .2s}
+.nav li a::before{counter-increment:n;content:"0" counter(n);font:500 16px var(--body);color:var(--crust)}
+.nav li a:hover{color:var(--crust);padding-left:12px}
+.nav__tel{margin-top:24px;font:500 18px/1.4 var(--body)}
+.nav__tel a{color:var(--sesame)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:7fr 5fr;min-height:100svh;padding-top:var(--hh)}
+.hero__l{position:relative;background:var(--crust);color:var(--ink);padding:clamp(40px,7vh,88px) var(--pad);display:flex;flex-direction:column;justify-content:center;gap:24px;overflow:hidden}
+.eyebrow{font:600 13px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase}
+.hero h1{font:700 clamp(40px,11vw,190px)/.95 var(--head);white-space:nowrap;margin-left:-.03em;position:relative;z-index:1}
+.lead{font-size:clamp(18px,1.5vw,21px);line-height:1.5;max-width:30em;position:relative;z-index:1}
+.cta{display:flex;flex-wrap:wrap;gap:12px;position:relative;z-index:1}
+.facts{display:flex;flex-wrap:wrap;gap:8px 28px;font:600 15px/1.4 var(--body);padding-top:20px;border-top:2px solid var(--ink);position:relative;z-index:1}
+.slash{position:absolute;right:-30px;bottom:-30px;width:340px;height:260px;pointer-events:none}
+.slash span{position:absolute;height:34px;width:300px;background:var(--sesame);transform:skewX(-35deg) rotate(-58deg);transform-origin:left;border-radius:20px}
+.slash span:nth-child(1){left:90px;top:220px}
+.slash span:nth-child(2){left:150px;top:220px;opacity:.7}
+.slash span:nth-child(3){left:210px;top:220px;opacity:.45}
+.hero__r{background:var(--ink);color:var(--white);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:40px var(--pad)}
+.dial{width:min(100%,420px);height:auto}
+.dial text{font-family:var(--body)}
+.dial__cap{text-align:center;font:500 15px/1.5 var(--body);color:#d6dde6;max-width:26em}
+.dial__cap strong{display:block;font:600 22px/1.2 var(--head);color:var(--white);letter-spacing:.03em;text-transform:uppercase;margin-bottom:4px}
+
+/* sections */
+.sec{padding:clamp(56px,9vw,120px) var(--pad)}
+.wrap{max-width:1280px;margin:0 auto}
+.sec__tag{display:flex;align-items:center;gap:12px;font:600 13px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
+.sec__tag::before{content:"";width:36px;height:3px;background:currentColor}
+h2{font:600 clamp(36px,5.5vw,76px)/1.02 var(--head);text-transform:uppercase}
+.sec--light{background:var(--flour)}
+.sec--sky{background:var(--sky)}
+.sec--ink{background:var(--ink);color:var(--white)}
+.sec--crust{background:var(--crust)}
+.tag-note{display:inline-block;margin-top:16px;padding:6px 12px;border:2px dashed currentColor;font:500 14px/1.3 var(--body)}
+
+/* menu */
+.menu-head{padding-bottom:0}
+.menu-head .wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px 64px;align-items:end}
+.menu-head p{max-width:34em;color:var(--muted)}
+.band{display:grid;grid-template-columns:5fr 7fr;gap:24px clamp(32px,6vw,96px);align-items:start}
+.band__word{font:700 clamp(64px,8vw,150px)/.9 var(--head);text-transform:uppercase;color:transparent;-webkit-text-stroke:2px var(--ink);overflow-wrap:anywhere}
+.sec--ink .band__word{-webkit-text-stroke-color:var(--white)}
+.band small{display:block;margin-top:14px;font:500 15px/1.4 var(--body);max-width:20em}
+.rows li{display:flex;align-items:baseline;gap:14px;padding:18px 0;border-top:2px dashed currentColor;font:500 18px/1.3 var(--body)}
+.rows li:last-child{border-bottom:2px dashed currentColor}
+.rows em{font:500 15px var(--body);font-style:normal;min-width:2.2em;color:var(--crust-d)}
+.sec--ink .rows em{color:var(--crust)}
+.rows span{opacity:.75}
+.rows i{flex:1;border-bottom:2px dotted currentColor;opacity:.5;transform:translateY(-4px)}
+.rows u{text-decoration:none;font-size:14px;opacity:.75}
+.sec--sky{color:var(--ink)}
+
+/* about */
+.about{display:grid;grid-template-columns:7fr 5fr;gap:32px clamp(32px,6vw,96px);align-items:start}
+.about__txt{font:500 clamp(22px,2.6vw,36px)/1.3 var(--head);text-transform:none;letter-spacing:.01em}
+.about__txt+.tag-note{margin-top:24px}
+.spec{border-top:3px solid var(--ink)}
+.spec div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.spec dt{color:var(--muted);font-size:15px}
+.spec dd{font-weight:600;text-align:right}
+
+/* contacts */
+.contacts{display:grid;grid-template-columns:5fr 7fr;gap:40px clamp(32px,5vw,80px);align-items:start}
+.dl{margin-top:28px;border-top:3px solid var(--ink)}
+.dl div{display:grid;grid-template-columns:7.5em 1fr;gap:12px;padding:14px 0;border-bottom:1px solid rgba(28,36,48,.35)}
+.dl dt{font:600 13px/1.6 var(--body);letter-spacing:.1em;text-transform:uppercase}
+.dl dd{font:600 18px/1.4 var(--body);overflow-wrap:anywhere}
+.dl a{text-decoration-thickness:2px;text-underline-offset:3px}
+.contacts .cta{margin-top:28px}
+.map{position:relative;min-height:440px;border:3px solid var(--ink);background:var(--ink);color:var(--white);display:flex;align-items:center;justify-content:center;text-align:center;padding:32px}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map__in{display:grid;gap:16px;justify-items:center;max-width:24em}
+.map__in strong{font:600 clamp(26px,3vw,38px)/1.1 var(--head);text-transform:uppercase}
+.map__in p{color:#d6dde6;font-size:15px}
+
+footer{background:var(--ink);color:#d6dde6;padding:48px var(--pad) 32px}
+footer .wrap{display:grid;gap:24px}
+.foot__row{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:baseline;justify-content:space-between}
+.foot__name{font:700 34px/1 var(--head);color:var(--white)}
+.foot__nav{display:flex;flex-wrap:wrap;gap:8px 24px}
+.foot__nav a{display:inline-block;padding:8px 0}
+.foot__line{padding-top:20px;border-top:1px solid var(--ink2);font-size:14px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.btn,.nav,.nav li a{transition:none}}
+
+/* tablet */
+@media (max-width:1000px){
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero__l{min-height:min(78svh,640px)}
+  .hero h1{font-size:clamp(40px,19vw,190px)}
+  .hero__r{flex-direction:row;gap:32px;padding:48px var(--pad)}
+  .dial{width:min(46%,340px)}
+  .band,.about,.contacts,.menu-head .wrap{grid-template-columns:1fr}
+  .band__word{font-size:clamp(64px,19vw,180px)}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .top{gap:10px}
+  .top__name{font-size:22px}
+  .status span{display:none}
+  .status i{width:14px;height:14px}
+  .top__menu{padding:0 12px}
+  .hero__r{flex-direction:column}
+  .dial{width:min(100%,320px)}
+  .cta .btn{flex:1 1 100%}
+  .dl div{grid-template-columns:1fr;gap:2px}
+  .rows li{font-size:16px;flex-wrap:wrap}
+  .map{min-height:360px}
+  .slash{opacity:.6}
+}
+</style>
+</head>
+<body>
+<header class="top" id="top">
+  <a class="top__name" href="#home" aria-label="Pekarskiy — на початок">Pekarskiy</a>
+  <span class="status" id="status" role="status"><i aria-hidden="true"></i><span>Щодня 10:00–21:00</span></span>
+  <button class="top__menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav"><b aria-hidden="true"></b>Розділи</button>
+</header>
+
+<div class="nav" id="nav" role="dialog" aria-modal="true" aria-label="Розділи сайту" data-lenis-prevent>
+  <button class="nav__close" id="navClose" type="button">Закрити ✕</button>
+  <ol>
+    <li><a href="#menu">Меню</a></li>
+    <li><a href="#about">Про заклад</a></li>
+    <li><a href="#contacts">Контакти</a></li>
+  </ol>
+  <p class="nav__tel">вулиця Шевченка 64 · <a href="tel:+380686033113">+380686033113</a></p>
+</div>
+
+<main id="home">
+  <section class="hero" aria-labelledby="h1">
+    <div class="hero__l">
+      <p class="eyebrow">Кав'ярня й пекарня · Івано-Франківськ</p>
+      <h1 id="h1">Pekarskiy</h1>
+      <p class="lead">Меню, години роботи та адреса в одному місці: гість швидко бачить, що тут є, і як дістатися.</p>
+      <div class="cta">
+        <a class="btn btn--ink" href="#contacts">Як нас знайти</a>
+        <a class="btn btn--line" href="tel:+380686033113">Зателефонувати</a>
+      </div>
+      <p class="facts"><span>вулиця Шевченка 64</span><span>щодня 10:00–21:00</span></p>
+      <div class="slash" aria-hidden="true"><span></span><span></span><span></span></div>
+    </div>
+    <div class="hero__r">
+      <svg class="dial" id="dial" viewBox="0 0 400 400" role="img" aria-label="Двадцятичотиригодинний циферблат: заклад відчинений щодня з 10:00 до 21:00">
+        <circle cx="200" cy="200" r="150" fill="none" stroke="#2b3748" stroke-width="36"/>
+        <path d="M275 329.9 A150 150 0 0 1 93.93 93.93" fill="none" stroke="#f0701e" stroke-width="36"/>
+        <g id="ticks" stroke="#8a96a6" stroke-width="2"></g>
+        <g fill="#d6dde6" font-size="16" font-weight="600" text-anchor="middle">
+          <text x="200" y="14">00</text><text x="391" y="206">06</text><text x="200" y="394">12</text><text x="9" y="206">18</text>
+        </g>
+        <g id="hand" style="transform-origin:200px 200px"><line x1="200" y1="200" x2="200" y2="40" stroke="#f7d154" stroke-width="4" stroke-linecap="round"/><circle cx="200" cy="40" r="9" fill="#f7d154"/></g>
+        <circle cx="200" cy="200" r="7" fill="#f7d154"/>
+        <text x="200" y="196" text-anchor="middle" font-family="Oswald,sans-serif" font-size="56" font-weight="700" fill="#fff" dy="-8">10–21</text>
+        <text x="200" y="248" text-anchor="middle" font-size="16" fill="#d6dde6" letter-spacing="2">ЩОДНЯ</text>
+      </svg>
+      <p class="dial__cap"><strong id="dialStatus">Щодня 10:00–21:00</strong>Жовта стрілка показує поточний час у Києві, помаранчева дуга — години, коли ми відчинені.</p>
+    </div>
+  </section>
+
+  <section class="sec sec--light menu-head" id="menu" aria-labelledby="menuH">
+    <div class="wrap">
+      <div class="rv"><p class="sec__tag">01 · Меню</p><h2 id="menuH">Кава й випічка</h2></div>
+      <div class="rv"><p>Тут з'являться позиції та ціни закладу. Поки що це заготовки: назв і цін ми не вигадуємо.</p><span class="tag-note">Заглушка · буде замінено меню закладу</span></div>
+    </div>
+  </section>
+
+  <section class="sec sec--sky" aria-labelledby="coffeeH">
+    <div class="wrap band">
+      <div class="rv"><h3 class="band__word" id="coffeeH">Кава</h3><small>Блок для напоїв: еспресо, фільтр, молочні напої тощо — коли власник надішле список.</small></div>
+      <ul class="rows rv">
+        <li><em>01</em><span>Назва позиції</span><i></i><u>ціна</u></li>
+        <li><em>02</em><span>Назва позиції</span><i></i><u>ціна</u></li>
+        <li><em>03</em><span>Назва позиції</span><i></i><u>ціна</u></li>
+        <li><em>04</em><span>Назва позиції</span><i></i><u>ціна</u></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec sec--ink" aria-labelledby="bakeH">
+    <div class="wrap band">
+      <div class="rv"><h3 class="band__word" id="bakeH">Випічка</h3><small>Блок для пекарні: хліб, булочки, десерти — коли власник надішле список.</small></div>
+      <ul class="rows rv">
+        <li><em>01</em><span>Назва позиції</span><i></i><u>ціна</u></li>
+        <li><em>02</em><span>Назва позиції</span><i></i><u>ціна</u></li>
+        <li><em>03</em><span>Назва позиції</span><i></i><u>ціна</u></li>
+        <li><em>04</em><span>Назва позиції</span><i></i><u>ціна</u></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="about" aria-labelledby="aboutH">
+    <div class="wrap about">
+      <div class="rv">
+        <p class="sec__tag">02 · Про заклад</p>
+        <h2 id="aboutH" style="margin-bottom:24px">Про Pekarskiy</h2>
+        <p class="about__txt">Pekarskiy — кав'ярня й пекарня в Івано-Франківську. Тут має бути коротка розповідь про заклад: про каву, випічку й атмосферу — власними словами власника.</p>
+        <span class="tag-note">Текст-заглушка · буде замінено</span>
+      </div>
+      <dl class="spec rv">
+        <div><dt>Формат</dt><dd>кав'ярня й пекарня</dd></div>
+        <div><dt>Місто</dt><dd>Івано-Франківськ</dd></div>
+        <div><dt>Адреса</dt><dd>вулиця Шевченка 64</dd></div>
+        <div><dt>Години</dt><dd>щодня 10:00–21:00</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec sec--crust" id="contacts" aria-labelledby="contH">
+    <div class="wrap contacts">
+      <div class="rv">
+        <p class="sec__tag">03 · Контакти</p>
+        <h2 id="contH">Як нас знайти</h2>
+        <dl class="dl">
+          <div><dt>Адреса</dt><dd>вулиця Шевченка 64, Івано-Франківськ</dd></div>
+          <div><dt>Години</dt><dd>щодня 10:00–21:00</dd></div>
+          <div><dt>Телефон</dt><dd><a href="tel:+380686033113">+380686033113</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:info@pekarskiy.com">info@pekarskiy.com</a></dd></div>
+          <div><dt>Сайт</dt><dd><a href="https://pekarskiy.com" rel="noopener">pekarskiy.com</a></dd></div>
+        </dl>
+        <div class="cta">
+          <a class="btn btn--ink" href="https://www.google.com/maps/search/?api=1&amp;query=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%A8%D0%B5%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%B0+64+%D0%86%D0%B2%D0%B0%D0%BD%D0%BE-%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA" rel="noopener" target="_blank">Знайти нас</a>
+          <a class="btn btn--line" href="tel:+380686033113">Зателефонувати</a>
+        </div>
+      </div>
+      <div class="map rv" id="map">
+        <div class="map__in" id="mapIn">
+          <strong>Мапа</strong>
+          <p>Мапа Google завантажується лише після натискання — до цього жодних запитів до сторонніх сервісів.</p>
+          <button class="btn btn--crust" id="mapBtn" type="button">Показати мапу</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot__row">
+      <span class="foot__name">Pekarskiy</span>
+      <nav class="foot__nav" aria-label="Нижня навігація"><a href="#menu">Меню</a><a href="#about">Про заклад</a><a href="#contacts">Контакти</a><a href="tel:+380686033113">+380686033113</a></nav>
+    </div>
+    <p class="foot__line">Попередній концепт від Doba Digital - не опублікований сайт</p>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // dial ticks
+  var NS='http://www.w3.org/2000/svg',g=document.getElementById('ticks');
+  for(var h=0;h<24;h++){var a=h/24*2*Math.PI,r1=h%6?172:166,r2=186;
+    var l=document.createElementNS(NS,'line');
+    l.setAttribute('x1',200+r1*Math.sin(a));l.setAttribute('y1',200-r1*Math.cos(a));
+    l.setAttribute('x2',200+r2*Math.sin(a));l.setAttribute('y2',200-r2*Math.cos(a));g.appendChild(l);}
+  // Kyiv time status
+  function kyiv(){var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Kyiv',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date()),o={};
+    p.forEach(function(x){o[x.type]=x.value});return (+o.hour%24)+(+o.minute)/60;}
+  function tick(){var t=kyiv(),open=t>=10&&t<21,s=document.getElementById('status');
+    s.classList.toggle('is-open',open);
+    var txt=open?'Відчинено · до 21:00':'Зачинено · відчиняємось о 10:00';
+    s.querySelector('span').textContent=txt;document.getElementById('dialStatus').textContent=txt;
+    document.getElementById('hand').style.transform='rotate('+(t/24*360)+'deg)';}
+  tick();setInterval(tick,60000);
+  // overlay nav
+  var nav=document.getElementById('nav'),btn=document.getElementById('menuBtn'),cl=document.getElementById('navClose');
+  function setNav(o){nav.classList.toggle('is-open',o);btn.setAttribute('aria-expanded',o);
+    if(window.lenis){o?lenis.stop():lenis.start();}
+    document.body.style.overflow=o?'hidden':'';
+    if(o){cl.focus()}else{btn.focus({preventScroll:true})}}
+  nav.inert=true;
+  var _set=setNav;setNav=function(o){nav.inert=!o;_set(o)};
+  btn.addEventListener('click',function(){setNav(true)});
+  cl.addEventListener('click',function(){setNav(false)});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setNav(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('is-open'))setNav(false)});
+  // map on click
+  document.getElementById('mapBtn').addEventListener('click',function(){
+    var f=document.createElement('iframe');f.title='Мапа: вулиця Шевченка 64, Івано-Франківськ';
+    f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';
+    f.src='https://www.google.com/maps?q='+encodeURIComponent('вулиця Шевченка 64, Івано-Франківськ')+'&output=embed';
+    document.getElementById('mapIn').hidden=true;document.getElementById('map').appendChild(f);});
+  // reveals
+  var items=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});items.forEach(function(i){io.observe(i)});}
+  else items.forEach(function(i){i.classList.add('in')});
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+<script>
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!window.Lenis)return;
+  window.lenis=new Lenis({autoRaf:true,anchors:{offset:-60}});
+})();
+</script>
+</body>
+</html>
