@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Меблі — магазин меблів у Тернополі: години й телефони</title>
+<meta name="description" content="Магазин «Меблі» в Тернополі: категорії меблів для дому, години роботи пн–пт 10:00–20:00, сб–нд 10:00–21:00, три телефони й пошта для зв'язку з магазином.">
+<meta property="og:title" content="Меблі — магазин меблів у Тернополі">
+<meta property="og:description" content="Категорії меблів, години роботи й телефони магазину в Тернополі.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ff5a1f'/%3E%3Cpath d='M12 50V16h8l12 20 12-20h8v34h-8V32L32 50 20 32v18z' fill='%231c1c20'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/commissioner-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FurnitureStore","name":"Меблі","telephone":"+380 67 709 8455","email":"meblisim7@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Тернопіль","addressCountry":"UA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"10:00","closes":"21:00"}]}
+</script>
+<style>
+@font-face{font-family:"Commissioner";font-style:normal;font-weight:400 900;font-display:swap;src:url(fonts/commissioner-cyr.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Commissioner";font-style:normal;font-weight:400 900;font-display:swap;src:url(fonts/commissioner-lat.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{
+  --ink:#1c1c20;--ink2:#2c2c33;--orange:#ff5a1f;--orange-d:#b93a08;--grey:#eceef1;--steel:#d5dde6;--white:#fff;--line:#c4c9d0;
+  --pad:clamp(20px,4vw,56px);--max:1600px;
+  --font:"Commissioner",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:auto;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font);font-size:17px;line-height:1.55;color:var(--ink);background:var(--white);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+[hidden]{display:none!important}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.on-dark :focus-visible,.dark :focus-visible{outline-color:var(--orange)}
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
+a.sr:focus{position:fixed;left:8px;top:8px;width:auto;height:auto;clip:auto;background:var(--white);color:var(--ink);padding:12px 16px;z-index:99;font-weight:700}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.label{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+
+/* buttons: rectangular, hard edge, arrow */
+.btn{display:inline-flex;align-items:center;gap:14px;min-height:52px;padding:0 24px;font:700 16px/1 var(--font);text-decoration:none;border:2px solid var(--ink);background:var(--ink);color:var(--white);border-radius:0;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn::after{content:"→";transition:transform .2s}
+.btn:hover::after{transform:translateX(4px)}
+.btn:hover{background:var(--white);color:var(--ink)}
+.btn--line{background:transparent;color:var(--ink)}
+.btn--line:hover{background:var(--ink);color:var(--white)}
+.btn--orange{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.btn--orange:hover{background:var(--white);border-color:var(--white);color:var(--ink)}
+.btn--ghost-w{background:transparent;border-color:var(--white);color:var(--white)}
+.btn--ghost-w:hover{background:var(--white);color:var(--ink)}
+
+/* header: two tiers */
+.topline{background:var(--ink);color:var(--white);font-size:14px}
+.topline .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:42px}
+.status{display:inline-flex;align-items:center;gap:10px;font-weight:600}
+.status i{width:9px;height:9px;background:var(--orange);display:block}
+.status[data-open="false"] i{background:#8a8f98}
+.topline__tel{display:flex;gap:28px}
+.topline__tel a{text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums;padding:10px 0}
+.topline__tel a:hover{color:var(--orange)}
+.bar{position:sticky;top:0;z-index:30;background:var(--white);border-bottom:2px solid var(--ink)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:76px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:900;font-size:26px;letter-spacing:-.01em}
+.logo__mark{width:40px;height:40px;background:var(--orange);display:grid;place-items:center}
+.logo__mark svg{width:26px;height:26px}
+.logo small{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#555a63;display:block;margin-top:2px}
+.logo span{display:block;line-height:1}
+.nav{display:flex;align-items:center;gap:40px}
+.nav ul{display:flex;gap:36px}
+.nav li a{display:flex;align-items:baseline;gap:8px;text-decoration:none;font-weight:600;padding:12px 0;border-bottom:3px solid transparent}
+.nav li a em{font-style:normal;font-size:12px;color:var(--orange-d);font-weight:800}
+.nav li a:hover,.nav li a[aria-current="true"]{border-bottom-color:var(--orange)}
+.burger{display:none;width:48px;height:48px;border:2px solid var(--ink);background:var(--white);padding:0;cursor:pointer}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px auto;transition:transform .2s,opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* hero */
+.hero{background:var(--orange);color:var(--ink);padding-top:clamp(32px,5vw,72px);overflow:hidden}
+.hero__top{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end}
+.hero__eyebrow{grid-column:1/6}
+.hero__eyebrow .label{display:inline-block;border:2px solid var(--ink);padding:8px 12px}
+.hero__lead{grid-column:7/13}
+.hero__lead p{font-size:clamp(19px,1.7vw,24px);line-height:1.4;font-weight:500;max-width:34em}
+.hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero__scene{position:relative;margin-top:clamp(36px,5vw,72px);height:clamp(112px,16vw,250px);overflow:hidden}
+.hero__scene svg{position:absolute;left:0;bottom:0;width:max(100%,820px);height:100%}
+.hero__word{margin:0;font-weight:900;line-height:.74;letter-spacing:-.045em;white-space:nowrap;font-size:clamp(60px,27vw,470px);padding-bottom:.02em;border-top:6px solid var(--ink);padding-top:.1em;margin-bottom:-.01em}
+
+/* catalog */
+.sec{padding-block:clamp(64px,9vw,128px)}
+.sec h2{font-size:clamp(32px,4.2vw,60px);line-height:1.05;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+.catalog{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(24px,4vw,64px)}
+.catalog__head{grid-column:1/5;align-self:start;position:sticky;top:110px}
+.catalog__head p{margin-top:20px;max-width:26em;color:#3e4048}
+.note{display:inline-block;margin-top:24px;padding:8px 12px;background:var(--grey);font-size:14px;font-weight:600}
+.catalog__list{grid-column:5/13;border-top:2px solid var(--ink)}
+.cat{display:grid;grid-template-columns:72px 1fr 200px;gap:24px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+.cat__n{font-size:44px;font-weight:900;line-height:1;color:transparent;-webkit-text-stroke:2px var(--ink);font-variant-numeric:tabular-nums}
+.cat h3{font-size:clamp(22px,2.4vw,32px);line-height:1.15;font-weight:800}
+.cat p{margin-top:4px;font-size:15px;color:#4b4d56}
+.cat__slot{height:110px;border:2px dashed var(--line);display:grid;place-items:center;color:var(--ink);position:relative;background:var(--grey)}
+.cat__slot svg{width:64px;height:64px}
+.cat__slot small{position:absolute;left:8px;bottom:5px;font-size:11px;font-weight:600;color:#555a63}
+.cat:hover .cat__n{-webkit-text-stroke-color:var(--orange-d)}
+
+/* illustrative photos */
+.gallery{background:var(--grey);padding-block:clamp(48px,6vw,88px)}
+.gallery__grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:clamp(12px,2vw,28px);align-items:end}
+.gallery figure img{width:100%;object-fit:cover;background:var(--steel)}
+.gallery figure:nth-child(1) img{aspect-ratio:3/2}
+.gallery figure:nth-child(2) img{aspect-ratio:3/4}
+.gallery figure:nth-child(3) img{aspect-ratio:1/1}
+.gallery figcaption{margin-top:10px;font-size:13px;color:#4b4d56;font-weight:500}
+.gallery__note{margin-bottom:24px;font-size:14px;font-weight:600;max-width:46em}
+
+/* hours */
+.hours{background:var(--ink);color:var(--white)}
+.hours__grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(24px,4vw,64px)}
+.hours__head{grid-column:1/6}
+.hours__head .status{margin-top:24px;font-size:18px;color:var(--white)}
+.hours__head .status i{width:12px;height:12px}
+.hours__big{grid-column:6/13;display:grid;gap:0}
+.slot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 20px;padding:22px 0;border-top:2px solid var(--white)}
+.slot:last-child{border-bottom:2px solid var(--white)}
+.slot__d{font-size:clamp(20px,2vw,28px);font-weight:700}
+.slot__t{font-size:clamp(38px,7vw,108px);font-weight:900;line-height:.95;letter-spacing:-.03em;color:var(--orange);font-variant-numeric:tabular-nums;white-space:nowrap}
+.slot[data-today="true"] .slot__d::after{content:"сьогодні";margin-left:12px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--orange);color:var(--ink);padding:4px 8px;vertical-align:middle}
+.week{grid-column:6/13;display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:-12px}
+.week li{padding:10px 0;text-align:center;font-weight:700;font-size:14px;border:1px solid #55555e}
+.week li[data-today="true"]{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+
+/* contacts */
+.contacts{background:var(--steel)}
+.contacts__grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(24px,4vw,64px)}
+.contacts__head{grid-column:1/6}
+.contacts__head p{margin-top:20px;max-width:26em}
+.contacts__list{grid-column:6/13;border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid #9aa4b0;align-items:baseline}
+.row dt{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#323640;flex:none;white-space:nowrap}
+.row dd{display:flex;flex-direction:column;gap:6px}
+.row a{font-size:clamp(24px,3vw,40px);font-weight:800;line-height:1.15;text-decoration:none;font-variant-numeric:tabular-nums;width:fit-content;border-bottom:3px solid transparent;overflow-wrap:anywhere}
+.row a:hover{border-bottom-color:var(--orange-d)}
+.row .plain{font-size:clamp(22px,2.4vw,32px);font-weight:800}
+.row .small{font-size:15px;font-weight:500;color:#323640}
+.row a.mail{font-size:clamp(20px,2.4vw,32px)}
+.row a.site{font-size:clamp(18px,2vw,24px);font-weight:700}
+
+/* closing call */
+.call{background:var(--orange);padding-block:clamp(56px,8vw,112px)}
+.call .wrap{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end}
+.call h2{grid-column:1/9;font-size:clamp(34px,5.6vw,84px);line-height:1;font-weight:900;letter-spacing:-.03em;text-wrap:balance}
+.call__btns{grid-column:9/13;display:flex;flex-direction:column;gap:12px}
+.call__btns .btn{justify-content:space-between}
+
+footer{background:var(--ink);color:#c9ccd3;padding-block:28px 100px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px}
+footer a{color:var(--white)}
+
+/* phone bottom bar */
+.dock{display:none}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .5s cubic-bezier(.16,1,.3,1),transform .5s cubic-bezier(.16,1,.3,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.btn,.btn::after{transition:none}}
+
+/* tablet */
+@media (max-width:1024px){
+  .nav ul{gap:22px}
+  .nav{gap:22px}
+  .catalog__head{grid-column:1/13;position:static}
+  .catalog__list{grid-column:1/13}
+  .hours__head,.contacts__head{grid-column:1/13}
+  .hours__big,.week,.contacts__list{grid-column:1/13}
+  .week{margin-top:0}
+  .call h2{grid-column:1/13}
+  .call__btns{grid-column:1/13;flex-direction:row;flex-wrap:wrap}
+  .call__btns .btn{flex:1 1 260px}
+  .hero__eyebrow{grid-column:1/13}
+  .hero__lead{grid-column:1/13}
+  .gallery__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .topline__tel{gap:18px}
+}
+/* phone */
+@media (max-width:760px){
+  body{font-size:16px}
+  .topline{display:none}
+  .bar .wrap{min-height:64px}
+  .burger{display:block}
+  .nav{position:absolute;left:0;right:0;top:100%;background:var(--white);border-bottom:2px solid var(--ink);flex-direction:column;align-items:stretch;gap:0;padding:8px var(--pad) 20px;display:none}
+  .nav.open{display:flex}
+  .nav ul{flex-direction:column;gap:0}
+  .nav li a{min-height:56px;align-items:center;border-bottom:1px solid var(--line);font-size:20px}
+  .nav .btn{margin-top:16px;justify-content:space-between}
+  .hero__actions .btn{flex:1 1 100%;justify-content:space-between}
+  .cat{grid-template-columns:48px 1fr;gap:14px}
+  .cat__n{font-size:32px}
+  .cat__slot{grid-column:1/3;height:84px}
+  .gallery__grid{grid-template-columns:1fr 1fr}
+  .gallery figure:nth-child(1){grid-column:1/3}
+  .row{grid-template-columns:1fr;gap:6px}
+  .week{gap:3px}
+  .week li{font-size:13px}
+  .call__btns{flex-direction:column}
+  .call__btns .btn{flex:none}
+  .dock{display:grid;grid-template-columns:1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--ink);border-top:2px solid var(--ink)}
+  .dock a{display:flex;align-items:center;justify-content:center;min-height:56px;font-weight:800;text-decoration:none;color:var(--white);font-size:16px}
+  .dock a:last-child{background:var(--orange);color:var(--ink)}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-sofa" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="12" y="20" width="40" height="16" rx="3"/><rect x="5" y="30" width="12" height="18" rx="3"/><rect x="47" y="30" width="12" height="18" rx="3"/><rect x="14" y="36" width="36" height="12" rx="2"/><path d="M12 54v-6M52 54v-6"/></symbol>
+    <symbol id="i-bed" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M6 14v40M58 34v20M6 42h52V34a4 4 0 0 0-4-4H6"/><rect x="12" y="30" width="16" height="8" rx="2"/></symbol>
+    <symbol id="i-wardrobe" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="10" y="6" width="44" height="50" rx="2"/><path d="M32 6v50M26 30v6M38 30v6M16 56v4M48 56v4"/></symbol>
+    <symbol id="i-table" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M6 22h52M12 22v32M52 22v32"/><path d="M22 54V40h8v14M34 54V40h8v14" opacity=".0"/></symbol>
+    <symbol id="i-kitchen" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="8" width="52" height="14" rx="1"/><rect x="6" y="34" width="52" height="22" rx="1"/><path d="M6 28h52M24 34v22M40 34v22M20 15h6M38 15h6"/></symbol>
+    <symbol id="i-decor" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M22 8h20l6 20H16zM32 28v26M20 56h24"/></symbol>
+  </defs>
+</svg>
+
+<a class="sr" href="#main">До змісту</a>
+
+<aside class="topline on-dark" aria-label="Години й телефони">
+  <div class="wrap">
+    <span class="status" id="status" data-open="true"><i></i><span id="status-text">Пн–Пт 10:00–20:00 · Сб–Нд 10:00–21:00</span></span>
+    <div class="topline__tel">
+      <a href="tel:+380677098455">+380 67 709 8455</a>
+      <a href="tel:+380639992257">+380 63 999 2257</a>
+      <a href="tel:+380509131022">+380 50 913 1022</a>
+    </div>
+  </div>
+</aside>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#top">
+      <span class="logo__mark"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 56V8h10l16 28L48 8h10v48H48V28L32 56 16 28v28z" fill="#1c1c20"/></svg></span>
+      <span>Меблі<small>Тернопіль</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основна навігація">
+      <ul>
+        <li><a href="#catalog"><em>01</em>Категорії</a></li>
+        <li><a href="#hours"><em>02</em>Години</a></li>
+        <li><a href="#contacts"><em>03</em>Контакти</a></li>
+      </ul>
+      <a class="btn" href="#contacts">Зв'язатися</a>
+    </nav>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero__top">
+      <div class="hero__eyebrow"><span class="label">Магазин меблів · Тернопіль</span></div>
+      <div class="hero__lead">
+        <p>Меблі для вітальні, спальні, кухні та всього дому. Дивіться категорії, години роботи й телефони магазину в Тернополі.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#contacts">Зв'язатися</a>
+          <a class="btn btn--line" href="#hours">Години роботи</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scene" aria-hidden="true">
+      <svg viewBox="0 0 1200 250" preserveAspectRatio="xMinYMax meet" fill="none" stroke="#1c1c20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+        <!-- wardrobe -->
+        <rect x="24" y="20" width="170" height="220" fill="#fff"/><path d="M109 20v220M92 120v26M126 120v26"/>
+        <!-- armchair -->
+        <rect x="246" y="116" width="118" height="70" rx="14" fill="#1c1c20"/><rect x="230" y="160" width="150" height="46" rx="8" fill="#fff"/><path d="M246 206v34M364 206v34"/>
+        <!-- floor lamp -->
+        <path d="M418 70h50l12 44h-74zM443 114v126M416 240h54" fill="#fff"/>
+        <!-- sofa -->
+        <rect x="528" y="120" width="250" height="60" rx="10" fill="#fff"/><rect x="504" y="164" width="298" height="48" rx="8" fill="#1c1c20"/><rect x="504" y="136" width="36" height="76" rx="8" fill="#fff"/><rect x="766" y="136" width="36" height="76" rx="8" fill="#fff"/><path d="M526 212v28M780 212v28"/>
+        <!-- table -->
+        <path d="M850 160h190M866 160v80M1024 160v80M898 160v-34h20v34M970 160v-34h20v34"/>
+        <!-- shelf -->
+        <rect x="1070" y="50" width="112" height="190" fill="#fff"/><path d="M1070 100h112M1070 150h112M1070 196h112"/><rect x="1086" y="64" width="22" height="36" fill="#1c1c20"/><rect x="1120" y="76" width="18" height="24" fill="#1c1c20"/><rect x="1094" y="162" width="40" height="34" fill="#1c1c20"/>
+      </svg>
+    </div>
+    <h1 class="hero__word">Меблі</h1>
+  </div>
+</section>
+
+<section class="sec" id="catalog">
+  <div class="wrap catalog">
+    <div class="catalog__head rv">
+      <h2>Що шукають у магазині меблів</h2>
+      <p>Шість основних груп меблів для дому. Конкретні моделі, ціни й наявність підкажуть у магазині.</p>
+      <span class="note">Орієнтовний перелік — уточнюється за асортиментом магазину</span>
+    </div>
+    <ul class="catalog__list">
+      <li class="cat rv"><span class="cat__n">01</span><div><h3>М'які меблі</h3><p>Дивани, крісла, пуфи</p></div><div class="cat__slot"><svg aria-hidden="true"><use href="#i-sofa"/></svg><small>фото — згодом</small></div></li>
+      <li class="cat rv"><span class="cat__n">02</span><div><h3>Спальня</h3><p>Ліжка, тумби, комоди</p></div><div class="cat__slot"><svg aria-hidden="true"><use href="#i-bed"/></svg><small>фото — згодом</small></div></li>
+      <li class="cat rv"><span class="cat__n">03</span><div><h3>Шафи й системи зберігання</h3><p>Шафи, стелажі, полиці</p></div><div class="cat__slot"><svg aria-hidden="true"><use href="#i-wardrobe"/></svg><small>фото — згодом</small></div></li>
+      <li class="cat rv"><span class="cat__n">04</span><div><h3>Столи й стільці</h3><p>Обідні, журнальні, робочі</p></div><div class="cat__slot"><svg aria-hidden="true"><use href="#i-table"/></svg><small>фото — згодом</small></div></li>
+      <li class="cat rv"><span class="cat__n">05</span><div><h3>Кухні</h3><p>Кухонні меблі та фасади</p></div><div class="cat__slot"><svg aria-hidden="true"><use href="#i-kitchen"/></svg><small>фото — згодом</small></div></li>
+      <li class="cat rv"><span class="cat__n">06</span><div><h3>Декор</h3><p>Світильники й прикраси для дому</p></div><div class="cat__slot"><svg aria-hidden="true"><use href="#i-decor"/></svg><small>фото — згодом</small></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="gallery" aria-labelledby="gal-t">
+  <div class="wrap">
+    <p class="gallery__note" id="gal-t">Ілюстративні фото з Unsplash для настрою — це не меблі й не інтер'єр магазину.</p>
+    <div class="gallery__grid">
+      <figure class="rv"><img src="img/living.jpg" width="1000" height="667" alt="Ілюстрація: диван і журнальний столик у світлій вітальні" loading="lazy"><figcaption>Вітальня · ілюстрація</figcaption></figure>
+      <figure class="rv"><img src="img/bedroom.jpg" width="1000" height="667" alt="Ілюстрація: ліжко з узголів'ям і тумбами у спальні" loading="lazy"><figcaption>Спальня · ілюстрація</figcaption></figure>
+      <figure class="rv"><img src="img/sofa.jpg" width="1000" height="667" alt="Ілюстрація: диван біля стіни" loading="lazy"><figcaption>М'які меблі · ілюстрація</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec hours on-dark dark" id="hours">
+  <div class="wrap hours__grid">
+    <div class="hours__head rv">
+      <h2>Коли магазин працює</h2>
+      <p class="status" id="status2" data-open="true"><i></i><span id="status2-text">Щодня, без вихідних</span></p>
+    </div>
+    <div class="hours__big">
+      <div class="slot rv" data-days="1-5"><span class="slot__d">Пн–Пт</span><span class="slot__t">10:00–20:00</span></div>
+      <div class="slot rv" data-days="0,6"><span class="slot__d">Сб–Нд</span><span class="slot__t">10:00–21:00</span></div>
+    </div>
+    <ul class="week" id="week" aria-label="Дні тижня">
+      <li data-d="1">Пн</li><li data-d="2">Вт</li><li data-d="3">Ср</li><li data-d="4">Чт</li><li data-d="5">Пт</li><li data-d="6">Сб</li><li data-d="0">Нд</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec contacts" id="contacts">
+  <div class="wrap contacts__grid">
+    <div class="contacts__head rv">
+      <h2>Як зв'язатися з магазином</h2>
+      <p>Зателефонуйте за будь-яким із трьох номерів або напишіть на пошту.</p>
+    </div>
+    <dl class="contacts__list">
+      <div class="row rv"><dt>Телефони</dt><dd>
+        <a href="tel:+380677098455">+380 67 709 8455</a>
+        <a href="tel:+380639992257">+380 63 999 2257</a>
+        <a href="tel:+380509131022">+380 50 913 1022</a>
+      </dd></div>
+      <div class="row rv"><dt>Пошта</dt><dd><a class="mail" href="mailto:meblisim7@gmail.com">meblisim7@gmail.com</a></dd></div>
+      <div class="row rv"><dt>Місто</dt><dd><span class="plain">Тернопіль</span><span class="small">Точну адресу магазину уточнюйте по телефону.</span></dd></div>
+      <div class="row rv"><dt>Сайт</dt><dd><a class="site" href="http://meblisim.com.ua/" rel="noopener">meblisim.com.ua</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="call">
+  <div class="wrap">
+    <h2 class="rv">Напишіть або зателефонуйте в магазин</h2>
+    <div class="call__btns rv">
+      <a class="btn" href="tel:+380677098455">Зателефонувати</a>
+      <a class="btn btn--line" href="mailto:meblisim7@gmail.com">Написати на пошту</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="on-dark">
+  <div class="wrap">
+    <span>Меблі · Тернопіль</span>
+    <span>Попередній концепт від Doba Digital - не опублікований сайт</span>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Швидкий зв'язок">
+  <a href="tel:+380677098455">Подзвонити</a>
+  <a href="#contacts">Зв'язатися</a>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Lenis (autoRaf), anchors offset by the sticky bar
+  var bar=document.querySelector('.bar');
+  if(window.Lenis && !reduce){
+    window.lenis=new Lenis({autoRaf:true,anchors:{offset:-(bar.offsetHeight+8)}});
+  }
+
+  // burger
+  var burger=document.getElementById('burger'), nav=document.getElementById('nav');
+  function setNav(o){nav.classList.toggle('open',o);burger.setAttribute('aria-expanded',o)}
+  burger.addEventListener('click',function(){setNav(!nav.classList.contains('open'))});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))setNav(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setNav(false)});
+
+  // Kyiv time: open / closed + today
+  function kyiv(){
+    var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Kyiv',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var o={};p.forEach(function(x){o[x.type]=x.value});
+    var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    return {day:map[o.weekday],min:(+o.hour%24)*60+ +o.minute};
+  }
+  function update(){
+    var k=kyiv(), close=(k.day===0||k.day===6)?21:20, open=k.min>=600&&k.min<close*60;
+    var t=document.getElementById('status-text'), s=document.getElementById('status'), t2=document.getElementById('status2-text'), s2=document.getElementById('status2');
+    var txt=open?'Зараз відчинено · до '+close+':00':(k.min<600?'Зараз зачинено · відкриємось о 10:00':'Зараз зачинено · відкриємось завтра о 10:00');
+    t.textContent=txt;t2.textContent=txt;s.dataset.open=open;s2.dataset.open=open;
+    document.querySelectorAll('#week li').forEach(function(li){li.dataset.today=(+li.dataset.d===k.day)});
+    document.querySelectorAll('.slot').forEach(function(sl){sl.dataset.today=sl.dataset.days.split(',').indexOf(String(k.day))>-1});
+  }
+  update();setInterval(update,60000);
+
+  // reveals
+  var items=document.querySelectorAll('.rv');
+  if(reduce||!('IntersectionObserver' in window)){items.forEach(function(i){i.classList.add('in')});}
+  else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    items.forEach(function(i,n){i.style.transitionDelay=(n%3)*60+'ms';io.observe(i)});
+  }
+
+  // current section in nav
+  var links=document.querySelectorAll('.nav li a');
+  if('IntersectionObserver' in window){
+    var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.setAttribute('aria-current',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
+    ['catalog','hours','contacts'].forEach(function(id){spy.observe(document.getElementById(id))});
+  }
+})();
+</script>
+</body>
+</html>
