@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NO WORRIES PLACE — салон краси у Сан-Дієго</title>
+<meta name="description" content="NO WORRIES PLACE — салон краси у Сан-Дієго. Телефон +1 619 666 1454, запис онлайн, послуги та контакти на одній сторінці.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2320c5d6'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='800' text-anchor='middle' font-family='Arial' fill='%230d1f26'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Onest:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.css">
+<style>
+:root{
+  --ink:#0d1f26; --ink2:#1a3540; --cyan:#20c5d6; --cyan-d:#0a6f7c; --foam:#e8f9fb;
+  --sun:#ffd84a; --white:#fff; --line:#b9dde3;
+  --pad:clamp(16px,4vw,56px);
+  --fh:'Unbounded','Arial Black',sans-serif; --fb:'Onest',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:72px}
+body{font-family:var(--fb);font-size:16px;line-height:1.6;color:var(--ink);background:var(--foam);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+[hidden]{display:none!important}
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--pad)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;font:600 16px var(--fb);text-decoration:none;border:2px solid var(--ink);border-radius:2px;transition:transform .2s,background .2s,color .2s;cursor:pointer}
+.btn--sun{background:var(--sun);color:var(--ink)}
+.btn--sun:hover{background:var(--ink);color:var(--sun)}
+.btn--line{background:transparent;color:var(--ink)}
+.btn--line:hover{background:var(--ink);color:var(--cyan)}
+.btn--dark{background:var(--ink);color:var(--white)}
+.btn--dark:hover{background:var(--sun);color:var(--ink)}
+.label{font:600 13px/1.3 var(--fb);letter-spacing:.08em;text-transform:uppercase}
+
+/* header: centred wordmark between split nav and CTA */
+.top{position:sticky;top:0;z-index:20;background:var(--cyan);border-bottom:2px solid var(--ink)}
+.top__in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:64px;gap:16px}
+.nav{display:flex;gap:28px}
+.nav a{font-weight:600;text-decoration:none;position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:hover::after{transform:scaleX(1)}
+.logo{font:800 15px/1 var(--fh);letter-spacing:.04em;text-decoration:none;text-align:center;white-space:nowrap}
+.top__cta{justify-self:end;min-height:40px;padding:0 18px;font-size:15px}
+.burger{display:none;justify-self:end;width:48px;height:48px;background:none;border:2px solid var(--ink);border-radius:2px;cursor:pointer;position:relative}
+.burger span,.burger span::before{content:"";position:absolute;left:11px;right:11px;height:2px;background:var(--ink)}
+.burger span{top:22px}.burger span::before{left:0;right:0;top:-7px;box-shadow:0 14px 0 var(--ink)}
+.drawer{display:none;background:var(--ink);color:var(--white);padding:8px var(--pad) 24px}
+.drawer a{display:block;padding:14px 0;border-bottom:1px solid var(--ink2);text-decoration:none;font-weight:600}
+.drawer .btn{margin-top:18px;width:100%;border-color:var(--sun)}
+
+/* hero */
+.hero{background:var(--cyan);padding:clamp(28px,5vw,64px) 0 0;position:relative;overflow:hidden}
+.hero__kick{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:clamp(12px,2vw,24px)}
+h1{font:800 clamp(34px,12.4vw,190px)/.92 var(--fh);text-transform:uppercase;letter-spacing:-.02em}
+h1 span{display:block;white-space:nowrap}
+h1 .o{color:var(--ink2)}
+.hero__row{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(20px,4vw,64px);align-items:end;padding:clamp(24px,4vw,48px) 0 clamp(32px,5vw,64px)}
+.hero__lead{font-size:clamp(18px,1.6vw,22px);max-width:34ch;line-height:1.5}
+.hero__btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.wave{display:block;width:100%;height:clamp(36px,6vw,80px);margin-bottom:-1px}
+.tape{background:var(--ink);color:var(--sun);overflow:hidden;white-space:nowrap}
+.tape__in{display:inline-block;padding:12px 0;animation:tape 40s linear infinite}
+.tape__in span{margin:0 28px}
+@keyframes tape{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:clamp(56px,8vw,112px) 0}
+h2{font:800 clamp(28px,4.4vw,56px)/1.08 var(--fh);text-transform:uppercase;letter-spacing:-.01em}
+.split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,5vw,80px)}
+.sticky{position:sticky;top:96px;align-self:start}
+.note{margin-top:16px;max-width:30ch;color:var(--ink2)}
+.rows{list-style:none;padding:0;border-top:2px solid var(--ink)}
+.rows li{display:grid;grid-template-columns:clamp(64px,9vw,120px) 1fr auto;align-items:center;gap:16px;padding:22px 0;border-bottom:1px solid var(--line);transition:background .2s,padding .2s}
+.rows li:hover{background:var(--white);padding-left:12px}
+.num{font:800 clamp(36px,5vw,64px)/1 var(--fh);color:transparent;-webkit-text-stroke:2px var(--cyan-d)}
+.rows b{font:600 clamp(18px,2vw,24px)/1.3 var(--fh)}
+.tag{font:600 12px var(--fb);letter-spacing:.06em;text-transform:uppercase;border:1px dashed var(--ink);padding:4px 10px;border-radius:2px;white-space:nowrap}
+
+.works{background:var(--ink);color:var(--white)}
+.works .note{color:#bcd9de}
+.slots{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;margin-top:40px}
+.slot{border:2px dashed #4d7a86;display:flex;align-items:flex-end;padding:14px;min-width:0;overflow:hidden;color:#bcd9de;font-size:14px}
+.slot:nth-child(1){grid-column:span 5;aspect-ratio:4/5}
+.slot:nth-child(2){grid-column:span 4;aspect-ratio:1}
+.slot:nth-child(3){grid-column:span 3;aspect-ratio:3/5}
+.slot:nth-child(4){grid-column:span 7;aspect-ratio:16/8}
+.slot:nth-child(5){grid-column:span 5;aspect-ratio:16/8}
+
+.about{background:var(--sun)}
+.about__grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,5vw,80px);align-items:start}
+.about p{font-size:clamp(18px,1.8vw,22px);line-height:1.55;max-width:46ch;margin-top:24px}
+.facts{border-top:2px solid var(--ink);list-style:none;padding:0}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--ink)}
+.facts li span:first-child{font-weight:400}.facts li span:last-child{font-weight:600;text-align:right}
+
+.contacts{background:var(--cyan)}
+.contacts__phone{display:block;font:800 clamp(30px,6.2vw,92px)/1 var(--fh);text-decoration:none;white-space:nowrap;margin:28px 0 28px;letter-spacing:-.02em}
+.contacts__phone:hover{color:var(--white)}
+dl{border-top:2px solid var(--ink)}
+dl div{display:grid;grid-template-columns:minmax(110px,1fr) 3fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--ink)}
+dt{font-weight:400}dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+.contacts__btns{display:flex;gap:12px;flex-wrap:wrap}
+
+footer{background:var(--ink);color:#bcd9de;padding:36px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer strong{font-family:var(--fh);color:var(--white)}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .5s,transform .5s}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1000px){
+  .nav,.top__cta{display:none}
+  .top__in{grid-template-columns:auto 1fr auto}
+  .logo{text-align:left}
+  .burger{display:block;grid-column:3}
+  .drawer.open{display:block}
+  .hero__row{grid-template-columns:1fr}
+  .hero__btns{justify-content:flex-start}
+  .split,.about__grid{grid-template-columns:1fr}
+  .sticky{position:static}
+}
+@media (max-width:640px){
+  .rows li{grid-template-columns:56px 1fr}
+  .rows .tag{grid-column:2;justify-self:start}
+  .slots{grid-template-columns:repeat(2,1fr)}
+  .slot:nth-child(n){grid-column:span 1;aspect-ratio:1;min-height:0}
+  .slot:nth-child(5){grid-column:span 2;aspect-ratio:16/8}
+  dl div{grid-template-columns:1fr;gap:2px}
+  .btn{width:100%}
+  .hero__kick .label:last-child{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .tape__in{animation:none}
+  .rv{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top__in">
+    <nav class="nav" aria-label="Основна навігація">
+      <a href="#poslugy">Послуги</a><a href="#roboty">Роботи</a><a href="#pro-salon">Про салон</a>
+    </nav>
+    <a class="logo" href="#top">NO WORRIES PLACE</a>
+    <a class="btn btn--dark top__cta" href="#kontakty">Записатися онлайн</a>
+    <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="drawer"><span></span></button>
+  </div>
+  <div class="drawer" id="drawer">
+    <a href="#poslugy">Послуги</a><a href="#roboty">Роботи</a><a href="#pro-salon">Про салон</a><a href="#kontakty">Контакти</a>
+    <a class="btn btn--sun" href="#kontakty">Записатися онлайн</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="hero__kick label"><span>Салон краси</span><span>Сан-Дієго, CA</span></div>
+    <h1 aria-label="NO WORRIES PLACE"><span>No</span><span>Worries</span><span class="o">Place</span></h1>
+    <div class="hero__row">
+      <p class="hero__lead">Салон краси у Сан-Дієго. Усе потрібне — послуги, адреса, години роботи й запис — на одній сторінці.</p>
+      <div class="hero__btns">
+        <a class="btn btn--sun" href="#kontakty">Записатися онлайн</a>
+        <a class="btn btn--line" href="tel:+16196661454">Подзвонити</a>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c120 0 120-30 240-30s120 30 240 30 120-30 240-30 120 30 240 30 120-30 240-30 120 30 240 30v40H0z" fill="#0d1f26"/></svg>
+</div>
+<div class="tape" aria-hidden="true"><div class="tape__in"><span>NO WORRIES PLACE</span><span>Сан-Дієго</span><span>+1 619 666 1454</span><span>Записатися онлайн</span><span>NO WORRIES PLACE</span><span>Сан-Дієго</span><span>+1 619 666 1454</span><span>Записатися онлайн</span><span>NO WORRIES PLACE</span><span>Сан-Дієго</span><span>+1 619 666 1454</span><span>Записатися онлайн</span><span>NO WORRIES PLACE</span><span>Сан-Дієго</span><span>+1 619 666 1454</span><span>Записатися онлайн</span></div></div>
+
+<section id="poslugy">
+  <div class="wrap split">
+    <div class="sticky rv">
+      <p class="label">01 — Послуги</p>
+      <h2>Послуги</h2>
+      <p class="note">Орієнтовна структура сторінки: перелік і ціни салону з’являться тут, щойно їх підтвердять.</p>
+    </div>
+    <ol class="rows rv">
+      <li><span class="num">01</span><b>Назва послуги</b><span class="tag">Заглушка</span></li>
+      <li><span class="num">02</span><b>Назва послуги</b><span class="tag">Заглушка</span></li>
+      <li><span class="num">03</span><b>Назва послуги</b><span class="tag">Заглушка</span></li>
+      <li><span class="num">04</span><b>Назва послуги</b><span class="tag">Заглушка</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="works" id="roboty">
+  <div class="wrap">
+    <p class="label">02 — Роботи</p>
+    <h2>Роботи майстрів</h2>
+    <p class="note">Тут буде галерея. Місця нижче — під власні фото майстрів салону.</p>
+    <div class="slots rv">
+      <div class="slot">Місце під фото</div><div class="slot">Місце під фото</div><div class="slot">Місце під фото</div><div class="slot">Місце під фото</div><div class="slot">Місце під фото</div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="pro-salon">
+  <div class="wrap about__grid">
+    <div class="rv">
+      <p class="label">03 — Про салон</p>
+      <h2>Про салон</h2>
+      <p>NO WORRIES PLACE — салон краси у Сан-Дієго. Розповідь про салон і команду з’явиться тут: текст надасть власник.</p>
+    </div>
+    <ul class="facts rv">
+      <li><span>Назва</span><span>NO WORRIES PLACE</span></li>
+      <li><span>Тип</span><span>Салон краси</span></li>
+      <li><span>Місто</span><span>Сан-Дієго, CA</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contacts" id="kontakty">
+  <div class="wrap">
+    <p class="label">04 — Запис і контакти</p>
+    <h2>Запишіться онлайн</h2>
+    <a class="contacts__phone" href="tel:+16196661454">+1 619 666 1454</a>
+    <div class="contacts__btns">
+      <a class="btn btn--dark" href="tel:+16196661454">Записатися за телефоном</a>
+      <a class="btn btn--line" href="mailto:no.worries.place@gmail.com">Написати на e-mail</a>
+    </div>
+    <dl style="margin-top:48px">
+      <div><dt>Телефон</dt><dd><a href="tel:+16196661454">+1 619 666 1454</a></dd></div>
+      <div><dt>E-mail</dt><dd><a href="mailto:no.worries.place@gmail.com">no.worries.place@gmail.com</a></dd></div>
+      <div><dt>Місто</dt><dd>Сан-Дієго, CA</dd></div>
+      <div><dt>Адреса</dt><dd>Точну адресу салону уточнюйте за телефоном</dd></div>
+      <div><dt>Години роботи</dt><dd>Уточнюйте за телефоном</dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><strong>NO WORRIES PLACE</strong> · Салон краси · Сан-Дієго, CA</span>
+    <span>Попередній концепт від Doba Digital - не опублікований сайт</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(window.Lenis&&!reduce){window.lenis=new Lenis({autoRaf:true});
+    var raf=function(t){window.lenis.raf(t);requestAnimationFrame(raf)};if(window.lenis.options&&!window.lenis.options.autoRaf)requestAnimationFrame(raf);}
+  var b=document.querySelector('.burger'),d=document.getElementById('drawer');
+  function close(){d.classList.remove('open');b.setAttribute('aria-expanded','false')}
+  b.addEventListener('click',function(){var o=d.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  d.addEventListener('click',function(e){if(e.target.closest('a'))close()});
+  addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+    els.forEach(function(e){io.observe(e)});
+  }else els.forEach(function(e){e.classList.add('in')});
+})();
+</script>
+</body>
+</html>
