@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build Beyond Blueprint — архітектура й дизайн інтер'єру</title>
+<meta name="description" content="Build Beyond Blueprint — студія архітектури та дизайну інтер'єру в Лос-Анджелесі. Подивіться, як виглядатимуть портфоліо та послуги, і напишіть нам, щоб обговорити проєкт."><meta property="og:title" content="Build Beyond Blueprint — архітектура й дизайн інтер'єру"><meta property="og:description" content="Студія архітектури та дизайну інтер'єру, Лос-Анджелес.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23101216'/%3E%3Cpath d='M16 50V14h16a9 9 0 0 1 0 18H16m16 0a9 9 0 0 1 0 18H16' fill='none' stroke='%236f86ff' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.css">
+<style>
+:root{
+  --ink:#101216; --ink2:#1d2128; --paper:#eceef0; --white:#fff;
+  --ultra:#1f3dff; --ultra-d:#1429c4; --mist:#dfe4ff; --line:#b9bec6; --blue-l:#aebbff;
+  --head:'Unbounded','Arial Black',sans-serif; --mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;
+  --pad:clamp(20px,4vw,56px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:auto}
+body{font-family:var(--mono);font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--ultra);outline-offset:3px}
+.dark :focus-visible,.hero :focus-visible,.hdr :focus-visible,.ftr :focus-visible{outline-color:var(--blue-l)}
+.wrap{max-width:1360px;margin:0 auto;padding:0 var(--pad)}
+.lbl{font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.1}
+h2{font-size:clamp(26px,4.4vw,52px)}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:12px 22px;border:2px solid var(--ultra);background:var(--ultra);color:#fff;font:500 15px/1.2 var(--mono);text-decoration:none;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn:hover{background:#fff;color:var(--ultra)}
+.btn--ghost{background:transparent;border-color:currentColor;color:inherit}
+.btn--ghost:hover{background:#fff;color:var(--ink)}
+.btn span{transition:transform .2s}.btn:hover span{transform:translateX(4px)}
+
+/* header: drawing title block */
+.hdr{position:sticky;top:0;z-index:30;background:var(--ink);color:#fff;border-bottom:1px solid #3a4150}
+.hdr__in{display:grid;grid-template-columns:auto 1fr auto auto;align-items:stretch;max-width:1360px;margin:0 auto}
+.cell{display:flex;align-items:center;padding:0 clamp(14px,2vw,28px);min-height:60px;border-right:1px solid #3a4150;text-decoration:none}
+.hdr__name{font-family:var(--head);font-weight:800;font-size:14px;gap:12px;border-left:1px solid #3a4150}
+.hdr__name i{font-style:normal;color:var(--blue-l);font-family:var(--mono);font-weight:400;font-size:12px}
+.nav{display:flex}
+.nav a{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(12px,2vw,28px);border-right:1px solid #3a4150;text-decoration:none;font-size:14px;line-height:1.3;transition:background .2s}
+.nav a small{font-size:11px;color:var(--blue-l)}
+.nav a:hover,.nav a[aria-current]{background:var(--ink2)}
+.hdr__tel{font-size:14px;white-space:nowrap}
+.hdr__cta{background:var(--ultra);color:#fff;font-weight:500;font-size:14px;border-right:0;transition:background .2s}
+.hdr__cta:hover{background:var(--ultra-d)}
+.burger{display:none;background:none;border:0;color:#fff;font:500 14px var(--mono);padding:0 18px;cursor:pointer;min-height:60px}
+
+/* hero */
+.hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;
+  background-image:linear-gradient(#ffffff12 1px,transparent 1px),linear-gradient(90deg,#ffffff12 1px,transparent 1px);background-size:64px 64px}
+.hero__top{display:flex;justify-content:space-between;gap:16px;padding-top:28px;color:var(--blue-l)}
+.hero h1{font-size:clamp(28px,14vw,300px);line-height:.98;letter-spacing:-.02em;margin-top:clamp(24px,6vw,80px)}
+.hero h1 span{display:inline-block;white-space:nowrap}
+.hero h1 .i1{padding-left:clamp(24px,10vw,170px)}
+.hero h1 .i2{color:var(--blue-l);padding-left:clamp(0px,3vw,48px)}
+.hero__row{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,72px);align-items:end;padding:clamp(28px,5vw,64px) 0 clamp(36px,6vw,80px)}
+.hero__lead{font-size:clamp(17px,1.6vw,20px);max-width:36ch}
+.hero__btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero__draw{width:100%;color:var(--blue-l)}
+.hero__draw path,.hero__draw line,.hero__draw rect,.hero__draw polyline{stroke-dasharray:var(--len,900);stroke-dashoffset:var(--len,900);animation:draw 2.4s .2s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* portfolio */
+.sec{padding:clamp(56px,8vw,112px) 0}
+.sec__hd{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;align-items:end;margin-bottom:clamp(28px,4vw,52px);border-top:2px solid var(--ink);padding-top:20px}
+.sec__hd p{max-width:52ch}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(12px,1.6vw,24px)}
+.sheet{position:relative;display:flex;flex-direction:column;gap:10px;margin:0}
+.sheet__frame{position:relative;border:2px dashed var(--ink);background:var(--white);overflow:hidden;color:var(--ultra)}
+.sheet__frame svg{width:100%;height:100%}
+.sheet figcaption{display:flex;justify-content:space-between;gap:12px;font-size:13px;border-top:1px solid var(--ink);padding-top:8px}
+.sheet figcaption b{font-weight:500}
+.s1{grid-column:1/8}.s1 .sheet__frame{aspect-ratio:16/10}
+.s2{grid-column:8/13}.s2 .sheet__frame{aspect-ratio:4/5}
+.s3{grid-column:1/5}.s3 .sheet__frame{aspect-ratio:1/1}
+.s4{grid-column:5/13}.s4 .sheet__frame{aspect-ratio:2/1}
+.s5{grid-column:1/6}.s5 .sheet__frame{aspect-ratio:5/4}
+.s6{grid-column:6/13}.s6 .sheet__frame{aspect-ratio:16/10}
+.sheet:hover .sheet__frame{background:var(--mist)}
+.note{margin-top:20px;font-size:14px}
+
+/* services */
+.svc{background:var(--ultra);color:#fff}
+.svc .sec__hd{border-color:#fff}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,4fr) minmax(0,3fr);gap:24px;align-items:baseline;padding:clamp(22px,3vw,40px) 0;border-top:1px solid #ffffff66}
+.row:last-child{border-bottom:1px solid #ffffff66}
+.row__n{font-family:var(--head);font-weight:800;font-size:clamp(28px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px #fff}
+.row h3{font-size:clamp(24px,4.4vw,58px);transition:transform .25s}
+.row:hover h3{transform:translateX(10px)}
+.row p{font-size:17px;max-width:30ch}
+
+/* about */
+.about__grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,5vw,80px);align-items:start}
+.ph{border:2px dashed var(--ultra);padding:clamp(20px,3vw,36px);background:var(--white);font-size:17px}
+.ph b{display:block;font-weight:500;color:var(--ultra-d);margin-bottom:8px;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+.tb{border:2px solid var(--ink);display:grid;grid-template-columns:1fr 1fr;font-size:14px}
+.tb div{padding:12px 14px;border-bottom:1px solid var(--ink)}
+.tb div:nth-child(odd){border-right:1px solid var(--ink);color:#454c58}
+.tb div:nth-last-child(-n+2){border-bottom:0}
+
+/* contacts */
+.contact{background:var(--mist)}
+.contact__grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px)}
+form{display:grid;gap:18px;margin-top:28px}
+label{display:grid;gap:6px;font-size:14px;font-weight:500}
+input,textarea{font:400 16px var(--mono);padding:12px 14px;border:2px solid var(--ink);border-radius:0;background:#fff;color:var(--ink);width:100%}
+textarea{min-height:140px;resize:vertical}
+input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#b3001b}
+.err{color:#b3001b;font-size:13px;min-height:1em;font-weight:500}
+.ok{border:2px solid var(--ink);background:#fff;padding:14px;font-size:15px}
+.consent{font-size:13px;color:#2f3540}
+dl{border-top:2px solid var(--ink)}
+dl div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--ink)}
+dt{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:#2f3540}
+dd{font-size:17px;overflow-wrap:anywhere}
+dd a{text-decoration-thickness:2px;text-underline-offset:4px}
+dd a:hover{color:var(--ultra-d)}
+.ftr{background:var(--ink);color:#c9ced6;padding:28px 0;font-size:13px}
+.ftr .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1000px){
+  .hdr__in{grid-template-columns:1fr auto auto}
+  .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--ink);border-bottom:1px solid #3a4150;display:none}
+  .nav.open{display:flex}
+  .nav a{min-height:56px;border-right:0;border-top:1px solid #3a4150;padding:8px var(--pad)}
+  .burger{display:block;border-right:1px solid #3a4150}
+  .hdr__tel{display:none}
+  .hero__row,.sec__hd,.about__grid,.contact__grid{grid-template-columns:1fr}
+  .row{grid-template-columns:auto 1fr}
+  .row p{grid-column:2;max-width:none}
+  .s1,.s4,.s6{grid-column:1/-1}.s2{grid-column:7/13}.s3{grid-column:1/7}.s5{grid-column:1/-1}
+  .s2 .sheet__frame,.s3 .sheet__frame{aspect-ratio:1/1}
+}
+@media (max-width:560px){
+  .hdr__name i{display:none}
+  .hdr__cta{display:none}
+  .hdr__in{grid-template-columns:1fr auto}
+  .hero__top{flex-direction:column;gap:2px}
+  
+  .btn{width:100%;justify-content:space-between}
+  .grid{display:flex;flex-direction:column}
+  .s2 .sheet__frame,.s3 .sheet__frame{aspect-ratio:4/3}
+  dl div{grid-template-columns:1fr;gap:2px}
+  .tb{grid-template-columns:1fr}
+  .tb div:nth-child(odd){border-right:0;border-bottom:0;padding-bottom:0}
+  .tb div:nth-last-child(2){border-bottom:0}
+  .tb div:nth-last-child(-n+2){border-bottom:0}
+  .tb div:nth-child(even){border-bottom:1px solid var(--ink)}
+  .tb div:last-child{border-bottom:0}
+  .row{gap:8px 16px}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero__draw *{animation:none!important;stroke-dashoffset:0!important}
+  .rv{opacity:1;transform:none;transition:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="plan-a" viewBox="0 0 320 200"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="30" y="24" width="260" height="152"/><path d="M30 90h110M140 24v66M140 90v86M140 130h150M215 130v46M215 24v40M215 64h75"/><path d="M60 90a22 22 0 0 1 22-22" stroke-width="1.2"/><path d="M140 118a12 12 0 0 1 12 12" stroke-width="1.2"/></g></symbol>
+    <symbol id="plan-b" viewBox="0 0 200 250"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M30 30h140v190H30z"/><path d="M30 110h80v110M110 110V60h60M70 30v40h40M110 150h60"/><circle cx="140" cy="190" r="20" stroke-width="1.2"/></g></symbol>
+    <symbol id="elev" viewBox="0 0 400 200"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M20 170h360M50 170V70h130v100M180 170V40h170v130M180 90h170M215 170v-50h30v50M275 100h50v40h-50z M50 70l65-30 65 30" /><path d="M50 40v-12M350 20v-10" stroke-width="1"/></g></symbol>
+    <symbol id="sect" viewBox="0 0 300 220"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M30 190h240M40 190V50l110-30 110 30v140M40 120h220M150 20v170"/><path d="M60 150h60M180 150h60M60 84h60M180 84h60" stroke-width="1.2"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="hdr">
+  <div class="hdr__in">
+    <a class="cell hdr__name" href="#top">BBB <i>Лист 00 · Лос-Анджелес, CA</i></a>
+    <nav class="nav" id="nav" aria-label="Основна навігація">
+      <a href="#portfolio"><small>01</small>Портфоліо</a>
+      <a href="#services"><small>02</small>Послуги</a>
+      <a href="#about"><small>03</small>Про студію</a>
+      <a href="#contact"><small>04</small>Контакти</a>
+    </nav>
+    <a class="cell hdr__tel" href="tel:+17736804251">+1 773 680 4251</a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="nav">Меню</button>
+    <a class="cell hdr__cta" href="#contact">Написати нам →</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero__top lbl"><span>Архітектура · Дизайн інтер'єру</span><span>Лос-Анджелес, CA</span></div>
+    <h1 id="h1"><span class="i0">Build</span><br><span class="i1 i2">Beyond</span><br><span>Blueprint</span></h1>
+    <div class="hero__row">
+      <div>
+        <p class="hero__lead">Студія архітектури та дизайну інтер'єру в Лос-Анджелесі.</p>
+        <div class="hero__btns">
+          <a class="btn" href="#contact">Написати нам <span>→</span></a>
+          <a class="btn btn--ghost" href="tel:+17736804251">+1 773 680 4251</a>
+        </div>
+      </div>
+      <svg class="hero__draw" viewBox="0 0 400 200" role="img" aria-label="Схематичний креслення фасаду, ілюстрація">
+        <g fill="none" stroke="currentColor" stroke-width="1.6">
+          <path pathLength="900" d="M20 170h360M50 170V70h130v100M180 170V40h170v130M180 90h170M215 170v-50h30v50M275 100h50v40h-50zM50 70l65-30 65 30"/>
+          <path pathLength="900" d="M20 185h360M20 180v10M380 180v10M50 28h130M50 24v8M180 24v8" stroke-width="1"/>
+        </g>
+        <text x="200" y="198" fill="currentColor" font-family="IBM Plex Mono,monospace" font-size="9" text-anchor="middle">ілюстративна схема</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="portfolio" aria-labelledby="t-port">
+  <div class="wrap">
+    <div class="sec__hd rv"><h2 id="t-port">Портфоліо</h2><p>Сітка проєктів. Нижче — приклади-заглушки: реальні фото та назви проєктів надасть студія.</p></div>
+    <div class="grid">
+      <figure class="sheet s1 rv"><div class="sheet__frame"><svg role="img" aria-label="Приклад: план"><title>Приклад: план</title><use href="#plan-a"/></svg></div><figcaption><b>Проєкт 01</b><span>приклад · фото буде</span></figcaption></figure>
+      <figure class="sheet s2 rv"><div class="sheet__frame"><svg role="img" aria-label="Приклад: план"><title>Приклад: план</title><use href="#plan-b"/></svg></div><figcaption><b>Проєкт 02</b><span>приклад · фото буде</span></figcaption></figure>
+      <figure class="sheet s3 rv"><div class="sheet__frame"><svg role="img" aria-label="Приклад: розріз"><title>Приклад: розріз</title><use href="#sect"/></svg></div><figcaption><b>Проєкт 03</b><span>приклад · фото буде</span></figcaption></figure>
+      <figure class="sheet s4 rv"><div class="sheet__frame"><svg role="img" aria-label="Приклад: фасад"><title>Приклад: фасад</title><use href="#elev"/></svg></div><figcaption><b>Проєкт 04</b><span>приклад · фото буде</span></figcaption></figure>
+      <figure class="sheet s5 rv"><div class="sheet__frame"><svg role="img" aria-label="Приклад: план"><title>Приклад: план</title><use href="#plan-a"/></svg></div><figcaption><b>Проєкт 05</b><span>приклад · фото буде</span></figcaption></figure>
+      <figure class="sheet s6 rv"><div class="sheet__frame"><svg role="img" aria-label="Приклад: розріз"><title>Приклад: розріз</title><use href="#sect"/></svg></div><figcaption><b>Проєкт 06</b><span>приклад · фото буде</span></figcaption></figure>
+    </div>
+    <p class="note">Схеми — ілюстрація місця для робіт студії, а не реальні проєкти.</p>
+  </div>
+</section>
+
+<section class="sec svc dark" id="services" aria-labelledby="t-svc">
+  <div class="wrap">
+    <div class="sec__hd rv"><h2 id="t-svc">Послуги</h2><p>Два напрями студії.</p></div>
+    <div class="row rv"><span class="row__n" aria-hidden="true">01</span><h3>Архітектура</h3><p>Проєктування будівель.</p></div>
+    <div class="row rv"><span class="row__n" aria-hidden="true">02</span><h3>Дизайн інтер'єру</h3><p>Простір усередині будівлі.</p></div>
+  </div>
+</section>
+
+<section class="sec" id="about" aria-labelledby="t-about">
+  <div class="wrap">
+    <div class="sec__hd rv"><h2 id="t-about">Про студію</h2><p>Коротка історія студії.</p></div>
+    <div class="about__grid">
+      <div class="ph rv"><b>Місце для тексту</b>Тут буде коротка історія студії Build Beyond Blueprint. Текст надасть клієнт.</div>
+      <div class="tb rv"><div>Студія</div><div>Build Beyond Blueprint</div><div>Місто</div><div>Лос-Анджелес, CA</div><div>Напрями</div><div>Архітектура, дизайн інтер'єру</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contact" aria-labelledby="t-contact">
+  <div class="wrap contact__grid">
+    <div class="rv">
+      <h2 id="t-contact">Написати нам</h2>
+      <form id="f" novalidate>
+        <label>Ім'я<input name="name" autocomplete="name" required></label><div class="err" data-for="name"></div>
+        <label>Телефон або e-mail<input name="contact" autocomplete="off" required></label><div class="err" data-for="contact"></div>
+        <label>Про проєкт<textarea name="msg" required></textarea></label><div class="err" data-for="msg"></div>
+        <p class="consent">Натискаючи кнопку, ви відкриєте лист у вашій поштовій програмі — адресований студії. Це концепт, форма нічого не надсилає самостійно.</p>
+        <div><button class="btn" type="submit">Написати нам <span>→</span></button></div>
+        <div class="ok" id="ok" role="status" hidden>Лист підготовлено у вашій поштовій програмі. Якщо вона не відкрилась — напишіть на zeus1design@gmail.com.</div>
+      </form>
+    </div>
+    <div class="rv">
+      <dl>
+        <div><dt>Телефон</dt><dd><a href="tel:+17736804251">+1 773 680 4251</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:zeus1design@gmail.com">zeus1design@gmail.com</a></dd></div>
+        <div><dt>Місто</dt><dd>Лос-Анджелес, CA</dd></div>
+        <div><dt>Instagram</dt><dd>посилання додамо, коли студія надішле його</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr"><div class="wrap"><span>© Build Beyond Blueprint</span><span>Попередній концепт від Doba Digital - не опублікований сайт</span></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hdr=document.querySelector('.hdr');
+  if(window.Lenis && !reduce){
+    window.lenis=new Lenis({autoRaf:true,anchors:{offset:-60}});
+  }
+  var nav=document.getElementById('nav'),bt=document.querySelector('.burger');
+  bt.addEventListener('click',function(){var o=nav.classList.toggle('open');bt.setAttribute('aria-expanded',o)});
+  nav.addEventListener('click',function(e){if(e.target.closest('a')){nav.classList.remove('open');bt.setAttribute('aria-expanded','false')}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){nav.classList.remove('open');bt.setAttribute('aria-expanded','false')}});
+  if(reduce){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')})}
+  else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+    document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+  }
+  // current section in nav
+  var links=[].slice.call(nav.querySelectorAll('a'));
+  var so=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){links.forEach(function(l){l.toggleAttribute('aria-current',l.getAttribute('href')==='#'+x.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+  links.forEach(function(l){var s=document.querySelector(l.getAttribute('href'));if(s)so.observe(s)});
+  // form
+  var f=document.getElementById('f');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();var bad=false;
+    ['name','contact','msg'].forEach(function(n){
+      var el=f.elements[n],er=f.querySelector('[data-for="'+n+'"]'),v=el.value.trim(),m='';
+      if(!v)m='Заповніть це поле';
+      else if(n==='contact'&&!(/^\S+@\S+\.\S+$/.test(v)||v.replace(/\D/g,'').length>=9))m='Вкажіть телефон або e-mail';
+      el.setAttribute('aria-invalid',m?'true':'false');er.textContent=m;if(m)bad=true;
+    });
+    if(bad)return;
+    var body='Ім\'я: '+f.elements.name.value+'\nКонтакт: '+f.elements.contact.value+'\n\n'+f.elements.msg.value;
+    document.getElementById('ok').hidden=false;
+    location.href='mailto:zeus1design@gmail.com?subject='+encodeURIComponent('Запит із сайту')+'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
