@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InFit Beauty &amp; Health — масаж і догляд у Валенсії | Студія</title>
+<meta name="description" content="InFit Beauty &amp; Health — студія масажу й догляду у Валенсії. Програми студії, підхід до клієнтки, контакти та запис: напишіть студії або зателефонуйте."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a2540'/%3E%3Ccircle cx='32' cy='17' r='6' fill='%23ff7a59'/%3E%3Cpath d='M26 29h12v24H26z' fill='%23cdebe6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"InFit Beauty & Health","telephone":"+34 642 217 477","email":"inna.kol.1004@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Valencia"}}
+</script>
+<style>
+:root{
+  --ink:#0a2540; --ink2:#14395e; --sea:#cdebe6; --sea-d:#8fcfc6; --foam:#f3f8f8; --coral:#ff7a59; --coral-d:#b23a1b; --white:#fff;
+  --serif:'Cormorant',Georgia,serif; --sans:'Onest',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+body{font-family:var(--sans);font-size:16px;line-height:1.6;color:var(--ink);background:var(--foam);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.wrap{max-width:1360px;margin:0 auto;padding-inline:var(--pad)}
+.serif{font-family:var(--serif)}
+.label{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+
+/* header: nav left, wordmark centre, CTA right */
+.hdr{position:sticky;top:0;z-index:50;background:var(--sea);border-bottom:1px solid var(--ink)}
+.hdr__in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:68px;gap:16px}
+.hdr nav ul{display:flex;gap:28px;list-style:none}
+.hdr nav a{text-decoration:none;font-weight:500;font-size:15px;padding:8px 0;border-bottom:2px solid transparent}
+.hdr nav a:hover{border-color:var(--ink)}
+.mark{font-family:var(--serif);font-weight:600;font-size:28px;text-decoration:none;white-space:nowrap;line-height:1}
+.mark i{font-style:italic;color:var(--coral-d)}
+.hdr__cta{justify-self:end;display:flex;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 24px;font:600 16px/1.2 var(--sans);text-decoration:none;border:2px solid var(--ink);border-radius:2px;background:var(--coral);color:var(--ink);cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{background:var(--ink);color:var(--white);transform:translateY(-2px)}
+.btn--ghost{background:transparent}
+.btn--ghost:hover{background:var(--ink);color:var(--white)}
+.burger{display:none;min-width:48px;min-height:48px;background:none;border:2px solid var(--ink);border-radius:2px;cursor:pointer;justify-self:end}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px auto;transition:.2s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.drawer{display:none;background:var(--ink);color:var(--white);padding:8px var(--pad) 24px}
+.drawer a{display:block;padding:16px 0;text-decoration:none;border-bottom:1px solid var(--ink2);font:500 28px/1.2 var(--serif)}
+.drawer .btn{margin-top:20px;width:100%;font-family:var(--sans)}
+.drawer.open{display:block}
+
+/* hero */
+.hero{background:var(--sea);position:relative;overflow:hidden;padding:clamp(40px,7vw,96px) 0 0}
+.hero__grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:end}
+.hero .label{margin-bottom:20px;display:block}
+h1{font-family:var(--serif);font-weight:500;line-height:.92;letter-spacing:-.01em}
+h1 span{display:block;white-space:nowrap;font-size:clamp(46px,10.4vw,168px)}
+h1 em{font-style:italic;color:var(--coral-d);padding-left:.9em}
+.hero__lead{max-width:34em;font-size:clamp(17px,1.5vw,20px);margin:clamp(24px,3vw,40px) 0 28px}
+.hero__btns{display:flex;flex-wrap:wrap;gap:12px;padding-bottom:clamp(40px,6vw,80px)}
+.stones{align-self:end;justify-self:end;width:min(100%,440px);display:block}
+.hero__strip{background:var(--ink);color:var(--white);padding:16px 0}
+.hero__strip .wrap{display:flex;flex-wrap:wrap;gap:8px 40px;font-size:15px}
+.hero__strip b{color:var(--sea-d);font-weight:500;margin-right:8px}
+.hero__strip a{text-decoration:none;border-bottom:1px solid var(--sea-d)}
+
+/* programs */
+.prog{background:var(--ink);color:var(--white);padding:clamp(64px,9vw,128px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px;margin-bottom:clamp(32px,5vw,64px);align-items:end}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(40px,5.6vw,84px);line-height:1}
+h2 em{color:var(--coral);font-style:italic}
+.note{font-size:15px;max-width:30em;opacity:.85}
+.rows{list-style:none;border-top:1px solid var(--sea-d)}
+.row{display:grid;grid-template-columns:90px minmax(0,6fr) minmax(0,5fr) auto;gap:24px;align-items:center;padding:clamp(20px,3vw,36px) 0;border-bottom:1px solid var(--ink2);transition:padding .3s,background .3s}
+.row:hover{padding-inline:16px;background:var(--ink2)}
+.row__n{font:italic 500 28px/1 var(--serif);color:var(--coral)}
+.row__t{font:500 clamp(30px,4vw,56px)/1.05 var(--serif)}
+.row__d{font-size:16px;color:#d6e6ea}
+.row__tag{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--sea-d);color:var(--sea-d);padding:4px 10px;border-radius:2px;white-space:nowrap}
+
+/* about */
+.about{padding:clamp(64px,9vw,128px) 0;background:var(--foam)}
+.about__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,7vw,120px)}
+.about h2 em{color:var(--coral-d)}
+.pull{font:italic 500 clamp(26px,3vw,40px)/1.2 var(--serif);margin-top:28px;padding-left:20px;border-left:4px solid var(--coral)}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:56px 1fr;gap:16px;padding:24px 0;border-top:1px solid var(--ink)}
+.steps li:last-child{border-bottom:1px solid var(--ink)}
+.steps li::before{content:counter(s,decimal-leading-zero);font:italic 500 32px/1 var(--serif);color:var(--coral-d)}
+.steps h3{font:600 20px/1.3 var(--sans);margin-bottom:6px}
+.steps p{max-width:34em}
+
+/* contacts */
+.contact{background:var(--coral);padding:clamp(64px,9vw,120px) 0;position:relative}
+.contact__grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:start}
+.contact h2{margin-bottom:28px}
+.contact .btns{display:flex;flex-wrap:wrap;gap:12px}
+.contact .btn{background:var(--ink);color:var(--white)}
+.contact .btn:hover{background:var(--white);color:var(--ink)}
+.contact .btn--ghost{background:transparent;color:var(--ink)}
+.contact .btn--ghost:hover{background:var(--white);color:var(--ink)}
+dl{border-top:2px solid var(--ink)}
+dl div{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--ink)}
+dt{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding-top:6px}
+dd{font:500 clamp(22px,2.4vw,32px)/1.25 var(--serif);overflow-wrap:anywhere}
+dd a{text-decoration:none;border-bottom:2px solid var(--ink)}
+dd small{display:block;font:400 15px/1.5 var(--sans);margin-top:4px}
+
+.foot{background:var(--ink);color:#d6e6ea;padding:28px 0;font-size:14px}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.foot a{color:var(--sea-d)}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.btn,.row{transition:none}}
+
+@media (max-width:1000px){
+  .hdr nav,.hdr__cta{display:none}
+  .hdr__in{grid-template-columns:1fr auto}
+  .burger{display:block}
+  .hero__grid,.sec-head,.about__grid,.contact__grid{grid-template-columns:1fr}
+  .stones{justify-self:start;width:min(70%,320px);margin-top:-8px}
+  .hero__btns{padding-bottom:32px}
+  .row{grid-template-columns:48px 1fr;gap:8px 16px}
+  .row__d,.row__tag{grid-column:2}
+  .row__tag{justify-self:start}
+}
+@media (max-width:480px){
+  .mark{font-size:24px}
+  dl div{grid-template-columns:1fr;gap:0}
+  .btn{width:100%}
+  .hero__strip .wrap{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <nav aria-label="Основна навігація"><ul>
+      <li><a href="#programs">Програми</a></li>
+      <li><a href="#about">Про студію</a></li>
+      <li><a href="#contact">Записатися</a></li>
+    </ul></nav>
+    <a class="mark" href="#top" aria-label="InFit Beauty &amp; Health — на початок">In<i>Fit</i> Beauty &amp; Health</a>
+    <div class="hdr__cta"><a class="btn" href="mailto:inna.kol.1004@gmail.com">Написати студії</a></div>
+    <button class="burger" aria-expanded="false" aria-controls="drawer" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+  <div class="drawer" id="drawer" data-lenis-prevent>
+    <a href="#programs">Програми</a><a href="#about">Про студію</a><a href="#contact">Записатися</a>
+    <a class="btn" href="mailto:inna.kol.1004@gmail.com">Написати студії</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div>
+      <span class="label">Студія масажу · Валенсія</span>
+      <h1><span>InFit Beauty</span><span><em>&amp; Health</em></span></h1>
+      <p class="hero__lead">Масаж і догляд у Валенсії. На цій сторінці — програми студії та спосіб зв'язатися: напишіть, і студія підкаже, що підійде саме вам.</p>
+      <div class="hero__btns">
+        <a class="btn" href="mailto:inna.kol.1004@gmail.com">Написати студії</a>
+        <a class="btn btn--ghost" href="tel:+34642217477">+34 642 217 477</a>
+      </div>
+    </div>
+    <svg class="stones" viewBox="0 0 400 420" role="img" aria-label="Стос гладких каменів — символ спокою" >
+      <path d="M20 392c60-12 120 6 180 0s120-14 180 0" fill="none" stroke="#0a2540" stroke-width="2"/>
+      <ellipse cx="200" cy="350" rx="170" ry="42" fill="#0a2540"/>
+      <ellipse cx="205" cy="272" rx="124" ry="34" fill="#ff7a59"/>
+      <ellipse cx="196" cy="206" rx="86" ry="26" fill="#f3f8f8" stroke="#0a2540" stroke-width="2"/>
+      <ellipse cx="202" cy="154" rx="54" ry="19" fill="#14395e"/>
+      <ellipse cx="200" cy="112" rx="28" ry="12" fill="#ff7a59" stroke="#0a2540" stroke-width="2"/>
+      <path d="M200 100c-10-30 12-40 0-70" fill="none" stroke="#0a2540" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="hero__strip"><div class="wrap">
+    <span><b>Місто</b>Валенсія</span>
+    <span><b>Телефон</b><a href="tel:+34642217477">+34 642 217 477</a></span>
+    <span><b>E-mail</b><a href="mailto:inna.kol.1004@gmail.com">inna.kol.1004@gmail.com</a></span>
+  </div></div>
+</section>
+
+<section class="prog" id="programs">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>Програми<br><em>студії</em></h2>
+      <p class="note">Орієнтовні напрями, щоб було з чого почати розмову. Точний перелік, тривалість і вартість програм уточнюйте у студії.</p>
+    </div>
+    <ul class="rows">
+      <li class="row rv"><span class="row__n">i</span><h3 class="row__t">Масаж</h3><p class="row__d">Програма масажу під ваш запит — як розслаблення або для самопочуття.</p><span class="row__tag">Приклад</span></li>
+      <li class="row rv"><span class="row__n">ii</span><h3 class="row__t">Догляд</h3><p class="row__d">Доглядові процедури для тіла та шкіри.</p><span class="row__tag">Приклад</span></li>
+      <li class="row rv"><span class="row__n">iii</span><h3 class="row__t">Beauty &amp; Health</h3><p class="row__d">Поєднання краси та здоров'я — комплексна програма за домовленістю зі студією.</p><span class="row__tag">Приклад</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about__grid">
+    <div class="rv">
+      <h2>Про <em>студію</em></h2>
+      <p class="pull">Спочатку розмова — потім програма.</p>
+    </div>
+    <ol class="steps rv">
+      <li><div><h3>Ви пишете або телефонуєте</h3><p>Розкажіть, що вам потрібно: масаж, догляд чи щось інше з програм студії.</p></div></li>
+      <li><div><h3>Студія підказує, що підійде</h3><p>Разом з вами обирають програму й зручний час для візиту.</p></div></li>
+      <li><div><h3>Ви приходите у Валенсії</h3><p>Адресу студія повідомляє під час запису.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact__grid">
+    <div class="rv">
+      <h2>Як знайти<br>й записатися</h2>
+      <div class="btns">
+        <a class="btn" href="mailto:inna.kol.1004@gmail.com">Написати студії</a>
+        <a class="btn btn--ghost" href="tel:+34642217477">Зателефонувати</a>
+      </div>
+    </div>
+    <dl class="rv">
+      <div><dt>Телефон</dt><dd><a href="tel:+34642217477">+34 642 217 477</a></dd></div>
+      <div><dt>E-mail</dt><dd><a href="mailto:inna.kol.1004@gmail.com">inna.kol.1004@gmail.com</a></dd></div>
+      <div><dt>Місто</dt><dd>Валенсія</dd></div>
+      <div><dt>Адреса й години</dt><dd>Уточнюйте у студії<small>Адресу та вільний час студія повідомляє під час запису.</small></dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <span>InFit Beauty &amp; Health · Валенсія</span>
+  <span>Попередній концепт від Doba Digital - не опублікований сайт</span>
+</div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lenis=null;
+  if(window.Lenis && !reduce){lenis=new Lenis({autoRaf:true});window.lenis=lenis;}
+  var b=document.querySelector('.burger'),d=document.getElementById('drawer');
+  function close(){b.setAttribute('aria-expanded','false');d.classList.remove('open');if(lenis)lenis.start();}
+  b.addEventListener('click',function(){
+    var o=b.getAttribute('aria-expanded')!=='true';
+    b.setAttribute('aria-expanded',o);d.classList.toggle('open',o);
+    if(lenis){o?lenis.stop():lenis.start();}
+  });
+  d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.classList.contains('open')){close();b.focus();}});
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){
+    var t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();
+    if(lenis)lenis.scrollTo(t,{offset:-68});else t.scrollIntoView();
+  });});
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.15});
+    els.forEach(function(e){io.observe(e)});
+  } else els.forEach(function(e){e.classList.add('in')});
+})();
+</script>
+</body>
+</html>
