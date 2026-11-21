@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mebel-odessa.shop/sitemap.xml
