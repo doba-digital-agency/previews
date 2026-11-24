@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>«Творчі» — рукоділля в Тернополі: пряжа, бісер, фурнітура</title>
+<meta name="description" content="Пряжа, бісер, схеми для вишивки, фурнітура для сумок і вироби ручної роботи в одному місці: пров. Генерала Тарнавського, 1, Тернопіль. Пишіть в Instagram.">
+<meta property="og:title" content="«Творчі» — все для рукоділля в Тернополі">
+<meta property="og:description" content="Пряжа, бісер, схеми для вишивки, фурнітура для сумок і вироби ручної роботи.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2312161c'/%3E%3Cpath d='M16 20h32M32 20v28' stroke='%2332d1c1' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M14 54h36' stroke='%23e0306e' stroke-width='4' stroke-dasharray='6 6' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;800&family=Onest:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HobbyShop","name":"«Творчі»","address":{"@type":"PostalAddress","streetAddress":"пров. Генерала Тарнавського, 1","addressLocality":"Тернопіль","addressRegion":"Тернопільська область","postalCode":"46004","addressCountry":"UA"},"telephone":"+380963668710","email":"kreate-t@ukr.net","sameAs":["https://www.instagram.com/tvorchistore/"]}
+</script>
+<style>
+:root{
+  --ink:#12161c; --ink2:#1f2630; --rasp:#d81b60; --rasp-d:#a80f45;
+  --teal:#32d1c1; --teal-d:#0b6d66; --mist:#e3f6f3; --linen:#eef1f3; --white:#fff;
+  --fh:'Montserrat Alternates','Trebuchet MS',sans-serif; --fb:'Onest',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:auto}
+body{font:400 17px/1.6 var(--fb);color:var(--ink);background:var(--white);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--rasp);outline-offset:3px}
+.dark :focus-visible,.hero :focus-visible,.contacts :focus-visible{outline-color:var(--teal)}
+.skip{position:absolute;left:-999px;top:0;background:var(--white);padding:10px 16px;z-index:100}
+.skip:focus{left:8px;top:8px}
+
+/* stitch motif: a dashed running stitch */
+.stitch{height:0;border-top:3px dashed currentColor;opacity:.9}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:3px dashed var(--ink)}
+.hdr__in{display:flex;align-items:center;gap:28px;padding:0 var(--pad);min-height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 22px/1 var(--fh)}
+.logo svg{width:34px;height:34px}
+.nav{display:flex;gap:6px;margin-left:auto}
+.nav a{display:flex;align-items:center;gap:9px;padding:10px 14px;text-decoration:none;font-weight:500;font-size:16px;transition:color .25s ease,transform .25s ease}
+.nav a::before{content:"";width:11px;height:11px;border-radius:50%;background:var(--c);transition:transform .25s ease}
+.nav a:hover{color:var(--rasp-d)}
+.nav a:hover::before{transform:scale(1.5)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 24px;border:2px solid var(--ink);border-radius:4px;background:var(--rasp);border-color:var(--rasp);color:#fff;font:600 16px/1.2 var(--fb);text-decoration:none;cursor:pointer;transition:background-color .25s ease,color .25s ease,transform .25s ease,border-color .25s ease}
+.btn span{transition:transform .25s ease}
+.btn:hover{background:var(--rasp-d);border-color:var(--rasp-d)}
+.btn:hover span{transform:translateX(5px)}
+.btn--line{background:transparent;border-color:currentColor;color:inherit}
+.btn--line:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn--ink{background:var(--ink);border-color:var(--ink)}
+.btn--ink:hover{background:#000;border-color:#000}
+.hdr .btn{min-height:44px;padding:8px 18px}
+.burger{display:none;margin-left:auto;min-height:44px;padding:8px 18px;border:2px solid var(--ink);border-radius:4px;background:var(--white);font:600 16px var(--fb);cursor:pointer;transition:background-color .25s ease,color .25s ease}
+.burger:hover{background:var(--ink);color:#fff}
+.drop{display:none;background:var(--ink);color:#fff;padding:12px var(--pad) 24px}
+.drop.open{display:block}
+.drop a{display:block;padding:14px 0;font:800 26px/1.1 var(--fh);text-decoration:none;border-bottom:1px dashed #5a6572;transition:color .25s ease,padding-left .25s ease}
+.drop a:hover{color:var(--teal);padding-left:8px}
+.drop .btn{margin-top:20px;display:flex;justify-content:center;font:600 16px var(--fb);border-bottom:2px solid var(--rasp)}
+
+/* hero: image-led split, photo bleeds left */
+.hero{display:grid;grid-template-columns:5fr 7fr;min-height:calc(100svh - 71px);background:var(--ink);color:#fff}
+.hero__ph{position:relative;overflow:hidden;background:#0a5a9a}
+.hero__ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero__ph figcaption{position:absolute;left:0;bottom:0;background:var(--ink);color:#fff;font-size:13px;line-height:1.4;padding:8px 14px}
+.hero__tx{display:flex;flex-direction:column;justify-content:center;gap:28px;padding:56px clamp(24px,4vw,64px)}
+.kicker{display:flex;align-items:center;gap:14px;font:600 14px/1.3 var(--fb);letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+.kicker::after{content:"";flex:1;border-top:3px dashed var(--teal);opacity:.7}
+h1{font:800 clamp(40px,10.6vw,190px)/1 var(--fh);white-space:nowrap;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--teal)}
+.lead{max-width:34em;font-size:clamp(18px,1.5vw,21px);color:#dfe5ea}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.hero__facts{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;color:#c3ccd4;border-top:3px dashed #3a4552;padding-top:18px}
+.hero__facts b{color:#fff;font-weight:600}
+
+section{padding:clamp(64px,9vw,120px) var(--pad)}
+.wrap{max-width:1320px;margin:0 auto}
+h2{font:800 clamp(30px,4.2vw,56px)/1.08 var(--fh);letter-spacing:-.01em}
+.label{display:inline-flex;align-items:center;gap:10px;font:600 13px/1 var(--fb);letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.label i{width:12px;height:12px;border-radius:50%;background:var(--rasp)}
+
+/* assortment */
+.shop{background:var(--white)}
+.shop__top{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:56px}
+.shop__top p{max-width:36em;color:#3a4552}
+.cats{list-style:none;padding:0;border-top:3px dashed var(--ink)}
+.cats li{display:grid;grid-template-columns:72px 1fr 1.2fr;gap:20px;align-items:baseline;padding:26px 0;border-bottom:3px dashed var(--ink);transition:background-color .3s ease,padding-left .3s ease}
+.cats li:hover{background:var(--linen);padding-left:14px}
+.cats .dot{width:28px;height:28px;border-radius:50%;background:var(--c);align-self:center}
+.cats h3{font:800 clamp(24px,2.8vw,38px)/1.1 var(--fh)}
+.cats p{color:#3a4552;font-size:16px}
+
+.bag{margin-top:clamp(56px,8vw,96px);display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.bag__t{grid-column:1/-1;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.bag__t p{max-width:30em;color:#3a4552}
+.bag figure{position:relative;overflow:hidden;background:var(--linen)}
+.bag img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.bag figure:hover img{transform:scale(1.04)}
+.bag figcaption{padding:10px 0 0;font-size:15px;color:#3a4552;background:var(--white);position:relative}
+.bag figure{background:var(--white)}
+.bag .ph{overflow:hidden}
+.b1{grid-column:1/6}.b1 .ph{aspect-ratio:3/4}
+.b2{grid-column:6/10;margin-top:72px}.b2 .ph{aspect-ratio:1}
+.b3{grid-column:10/13}.b3 .ph{aspect-ratio:3/4}
+.b4{grid-column:1/13}
+.source{grid-column:1/-1;font-size:14px;color:#566170}
+
+/* about */
+.about{background:var(--ink);color:#fff}
+.about .grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(32px,6vw,96px);align-items:start}
+.about h2 em{font-style:normal;color:var(--teal)}
+.about p{color:#dfe5ea;max-width:36em;margin-top:22px}
+.about blockquote{border-left:6px solid var(--rasp);padding:4px 0 4px 22px;margin-top:34px;font:600 clamp(18px,1.8vw,22px)/1.5 var(--fh);max-width:30em}
+.about blockquote cite{display:block;margin-top:12px;font:400 14px var(--fb);color:#aeb8c2}
+.about blockquote cite a{transition:color .25s ease}
+.about blockquote cite a:hover{color:var(--teal)}
+.facts{list-style:none;padding:0;border-top:3px dashed #3a4552}
+.facts li{padding:20px 0;border-bottom:3px dashed #3a4552;display:flex;flex-direction:column;gap:2px}
+.facts b{font:800 clamp(22px,2.4vw,32px)/1.15 var(--fh);color:var(--teal)}
+.facts span{color:#c3ccd4;font-size:15px}
+
+/* contacts */
+.contacts{background:var(--teal);color:var(--ink)}
+.contacts .grid{display:grid;grid-template-columns:6fr 6fr;gap:clamp(32px,6vw,96px)}
+.contacts h2{margin-bottom:22px}
+.contacts .lead{color:var(--ink)}
+.contacts .btn--line:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.clist{list-style:none;padding:0;border-top:3px dashed var(--ink)}
+.clist li{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:18px 0;border-bottom:3px dashed var(--ink)}
+.clist small{font:600 13px/1.6 var(--fb);letter-spacing:.07em;text-transform:uppercase}
+.clist a{font-weight:600;overflow-wrap:anywhere;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px;transition:color .25s ease}
+.clist a:hover{color:#fff}
+.clist .tel{font:800 clamp(26px,3vw,40px)/1.1 var(--fh);text-decoration:none}
+.clist address{font-style:normal;font-weight:500}
+
+footer{background:var(--ink);color:#c3ccd4;padding:28px var(--pad);font-size:14px;text-align:center}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1100px){
+  .nav{display:none}.hdr .btn{display:none}.burger{display:block}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero__ph{aspect-ratio:16/10}
+  .hero__ph img{object-position:center 40%}
+  .hero__tx{padding:44px var(--pad) 52px}
+  h1{font-size:clamp(40px,20vw,230px)}
+  .shop__top,.about .grid,.contacts .grid{grid-template-columns:1fr}
+  .cats li{grid-template-columns:48px 1fr}
+  .cats p{grid-column:2}
+  .b1{grid-column:1/7}.b2{grid-column:7/13;margin-top:40px}
+  .b3{grid-column:1/7}.b4{grid-column:7/13;margin-top:40px}.b4 .ph{aspect-ratio:3/4!important}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  h1{font-size:clamp(40px,21vw,230px)}
+  .hero__ph{aspect-ratio:4/3}
+  .btn{width:100%;justify-content:center}
+  .bag{gap:14px}
+  .b1,.b2,.b3,.b4{grid-column:1/-1;margin-top:0}
+  .b1 .ph,.b3 .ph{aspect-ratio:4/5}
+  .b4 .ph{aspect-ratio:1!important}
+  .clist li{grid-template-columns:1fr;gap:2px}
+  .cats .dot{width:22px;height:22px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms!important;animation:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">До змісту</a>
+
+<header class="hdr">
+  <div class="hdr__in">
+    <a class="logo" href="#top" aria-label="«Творчі» — на початок">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#12161c"/><path d="M16 20h32M32 20v28" stroke="#32d1c1" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M14 54h36" stroke="#e0306e" stroke-width="4" stroke-dasharray="6 6" fill="none"/></svg>
+      Творчі
+    </a>
+    <nav class="nav" aria-label="Основна навігація">
+      <a href="#shop" style="--c:var(--rasp)">Асортимент</a>
+      <a href="#about" style="--c:var(--ink)">Про крамницю</a>
+      <a href="#contacts" style="--c:var(--teal)">Адреса й контакти</a>
+    </nav>
+    <a class="btn" href="https://www.instagram.com/tvorchistore/" target="_blank" rel="noopener">Написати в Instagram <span aria-hidden="true">→</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="drop">Меню</button>
+  </div>
+  <div class="drop" id="drop" data-lenis-prevent>
+    <a href="#shop">Асортимент</a>
+    <a href="#about">Про крамницю</a>
+    <a href="#contacts">Адреса й контакти</a>
+    <a class="btn" href="https://www.instagram.com/tvorchistore/" target="_blank" rel="noopener">Написати в Instagram</a>
+  </div>
+</header>
+
+<main id="main">
+<div id="top"></div>
+<div class="hero">
+  <figure class="hero__ph">
+    <img src="photos/ig-02.webp" width="1440" height="1440" alt="Мотки муліне синіх і жовтих кольорів, викладені на фетрі у формі тризуба, поряд з перлинами та смужкою вишитої стрічки" fetchpriority="high">
+    <figcaption>Фото з Instagram крамниці</figcaption>
+  </figure>
+  <div class="hero__tx">
+    <p class="kicker">Рукоділля · Тернопіль</p>
+    <h1>Творчі</h1>
+    <p class="lead">Пряжа, бісер, схеми для вишивки, фурнітура для сумок і вироби ручної роботи в одному місці — з адресою та контактами.</p>
+    <div class="btns">
+      <a class="btn" href="#contacts">Як нас знайти <span aria-hidden="true">→</span></a>
+      <a class="btn btn--line" href="https://www.instagram.com/tvorchistore/" target="_blank" rel="noopener">Написати в Instagram</a>
+    </div>
+    <p class="hero__facts"><span><b>пров. Генерала Тарнавського, 1</b></span><span>Тернопіль</span><span>Google: <b>5,0</b> · 9 відгуків</span></p>
+  </div>
+</div>
+
+<section class="shop" id="shop">
+  <div class="wrap">
+    <div class="shop__top rv">
+      <div>
+        <span class="label"><i></i>Що в крамниці</span>
+        <h2>Чотири розділи для ваших рук</h2>
+      </div>
+      <p>Усе, що потрібно, щоб вишити, зв'язати чи зібрати сумку, — під одним дахом. Наявність і ціни краще уточнити в директі: ми не вказуємо їх тут, щоб не вводити в оману.</p>
+    </div>
+
+    <ul class="cats rv">
+      <li style="--c:var(--rasp)"><span class="dot"></span><h3>Вишивка</h3><p>Бісер і схеми для вишивки, зокрема для вишивки бісером.</p></li>
+      <li style="--c:var(--teal)"><span class="dot"></span><h3>В'язання</h3><p>Пряжа для в'язання.</p></li>
+      <li style="--c:var(--ink)"><span class="dot"></span><h3>Фурнітура для сумок</h3><p>Ланцюги, денця, замочки та інші деталі для сумок — дивіться нижче.</p></li>
+      <li style="--c:var(--teal-d)"><span class="dot"></span><h3>Декор і художні матеріали</h3><p>Для декору та творчості. Що саме є зараз — запитайте в Instagram.</p></li>
+    </ul>
+
+    <div class="bag">
+      <div class="bag__t rv">
+        <div>
+          <span class="label"><i></i>Фурнітура для сумок</span>
+          <h2>З чого збирають сумку</h2>
+        </div>
+        <p>Фото з Instagram крамниці «Творчі» — так виглядають деякі деталі.</p>
+      </div>
+      <figure class="b1 rv"><div class="ph"><img loading="lazy" src="photos/ig-05.webp" width="1440" height="1440" alt="П'ять акрилових ланцюгів для сумок: чорні, молочно-бежевий, оливковий і бірюзовий, з кільцями-карабінами"></div><figcaption>Акрилові ланцюги для сумок</figcaption></figure>
+      <figure class="b2 rv"><div class="ph"><img loading="lazy" src="photos/ig-04.webp" width="1440" height="1440" alt="Два овальних денця для сумок з рядом отворів по краю"></div><figcaption>Денця для сумок з отворами</figcaption></figure>
+      <figure class="b3 rv"><div class="ph"><img loading="lazy" src="photos/ig-03.webp" width="1440" height="1920" alt="П'ять золотистих замочків-затискачів з карабіном і ланцюжком-подовжувачем"></div><figcaption>Замочки з ланцюжком</figcaption></figure>
+      <figure class="b4 rv" style="display:block"><div class="ph" style="aspect-ratio:21/8"><img loading="lazy" src="photos/ig-06.webp" width="1440" height="1440" alt="Золотистий і сріблястий ланцюжки-подовжувачі з застібкою-карабіном і краплею" style="object-position:center 45%"></div><figcaption>Ланцюжки-подовжувачі із застібкою</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap grid">
+    <div class="rv">
+      <span class="label"><i></i>Про крамницю й майстриню</span>
+      <h2>Не лише матеріали — <em>вироби ручної роботи</em></h2>
+      <p>У крамниці «Творчі» є товари для рукоділля, а ще вироби ручної роботи від нашої майстрині. Серед них — гердани з каліброваного чеського бісеру в техніці ручного ткацтва.</p>
+      <blockquote>«У нашому магазині є ще багато виробів ручної роботи. Якщо є запитання — пиши у дірект.»<cite>З допису в <a href="https://www.instagram.com/reel/DYsi3IIuHNd/" target="_blank" rel="noopener">Instagram крамниці</a></cite></blockquote>
+    </div>
+    <ul class="facts rv">
+      <li><b>5,0 з 5</b><span>оцінка в Google, 9 відгуків</span></li>
+      <li><b>Тернопіль</b><span>пров. Генерала Тарнавського, 1</span></li>
+      <li><b>Instagram @tvorchistore</b><span>запитання — у директ</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contacts" id="contacts">
+  <div class="wrap grid">
+    <div class="rv">
+      <span class="label"><i style="background:var(--ink)"></i>Як нас знайти</span>
+      <h2>Заходьте в Тернополі або пишіть у директ</h2>
+      <p class="lead">Адреса — пров. Генерала Тарнавського, 1. Графік роботи уточнюйте в Instagram чи за телефоном.</p>
+      <div class="btns" style="margin-top:28px">
+        <a class="btn btn--ink" href="https://www.instagram.com/tvorchistore/" target="_blank" rel="noopener">Написати в Instagram <span aria-hidden="true">→</span></a>
+        <a class="btn btn--line" href="https://www.google.com/maps/place/?q=place_id:ChIJbf3ubQAzMEcRDMeBLbUbJv8" target="_blank" rel="noopener">Відкрити на карті</a>
+      </div>
+    </div>
+    <ul class="clist rv">
+      <li><small>Телефон</small><a class="tel" href="tel:+380963668710">096 366 8710</a></li>
+      <li><small>Адреса</small><address>пров. Генерала Тарнавського, 1, Тернопіль, Тернопільська область, 46004</address></li>
+      <li><small>E-mail</small><a href="mailto:kreate-t@ukr.net">kreate-t@ukr.net</a></li>
+      <li><small>Instagram</small><a href="https://www.instagram.com/tvorchistore/" target="_blank" rel="noopener">@tvorchistore</a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>Попередній концепт від Doba Digital - не опублікований сайт</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lenis=null;
+  if(window.Lenis&&!reduce){lenis=new Lenis({autoRaf:true});window.lenis=lenis;}
+  var hdr=document.querySelector('.hdr');
+  function off(){return hdr.offsetHeight+4}
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href');var t=id==='#top'?document.body:document.querySelector(id);
+      if(!t)return;e.preventDefault();closeMenu();
+      if(lenis)lenis.scrollTo(id==='#top'?0:t,{offset:-off()});
+      else window.scrollTo({top:id==='#top'?0:t.getBoundingClientRect().top+scrollY-off()});
+    });
+  });
+  var b=document.querySelector('.burger'),d=document.getElementById('drop');
+  function closeMenu(){d.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='Меню';if(lenis)lenis.start();}
+  b.addEventListener('click',function(){
+    var o=!d.classList.contains('open');
+    d.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.textContent=o?'Закрити':'Меню';
+    if(lenis){o?lenis.stop():lenis.start();}
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.classList.contains('open')){closeMenu();b.focus();}});
+  addEventListener('resize',function(){if(innerWidth>1100)closeMenu()});
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08});
+    els.forEach(function(el){io.observe(el)});
+  }else els.forEach(function(el){el.classList.add('in')});
+})();
+</script>
+</body>
+</html>
