@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Car Broker | Car brokerage and car search in Los Angeles</title>
+<meta name="description" content="Car Broker helps you find the right car in Los Angeles. Tell the broker what you are looking for: send an enquiry by the form, by e-mail or by phone.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a3d4d'/%3E%3Cpath d='M44 22a15 15 0 1 0 0 20' fill='none' stroke='%23ffc82e' stroke-width='7'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AutomotiveBusiness","name":"Car Broker","telephone":"+1 213 513 8216","email":"brocar.losangeles@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA"}}</script>
+<style>
+:root{
+  --petrol:#0a3d4d; --petrol2:#0f5166; --ink:#0b1a20; --cyan:#5ad1e6; --cyan-d:#0b6275;
+  --sign:#ffc82e; --sign-d:#7a5a00; --paper:#f2f6f7; --line:#cfdde1; --white:#fff;
+  --pad:clamp(20px,4vw,56px); --max:1360px;
+  --h:'Bricolage Grotesque',system-ui,sans-serif; --b:'Instrument Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:auto}
+html.lenis,html.lenis body{height:auto}
+body{font:400 17px/1.6 var(--b);color:var(--ink);background:var(--paper);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+[hidden]{display:none!important}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+:focus-visible{outline:3px solid var(--sign);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.sr:focus{width:auto;height:auto;clip:auto;z-index:99;left:8px;top:8px;background:var(--sign);color:var(--ink);padding:12px 16px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.7em;min-height:48px;padding:.75em 1.4em;border:2px solid var(--sign);background:var(--sign);color:var(--ink);font:600 16px/1 var(--b);text-decoration:none;border-radius:3px;cursor:pointer;transition:background-color .25s ease,color .25s ease,border-color .25s ease}
+.btn svg{width:18px;height:18px;transition:transform .25s ease}
+.btn:hover{background:var(--white);border-color:var(--white)}
+.btn:hover svg{transform:translateX(4px)}
+.btn--ghost{background:transparent;color:var(--white);border-color:rgba(255,255,255,.55)}
+.btn--ghost:hover{background:var(--white);color:var(--petrol);border-color:var(--white)}
+
+/* header: route bar */
+.top{position:sticky;top:0;z-index:50;background:var(--petrol);color:var(--white)}
+.top__in{display:flex;align-items:center;gap:28px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 20px/1 var(--h);letter-spacing:-.01em;white-space:nowrap}
+.logo svg{width:32px;height:32px}
+.nav{display:flex;gap:6px;margin-left:auto}
+.nav a{position:relative;padding:10px 14px;text-decoration:none;font-weight:500;font-size:15px;color:#d5e9ee;transition:color .25s ease}
+.nav a::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;background:var(--sign);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.nav a:hover,.nav a.on{color:var(--white)}
+.nav a:hover::after,.nav a.on::after{transform:scaleX(1)}
+.top__tel{font:600 15px var(--b);text-decoration:none;padding:8px 0 8px 22px;border-left:1px solid rgba(255,255,255,.25);white-space:nowrap;transition:color .25s ease}
+.top__tel:hover{color:var(--sign)}
+.top .btn{min-height:42px;padding:.6em 1.1em;font-size:15px}
+.menu{display:none;margin-left:auto;min-height:44px;padding:0 16px;background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.5);border-radius:3px;font:600 15px var(--b);cursor:pointer;transition:background-color .25s ease,color .25s ease}
+.menu:hover{background:var(--white);color:var(--petrol)}
+.route{position:absolute;left:0;bottom:0;height:4px;width:100%;background:rgba(255,255,255,.14)}
+.route i{display:block;height:100%;width:100%;background:var(--sign);transform:scaleX(0);transform-origin:left}
+.drop{display:none;background:var(--ink);padding:10px var(--pad) 24px}
+.drop a{display:block;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.14);font:600 28px/1.1 var(--h);text-decoration:none;color:var(--white);transition:color .25s ease}
+.drop a:hover{color:var(--sign)}
+.drop.open{display:block}
+
+/* hero */
+.hero{background:var(--petrol);color:var(--white);padding:clamp(28px,5vw,64px) 0 0;position:relative}
+.kicker{display:flex;align-items:center;gap:14px;font:600 13px/1.3 var(--b);letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.22)}
+.kicker b{color:var(--sign);font-weight:600}
+h1{font:800 clamp(34px,14.2vw,212px)/.95 var(--h);letter-spacing:-.035em;white-space:nowrap;margin:clamp(14px,2.5vw,34px) 0 0}
+h1 span{color:var(--sign)}
+.hero__row{display:grid;grid-template-columns:7fr 5fr;gap:clamp(24px,4vw,64px);align-items:end;margin-top:clamp(18px,3vw,36px)}
+.lead{font-size:clamp(18px,1.7vw,22px);line-height:1.5;max-width:34em;color:#e1f1f5}
+.actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+.pano{position:relative;margin-top:clamp(28px,4vw,56px)}
+.pano img{width:100%;aspect-ratio:21/8;object-fit:cover;object-position:50% 60%}
+.pano figcaption{position:absolute;right:var(--pad);bottom:12px;font-size:12px;color:var(--white);background:var(--ink);padding:4px 10px;border-radius:2px}
+.pano::before{content:"";position:absolute;inset:-1px 0 auto;height:1px}
+
+/* sections */
+.sec{padding:clamp(56px,8vw,120px) 0}
+.eyebrow{display:flex;align-items:center;gap:12px;font:600 13px/1 var(--b);letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-d);margin-bottom:22px}
+.eyebrow::before{content:"";width:34px;height:3px;background:var(--sign)}
+h2{font:800 clamp(30px,4.6vw,62px)/1.05 var(--h);letter-spacing:-.025em;max-width:15em}
+.about{display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,6vw,96px)}
+.about__txt p{font-size:clamp(18px,1.6vw,21px);max-width:32em}
+.about__txt p+p{margin-top:1em}
+.tag{display:inline-block;margin-top:26px;padding:6px 12px;border:1px dashed var(--cyan-d);color:var(--cyan-d);font-size:13px;font-weight:600;border-radius:2px}
+.about__pic{margin-top:clamp(28px,4vw,48px);position:relative;max-width:520px}
+.about__pic img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.about__pic figcaption{font-size:12px;color:#44606a;margin-top:8px}
+
+/* steps on a road */
+.steps{background:var(--ink);color:var(--white)}
+.steps h2{color:var(--white)}
+.steps .eyebrow{color:var(--cyan)}
+.road{position:relative;margin-top:clamp(40px,6vw,80px);display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,56px);list-style:none;padding:0}
+.road::before{content:"";position:absolute;left:0;right:0;top:27px;border-top:3px dashed var(--sign);opacity:.8}
+.road li{position:relative;padding-top:78px}
+.road li::before{content:"";position:absolute;top:14px;left:0;width:28px;height:28px;border-radius:50%;background:var(--ink);border:4px solid var(--sign)}
+.road .n{position:absolute;top:-6px;right:0;font:800 clamp(52px,6vw,84px)/1 var(--h);color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.28)}
+.road h3{font:700 clamp(22px,2.4vw,30px)/1.15 var(--h);margin-bottom:10px;position:relative}
+.road p{color:#bcd3da;max-width:22em;position:relative}
+.steps .tag{border-color:var(--cyan);color:var(--cyan)}
+
+/* contact */
+.contact{background:var(--sign)}
+.contact .eyebrow{color:var(--ink)}
+.contact .eyebrow::before{background:var(--ink)}
+.cgrid{display:grid;grid-template-columns:6fr 6fr;gap:clamp(28px,6vw,96px);align-items:start}
+.bigtel{display:inline-block;margin:26px 0 8px;font:800 clamp(30px,5.4vw,76px)/1 var(--h);letter-spacing:-.03em;text-decoration:none;white-space:nowrap;border-bottom:4px solid var(--ink);transition:color .25s ease,border-color .25s ease}
+.bigtel:hover{color:var(--petrol);border-color:var(--petrol)}
+.clist{list-style:none;padding:0;margin-top:20px;border-top:2px solid var(--ink)}
+.clist li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid rgba(11,26,32,.35)}
+.clist span{font-weight:600}
+.clist a{overflow-wrap:anywhere;text-align:right;transition:color .25s ease}
+.clist a:hover{color:var(--petrol)}
+form{background:var(--ink);color:var(--white);padding:clamp(22px,3vw,40px);border-radius:3px}
+form h3{font:700 26px/1.1 var(--h);margin-bottom:18px}
+.f{margin-bottom:16px}
+label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+input,textarea{width:100%;font:400 16px var(--b);padding:12px 14px;background:#16282f;color:var(--white);border:1px solid #4a6670;border-radius:3px;transition:border-color .25s ease,background-color .25s ease}
+input:hover,textarea:hover{border-color:var(--cyan)}
+input:focus-visible,textarea:focus-visible{outline:3px solid var(--sign);outline-offset:1px}
+textarea{min-height:120px;resize:vertical}
+.err{color:#ff9d8f;font-size:13px;margin-top:4px;min-height:0}
+.note{font-size:13px;color:#a9c3cb;margin-top:12px}
+.ok{margin-top:14px;padding:12px 14px;border:1px solid var(--cyan);color:var(--white);font-size:15px;border-radius:3px}
+
+footer{background:var(--ink);color:#a9c3cb;padding:34px 0 40px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px}
+footer strong{color:var(--white);font-family:var(--h);font-size:18px}
+.concept{width:100%;padding-top:16px;margin-top:6px;border-top:1px solid rgba(255,255,255,.14);font-size:13px}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1060px){
+  .nav,.top__tel,.top .btn{display:none}
+  .menu{display:block}
+  .about,.cgrid{grid-template-columns:1fr}
+  .hero__row{grid-template-columns:1fr}
+  .actions{justify-content:flex-start}
+  .about__pic{max-width:none}
+  .about__pic img{aspect-ratio:16/9}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .pano img{aspect-ratio:4/3}
+  .road{grid-template-columns:1fr;gap:0;padding-left:0}
+  .road::before{left:13px;right:auto;top:20px;bottom:30px;border-top:0;border-left:3px dashed var(--sign)}
+  .road li{padding:2px 0 40px 58px}
+  .road li::before{top:2px;left:0}
+  .road .n{top:-6px;font-size:56px}
+  .road h3{padding-right:48px}
+  .kicker{font-size:11px;letter-spacing:.1em}
+  .clist li{flex-direction:column;gap:2px}
+  .clist a{text-align:left}
+  .btn{width:100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition-duration:.01s!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="sr" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap top__in">
+    <a class="logo" href="#top" aria-label="Car Broker, home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="3" fill="#ffc82e"/><path d="M45 22a15 15 0 1 0 0 20" fill="none" stroke="#0a3d4d" stroke-width="7"/></svg>
+      Car Broker
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#about">What we do</a>
+      <a href="#steps">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="top__tel" href="tel:+12135138216">+1 213 513 8216</a>
+    <a class="btn" href="#contact">Send an enquiry
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="drop">Menu</button>
+  </div>
+  <div class="drop" id="drop" data-lenis-prevent>
+    <a href="#about">What we do</a>
+    <a href="#steps">How it works</a>
+    <a href="#contact">Send an enquiry</a>
+    <a href="tel:+12135138216">+1 213 513 8216</a>
+  </div>
+  <div class="route" aria-hidden="true"><i id="prog"></i></div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="kicker"><b>Car brokerage</b> <span>Los Angeles, CA</span></p>
+    <h1>Car <span>Broker</span></h1>
+    <div class="hero__row">
+      <p class="lead">Helping you find the right car in Los Angeles. Tell us what you are looking for and we will get back to you.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Send an enquiry
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--ghost" href="tel:+12135138216">Call +1 213 513 8216</a>
+      </div>
+    </div>
+  </div>
+  <figure class="pano">
+    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=2000&q=70&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=70&auto=format&fit=crop 700w, https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1400&q=70&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=2000&q=70&auto=format&fit=crop 2000w" sizes="100vw" width="2000" height="1333" alt="A sports car parked on a city street (illustrative stock photo)" fetchpriority="high">
+    <figcaption>Illustrative photo</figcaption>
+  </figure>
+</section>
+
+<section class="sec" id="about">
+  <div class="wrap about">
+    <div>
+      <p class="eyebrow">What we do</p>
+      <h2>A broker between you and the right car.</h2>
+    </div>
+    <div class="about__txt rv">
+      <p>Car Broker helps people in Los Angeles find the right car. You describe what you need, and the broker takes it from there.</p>
+      <p>The details of the service, such as the kinds of cars and how the deal is arranged, will be added once confirmed with the owner.</p>
+      <span class="tag">Placeholder wording, to be confirmed</span>
+      <figure class="about__pic">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&q=70&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=70&auto=format&fit=crop 600w, https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&q=70&auto=format&fit=crop 1200w" sizes="(max-width:1060px) 100vw, 520px" width="1200" height="800" alt="A car on the road (illustrative stock photo)">
+        <figcaption>Illustrative photo, not a Car Broker vehicle.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec steps" id="steps">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Three stops from your wish to the keys.</h2>
+    <ol class="road">
+      <li class="rv"><span class="n" aria-hidden="true">1</span><h3>Tell us what you need</h3><p>Send an enquiry with the kind of car you have in mind.</p></li>
+      <li class="rv"><span class="n" aria-hidden="true">2</span><h3>We look for options</h3><p>The broker searches and gets back to you with suitable cars.</p></li>
+      <li class="rv"><span class="n" aria-hidden="true">3</span><h3>You decide</h3><p>You choose the car, and the broker helps with the next step.</p></li>
+    </ol>
+    <span class="tag">Placeholder steps, to be confirmed with the owner</span>
+  </div>
+</section>
+
+<section class="sec contact" id="contact">
+  <div class="wrap cgrid">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Send an enquiry.</h2>
+      <a class="bigtel" href="tel:+12135138216">+1 213 513 8216</a>
+      <ul class="clist">
+        <li><span>Phone</span><a href="tel:+12135138216">+1 213 513 8216</a></li>
+        <li><span>E-mail</span><a href="mailto:brocar.losangeles@gmail.com">brocar.losangeles@gmail.com</a></li>
+        <li><span>City</span><b>Los Angeles, CA</b></li>
+      </ul>
+    </div>
+    <form id="form" novalidate>
+      <h3>Tell us what you are looking for</h3>
+      <div class="f"><label for="n">Your name</label><input id="n" name="name" autocomplete="name" required><p class="err" id="en"></p></div>
+      <div class="f"><label for="p">Phone or e-mail</label><input id="p" name="contact" autocomplete="tel" required><p class="err" id="ep"></p></div>
+      <div class="f"><label for="m">Which car are you looking for?</label><textarea id="m" name="msg" required></textarea><p class="err" id="em"></p></div>
+      <button class="btn" type="submit">Send an enquiry
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      <p class="note">This concept has no server: the button opens a draft in your e-mail app, addressed to Car Broker.</p>
+      <p class="ok" id="ok" role="status" hidden>Your e-mail app should now show a draft. Press send there to finish.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Car Broker</strong>
+    <span>Los Angeles, CA</span>
+    <p class="concept">First concept by Doba Digital - not a published site</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lenis=null;
+  if(window.Lenis&&!reduce){lenis=new Lenis({autoRaf:true,anchors:{offset:-70}});window.lenis=lenis}
+  var prog=document.getElementById('prog');
+  function upd(){var h=document.documentElement.scrollHeight-innerHeight;prog.style.transform='scaleX('+(h>0?Math.min(1,scrollY/h):0)+')'}
+  addEventListener('scroll',upd,{passive:true});upd();
+  // menu
+  var mb=document.querySelector('.menu'),dr=document.getElementById('drop');
+  function close(){dr.classList.remove('open');mb.setAttribute('aria-expanded','false');mb.textContent='Menu';lenis&&lenis.start()}
+  mb.addEventListener('click',function(){var o=dr.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu';if(lenis){o?lenis.stop():lenis.start()}});
+  dr.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&dr.classList.contains('open')){close();mb.focus()}});
+  // reveal + active nav
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  var links=[].slice.call(document.querySelectorAll('.nav a'));
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});
+  ['about','steps','contact'].forEach(function(id){so.observe(document.getElementById(id))});
+  // form
+  var f=document.getElementById('form');
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var n=f.name,p=f.contact,m=f.msg,bad=false;
+    function chk(el,id,msg,ok){document.getElementById(id).textContent=ok?'':msg;el.setAttribute('aria-invalid',ok?'false':'true');if(!ok)bad=true}
+    chk(n,'en','Please enter your name.',n.value.trim().length>1);
+    var v=p.value.trim();
+    chk(p,'ep','Please enter a phone number or an e-mail.',/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)||v.replace(/\D/g,'').length>=7);
+    chk(m,'em','Please say which car you are looking for.',m.value.trim().length>2);
+    if(bad)return;
+    var body='Name: '+n.value.trim()+'\nContact: '+v+'\n\n'+m.value.trim();
+    location.href='mailto:brocar.losangeles@gmail.com?subject='+encodeURIComponent('Enquiry from the website')+'&body='+encodeURIComponent(body);
+    document.getElementById('ok').hidden=false;
+  });
+})();
+</script>
+</body>
+</html>
