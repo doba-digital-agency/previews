@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ceiling Group | Ceilings and lighting, Hallandale Beach</title>
+<meta name="description" content="Ceiling Group offers ceilings and lighting in Hallandale Beach, FL. Call +1 305 909 9555 or send a request through the form. This is a first website concept.">
+<meta property="og:title" content="Ceiling Group | Ceilings and lighting, Hallandale Beach">
+<meta property="og:description" content="Ceilings and lighting in Hallandale Beach, FL. First website concept.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d1117'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23ffb020' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23ffb020'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ink:#0d1117; --ink2:#1a212b; --amber:#ffb020; --amber-d:#8a5300;
+  --plaster:#e9ecef; --paper:#f7f8f9; --white:#fff; --steel:#505965; --line:#c7ced6;
+  --pad:clamp(20px,4vw,56px);
+  --head:'Space Grotesk',system-ui,sans-serif; --body:'IBM Plex Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:auto}
+[hidden]{display:none!important}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+body{font-family:var(--body);font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1600px;margin-inline:auto;padding-inline:var(--pad)}
+h1,h2,h3{font-family:var(--head);line-height:1.08;overflow-wrap:break-word}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--amber);color:var(--ink);padding:10px 16px;z-index:100}
+.skip:focus{left:8px;top:8px}
+
+/* buttons: rectangular, 2px */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 24px;font:600 16px var(--body);text-decoration:none;border:2px solid var(--amber);background:var(--amber);color:var(--ink);border-radius:2px;cursor:pointer;transition:background-color .25s ease,color .25s ease,border-color .25s ease,transform .25s ease}
+.btn:hover{background:transparent;color:var(--amber)}
+.btn--line{background:transparent;color:var(--white);border-color:#5b6572}
+.btn--line:hover{border-color:var(--amber);color:var(--amber);background:transparent}
+.btn--ink{background:var(--ink);border-color:var(--ink);color:var(--white)}
+.btn--ink:hover{background:transparent;color:var(--ink)}
+.btn svg{width:18px;height:18px;transition:transform .25s ease}
+.btn:hover svg{transform:translateX(4px)}
+
+/* header: ink bar with a ruler edge */
+.top{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--white)}
+.top::after{content:"";display:block;height:8px;background:repeating-linear-gradient(90deg,#3a434f 0 1px,transparent 1px 12px)}
+.top__in{display:flex;align-items:center;gap:24px;min-height:64px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 19px var(--head);letter-spacing:.01em}
+.brand svg{width:30px;height:30px}
+.nav{display:flex;gap:6px;margin-left:auto}
+.nav a{position:relative;text-decoration:none;padding:10px 14px;font-weight:500;color:#d7dce2;transition:color .25s ease}
+.nav a::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.nav a:hover{color:var(--white)}
+.nav a:hover::after{transform:scaleX(1)}
+.top__tel{font:700 16px var(--head);text-decoration:none;color:var(--amber);padding:10px 0 10px 18px;border-left:1px solid #3a434f;white-space:nowrap;transition:color .25s ease}
+.top__tel:hover{color:var(--white)}
+.menu-btn{display:none;margin-left:auto;min-height:44px;padding:0 16px;background:transparent;color:var(--white);border:2px solid #5b6572;border-radius:2px;font:600 15px var(--body);cursor:pointer;transition:border-color .25s ease,color .25s ease}
+.menu-btn:hover{border-color:var(--amber);color:var(--amber)}
+.drop{display:none;background:var(--ink2);border-top:1px solid #3a434f}
+.drop.is-open{display:block}
+.drop a{display:block;padding:16px var(--pad);font:700 26px var(--head);text-decoration:none;border-bottom:1px solid #2c3541;transition:color .25s ease,padding-left .25s ease}
+.drop a:hover{color:var(--amber);padding-left:calc(var(--pad) + 10px)}
+@media(max-width:1000px){.nav,.top__tel{display:none}.menu-btn{display:block}}
+
+/* hero: looking up at a ceiling */
+.hero{background:var(--ink);color:var(--white);position:relative;overflow:hidden}
+.plan{position:relative;border-bottom:1px solid #2c3541;background:
+ linear-gradient(#232b36 1px,transparent 1px) 0 0/100% 25%,linear-gradient(90deg,#232b36 1px,transparent 1px) 0 0/12.5% 100%}
+.plan__grid{display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(4,1fr);height:clamp(190px,34vw,430px)}
+.lamp{display:grid;place-items:center}
+.lamp i{width:clamp(10px,1.9vw,26px);aspect-ratio:1;border-radius:50%;border:2px solid #4a5460;background:#1a212b;transition:background-color .35s ease,box-shadow .35s ease,border-color .35s ease}
+.on .lamp i{background:var(--amber);border-color:#ffd488;box-shadow:0 0 0 calc(var(--g,0)*14px) rgba(255,176,32,.14),0 0 calc(10px + var(--g,0)*30px) rgba(255,176,32,.55)}
+.on .plan{background-color:#171d26}
+@media(max-width:560px){.plan__tag{display:none}}
+.plan__tag{position:absolute;left:var(--pad);top:14px;font:500 12px var(--body);letter-spacing:.08em;text-transform:uppercase;color:#aab3be}
+.switch{position:absolute;right:var(--pad);top:10px;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 14px;background:var(--ink);color:var(--white);border:1px solid #5b6572;border-radius:2px;font:600 14px var(--body);cursor:pointer;transition:border-color .25s ease,color .25s ease}
+.switch:hover{border-color:var(--amber);color:var(--amber)}
+.switch b{width:34px;height:18px;border-radius:9px;background:#3a434f;position:relative;transition:background-color .25s ease}
+.switch b::after{content:"";position:absolute;left:2px;top:2px;width:14px;height:14px;border-radius:50%;background:var(--white);transition:transform .25s ease}
+.on .switch b{background:var(--amber)}
+.on .switch b::after{transform:translateX(16px);background:var(--ink)}
+.hero__body{padding-block:clamp(28px,4vw,56px) clamp(36px,5vw,72px)}
+.kicker{display:flex;align-items:center;gap:14px;font:600 14px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
+.kicker::before{content:"";width:40px;height:2px;background:var(--amber)}
+.hero h1{font-weight:700;font-size:clamp(28px,10.5vw,190px);white-space:nowrap;letter-spacing:-.02em;line-height:1;margin-bottom:clamp(20px,3vw,40px)}
+.hero h1 span{color:var(--amber)}
+.hero__row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
+.hero__lead{font-size:clamp(18px,1.6vw,22px);color:#d7dce2;max-width:46ch}
+.hero__act{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:800px){.hero__row{grid-template-columns:1fr;align-items:start}}
+.plan__grid .lamp:nth-child(3n) i{opacity:.9}
+
+/* sections */
+section{padding-block:clamp(56px,8vw,120px)}
+.lab{font:600 13px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--steel);margin-bottom:14px}
+h2{font-size:clamp(32px,4.4vw,64px);font-weight:700;letter-spacing:-.015em}
+.svc__head{display:grid;grid-template-columns:5fr 7fr;gap:40px;margin-bottom:clamp(32px,5vw,64px)}
+.svc__head p{font-size:19px;max-width:52ch;align-self:end;color:var(--steel)}
+.svc__list{border-top:2px solid var(--ink)}
+.svc{display:grid;grid-template-columns:120px 1fr 1.2fr;gap:32px;padding:clamp(28px,4vw,52px) 0;border-bottom:2px solid var(--ink);align-items:start;transition:background-color .3s ease,padding-left .3s ease}
+.svc:hover{background:var(--plaster);padding-left:16px}
+.svc__n{font:700 clamp(56px,7vw,104px)/0.9 var(--head);color:transparent;-webkit-text-stroke:2px var(--ink)}
+.svc h3{font-size:clamp(28px,3.4vw,48px)}
+.svc p{font-size:19px;max-width:48ch}
+@media(max-width:900px){.svc__head{grid-template-columns:1fr}.svc{grid-template-columns:80px 1fr;gap:16px 20px}.svc p{grid-column:1/-1}}
+@media(max-width:480px){.svc{grid-template-columns:1fr}.svc__n{font-size:56px}}
+
+.work{background:var(--plaster)}
+.work__head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.work__head p{max-width:42ch;color:var(--steel)}
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(110px,15vw,210px);gap:14px}
+.slot{display:grid;place-items:center;text-align:center;padding:14px;border:2px dashed #8b95a1;color:var(--steel);font:500 14px var(--body);background:rgba(255,255,255,.55);transition:border-color .3s ease,background-color .3s ease,color .3s ease}
+.slot:hover{border-color:var(--ink);background:var(--white);color:var(--ink)}
+.slot svg{width:34px;height:34px;margin:0 auto 8px}
+.s1{grid-column:span 7;grid-row:span 2}.s2{grid-column:span 5}.s3{grid-column:span 5}
+.s4{grid-column:span 4}.s5{grid-column:span 8}
+@media(max-width:700px){.mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:130px}.s1,.s5{grid-column:span 2}.s1{grid-row:span 2}.s2,.s3,.s4{grid-column:span 1}}
+
+.about{background:var(--ink);color:var(--white)}
+.about .wrap{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px)}
+.about .lab{color:var(--amber)}
+.about p{font-size:clamp(19px,1.7vw,24px);color:#d7dce2;max-width:46ch}
+.about p+p{margin-top:20px}
+.facts{margin-top:36px;border-top:1px solid #3a434f;list-style:none;padding:0;max-width:520px}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid #3a434f;font-size:16px;color:#d7dce2}
+.facts span:first-child{color:#aab3be;flex:none;white-space:nowrap}
+.facts span:last-child{text-align:right;overflow-wrap:anywhere}
+@media(max-width:900px){.about .wrap{grid-template-columns:1fr}}
+
+.contact{background:var(--amber);color:var(--ink)}
+.contact .lab{color:#3b2a00}
+.contact__tel{display:block;font:700 clamp(32px,8.6vw,150px)/1 var(--head);letter-spacing:-.02em;text-decoration:none;white-space:nowrap;margin:8px 0 clamp(28px,4vw,56px);width:fit-content;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 4px no-repeat;transition:background-size .35s ease}
+.contact__tel:hover{background-size:100% 4px}
+.contact__grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,5vw,80px)}
+.clist{list-style:none;padding:0;border-top:2px solid var(--ink)}
+.clist li{padding:16px 0;border-bottom:2px solid var(--ink);display:flex;flex-direction:column}
+.clist small{font:600 12px var(--body);letter-spacing:.1em;text-transform:uppercase}
+.clist a,.clist span{font:700 clamp(18px,1.8vw,24px) var(--head);overflow-wrap:anywhere;text-decoration:none}
+.clist a{transition:opacity .25s ease,letter-spacing .25s ease}
+.clist a:hover{opacity:.65}
+.form{background:var(--ink);color:var(--white);padding:clamp(22px,3vw,40px);display:grid;gap:16px;border-radius:2px}
+.form h3{font-size:28px}
+.fld{display:grid;gap:6px}
+.fld label{font:600 14px var(--body)}
+.fld input,.fld textarea{font:400 17px var(--body);min-height:48px;padding:10px 14px;border:2px solid #5b6572;background:var(--ink2);color:var(--white);border-radius:2px;transition:border-color .25s ease}
+.fld input:hover,.fld textarea:hover{border-color:#8b95a1}
+.fld input:focus,.fld textarea:focus{border-color:var(--amber);outline:none}
+.fld textarea{min-height:110px;resize:vertical}
+.fld .err{color:#ffb4a8;font-size:14px;min-height:0}
+.fld [aria-invalid=true]{border-color:#ff8a76}
+.chk{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:#d7dce2}
+.chk input{width:22px;height:22px;margin-top:2px;accent-color:var(--amber);flex:none}
+.form__note{font-size:14px;color:#aab3be}
+.form__ok{padding:14px;border:2px solid var(--amber);color:var(--amber);font-weight:600}
+@media(max-width:900px){.contact__grid{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#aab3be;padding:28px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .5s ease,transform .5s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01s!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body class="on" id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="#top" aria-label="Ceiling Group, home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#ffb020"/><circle cx="32" cy="32" r="15" fill="none" stroke="#0d1117" stroke-width="5"/><circle cx="32" cy="32" r="5" fill="#0d1117"/></svg>
+      Ceiling Group
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a><a href="#work">Our work</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="top__tel" href="tel:+13059099555">+1 305 909 9555</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drop">Menu</button>
+  </div>
+  <div class="drop" id="drop" data-lenis-prevent>
+    <a href="#services">Services</a><a href="#work">Our work</a><a href="#about">About</a><a href="#contact">Contact us</a>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero">
+  <div class="plan" aria-hidden="false">
+    <span class="plan__tag">Ceiling plan · Hallandale Beach, FL</span>
+    <button class="switch" type="button" id="sw" aria-pressed="true"><b></b><span id="swt">Lights on</span></button>
+    <div class="plan__grid" id="grid" aria-hidden="true"></div>
+  </div>
+  <div class="wrap hero__body">
+    <p class="kicker">Ceilings and lighting · Hallandale Beach, FL</p>
+    <h1>Ceiling <span>Group</span></h1>
+    <div class="hero__row">
+      <p class="hero__lead">Ceilings and lighting for the spaces of Hallandale Beach, Florida. Tell us about your room and we will get back to you.</p>
+      <div class="hero__act">
+        <a class="btn" href="#contact">Contact us
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--line" href="tel:+13059099555">Call +1 305 909 9555</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="svc__head rv">
+      <div><p class="lab">What we do</p><h2>Two things, done together</h2></div>
+      <p>A ceiling and the light that falls on it belong in one plan. That is how Ceiling Group looks at every room.</p>
+    </div>
+    <div class="svc__list">
+      <article class="svc rv"><span class="svc__n" aria-hidden="true">01</span><h3>Ceilings</h3><p>The surface above every room, planned and finished to suit the space.</p></article>
+      <article class="svc rv"><span class="svc__n" aria-hidden="true">02</span><h3>Lighting</h3><p>Light placed to work with the ceiling, so the room reads the way it should.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="work__head rv">
+      <div><p class="lab">Our work</p><h2>Gallery</h2></div>
+      <p>Placeholder frames. They will be replaced with Ceiling Group's own photos of finished ceilings and lighting.</p>
+    </div>
+    <div class="mosaic">
+      <div class="slot s1"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="16"/><circle cx="12" cy="12" r="3.5"/></svg>Photo of your work, wide</div></div>
+      <div class="slot s2">Photo placeholder</div>
+      <div class="slot s3">Photo placeholder</div>
+      <div class="slot s4">Photo placeholder</div>
+      <div class="slot s5">Photo placeholder, wide</div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="rv"><p class="lab">About</p><h2>Ceiling Group</h2></div>
+    <div class="rv">
+      <p>Ceiling Group is a company that works with ceilings and lighting in Hallandale Beach, Florida.</p>
+      <p>This text is a neutral placeholder. The company's own story, projects and the areas it serves will be added here.</p>
+      <ul class="facts">
+        <li><span>Focus</span><span>Ceilings and lighting</span></li>
+        <li><span>Based in</span><span>Hallandale Beach, FL</span></li>
+        <li><span>Phone</span><span>+1 305 909 9555</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="lab">Contact us</p>
+    <a class="contact__tel" href="tel:+13059099555">+1 305 909 9555</a>
+    <div class="contact__grid">
+      <ul class="clist">
+        <li><small>Phone</small><a href="tel:+13059099555">+1 305 909 9555</a></li>
+        <li><small>Email</small><a href="mailto:ceilingoffice@gmail.com">ceilingoffice@gmail.com</a></li>
+        <li><small>Website</small><a href="https://ceiling-group.com" rel="noopener">ceiling-group.com</a></li>
+        <li><small>Location</small><span>Hallandale Beach, FL</span></li>
+      </ul>
+      <form class="form" id="form" novalidate>
+        <h3>Send a request</h3>
+        <div class="fld"><label for="n">Your name</label><input id="n" name="name" autocomplete="name" required><span class="err" id="en"></span></div>
+        <div class="fld"><label for="p">Phone</label><input id="p" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+1 305 000 0000"><span class="err" id="ep"></span></div>
+        <div class="fld"><label for="m">What do you need?</label><textarea id="m" name="msg"></textarea></div>
+        <label class="chk"><input type="checkbox" id="c" required><span>I agree that Ceiling Group may contact me about this request.</span></label>
+        <span class="err" id="ec" style="color:#ffb4a8;font-size:14px"></span>
+        <button class="btn" type="submit">Send request</button>
+        <p class="form__note">This concept has no server. Sending opens a draft in your email app, addressed to ceilingoffice@gmail.com.</p>
+        <p class="form__ok" id="ok" hidden role="status">Your email app should open with the request. Nothing is sent until you press send there.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>First concept by Doba Digital - not a published site</span><span>Ceiling Group · Hallandale Beach, FL</span></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lenis=null;
+  if(window.Lenis&&!reduce){
+    lenis=new Lenis({autoRaf:true});window.lenis=lenis;
+  }
+  function go(h){var t=document.querySelector(h);if(!t)return;
+    var y=t.getBoundingClientRect().top+scrollY-70;
+    lenis?lenis.scrollTo(y):scrollTo(0,y)}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#"]');if(!a||a.getAttribute('href')==='#top'&&false)return;
+    var h=a.getAttribute('href');if(h==='#top'){e.preventDefault();lenis?lenis.scrollTo(0):scrollTo(0,0);return}
+    e.preventDefault();go(h);closeMenu();
+  });
+  // ceiling plan lights
+  var grid=document.getElementById('grid'),lamps=[];
+  for(var i=0;i<32;i++){var d=document.createElement('div');d.className='lamp';var l=document.createElement('i');d.appendChild(l);grid.appendChild(d);lamps.push(d)}
+  var plan=grid.parentNode;
+  plan.addEventListener('pointermove',function(e){
+    var r=plan.getBoundingClientRect(),R=Math.max(r.width*.18,120);
+    lamps.forEach(function(d){var b=d.getBoundingClientRect(),dx=b.left+b.width/2-e.clientX,dy=b.top+b.height/2-e.clientY;
+      var g=Math.max(0,1-Math.hypot(dx,dy)/R);d.firstChild.style.setProperty('--g',g.toFixed(2))})});
+  plan.addEventListener('pointerleave',function(){lamps.forEach(function(d){d.firstChild.style.setProperty('--g',0)})});
+  var sw=document.getElementById('sw'),swt=document.getElementById('swt');
+  sw.addEventListener('click',function(){var on=document.body.classList.toggle('on');sw.setAttribute('aria-pressed',on);swt.textContent=on?'Lights on':'Lights off'});
+  // menu
+  var mb=document.querySelector('.menu-btn'),dr=document.getElementById('drop');
+  function closeMenu(){dr.classList.remove('is-open');mb.setAttribute('aria-expanded','false');mb.textContent='Menu'}
+  mb.addEventListener('click',function(){var o=dr.classList.toggle('is-open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu'});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()});
+  // reveal
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15});els.forEach(function(x){io.observe(x)})}
+  else els.forEach(function(x){x.classList.add('in')});
+  // form
+  var f=document.getElementById('form');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();var ok=true;
+    var n=f.name.value.trim(),p=f.phone.value.replace(/\D/g,''),c=document.getElementById('c').checked;
+    function s(id,msg,el){document.getElementById(id).textContent=msg;if(el)el.setAttribute('aria-invalid',msg?'true':'false')}
+    s('en',n?'':'Please enter your name.',f.name);if(!n)ok=false;
+    s('ep',p.length>=10&&p.length<=15?'':'Please enter a valid phone number.',f.phone);if(!(p.length>=10&&p.length<=15))ok=false;
+    s('ec',c?'':'Please tick the box to continue.');if(!c)ok=false;
+    if(!ok)return;
+    var body='Name: '+n+'\nPhone: '+f.phone.value+'\n\n'+f.msg.value;
+    location.href='mailto:ceilingoffice@gmail.com?subject='+encodeURIComponent('Request from the website')+'&body='+encodeURIComponent(body);
+    document.getElementById('ok').hidden=false;
+  });
+})();
+</script>
+</body>
+</html>
