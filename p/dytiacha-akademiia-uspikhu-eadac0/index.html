@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дитяча «Академія успіху» — садок і курси в Мукачеві</title>
+<meta name="description" content="Садок, підготовка до школи та курси для дітей від 1 до 10 років у Мукачеві: авторські програми, мови, логопед і психолог. Запис на екскурсію: +380 95 019 1401.">
+<meta property="og:title" content="Дитяча «Академія успіху» — садок і курси в Мукачеві">
+<meta property="og:description" content="Садок, підготовка до школи та курси для дітей від 1 до 10 років у Мукачеві.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f29f05'/%3E%3Ctext x='32' y='46' font-family='Arial,sans-serif' font-size='40' font-weight='900' text-anchor='middle' fill='%231d1a2f'%3EА%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.css">
+<style>
+:root{
+  --ink:#1d1a2f; --ink2:#2e2a47; --muted:#55516b;
+  --sun:#f29f05; --sun-d:#9a5a00; --sun-p:#fff1d4;
+  --tomato:#e4473b; --tomato-d:#b42318;
+  --sky:#2f7fd8; --sky-d:#154a8a; --grid:#dbe7f5;
+  --paper:#fbfdff; --white:#fff; --line:#c9d3e0;
+  --hf:"Unbounded",system-ui,sans-serif; --bf:"Nunito",system-ui,sans-serif;
+  --pad:clamp(18px,4vw,56px); --max:1320px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--bf);font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper);overflow-wrap:anywhere}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--hf);line-height:1.1;margin:0;font-weight:800;overflow-wrap:normal}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.kicker{font-family:var(--hf);font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--tomato-d);display:flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:28px;height:2px;background:currentColor}
+/* notebook paper */
+.squared{background-color:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 22px;border:2px solid var(--ink);border-radius:10px 10px 10px 0;font-weight:800;font-size:16px;text-decoration:none;cursor:pointer;font-family:var(--bf);transition:background-color .25s ease,color .25s ease,transform .25s ease,border-color .25s ease}
+.btn svg{transition:transform .25s ease}
+.btn:hover svg{transform:translateX(4px)}
+.btn--sun{background:var(--sun);color:var(--ink)}
+.btn--sun:hover{background:var(--ink);color:var(--sun)}
+.btn--ghost{background:transparent;color:var(--ink)}
+.btn--ghost:hover{background:var(--ink);color:var(--white)}
+/* header: notebook tabs */
+.hdr{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:2px solid var(--ink)}
+.hdr__in{display:flex;align-items:stretch;gap:24px;max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:72px}
+.hdr__logo{display:flex;align-items:center;margin-right:auto;transition:opacity .25s ease}
+.hdr__logo:hover{opacity:.8}
+.hdr__logo img{height:38px;width:auto}
+.tabs{display:flex;align-items:flex-start;gap:6px;margin:0;padding:0;list-style:none}
+.tabs a{display:block;padding:14px 16px 12px;margin-top:-2px;border:2px solid var(--ink);border-top:0;border-radius:0 0 10px 10px;font-weight:800;font-size:15px;text-decoration:none;background:var(--tab,#fff);transition:padding-top .25s ease,background-color .25s ease}
+.tabs a:hover{padding-top:22px}
+.tabs li:nth-child(1) a{--tab:var(--sun-p)}
+.tabs li:nth-child(2) a{--tab:#e3efff}
+.tabs li:nth-child(3) a{--tab:#ffe3df}
+.tabs li:nth-child(4) a{--tab:#eef3c9}
+.hdr__cta{align-self:center}
+.menu-btn{display:none;align-self:center;min-height:44px;padding:8px 16px;border:2px solid var(--ink);border-radius:10px 10px 10px 0;background:var(--white);font:800 15px var(--bf);color:var(--ink);cursor:pointer;transition:background-color .25s ease}
+.menu-btn:hover{background:var(--sun-p)}
+.drop{display:none}
+@media (max-width:1080px){
+  .tabs,.hdr__cta{display:none}
+  .menu-btn{display:inline-flex}
+  .hdr__in{height:64px}
+  .hdr__logo img{height:30px}
+  .drop{position:fixed;inset:64px 0 auto 0;background:var(--ink);padding:16px var(--pad) 28px;border-bottom:4px solid var(--sun)}
+  .drop[data-open]{display:block}
+  .drop a{display:block;color:var(--white);font:800 24px/1.2 var(--hf);padding:14px 0;border-bottom:1px solid #4a4566;text-decoration:none;transition:color .25s ease}
+  .drop a:hover{color:var(--sun)}
+  .drop .btn{margin-top:20px;border-color:var(--sun);font-family:var(--bf);font-size:16px;color:var(--ink)}
+}
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:2px solid var(--ink)}
+.hero::before{content:"";position:absolute;top:0;bottom:0;left:calc(var(--pad) - 14px);width:2px;background:var(--tomato);opacity:.55}
+.hero__in{position:relative;max-width:var(--max);margin:0 auto;padding:clamp(36px,6vw,80px) var(--pad) 0}
+.hero h1{white-space:nowrap;font-size:clamp(20px,7.4vw,102px);letter-spacing:-.02em;line-height:1;margin:22px 0 0}
+.hero h1 .u{color:var(--tomato-d)}
+.hero__row{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,64px);align-items:center;margin-top:clamp(24px,3vw,40px)}
+.hero__sub{font-family:var(--hf);font-weight:500;font-size:clamp(17px,1.7vw,24px);line-height:1.35}
+.hero__sub b{color:var(--sky-d);font-weight:800}
+.hero__lead{margin-top:16px;max-width:52ch;color:var(--muted);font-size:18px}
+.hero__btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero__facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin:36px 0 clamp(32px,5vw,64px);padding:0;list-style:none;border:2px solid var(--ink);background:var(--white);width:max-content;max-width:100%}
+.hero__facts li{padding:12px 18px;border-right:2px solid var(--ink);font-size:15px;line-height:1.35}
+.hero__facts li:last-child{border-right:0}
+.hero__facts b{display:block;font-family:var(--hf);font-size:18px}
+.hero__art{position:relative;align-self:stretch;display:flex;justify-content:center;align-items:flex-end;min-height:320px}
+.hero__girl{width:min(330px,70%);height:auto;margin-bottom:-2px}
+.hero__fly{position:absolute;top:0;left:0;width:min(250px,55%);height:auto;animation:fly 6s ease-in-out infinite}
+@keyframes fly{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(10px,-12px) rotate(-3deg)}}
+@media (max-width:860px){
+  .hero__row{grid-template-columns:1fr}
+  .hero__facts{margin-bottom:8px}
+  .hero__art{min-height:0}
+  .hero__girl{width:min(260px,62%)}
+  .hero__fly{width:min(170px,38%);top:20px}
+}
+@media (max-width:560px){
+  .hero__facts{grid-template-columns:1fr;width:100%}
+  .hero__facts li{border-right:0;border-bottom:2px solid var(--ink)}
+  .hero__facts li:last-child{border-bottom:0}
+}
+/* section head */
+.sec{padding:clamp(64px,8vw,120px) 0}
+.sec__head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:24px 48px;align-items:end;margin-bottom:clamp(32px,4vw,56px)}
+.sec__head h2{font-size:clamp(28px,3.4vw,46px);margin-top:14px}
+.sec__head p{color:var(--muted);max-width:48ch}
+@media (max-width:860px){.sec__head{grid-template-columns:1fr}}
+/* age timeline */
+.ages{background:var(--white);border:2px solid var(--ink)}
+.ages__scale,.ages__row{display:grid;grid-template-columns:minmax(200px,260px) repeat(10,minmax(0,1fr))}
+.ages__scale{border-bottom:2px solid var(--ink);background:var(--ink);color:var(--white)}
+.ages__scale span{padding:10px 0;text-align:center;font-family:var(--hf);font-size:14px;border-left:1px solid #4a4566}
+.ages__scale span:first-child{text-align:left;padding-left:16px;border-left:0;font-weight:500;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.ages__group{padding:10px 16px;font-family:var(--hf);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:#f1f5fa;border-bottom:1px solid var(--line)}
+.ages__row{position:relative;border-bottom:1px solid var(--line);background-image:linear-gradient(90deg,transparent 0,transparent calc(100% - 1px),var(--grid) calc(100% - 1px));transition:background-color .25s ease}
+.ages__row:last-child{border-bottom:0}
+.ages__row:hover{background-color:var(--sun-p)}
+.ages__name{grid-column:1;padding:12px 16px;font-weight:800;line-height:1.3;border-right:2px solid var(--ink)}
+.ages__name small{display:block;font-weight:600;color:var(--muted);font-size:14px}
+.ages__bar{grid-row:1;align-self:center;height:30px;margin:0 4px;border:2px solid var(--ink);border-radius:15px 15px 15px 0;background:var(--c,var(--sun));display:flex;align-items:center;padding:0 12px;font-weight:800;font-size:13px;white-space:nowrap;overflow:hidden;transition:transform .25s ease}
+.ages__row:hover .ages__bar{transform:translateY(-2px)}
+.c-sky{--c:#9cc8f5}.c-tom{--c:#ffb3a8}.c-sun{--c:#ffd27a}.c-oli{--c:#dfe48a}
+.ages__note{margin-top:14px;color:var(--muted);font-size:15px}
+@media (max-width:1080px){
+  .ages__scale,.ages__row{grid-template-columns:minmax(170px,200px) repeat(10,minmax(0,1fr))}
+  .ages__bar{padding:0 6px;font-size:12px}
+}
+@media (max-width:640px){
+  .ages__scale{display:none}
+  .ages__row{grid-template-columns:1fr auto;background-image:none;align-items:center}
+  .ages__name{border-right:0}
+  .ages__bar{grid-column:2 !important;grid-row:1;margin-right:12px}
+}
+/* kindergarten */
+.kg{background:var(--sky-d);color:var(--white);border-bottom:2px solid var(--ink);border-top:2px solid var(--ink)}
+.kg .kicker{color:#ffd27a}
+.kg__grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr) minmax(0,.9fr);gap:clamp(24px,4vw,56px);align-items:start}
+.kg h2{font-size:clamp(28px,3.4vw,46px);margin:14px 0 20px}
+.kg p{color:#e8f1ff}
+.kg__art{background:var(--paper);border:2px solid var(--ink);border-radius:24px 24px 24px 0;padding:20px;transform:rotate(-2deg)}
+.kg__art img{width:100%;height:auto}
+.kg__list{list-style:none;margin:0;padding:0;border-top:2px solid #ffd27a}
+.kg__list li{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.3);display:flex;gap:14px}
+.kg__list b{font-family:var(--hf);color:#ffd27a;font-size:14px;min-width:28px}
+.extra h3{font-size:18px;margin:0 0 12px;color:#ffd27a}
+.extra ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.extra li{padding:8px 14px;border:2px solid var(--white);border-radius:10px 10px 10px 0;font-weight:800}
+.extra + .extra{margin-top:28px}
+.src{font-size:14px;color:#cfe0f7;margin-top:16px}
+.src a{color:var(--white);text-underline-offset:3px;transition:color .25s ease}
+.src a:hover{color:#ffd27a}
+@media (max-width:1080px){.kg__grid{grid-template-columns:minmax(0,.8fr) minmax(0,1fr)}.kg__grid > :last-child{grid-column:1/-1}}
+@media (max-width:640px){.kg__grid{grid-template-columns:1fr}.kg__art{max-width:340px}}
+/* events */
+.ev__grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+.ev__big{background:var(--sun);border:2px solid var(--ink);border-radius:24px 24px 24px 0;padding:clamp(24px,3.5vw,44px)}
+.ev__big .day{font-family:var(--hf);font-weight:800;font-size:clamp(30px,4.6vw,64px);line-height:1;color:var(--ink);overflow-wrap:normal;white-space:nowrap}
+.ev__big h3{overflow-wrap:normal}
+.ev__big h3{font-size:clamp(20px,2vw,28px);margin:18px 0 10px}
+.ev__links{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.ev__links a{display:grid;grid-template-columns:72px 1fr auto;gap:16px;align-items:center;padding:20px 0;border-bottom:2px solid var(--ink);text-decoration:none;transition:background-color .25s ease,padding .25s ease}
+.ev__links a:hover{background:var(--white);padding-left:12px;padding-right:12px}
+.ev__links .n{overflow-wrap:normal;white-space:nowrap;font-family:var(--hf);font-size:28px;color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.ev__links .t{font-weight:600}
+.ev__links .t b{display:block;font-family:var(--hf);font-size:16px;margin-bottom:4px}
+.ev__more{margin-top:24px}
+@media (max-width:860px){.ev__grid{grid-template-columns:1fr}}
+/* reviews */
+.rv{background:var(--ink);color:var(--white);border-top:2px solid var(--ink)}
+.rv .kicker{color:#ffd27a}
+.rv__grid{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(24px,5vw,80px);align-items:start}
+.rv__score{font-family:var(--hf);font-weight:800;font-size:clamp(56px,8vw,120px);line-height:1;color:var(--sun);margin-top:16px}
+.rv__stars{display:flex;gap:4px;margin:12px 0}
+.rv__score + p{color:#d6d3e6}
+.rv blockquote{margin:0;font-size:clamp(18px,1.7vw,22px);line-height:1.6;border-left:4px solid var(--sun);padding-left:clamp(18px,2.5vw,32px)}
+.rv blockquote footer{margin-top:16px;font-size:15px;color:#d6d3e6}
+.rv__btn{margin-top:28px;border-color:var(--sun)}
+.rv .btn--ghost{color:var(--white);border-color:var(--white)}
+.rv .btn--ghost:hover{background:var(--white);color:var(--ink)}
+@media (max-width:860px){.rv__grid{grid-template-columns:1fr}}
+/* contacts */
+.ct{background:var(--tomato-d);color:var(--white)}
+.ct .kicker{color:#ffe3df}
+.ct__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px)}
+.ct h2{font-size:clamp(28px,3.4vw,46px);margin:14px 0 24px}
+.ct__phone{display:inline-block;font-family:var(--hf);font-weight:800;font-size:clamp(26px,3.6vw,52px);color:var(--white);text-decoration:none;border-bottom:3px solid #ffd27a;transition:color .25s ease}
+.ct__phone:hover{color:#ffd27a}
+.ct dl{margin:28px 0 0;border-top:2px solid rgba(255,255,255,.5)}
+.ct dl div{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.35)}
+.ct dt{font-family:var(--hf);font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:#ffe3df;padding-top:3px}
+.ct dd{margin:0;font-weight:600}
+.ct dd a{text-underline-offset:3px;transition:color .25s ease}
+.ct dd a:hover{color:#ffd27a}
+.form{background:var(--paper);color:var(--ink);border:2px solid var(--ink);border-radius:24px 24px 24px 0;padding:clamp(22px,3vw,40px)}
+.form h3{font-size:22px;margin-bottom:6px}
+.form > p{color:var(--muted);font-size:15px}
+.fld{margin-top:18px}
+.fld label{display:block;font-weight:800;margin-bottom:6px}
+.fld input,.fld select{width:100%;min-height:48px;padding:10px 14px;border:2px solid var(--ink);border-radius:10px;font:600 16px var(--bf);background:var(--white);color:var(--ink);transition:border-color .25s ease}
+.fld input:hover,.fld select:hover{border-color:var(--sky-d)}
+.fld .err{display:block;min-height:20px;color:var(--tomato-d);font-size:14px;font-weight:700;margin-top:4px}
+.chk{display:flex;gap:10px;align-items:flex-start;margin-top:12px;font-size:14px}
+.chk input{width:20px;height:20px;margin-top:2px;accent-color:var(--sky-d)}
+.form .btn{margin-top:20px;width:100%;justify-content:center}
+.form__ok{margin-top:16px;padding:12px 14px;border:2px solid var(--sky-d);border-radius:10px;background:#e3efff;font-weight:600}
+.form__ok[hidden]{display:none}
+@media (max-width:860px){.ct__grid{grid-template-columns:1fr}.ct dl div{grid-template-columns:1fr;gap:2px}}
+/* footer */
+.ft{background:var(--ink);color:#d6d3e6;padding:36px 0;font-size:15px}
+.ft__in{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
+.ft a{color:var(--white);text-underline-offset:3px;transition:color .25s ease}
+.ft a:hover{color:var(--sun)}
+.ft__note{width:100%;padding-top:16px;border-top:1px solid #4a4566;font-size:13px}
+/* reveal */
+.rv-in{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.rv-in.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms !important;animation:none !important}
+  .rv-in{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="hdr__in">
+    <a class="hdr__logo" href="#top" aria-label="Дитяча «Академія успіху» — на початок"><img src="photos/01-w.webp" alt="Дитяча «Академія успіху»" width="520" height="93"></a>
+    <nav aria-label="Головне меню">
+      <ul class="tabs">
+        <li><a href="#courses">Курси за віком</a></li>
+        <li><a href="#kindergarten">Садок</a></li>
+        <li><a href="#events">Події</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--sun hdr__cta" href="#visit">Записатися на екскурсію</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drop">Меню</button>
+  </div>
+  <div class="drop" id="drop">
+    <a href="#courses">Курси за віком</a>
+    <a href="#kindergarten">Садок</a>
+    <a href="#events">Події</a>
+    <a href="#reviews">Відгуки</a>
+    <a href="#contacts">Контакти</a>
+    <a class="btn btn--sun" href="#visit">Записатися на екскурсію</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero squared" aria-labelledby="h1">
+  <div class="hero__in">
+    <p class="kicker">Дитяча академія · Мукачево</p>
+    <h1 id="h1">Академія <span class="u">успіху</span></h1>
+    <div class="hero__row">
+      <div>
+        <p class="hero__sub">садок · підготовка до школи · <b>1–5 класи</b></p>
+        <p class="hero__lead">Дитячий освітній простір з авторськими програмами та проєктною діяльністю — для дітей від року до 10 років.</p>
+        <div class="hero__btns">
+          <a class="btn btn--sun" href="#visit">Записатися на екскурсію <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost" href="#courses">Курси за віком</a>
+        </div>
+        <ul class="hero__facts">
+          <li><b>Пн–Пт</b>9:00–19:00</li>
+          <li><b>Сб</b>9:00–17:00</li>
+          <li><b>Google 5,0</b>46 відгуків</li>
+        </ul>
+      </div>
+      <div class="hero__art">
+        <img class="hero__fly" src="photos/04-w.webp" alt="" width="400" height="189">
+        <img class="hero__girl" src="photos/03-w.webp" alt="Ілюстрація академії: дівчинка з олівцем мріє над зошитом" width="560" height="1027" fetchpriority="high">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec squared" id="courses" aria-labelledby="h-courses">
+  <div class="wrap">
+    <div class="sec__head rv-in">
+      <div>
+        <p class="kicker">Шкала віку · 1–10 років</p>
+        <h2 id="h-courses">Курси за віком дитини</h2>
+      </div>
+      <p>Знайдіть вік своєї дитини на шкалі — і побачите всі програми, що їй підходять. У кожному курсі — авторська програма засновниці академії Катерини Лабош.</p>
+    </div>
+    <div class="ages rv-in" role="table" aria-label="Курси академії за віком дитини">
+      <div class="ages__scale" role="row" aria-hidden="true">
+        <span>Вік, років</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+      </div>
+      <div class="ages__group" role="row"><span role="cell">Садок і розвиток</span></div>
+      <div class="ages__row" role="row"><div class="ages__name" role="cell">Садок</div><div class="ages__bar c-sun" role="cell" style="grid-column:2/8">1–5+</div></div>
+      <div class="ages__row" role="row"><div class="ages__name" role="cell">«Моторика для малят»<small>разом з мамою або татом</small></div><div class="ages__bar c-oli" role="cell" style="grid-column:2/4">1–2</div></div>
+      <div class="ages__row" role="row"><div class="ages__name" role="cell">«Ранній розвиток»</div><div class="ages__bar c-oli" role="cell" style="grid-column:3/5">2–3</div></div>
+      <div class="ages__row" role="row"><div class="ages__name" role="cell">«Малечі про цікаві речі»</div><div class="ages__bar c-oli" role="cell" style="grid-column:4/6">3–4</div></div>
+      <div class="ages__row" role="row"><div class="ages__name" role="cell">«Пізнаю світ»</div><div class="ages__bar c-oli" role="cell" style="grid-column:5/7">4–5</div></div>
+      <div class="ages__group" role="row"><span role="cell">Школа</span></div>
+      <div class="ages__row" role="row"><div class="ages__name" role="cell">«Крок до школи»<small>підготовка за програмою НУШ</small></div><div class="ages__bar c-sky" role="cell" style="grid-column:6/8">5–6</div></div>
+      <div class="ages__row" role="row"><div class="ages__name" role="cell">«Шкільний інтенсив»<small>для учнів початкових класів</small></div><div class="ages__bar c-sky" role="cell" style="grid-column:7/11">6–7, 8–9</div></div>
+      <div class="ages__group" role="row"><span role="cell">Мови й суботи</span></div>
+      <div class="ages__row" role="row"><div class="ages__name" role="cell">Англійська мова</div><div class="ages__bar c-tom" role="cell" style="grid-column:4/12">3–10</div></div>
+      <div class="ages__row" role="row"><div class="ages__name" role="cell">Угорська мова<small>з носієм мови, у грі</small></div><div class="ages__bar c-tom" role="cell" style="grid-column:4/9">3–7</div></div>
+      <div class="ages__row" role="row"><div class="ages__name" role="cell">«Субота з користю»<small>щосуботи 10:00–13:00</small></div><div class="ages__bar c-tom" role="cell" style="grid-column:4/10">3–8</div></div>
+      <div class="ages__group" role="row"><span role="cell">Фахівці, індивідуально</span></div>
+      <div class="ages__row" role="row"><div class="ages__name" role="cell">Логопед</div><div class="ages__bar c-sun" role="cell" style="grid-column:2/12">1–10</div></div>
+      <div class="ages__row" role="row"><div class="ages__name" role="cell">Психолог</div><div class="ages__bar c-sun" role="cell" style="grid-column:2/12">1–10</div></div>
+      <div class="ages__row" role="row"><div class="ages__name" role="cell">Індивідуальні заняття</div><div class="ages__bar c-sun" role="cell" style="grid-column:2/12">1–10</div></div>
+    </div>
+    <p class="ages__note">Розклад і вартість кожного курсу — за телефоном <a href="tel:+380950191401">+380 95 019 1401</a>.</p>
+  </div>
+</section>
+
+<section class="sec kg" id="kindergarten" aria-labelledby="h-kg">
+  <div class="wrap kg__grid">
+    <figure class="kg__art rv-in" style="margin:0">
+      <img src="photos/06-w.webp" alt="Ілюстрація академії: дівчинка у вишиванці з прапором України" width="700" height="823" loading="lazy">
+    </figure>
+    <div class="rv-in">
+      <p class="kicker">Садок · вік 1–5+</p>
+      <h2 id="h-kg">Садок, де розклад складено під вік</h2>
+      <p>Щотижневий розпорядок дня складений з урахуванням вікових особливостей і специфіки розвитку дітей. Навчання — згідно з державними стандартами дошкільної освіти та вимогами НУШ.</p>
+      <ul class="kg__list" style="margin-top:24px">
+        <li><b>01</b><span>Для кожної вікової групи — час на обідній сон.</span></li>
+        <li><b>02</b><span>Закритий дворик, де діти гуляють двічі на день.</span></li>
+        <li><b>03</b><span>Вихователі й педагоги — провідники: діти самі шукають відповіді.</span></li>
+      </ul>
+      <p class="src">З дописів академії в <a href="https://www.instagram.com/reel/DfW_b-7MwJJ/" target="_blank" rel="noopener">Instagram</a>.</p>
+    </div>
+    <div class="rv-in">
+      <div class="extra">
+        <h3>Додаткові заняття</h3>
+        <ul>
+          <li>гончарство</li><li>англійська</li><li>іспанська</li><li>скрипка</li><li>танці</li><li>шиття</li>
+        </ul>
+      </div>
+      <div class="extra">
+        <h3>Методики</h3>
+        <p>Авторські програми з досвідом педагогів Норвегії, США, Швейцарії та Польщі. Програми щороку оновлюються.</p>
+      </div>
+      <a class="btn btn--sun" href="#visit" style="margin-top:28px;border-color:var(--ink)">Подивитися садок наживо</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec squared" id="events" aria-labelledby="h-ev">
+  <div class="wrap">
+    <div class="sec__head rv-in">
+      <div>
+        <p class="kicker">Події</p>
+        <h2 id="h-ev">Суботи, свята й майстер-класи</h2>
+      </div>
+      <p>Анонси виходять в Instagram академії — близько чотирьох дописів на тиждень.</p>
+    </div>
+    <div class="ev__grid">
+      <div class="ev__big rv-in">
+        <div class="day">Щосуботи</div>
+        <h3>«Субота з користю»<br>10:00–13:00</h3>
+        <p>Творча й розважальна програма для дітей 3–8 років.</p>
+        <a class="btn btn--ghost ev__more" href="#visit">Записати дитину</a>
+      </div>
+      <div class="rv-in">
+        <ul class="ev__links">
+          <li><a href="https://www.instagram.com/reel/DfcSKD-MW78/" target="_blank" rel="noopener"><span class="n">01</span><span class="t"><b>Наші свята</b>Кадри зі свята академії</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="https://www.instagram.com/reel/De30siLsOs_/" target="_blank" rel="noopener"><span class="n">02</span><span class="t"><b>Оновлений дворик</b>Нова концепція простору для малечі</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="https://www.instagram.com/reel/DfW_b-7MwJJ/" target="_blank" rel="noopener"><span class="n">03</span><span class="t"><b>Обідній сон</b>Як ми дбаємо про комфорт дітей</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+        </ul>
+        <a class="btn btn--ghost ev__more" href="https://www.instagram.com/academiya_uspikhy/" target="_blank" rel="noopener">Усі анонси в Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec rv" id="reviews" aria-labelledby="h-rv">
+  <div class="wrap rv__grid">
+    <div class="rv-in">
+      <p class="kicker">Відгуки батьків</p>
+      <h2 id="h-rv" class="sr">Відгуки батьків</h2>
+      <p class="rv__score">5,0</p>
+      <div class="rv__stars" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#f29f05"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.2 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="#f29f05"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.2 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="#f29f05"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.2 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="#f29f05"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.2 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="#f29f05"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.2 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg>
+      </div>
+      <p>46 відгуків у Google</p>
+    </div>
+    <div class="rv-in">
+      <blockquote>
+        <p>«Дуже мене зацікавив гурток "Пізнаю світ", де діти отримують купу цікавої пізнавальної інформації про все на світі, і все це у доступній та цікавій формі для них! І вже після перших занять ми побачили гарні результати! З вересня обрали новий гурток "Крок до школи", тому з радістю і надалі відвідуємо нашу улюблену академію.»</p>
+        <footer>Відгук мами учня, з сайту академії</footer>
+      </blockquote>
+      <a class="btn btn--ghost rv__btn" href="#visit">Прийти на екскурсію</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec ct" id="contacts" aria-labelledby="h-ct">
+  <div class="wrap ct__grid">
+    <div class="rv-in">
+      <p class="kicker">Контакти</p>
+      <h2 id="h-ct">Приходьте подивитися академію</h2>
+      <a class="ct__phone" href="tel:+380950191401">+380 95 019 1401</a>
+      <dl>
+        <div><dt>Адреса</dt><dd>Мукачево, вул. Немировича-Данченка, 2а</dd></div>
+        <div><dt>Графік</dt><dd>Пн–Пт 9:00–19:00, Сб 9:00–17:00, Нд — вихідний</dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:academiya.uspikhy@gmail.com">academiya.uspikhy@gmail.com</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/academiya_uspikhy/" target="_blank" rel="noopener">@academiya_uspikhy</a></dd></div>
+      </dl>
+    </div>
+    <form class="form rv-in" id="visit" novalidate>
+      <h3>Запис на екскурсію</h3>
+      <p>Залиште контакт — академія зателефонує й домовиться про час.</p>
+      <div class="fld"><label for="f-name">Ваше ім'я</label><input id="f-name" name="name" autocomplete="name" required><span class="err" aria-live="polite"></span></div>
+      <div class="fld"><label for="f-phone">Телефон</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+38 (0__) ___ __ __" required><span class="err" aria-live="polite"></span></div>
+      <div class="fld"><label for="f-age">Вік дитини</label>
+        <select id="f-age" name="age"><option>1–2 роки</option><option>3–4 роки</option><option>5–6 років</option><option>7–10 років</option></select><span class="err"></span></div>
+      <label class="chk"><input type="checkbox" id="f-ok" required> <span>Погоджуюсь на обробку моїх даних для зворотного зв'язку</span></label>
+      <span class="err" id="ok-err" aria-live="polite" style="color:var(--tomato-d);font-size:14px;font-weight:700"></span>
+      <button class="btn btn--sun" type="submit">Записатися на екскурсію <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <p class="form__ok" role="status" hidden>Це концепт: форма відкрила лист у вашій пошті — надішліть його, і академія отримає запит.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap ft__in">
+    <span>© Дитяча «Академія успіху», Мукачево</span>
+    <a href="tel:+380950191401">+380 95 019 1401</a>
+    <p class="ft__note">Попередній концепт від Doba Digital - не опублікований сайт</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ChildCare","name":"Дитяча «Академія успіху»","telephone":"+380950191401","email":"academiya.uspikhy@gmail.com","address":{"@type":"PostalAddress","streetAddress":"вул. Немировича-Данченка, 2а","addressLocality":"Мукачево","addressCountry":"UA"},"openingHours":["Mo-Fr 09:00-19:00","Sa 09:00-17:00"],"sameAs":["https://www.instagram.com/academiya_uspikhy/"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"46"}}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lenis=null;
+  if(window.Lenis&&!reduce){lenis=new Lenis({autoRaf:true});window.lenis=lenis;}
+  function hdrH(){return document.querySelector('.hdr').offsetHeight;}
+  var btn=document.querySelector('.menu-btn'),drop=document.getElementById('drop');
+  function setMenu(open){if(open){drop.setAttribute('data-open','');}else{drop.removeAttribute('data-open');}btn.setAttribute('aria-expanded',open);if(lenis){open?lenis.stop():lenis.start();}}
+  btn.addEventListener('click',function(){setMenu(!drop.hasAttribute('data-open'));});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&drop.hasAttribute('data-open')){setMenu(false);btn.focus();}});
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){
+    var id=a.getAttribute('href');var t=id==='#top'?document.body:document.querySelector(id);if(!t)return;
+    e.preventDefault();setMenu(false);
+    if(lenis){lenis.scrollTo(t,{offset:-hdrH()-8});}else{window.scrollTo({top:t.getBoundingClientRect().top+scrollY-hdrH()-8,behavior:reduce?'auto':'smooth'});}
+    if(id==='#visit'){setTimeout(function(){document.getElementById('f-name').focus({preventScroll:true});},reduce?0:900);}
+  });});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv-in').forEach(function(el){io.observe(el);});
+  // phone mask
+  var ph=document.getElementById('f-phone');
+  function digits(v){var d=v.replace(/\D/g,'');if(d.indexOf('380')===0)d=d.slice(2);else if(d.indexOf('80')===0)d=d.slice(1);if(d&&d[0]!=='0')d='0'+d;return d.slice(0,10);}
+  function fmt(d){var s='+38';if(!d)return '';s+=' ('+d.slice(0,3);if(d.length>=3)s+=')';if(d.length>3)s+=' '+d.slice(3,6);if(d.length>6)s+=' '+d.slice(6,8);if(d.length>8)s+=' '+d.slice(8,10);return s;}
+  ph.addEventListener('input',function(e){if(e.inputType&&e.inputType.indexOf('delete')===0)return;ph.value=fmt(digits(ph.value));});
+  ph.addEventListener('blur',function(){ph.value=fmt(digits(ph.value));});
+  var form=document.getElementById('visit');
+  function err(el,msg){el.parentNode.querySelector('.err').textContent=msg;el.setAttribute('aria-invalid',msg?'true':'false');}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();var ok=true;var n=document.getElementById('f-name');var chk=document.getElementById('f-ok');
+    if(!n.value.trim()){err(n,"Вкажіть, будь ласка, ім'я");ok=false;}else err(n,'');
+    if(digits(ph.value).length!==10){err(ph,'Номер має містити 10 цифр, наприклад 095 019 14 01');ok=false;}else err(ph,'');
+    document.getElementById('ok-err').textContent=chk.checked?'':'Потрібна ваша згода';if(!chk.checked)ok=false;
+    if(!ok)return;
+    var body="Ім'я: "+n.value.trim()+"\nТелефон: "+ph.value+"\nВік дитини: "+document.getElementById('f-age').value;
+    location.href='mailto:academiya.uspikhy@gmail.com?subject='+encodeURIComponent('Запис на екскурсію')+'&body='+encodeURIComponent(body);
+    form.querySelector('.form__ok').hidden=false;
+  });
+})();
+</script>
+</body>
+</html>
