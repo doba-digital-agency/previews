@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бурбон на Культури — спешелті кава і їжа в Харкові</title>
+<meta name="description" content="Бурбон на Культури, 22-в у Харкові: спешелті кава, хенд брю, спешли від шефа на вихідних, дріпи й кавовий адвент-календар. Меню та замовлення — онлайн.">
+<meta property="og:title" content="Бурбон на Культури — спешелті кава і їжа в Харкові">
+<meta property="og:description" content="Спешелті кава, спешли від шефа на вихідних, дріпи й кавовий адвент-календар. Вул. Культури, 22-в, Харків.">
+<meta property="og:image" content="img/ig-06.webp">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316236b'/%3E%3Cpath d='M14 44c4-14 10-26 16-24s-8 22 2 22 12-24 18-20-6 18 2 18' fill='none' stroke='%23b4c1f2' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Бурбон на Культури","telephone":"+380689252814","email":"mrbourboncoffee@gmail.com","url":"https://mr-bourbon.choiceqr.com/","menu":"https://mr-bourbon.choiceqr.com/online-menu","address":{"@type":"PostalAddress","streetAddress":"вул. Культури, 22-в","addressLocality":"Харків","postalCode":"61000","addressCountry":"UA"},"openingHours":["Mo-Th 09:00-20:00","Fr 09:00-21:00","Sa-Su 10:00-21:00"],"sameAs":["https://www.instagram.com/mrbourboncoffee/"]}
+</script>
+<style>
+:root{
+  --ink:#0f1640; --navy:#16236b; --navy2:#22338f; --peri:#b4c1f2; --peri2:#dde4fb;
+  --ice:#f3f5fd; --white:#fff; --car:#d1a262; --car-d:#7a4f14; --muted:#4a5486;
+  --line:rgba(15,22,64,.14); --wrap:1320px; --pad:clamp(16px,4vw,48px);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Commissioner",system-ui,sans-serif;font-size:16px;line-height:1.55;color:var(--ink);background:var(--ice);overflow-wrap:break-word}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+[hidden]{display:none!important}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
+.hand{font-family:"Caveat",cursive;font-weight:600;letter-spacing:.01em}
+.num{position:absolute;top:10px;right:12px;font-size:13px;font-weight:500;opacity:.75}
+:focus-visible{outline:3px solid var(--car);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip:focus{left:12px;top:12px;width:auto;height:auto;clip:auto;z-index:60;padding:12px 16px;background:var(--car);color:var(--ink);border-radius:6px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 20px;border-radius:6px;font:700 15px/1.2 "Commissioner",sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease),transform .25s var(--ease)}
+.btn svg{width:18px;height:18px;transition:transform .25s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn--car{background:var(--car);color:var(--ink)}
+.btn--car:hover{background:#e2b97f}
+.btn--navy{background:var(--navy);color:#fff}
+.btn--navy:hover{background:var(--navy2)}
+.btn--line{border-color:currentColor;color:var(--navy);background:transparent}
+.btn--line:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn--line-w{border-color:rgba(255,255,255,.7);color:#fff;background:transparent}
+.btn--line-w:hover{background:#fff;color:var(--navy);border-color:#fff}
+.link{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;transition:text-decoration-color .25s var(--ease),color .25s var(--ease)}
+.link:hover{color:var(--car-d);text-decoration-color:var(--car-d)}
+
+/* top line */
+.top{background:var(--navy);color:#fff}
+.top__in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:.14em;font-size:18px}
+.brand svg{width:40px;height:28px}
+.top__meta{display:flex;gap:22px;font-size:14px;color:var(--peri2);flex-wrap:wrap;justify-content:flex-end}
+.top__meta a{text-decoration:none;transition:color .25s var(--ease)}
+.top__meta a:hover{color:var(--car)}
+@media (max-width:620px){.top__meta a:first-child{display:none}}
+
+/* dock nav (bottom, all widths) */
+.dock{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:4px;padding:6px;background:var(--ink);border-radius:10px;box-shadow:0 10px 30px rgba(15,22,64,.28);max-width:calc(100vw - 24px)}
+.dock__links{display:flex;gap:2px;list-style:none;margin:0;padding:0}
+.dock__links a{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:6px;color:#fff;text-decoration:none;font-size:14px;font-weight:500;transition:background-color .25s var(--ease),color .25s var(--ease)}
+.dock__links a span{font-size:11px;color:var(--peri);transition:color .25s var(--ease)}
+.dock__links a:hover{background:var(--navy2)}
+.dock__toggle{display:none;min-height:44px;padding:0 16px;border:0;border-radius:6px;background:var(--navy2);color:#fff;font:600 14px "Commissioner",sans-serif;cursor:pointer;transition:background-color .25s var(--ease)}
+.dock__toggle:hover{background:var(--navy)}
+.dock .btn{min-height:44px;padding:0 16px;white-space:nowrap}
+.dock__panel{position:fixed;left:12px;right:12px;bottom:84px;z-index:49;background:var(--ink);border-radius:10px;padding:10px;opacity:0;transform:translateY(12px);visibility:hidden;transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}
+.dock__panel.open{opacity:1;transform:none;visibility:visible}
+.dock__panel ul{list-style:none;margin:0;padding:0}
+.dock__panel a{display:flex;justify-content:space-between;align-items:center;min-height:56px;padding:0 14px;color:#fff;text-decoration:none;font-size:22px;font-weight:700;border-bottom:1px solid rgba(255,255,255,.12);transition:color .25s var(--ease)}
+.dock__panel a:hover{color:var(--car)}
+.dock__panel a span{font-size:13px;color:var(--peri);font-weight:500}
+.dock__links a{white-space:nowrap}
+@media (max-width:900px){
+  .dock{left:12px;right:12px;transform:none;justify-content:space-between}
+  .dock__links{display:none}
+  .dock__toggle{display:block}
+  .dock .btn{flex:1;justify-content:center}
+}
+
+/* hero: advent-calendar box */
+.hero{background:var(--navy);padding-block:clamp(16px,3vw,32px) clamp(40px,6vw,72px)}
+.box{display:grid;gap:10px;grid-template-columns:repeat(6,1fr);grid-template-rows:auto auto clamp(190px,17vw,250px);grid-template-areas:
+ "t1 c c c c p1" "t2 c c c c p1" "p2 p2 t3 t4 t5 t5"}
+.tile{position:relative;border-radius:8px;padding:18px;min-height:150px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:4px}
+.tile--navy{background:var(--navy2);color:#fff}
+.tile--peri{background:var(--peri);color:var(--ink)}
+.tile--ink{background:var(--ink);color:#fff}
+.tile--car{background:var(--car);color:var(--ink)}
+.tile b{font-size:clamp(19px,1.7vw,24px);line-height:1.15;font-weight:800}
+.t1 b{white-space:nowrap;font-size:clamp(18px,1.5vw,22px)}
+.tile small{font-size:14px;line-height:1.35}
+.tile .hand{font-size:24px;line-height:1}
+a.tile{text-decoration:none;transition:transform .3s var(--ease),background-color .3s var(--ease)}
+a.tile:hover{transform:translateY(-4px)}
+a.tile.tile--peri:hover{background:var(--peri2)}
+a.tile.tile--navy:hover{background:#2c40a8}
+.tile__arrow{position:absolute;left:18px;top:14px;width:22px;height:22px;transition:transform .3s var(--ease)}
+a.tile:hover .tile__arrow{transform:translate(4px,-4px)}
+.ph{padding:0;min-height:0}
+.ph img{width:100%;height:100%;object-fit:cover}
+.t1{grid-area:t1}.t2{grid-area:t2}.t3{grid-area:t3}.t4{grid-area:t4}.t5{grid-area:t5}.p1{grid-area:p1}.p2{grid-area:p2}
+.p1 img{object-position:55% 60%}
+.p2 img{object-position:50% 70%}
+.centre{grid-area:c;background:#fff;border-radius:8px;padding:clamp(22px,3.4vw,48px);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.centre__kick{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.centre__kick::before{content:"";width:32px;height:2px;background:var(--car)}
+.h1{margin:10px 0 0;font-weight:800;line-height:.95;letter-spacing:-.035em;white-space:nowrap;color:var(--navy);font-size:clamp(44px,14vw,130px)}
+.centre__sub{margin:12px 0 0;font-size:clamp(20px,2.2vw,28px);line-height:1.2;font-weight:700;max-width:22ch}
+.centre__lead{margin:14px 0 0;max-width:46ch;color:var(--muted);font-size:17px}
+.centre__cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.scribble{position:absolute;right:-10px;top:14px;width:clamp(120px,20vw,260px);height:auto;color:var(--peri);pointer-events:none}
+.scribble path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 1.6s .2s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (min-width:1024px){.h1{font-size:clamp(96px,11.6vw,176px)}}
+@media (max-width:1023px){
+  .box{grid-template-columns:repeat(2,1fr);grid-template-rows:none;grid-template-areas:"c c" "p1 t1" "p1 t2" "p2 p2" "t3 t4" "t5 t5"}
+  .p1{min-height:320px}.p2{aspect-ratio:16/9}
+  .scribble{width:150px;opacity:.7}
+}
+
+/* sections */
+.sec{padding-block:clamp(64px,9vw,120px)}
+.label{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0 0 18px}
+.label i{font-style:normal;display:inline-grid;place-items:center;width:30px;height:30px;border:1.5px solid currentColor;border-radius:5px;font-size:12px;letter-spacing:0}
+.h2{margin:0;font-size:clamp(32px,4.2vw,52px);line-height:1.08;letter-spacing:-.02em;font-weight:800;max-width:18ch}
+.p{font-size:17px;max-width:56ch}
+
+/* 01 advent */
+.adv{background:var(--ink);color:#fff}
+.adv__grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(16px,2.4vw,32px);align-items:start}
+.adv__text{grid-column:1/6;position:sticky;top:40px}
+.adv__text .p{color:#d6dcf5}
+.adv__note{margin:26px 0;padding:18px 20px;border-left:3px solid var(--car);background:rgba(255,255,255,.05)}
+.adv__note .hand{font-size:28px;color:var(--peri);display:block;line-height:1.1}
+.adv__note small{display:block;margin-top:8px;color:#aab3dc;font-size:13px}
+.adv__note small a{color:#fff}
+.adv__pics{grid-column:6/13;display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:start}
+.adv__pics figure{margin:0}
+.adv__pics figure:last-child{margin-top:90px}
+.adv__pics img{border-radius:8px;width:100%;aspect-ratio:4/5;object-fit:cover}
+.adv__pics figcaption{font-size:13px;color:#aab3dc;margin-top:8px}
+.adv__drips{grid-column:1/-1;margin-top:clamp(24px,4vw,48px);display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:24px 0;border-top:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16)}
+.adv__drips b{font-size:clamp(22px,2.4vw,30px);line-height:1.15}
+.adv__drips p{margin:0;color:#d6dcf5}
+@media (max-width:1023px){
+  .adv__text{grid-column:1/-1;position:static}
+  .adv__pics{grid-column:1/-1}
+  .adv__drips{grid-template-columns:1fr}
+}
+@media (max-width:520px){.adv__pics figure:last-child{margin-top:40px}}
+
+/* 02 events */
+.ev{background:#fff}
+.ev__grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(16px,2.4vw,32px)}
+.ev__head{grid-column:1/5}
+.ev__head .hand{display:block;font-size:26px;color:var(--car-d);margin-top:16px;transform:rotate(-2deg);transform-origin:left}
+.ev__list{grid-column:5/13;list-style:none;margin:0;padding:0}
+.ev__row{display:grid;grid-template-columns:56px 1fr 200px;gap:20px;align-items:start;padding:26px 0;border-top:1px solid var(--line)}
+.ev__row:last-child{border-bottom:1px solid var(--line)}
+.ev__n{display:grid;place-items:center;width:44px;height:44px;border-radius:6px;background:var(--peri2);color:var(--navy);font-weight:800;font-size:15px;transition:background-color .3s var(--ease),color .3s var(--ease)}
+.ev__row:hover .ev__n{background:var(--navy);color:#fff}
+.ev__row h3{margin:6px 0 6px;font-size:clamp(20px,2vw,26px);line-height:1.2}
+.ev__row p{margin:0;color:var(--muted)}
+.ev__row img{border-radius:6px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.ev__row .ev__tall{aspect-ratio:3/4}
+.ev__wide{grid-column:2/-1}
+.ev__more{margin-top:26px}
+@media (max-width:1023px){.ev__head,.ev__list{grid-column:1/-1}}
+@media (max-width:620px){
+  .ev__row{grid-template-columns:44px 1fr;gap:14px}
+  .ev__row img{grid-column:2;max-width:260px}
+}
+
+/* 03 menu */
+.menu{background:var(--ice)}
+.menu__top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,44px)}
+.menu__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.drink{background:#fff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;position:relative}
+.drink__img{aspect-ratio:1;overflow:hidden;background:var(--peri2)}
+.drink__img img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.drink:hover .drink__img img{transform:scale(1.05)}
+.drink__body{padding:14px 14px 16px;display:flex;flex-direction:column;gap:2px;flex:1}
+.drink__body b{font-size:17px;line-height:1.25}
+.drink__body small{color:var(--muted);font-size:13px}
+.drink__price{margin-top:auto;padding-top:10px;font-weight:800;color:var(--navy)}
+.drink--all{background:var(--navy);color:#fff;text-decoration:none;justify-content:space-between;padding:18px;min-height:220px;transition:background-color .3s var(--ease)}
+.drink--all:hover{background:var(--navy2)}
+.drink--all .hand{font-size:28px;color:var(--peri);line-height:1}
+.drink--all b{font-size:22px;line-height:1.15}
+.drink--all svg{width:28px;height:28px;transition:transform .3s var(--ease)}
+.drink--all:hover svg{transform:translateX(6px)}
+.menu__note{margin:18px 0 0;font-size:13px;color:var(--muted)}
+@media (max-width:1100px){.menu__grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:620px){.menu__grid{grid-template-columns:repeat(2,1fr)}}
+
+/* 04 contacts */
+.con{background:var(--peri);color:var(--ink)}
+.con__grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(16px,2.4vw,32px);align-items:start}
+.con__main{grid-column:1/7}
+.con__phone{display:inline-block;margin:22px 0 8px;font-size:clamp(30px,4.4vw,56px);font-weight:800;letter-spacing:-.02em;line-height:1.05;text-decoration:none;color:var(--navy);transition:color .25s var(--ease)}
+.con__phone:hover{color:var(--ink)}
+.con__list{list-style:none;margin:24px 0 0;padding:0;border-top:1.5px solid var(--ink)}
+.con__list li{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(15,22,64,.25)}
+.con__list span{flex:none;width:110px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+.hours{width:100%;border-collapse:collapse;font-size:15px}
+.hours td{padding:3px 0}
+.hours td:last-child{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.hours tr.today td{color:var(--navy);font-weight:800}
+.hours tr.today td:first-child::after{content:" · сьогодні";font-weight:500;font-size:13px}
+.rating{display:flex;align-items:baseline;gap:12px;margin-top:22px}
+.rating b{font-size:clamp(28px,3vw,40px);line-height:1}
+.con__side{grid-column:8/13}
+.map{position:relative;border-radius:8px;overflow:hidden;background:var(--ink);color:#fff;aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:flex-end;padding:22px}
+.map__lines{position:absolute;inset:0;opacity:.35}
+.map p{position:relative;margin:0 0 14px;font-size:15px;color:#d6dcf5}
+.map b{position:relative;font-size:24px;line-height:1.2;margin-bottom:8px}
+.map .btn{position:relative;align-self:flex-start}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (max-width:1023px){.con__main,.con__side{grid-column:1/-1}.map{aspect-ratio:16/10}}
+@media (max-width:520px){.map{aspect-ratio:4/5}.con__list li{flex-direction:column;gap:4px}.con__list span{width:auto}}
+
+.foot{background:var(--ink);color:#c3cae8;padding:36px 0 120px;font-size:14px}
+.foot__in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot a{color:#fff}
+.foot__concept{font-size:13px;color:#9aa3cc;margin:18px 0 0}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s var(--ease),transform .55s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01s!important;animation-duration:.01s!important}
+  .reveal{opacity:1;transform:none}
+  .scribble path{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<a class="sr skip" href="#main">До змісту</a>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="#top" aria-label="Бурбон — на початок">
+      <svg viewBox="0 0 40 28" aria-hidden="true"><path d="M3 22c3-9 7-17 11-15s-6 15 1 15 8-16 12-13-4 12 1 12 6-6 9-9" fill="none" stroke="#b4c1f2" stroke-width="2.6" stroke-linecap="round"/></svg>
+      БУРБОН
+    </a>
+    <div class="top__meta">
+      <a href="https://www.google.com/maps/place/?q=place_id:ChIJ40z46yahJ0ERh2TNLOLyPhQ" target="_blank" rel="noopener">вул. Культури, 22-в, Харків</a>
+      <a href="tel:+380689252814">068 925 2814</a>
+    </div>
+  </div>
+</header>
+
+<nav class="dock" aria-label="Основна навігація">
+  <ul class="dock__links">
+    <li><a href="#advent"><span>01</span>Адвент і дріпи</a></li>
+    <li><a href="#events"><span>02</span>Події</a></li>
+    <li><a href="#menu"><span>03</span>Напої</a></li>
+    <li><a href="#contacts"><span>04</span>Контакти</a></li>
+  </ul>
+  <button class="dock__toggle" type="button" aria-expanded="false" aria-controls="dock-panel">Розділи</button>
+  <a class="btn btn--car" href="https://mr-bourbon.choiceqr.com/online-menu" target="_blank" rel="noopener">Меню та замовлення</a>
+</nav>
+<div class="dock__panel" id="dock-panel" data-lenis-prevent>
+  <ul>
+    <li><a href="#advent">Адвент і дріпи <span>01</span></a></li>
+    <li><a href="#events">Події <span>02</span></a></li>
+    <li><a href="#menu">Напої <span>03</span></a></li>
+    <li><a href="#contacts">Контакти <span>04</span></a></li>
+  </ul>
+</div>
+
+<main id="main">
+<section class="hero" id="top" aria-labelledby="h1">
+  <div class="wrap box">
+    <div class="centre">
+      <svg class="scribble" viewBox="0 0 260 200" aria-hidden="true"><path d="M20 160c20-60 50-130 80-120s-40 120 10 120 50-140 90-110-30 100 10 100 30-50 40-90" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+      <p class="centre__kick">Кав'ярня · Харків</p>
+      <h1 class="h1" id="h1">Бурбон</h1>
+      <p class="centre__sub">Спешелті кава і смачна їжа на Культури</p>
+      <p class="centre__lead">Кава від українських обсмажчиків, спешли від шефа на вихідних і все про кав'ярню в одному місці.</p>
+      <div class="centre__cta">
+        <a class="btn btn--navy" href="https://mr-bourbon.choiceqr.com/online-menu" target="_blank" rel="noopener">Відкрити меню й замовити
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--line" href="#contacts">Як нас знайти</a>
+      </div>
+    </div>
+    <div class="tile tile--peri t1">
+      <span class="num">1</span>
+      <span class="hand">сьогодні</span>
+      <b id="today-hours">9:00–20:00</b>
+      <small>Пн–Чт 9–20, Пт 9–21, Сб–Нд 10–21</small>
+    </div>
+    <div class="tile tile--ink t2">
+      <span class="num">7</span>
+      <span class="hand" style="color:var(--peri)">Google</span>
+      <b>4,7 ★</b>
+      <small>627 відгуків</small>
+    </div>
+    <figure class="tile ph p1" style="margin:0">
+      <img src="img/ig-06.webp" width="960" height="1200" alt="Дві чашки кави з собою з логотипом Бурбону на столі під сонцем" fetchpriority="high">
+    </figure>
+    <figure class="tile ph p2" style="margin:0">
+      <img src="img/ig-03.webp" width="960" height="1280" alt="Страви на металевих тарілках і келих рожевого вина в Бурбоні" loading="lazy">
+    </figure>
+    <a class="tile tile--navy t3" href="#advent">
+      <svg class="tile__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      <span class="num">24</span>
+      <b>Адвент-календар</b><small>кава на кожен день</small>
+    </a>
+    <a class="tile tile--peri t4" href="#events">
+      <svg class="tile__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      <span class="num">6</span>
+      <b>Спешли вихідних</b><small>і поп-апи</small>
+    </a>
+    <a class="tile tile--car t5" href="https://www.google.com/maps/place/?q=place_id:ChIJ40z46yahJ0ERh2TNLOLyPhQ" target="_blank" rel="noopener">
+      <svg class="tile__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      <span class="num">22</span>
+      <b>вул. Культури, 22-в</b><small>Харків · відкрити в Google Maps</small>
+    </a>
+  </div>
+</section>
+
+<section class="sec adv" id="advent" aria-labelledby="adv-h">
+  <div class="wrap adv__grid">
+    <div class="adv__text reveal">
+      <p class="label"><i>01</i>З собою і в подарунок</p>
+      <h2 class="h2" id="adv-h">Кавовий адвент-календар</h2>
+      <p class="p">Коробка з віконцями на кожен день до свята, у фірмовому синьому дизайні Бурбону. Замовлення приймаємо в Instagram, відправка — з 25 листопада.</p>
+      <div class="adv__note">
+        <span class="hand">«Встигніть замовити свій адвент-календар»</span>
+        <small>з поста в <a class="link" href="https://www.instagram.com/reel/Df4ikTSuive/" target="_blank" rel="noopener">Instagram</a></small>
+      </div>
+      <a class="btn btn--car" href="https://www.instagram.com/mrbourboncoffee/" target="_blank" rel="noopener">Замовити
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="adv__pics">
+      <figure class="reveal">
+        <img src="img/ig-05.webp" width="960" height="1198" alt="Відкритий кавовий адвент-календар Бурбону з баночками зерна" loading="lazy">
+        <figcaption>Віконця з кавою всередині</figcaption>
+      </figure>
+      <figure class="reveal">
+        <img src="img/ig-02.webp" width="960" height="1200" alt="Стос синіх коробок адвент-календаря з написом Бурбон" loading="lazy">
+        <figcaption>Готові до відправки</figcaption>
+      </figure>
+    </div>
+    <div class="adv__drips reveal">
+      <b>Дріпи на поличках</b>
+      <p>Куштуйте різні сорти від різних обсмажчиків у кав'ярні або забирайте з собою.</p>
+      <a class="btn btn--line-w" href="https://www.instagram.com/mrbourboncoffee/" target="_blank" rel="noopener">Замовити дріпи</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec ev" id="events" aria-labelledby="ev-h">
+  <div class="wrap ev__grid">
+    <div class="ev__head reveal">
+      <p class="label"><i>02</i>Події</p>
+      <h2 class="h2" id="ev-h">Вихідні в Бурбоні</h2>
+      <p class="p">Спешли від шефа на вихідних і поп-апи друзів кав'ярні. Нижче — приклади з Instagram; анонси нових подій виходять там.</p>
+      <span class="hand">ходіть куштувати!</span>
+    </div>
+    <ol class="ev__list">
+      <li class="ev__row reveal">
+        <span class="ev__n">01</span>
+        <div><h3>Спешл від шефа</h3><p>Страва вихідних від шефа кав'ярні — що буде цього разу, розповідаємо в Instagram.</p></div>
+        <img class="ev__tall" src="img/ig-04.webp" width="960" height="1200" alt="Гостя кав'ярні поруч із великим сендвічем на тарілці" loading="lazy">
+      </li>
+      <li class="ev__row reveal">
+        <span class="ev__n">02</span>
+        <div class="ev__wide"><h3>Гриль на вихідних</h3><p>Поп-ап з грилем разом із <a class="link" href="https://www.instagram.com/klubdymu.probbq/" target="_blank" rel="noopener">klubdymu.probbq</a>.</p></div>
+      </li>
+      <li class="ev__row reveal">
+        <span class="ev__n">03</span>
+        <div><h3>Тістечка «Картопля»</h3><p>Солодкий поп-ап від <a class="link" href="https://www.instagram.com/sweets.sofa/" target="_blank" rel="noopener">sweets.sofa</a> — «вирішили, що всім нам не завадить трішки підсолодити життя».</p></div>
+        <img src="img/ig-01.webp" width="960" height="1200" alt="Шоколадні тістечка «Картопля» з малиною на білій тарілці" loading="lazy">
+      </li>
+    </ol>
+    <div class="ev__more" style="grid-column:1/-1;text-align:right">
+      <a class="btn btn--line" href="https://www.instagram.com/mrbourboncoffee/" target="_blank" rel="noopener">Анонси в Instagram</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec menu" id="menu" aria-labelledby="menu-h">
+  <div class="wrap">
+    <div class="menu__top reveal">
+      <div>
+        <p class="label"><i>03</i>З меню</p>
+        <h2 class="h2" id="menu-h">Від еспресо до Irish Coffee</h2>
+      </div>
+      <a class="btn btn--navy" href="https://mr-bourbon.choiceqr.com/online-menu" target="_blank" rel="noopener">Відкрити меню й замовити
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <ul class="menu__grid">
+      <li class="drink reveal"><div class="drink__img"><img src="https://cdn-media.choiceqr.com/prod-eat-mr-bourbon/menu/SZukHGY-eXiAHiH-ghFpHIc_urb.webp" width="600" height="600" alt="Еспресо в чашці" loading="lazy"></div>
+        <div class="drink__body"><b>Еспресо</b><small>20 ml · густа текстура й крема</small><span class="drink__price">70 ₴</span></div></li>
+      <li class="drink reveal"><div class="drink__img"><img src="https://cdn-media.choiceqr.com/prod-eat-mr-bourbon/menu/kLzgINk-PWoEbhU-DTbaVkb_ppS.webp" width="600" height="600" alt="Хенд брю — кава альтернативним методом" loading="lazy"></div>
+        <div class="drink__body"><b>Хенд брю</b><small>200 ml · кемекс, V60, аеропрес, Kalita</small><span class="drink__price">110 ₴</span></div></li>
+      <li class="drink reveal"><div class="drink__img"><img src="https://cdn-media.choiceqr.com/prod-eat-mr-bourbon/menu/img_riKUs-yUHCf-SwwYb.webp" width="600" height="600" alt="Irish Coffee зі збитими вершками" loading="lazy"></div>
+        <div class="drink__body"><b>Irish Coffee</b><small>гарячий фільтр, віскі, холодні вершки</small><span class="drink__price">200 ₴</span></div></li>
+      <li class="drink reveal"><div class="drink__img"><img src="https://cdn-media.choiceqr.com/prod-eat-mr-bourbon/menu/img_SQwID-jeWXY-LrCxa.webp" width="600" height="600" alt="Сезонний напій Повітряний фільтр" loading="lazy"></div>
+        <div class="drink__body"><b>Повітряний фільтр</b><small>сезонне · фільтр, гранат, малина</small><span class="drink__price">150 ₴</span></div></li>
+      <li class="drink reveal"><div class="drink__img"><img src="https://cdn-media.choiceqr.com/prod-eat-mr-bourbon/menu/img_SXbsa-HIAqD-OIURb.webp" width="600" height="600" alt="Сезонний напій Гарбузове не лате" loading="lazy"></div>
+        <div class="drink__body"><b>Гарбузове не лате</b><small>сезонне · 330 ml</small><span class="drink__price">185 ₴</span></div></li>
+      <li class="reveal" style="display:flex"><a class="drink drink--all" style="flex:1" href="https://mr-bourbon.choiceqr.com/online-menu" target="_blank" rel="noopener">
+        <span class="hand">і ще багато</span><b>Усе меню: кава, матча, чай, вино, комбуча</b>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+    </ul>
+    <p class="menu__note">Ціни — з онлайн-меню кав'ярні на ChoiceQR; актуальні ціни й доставка — там.</p>
+  </div>
+</section>
+
+<section class="sec con" id="contacts" aria-labelledby="con-h">
+  <div class="wrap con__grid">
+    <div class="con__main reveal">
+      <p class="label"><i>04</i>Контакти</p>
+      <h2 class="h2" id="con-h">Заходьте на Культури</h2>
+      <a class="con__phone" href="tel:+380689252814">068 925 2814</a>
+      <ul class="con__list">
+        <li><span>Адреса</span><div>вул. Культури, 22-в, Харків, 61000</div></li>
+        <li><span>Години</span>
+          <table class="hours"><tbody>
+            <tr data-d="1 2 3 4"><td>Пн–Чт</td><td>09:00–20:00</td></tr>
+            <tr data-d="5"><td>Пт</td><td>09:00–21:00</td></tr>
+            <tr data-d="6 0"><td>Сб–Нд</td><td>10:00–21:00</td></tr>
+          </tbody></table></li>
+        <li><span>Instagram</span><a class="link" href="https://www.instagram.com/mrbourboncoffee/" target="_blank" rel="noopener">@mrbourboncoffee</a></li>
+        <li><span>E-mail</span><a class="link" href="mailto:mrbourboncoffee@gmail.com">mrbourboncoffee@gmail.com</a></li>
+      </ul>
+      <div class="rating"><b>4,7</b><span>оцінка в Google · 627 відгуків</span></div>
+    </div>
+    <div class="con__side reveal">
+      <div class="map" id="map">
+        <svg class="map__lines" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120 400 60M0 300 400 220M120 0 160 500M290 0 250 500M0 430 400 390" stroke="#b4c1f2" stroke-width="2" fill="none"/><circle cx="205" cy="250" r="9" fill="#d1a262"/></svg>
+        <b>вул. Культури, 22-в</b>
+        <p>Карта Google завантажиться лише після натискання.</p>
+        <button class="btn btn--car" type="button" id="map-btn">Показати карту</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <span>© Бурбон на Культури · Харків</span>
+      <span><a class="link" href="https://mr-bourbon.choiceqr.com/" target="_blank" rel="noopener">mr-bourbon.choiceqr.com</a></span>
+    </div>
+    <p class="foot__concept">Попередній концепт від Doba Digital - не опублікований сайт</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lenis = null;
+  if (window.Lenis && !reduce) {
+    // Lenis 1.1.13 has no autoRaf option: drive its animation loop ourselves
+    lenis = new Lenis(); window.lenis = lenis;
+    (function raf(t){ lenis.raf(t); requestAnimationFrame(raf); })(performance.now());
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href'); var t = id.length > 1 && document.querySelector(id);
+      if (!t) return; e.preventDefault(); closePanel();
+      if (lenis) lenis.scrollTo(t); else t.scrollIntoView();
+    });
+  });
+  // today's hours (Kyiv time)
+  var day = new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Kyiv'})).getDay();
+  var hrs = {0:'10:00–21:00',1:'09:00–20:00',2:'09:00–20:00',3:'09:00–20:00',4:'09:00–20:00',5:'09:00–21:00',6:'10:00–21:00'};
+  document.getElementById('today-hours').textContent = hrs[day];
+  document.querySelectorAll('.hours tr').forEach(function(r){ if (r.dataset.d.split(' ').indexOf(String(day)) > -1) r.classList.add('today'); });
+  // dock panel
+  var btn = document.querySelector('.dock__toggle'), panel = document.getElementById('dock-panel');
+  function closePanel(){ if (!panel.classList.contains('open')) return; panel.classList.remove('open'); btn.setAttribute('aria-expanded','false'); if (lenis) lenis.start(); }
+  btn.addEventListener('click', function(){
+    var open = !panel.classList.contains('open');
+    panel.classList.toggle('open', open); btn.setAttribute('aria-expanded', String(open));
+    if (lenis) { open ? lenis.stop() : lenis.start(); }
+    if (open) panel.querySelector('a').focus();
+  });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && panel.classList.contains('open')) { closePanel(); btn.focus(); } });
+  // map on click
+  document.getElementById('map-btn').addEventListener('click', function(){
+    var f = document.createElement('iframe');
+    f.src = 'https://www.google.com/maps?q=' + encodeURIComponent('вулиця Культури 22-в, Харків') + '&output=embed';
+    f.title = 'Карта: вулиця Культури, 22-в, Харків'; f.loading = 'lazy';
+    document.getElementById('map').appendChild(f);
+  });
+  // reveals
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) { els.forEach(function(el){ el.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
