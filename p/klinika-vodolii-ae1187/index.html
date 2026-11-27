@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Клініка «Водолій», Хуст — кабінети, лікарі, запис на прийом</title>
+<meta name="description" content="Клініка сучасних методів діагностики «Водолій» у Хусті: неврологія, ЛОР, УЗД, рентген, фізіотерапія, масаж, лабораторія. Пн–Пт 8.00–17.45, Сб 9.00–16.00.">
+<meta property="og:title" content="Клініка «Водолій», Хуст">
+<meta property="og:description" content="Кабінети, лікарі, години роботи і запис на прийом.">
+<meta property="og:image" content="photos/01.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230c1c26'/%3E%3Cpath d='M5 13l4.5-4 4.5 4 4.5-4 4.5 4 4.5-4M5 22l4.5-4 4.5 4 4.5-4 4.5 4 4.5-4' fill='none' stroke='%2312b5cb' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Клініка «Водолій»",
+  "description": "Клініка сучасних методів діагностики та інноваційних медичних технологій",
+  "url": "https://vodoliy.com/uk",
+  "telephone": "+380314254249",
+  "email": "office@vodoliy.com",
+  "address": {"@type": "PostalAddress", "streetAddress": "вул. С. Росохи, 1", "postalCode": "90400", "addressLocality": "Хуст", "addressRegion": "Закарпатська обл.", "addressCountry": "UA"},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:45"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "16:00"}
+  ],
+  "sameAs": ["https://www.facebook.com/rtkkhust"]
+}
+</script>
+<style>
+:root{
+  --ink:#0c1c26; --ink2:#16303f; --aqua:#12b5cb; --aqua-d:#0a6b78; --aqua-p:#d9f3f6;
+  --mist:#eef4f6; --paper:#f8fbfc; --white:#fff; --line:#c9d8de; --muted:#4a5f6b;
+  --open:#17a35a; --closed:#c4321f;
+  --head:'Commissioner',system-ui,sans-serif; --body:'Source Sans 3',system-ui,sans-serif;
+  --wrap:1320px; --pad:clamp(20px,4vw,56px); --hdr:72px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+body{margin:0;font:400 17px/1.6 var(--body);color:var(--ink);background:var(--white);overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.1;font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(30px,3.4vw,46px)}
+h3{font-size:clamp(19px,1.6vw,22px);font-weight:500;line-height:1.25}
+p{margin:0}
+[hidden]{display:none!important}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip:focus{position:fixed;left:12px;top:12px;width:auto;height:auto;clip:auto;z-index:100;background:var(--ink);color:var(--white);padding:12px 16px}
+:focus-visible{outline:3px solid var(--aqua);outline-offset:3px}
+.label{font:600 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:0 22px 0 20px;font:600 16px/1 var(--body);text-decoration:none;border:2px solid var(--ink);background:var(--ink);color:var(--white);cursor:pointer;
+  box-shadow:inset 6px 0 0 var(--aqua);transition:background-color .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease),box-shadow .25s var(--ease)}
+.btn svg{width:18px;height:18px;flex:none;transition:transform .25s var(--ease)}
+.btn:hover{background:var(--aqua);border-color:var(--aqua);color:var(--ink);box-shadow:inset 0 0 0 var(--aqua)}
+.btn:hover svg{transform:translateX(4px)}
+.btn--ghost{background:transparent;color:var(--ink);box-shadow:none}
+.btn--ghost:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.btn--light{background:var(--white);border-color:var(--white);color:var(--ink)}
+.btn--light:hover{background:var(--aqua);border-color:var(--aqua)}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+.hdr__in{display:flex;align-items:center;gap:20px;height:var(--hdr)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.logo__mark{width:40px;height:40px;background:var(--ink);display:grid;place-items:center}
+.logo__mark svg{width:28px;height:28px}
+.logo__name{font:700 21px/1 var(--head);display:block}
+.logo__sub{font:600 12px/1.2 var(--body);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;display:block;margin-top:4px}
+.status{display:inline-flex;align-items:center;gap:10px;font:600 15px/1.2 var(--body);padding:8px 14px;border:1px solid var(--line);background:var(--paper);white-space:nowrap}
+.status__dot{width:10px;height:10px;border-radius:50%;background:var(--closed);flex:none}
+.status.is-open .status__dot{background:var(--open);box-shadow:0 0 0 4px rgba(23,163,90,.18)}
+.hdr .status{margin-left:auto}
+.hdr__tel{font:600 16px/1 var(--body);text-decoration:none;white-space:nowrap;padding:14px 2px;background:linear-gradient(var(--aqua),var(--aqua)) 0 100%/0 2px no-repeat;transition:background-size .3s var(--ease)}
+.hdr__tel:hover{background-size:100% 2px}
+.menu-btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 16px;border:2px solid var(--ink);background:var(--white);color:var(--ink);font:600 16px/1 var(--body);cursor:pointer;transition:background-color .25s var(--ease),color .25s var(--ease)}
+.menu-btn:hover{background:var(--ink);color:var(--white)}
+.menu-btn__bars{width:18px;height:12px;position:relative}
+.menu-btn__bars::before,.menu-btn__bars::after{content:"";position:absolute;left:0;right:0;height:2px;background:currentColor;transition:transform .3s var(--ease),top .3s var(--ease)}
+.menu-btn__bars::before{top:1px}.menu-btn__bars::after{top:9px}
+.menu-open .menu-btn__bars::before{top:5px;transform:rotate(45deg)}
+.menu-open .menu-btn__bars::after{top:5px;transform:rotate(-45deg)}
+
+.panel{position:fixed;left:0;right:0;top:var(--hdr);z-index:49;background:var(--ink);color:var(--white);max-height:calc(100dvh - var(--hdr));overflow-y:auto;
+  opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .3s var(--ease),transform .3s var(--ease),visibility 0s linear .3s}
+.menu-open .panel{opacity:1;visibility:visible;transform:none;transition:opacity .3s var(--ease),transform .3s var(--ease),visibility 0s}
+.panel__grid{display:grid;grid-template-columns:5fr 7fr;gap:48px;padding-block:40px 48px}
+.panel .label{color:var(--aqua)}
+.panel__big{list-style:none;margin:18px 0 28px;padding:0}
+.panel__big a{display:block;font:700 clamp(26px,3vw,38px)/1.25 var(--head);text-decoration:none;padding:6px 0;transition:color .25s var(--ease),transform .25s var(--ease)}
+.panel__big a:hover{color:var(--aqua);transform:translateX(6px)}
+.panel__cabs{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
+.panel__cabs a{display:flex;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.14);text-decoration:none;font-size:17px;transition:color .25s var(--ease)}
+.panel__cabs a span{font:500 13px/1 var(--head);color:var(--aqua)}
+.panel__cabs a:hover{color:var(--aqua)}
+
+/* ---------- hero ---------- */
+.hero{background:var(--paper);padding-block:clamp(32px,5vw,64px) 0;position:relative}
+.kicker{display:flex;align-items:center;gap:16px;color:var(--aqua-d)}
+.kicker::after{content:"";flex:1;height:1px;background:var(--line)}
+.hero__top{display:flex;align-items:center;gap:clamp(16px,3vw,40px);margin-top:clamp(18px,2.5vw,30px)}
+.hero h1{font-size:clamp(44px,15vw,240px);line-height:.95;white-space:nowrap;letter-spacing:-.035em}
+.sign{flex:1;min-width:0;max-width:340px;margin-left:auto}
+.sign svg{width:100%;height:auto;display:block}
+.sign path{fill:none;stroke:var(--aqua);stroke-width:9;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.1s var(--ease) .15s forwards}
+.sign path+path{animation-delay:.35s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero__sub{font:500 clamp(18px,1.7vw,24px)/1.3 var(--head);margin-top:clamp(14px,2vw,22px);max-width:30ch}
+.hero__grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(24px,4vw,56px);margin-top:clamp(28px,4vw,52px);align-items:stretch}
+.hero__photo{margin:0 0 0 calc(-1 * var(--pad));position:relative}
+.hero__photo img{width:100%;height:100%;min-height:360px;object-fit:cover;object-position:78% 30%}
+.hero__side{display:flex;flex-direction:column;gap:24px;padding-bottom:clamp(28px,4vw,56px)}
+.hero__lead{font-size:clamp(17px,1.3vw,19px);color:var(--muted);max-width:44ch}
+.hero__btns{display:flex;flex-wrap:wrap;gap:12px}
+.today{border:2px solid var(--ink);background:var(--white)}
+.today__head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;background:var(--ink);color:var(--white)}
+.today__head .label{color:var(--aqua)}
+.today .status{background:transparent;border:0;padding:0;color:var(--white)}
+.hours{width:100%;border-collapse:collapse}
+.hours th,.hours td{text-align:left;padding:12px 18px;border-top:1px solid var(--line);font-weight:400}
+.hours td{text-align:right;font:500 17px/1.3 var(--head);white-space:nowrap}
+.hours tr.is-today{background:var(--aqua-p)}
+.hours tr.is-today th{font-weight:600}
+.hours tr.is-today th::after{content:" · сьогодні";color:var(--aqua-d);font-weight:600}
+
+/* ---------- cabinets ---------- */
+.cabs{background:var(--ink);color:var(--white);padding-block:clamp(64px,8vw,120px)}
+.cabs__grid{display:grid;grid-template-columns:4fr 8fr;gap:clamp(32px,5vw,72px);align-items:start}
+.cabs__intro{position:sticky;top:calc(var(--hdr) + 32px)}
+.cabs__intro .label{color:var(--aqua)}
+.cabs__intro h2{margin-top:16px}
+.cabs__intro p{margin-top:18px;color:#b9cad2;max-width:38ch}
+.plates{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.plate{display:grid;grid-template-columns:auto 1fr auto;gap:4px 16px;align-items:start;min-height:100%;padding:20px 18px;text-decoration:none;background:var(--ink2);border-left:6px solid var(--aqua);
+  transition:background-color .25s var(--ease),color .25s var(--ease)}
+.plate__n{font:500 14px/1 var(--head);color:var(--aqua);padding-top:5px;transition:color .25s var(--ease)}
+.plate h3{grid-column:2}
+.plate__note{grid-column:2;font-size:15px;line-height:1.45;color:#b9cad2;transition:color .25s var(--ease)}
+.plate__go{grid-column:3;grid-row:1/span 2;align-self:center;width:24px;height:24px;transition:transform .25s var(--ease)}
+.plate:hover{background:var(--aqua);color:var(--ink)}
+.plate:hover .plate__n,.plate:hover .plate__note{color:var(--ink)}
+.plate:hover .plate__go{transform:translateX(4px)}
+.plate--wide{grid-column:1/-1}
+
+/* ---------- inside photos ---------- */
+.inside{background:var(--mist);padding-block:clamp(56px,7vw,100px)}
+.inside__grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(16px,2vw,24px);align-items:end}
+.inside figure{margin:0}
+.inside img{width:100%;object-fit:cover}
+.inside__a img{aspect-ratio:16/9;object-position:70% 40%}
+.inside__b img{aspect-ratio:4/5;object-position:82% 30%}
+.inside figcaption{font-size:15px;color:var(--muted);margin-top:10px;padding-left:12px;border-left:3px solid var(--aqua)}
+
+/* ---------- doctors ---------- */
+.docs{padding-block:clamp(64px,8vw,120px)}
+.docs__head{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,5vw,72px);align-items:end}
+.docs__head .label{color:var(--aqua-d)}
+.docs__head h2{margin-top:14px}
+.quote{margin:0;padding-left:24px;border-left:6px solid var(--aqua)}
+.quote p{font:500 clamp(20px,2vw,27px)/1.35 var(--head)}
+.quote footer{margin-top:12px;color:var(--muted)}
+.doclist{list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(14px,1.6vw,24px)}
+.doc{display:flex;flex-direction:column}
+.doc__ph{overflow:hidden;background:var(--mist)}
+.doc__ph img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;transition:transform .4s var(--ease)}
+.doc:hover .doc__ph img{transform:scale(1.04)}
+.doc h3{margin-top:16px;font-size:clamp(18px,1.4vw,20px);font-weight:700}
+.doc p{margin-top:6px;color:var(--aqua-d);font-weight:600;font-size:15px;line-height:1.4}
+.team{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:3fr 9fr;gap:24px;border-top:2px solid var(--ink);padding-top:24px}
+.team ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+.team li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.team li span{color:var(--muted);text-align:right}
+
+/* ---------- booking ---------- */
+.book{background:var(--mist);padding-block:clamp(64px,8vw,120px)}
+.book__grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,5vw,80px);align-items:start}
+.book__intro .label{color:var(--aqua-d)}
+.book__intro h2{margin-top:14px}
+.book__intro>p{margin-top:18px;color:var(--muted);max-width:40ch}
+.bighours{list-style:none;margin:32px 0 0;padding:0;border-top:2px solid var(--ink)}
+.bighours li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 4px;border-bottom:1px solid var(--line)}
+.bighours b{font:700 clamp(22px,2.2vw,30px)/1.1 var(--head);white-space:nowrap}
+.bighours li.is-today{background:var(--white);box-shadow:inset 6px 0 0 var(--aqua);padding-left:18px}
+.form{background:var(--white);border:2px solid var(--ink);padding:clamp(22px,3vw,40px);display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field--full{grid-column:1/-1}
+.field label{font-weight:600;font-size:15px}
+.field input,.field select,.field textarea{font:400 17px/1.4 var(--body);color:var(--ink);min-height:52px;padding:12px 14px;border:1.5px solid #8aa1ab;border-radius:0;background:var(--white);width:100%;transition:border-color .25s var(--ease),box-shadow .25s var(--ease)}
+.field textarea{min-height:110px;resize:vertical}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--aqua-d);box-shadow:0 0 0 3px rgba(18,181,203,.35)}
+.field.has-error input{border-color:var(--closed)}
+.err{color:var(--closed);font-size:14px;min-height:0}
+.consent{grid-column:1/-1;display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.45;color:var(--muted)}
+.consent input{width:22px;height:22px;margin:1px 0 0;flex:none;accent-color:var(--aqua-d)}
+.form__foot{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.form__note{font-size:14px;color:var(--muted);flex:1;min-width:220px}
+.form__ok{grid-column:1/-1;padding:14px 16px;background:var(--aqua-p);border-left:6px solid var(--aqua-d);font-weight:600}
+
+/* ---------- contacts ---------- */
+.contacts{background:var(--aqua);color:var(--ink);padding-block:clamp(64px,8vw,112px)}
+.contacts__grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(32px,5vw,72px);align-items:end}
+.contacts .label{color:var(--ink)}
+.contacts__tel{display:inline-block;margin-top:16px;font:700 clamp(30px,4.4vw,64px)/1.05 var(--head);text-decoration:none;white-space:nowrap;
+  background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 4px no-repeat;padding-bottom:6px;transition:background-size .35s var(--ease)}
+.contacts__tel:hover{background-size:100% 4px}
+.contacts__urgent{margin-top:12px;font-weight:600}
+.clist{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.clist li{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid rgba(12,28,38,.3)}
+.clist dt,.clist .k{font-weight:600}
+.clist a{text-decoration:none;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1.5px no-repeat;transition:background-size .3s var(--ease);overflow-wrap:anywhere}
+.clist a:hover{background-size:100% 1.5px}
+.contacts__btns{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--ink);color:#b9cad2;padding-block:40px;font-size:15px}
+.ftr__in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;align-items:center}
+.ftr .logo__name{color:var(--white)}
+.ftr .logo__sub{color:#8fa6b0}
+.ftr nav{display:flex;flex-wrap:wrap;gap:4px 24px}
+.ftr nav a{text-decoration:none;padding:12px 0;transition:color .25s var(--ease)}
+.ftr nav a:hover{color:var(--aqua)}
+.ftr__concept{width:100%;border-top:1px solid rgba(255,255,255,.14);padding-top:18px;font-size:14px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .55s var(--ease),transform .55s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .hdr__tel{display:none}
+  .doclist{grid-template-columns:repeat(3,1fr)}
+  .cabs__grid{grid-template-columns:1fr}
+  .cabs__intro{position:static}
+}
+@media (max-width:900px){
+  .hero__grid{grid-template-columns:1fr}
+  .hero__photo{margin-inline:calc(-1 * var(--pad))}
+  .hero__photo img{min-height:0;aspect-ratio:16/9}
+  .hero__side{order:-1;padding-bottom:0}
+  .hero__photo{order:1}
+  .hero{padding-bottom:0}
+  .docs__head,.book__grid,.contacts__grid,.team{grid-template-columns:1fr}
+  .team ul{grid-template-columns:1fr}
+  .panel__grid{grid-template-columns:1fr;gap:24px}
+}
+@media (max-width:760px){
+  .hdr .status{display:none}
+  .hdr__cta{display:none}
+  .menu-btn{margin-left:auto}
+  .plates{grid-template-columns:1fr}
+  .doclist{grid-template-columns:1fr 1fr}
+  .inside__grid{grid-template-columns:1fr}
+  .inside__b img{aspect-ratio:4/3}
+  .form{grid-template-columns:1fr}
+  .panel__cabs{grid-template-columns:1fr}
+  .sign{max-width:120px}
+}
+@media (max-width:420px){
+  .clist li{grid-template-columns:1fr;gap:2px}
+  .team li{flex-direction:column;gap:2px}
+  .team li span{text-align:left}
+  .btn{width:100%;justify-content:space-between}
+  .logo__sub{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01s!important;animation-duration:.01s!important;animation-delay:0s!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="sr skip" href="#main">До основного змісту</a>
+
+<header class="hdr" id="top">
+  <div class="wrap hdr__in">
+    <a class="logo" href="#top">
+      <span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 12l4.5-4 4.5 4 4.5-4 4.5 4 4.5-4M4 22l4.5-4 4.5 4 4.5-4 4.5 4 4.5-4" fill="none" stroke="#12b5cb" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+      <span><span class="logo__name">Водолій</span><span class="logo__sub">клініка · Хуст</span></span>
+    </a>
+    <p class="status" data-status aria-live="polite"><span class="status__dot"></span><span data-status-text>Години роботи</span></p>
+    <a class="hdr__tel" href="tel:+380314254249">(+3803142) 5-42-49</a>
+    <a class="btn hdr__cta" href="#zapys">Записатися на прийом</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="panel"><span class="menu-btn__bars" aria-hidden="true"></span><span data-menu-label>Меню</span></button>
+  </div>
+  <nav class="panel" id="panel" aria-label="Меню сайту" data-lenis-prevent>
+    <div class="wrap panel__grid">
+      <div>
+        <p class="label">Розділи</p>
+        <ul class="panel__big">
+          <li><a href="#kabinety">Кабінети</a></li>
+          <li><a href="#likari">Наші лікарі</a></li>
+          <li><a href="#zapys">Години і запис</a></li>
+          <li><a href="#kontakty">Контакти</a></li>
+        </ul>
+        <a class="btn btn--light" href="#zapys">Записатися на прийом <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+      </div>
+      <div>
+        <p class="label">Записатися до кабінету</p>
+        <ul class="panel__cabs" data-cab-menu></ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <p class="kicker label">Хуст · Закарпатська обл.</p>
+      <div class="hero__top">
+        <h1 id="h1">Водолій</h1>
+        <div class="sign" aria-hidden="true">
+          <svg viewBox="0 0 340 170"><path d="M12 62 60 20l48 42 48-42 48 42 48-42 48 42"/><path d="M12 142 60 100l48 42 48-42 48 42 48-42 48 42"/></svg>
+        </div>
+      </div>
+      <p class="hero__sub">Клініка сучасних методів діагностики</p>
+      <div class="hero__grid">
+        <figure class="hero__photo rv">
+          <img src="photos/01.jpg" width="1349" height="700" alt="Лікар клініки «Водолій» проводить ультразвукове дослідження" fetchpriority="high">
+        </figure>
+        <div class="hero__side">
+          <p class="hero__lead">Сучасна діагностика та інноваційні медичні технології: дев'ять кабінетів і лабораторія в одному місці, на вул. С. Росохи, 1.</p>
+          <div class="hero__btns">
+            <a class="btn" href="#zapys">Записатися на прийом <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+            <a class="btn btn--ghost" href="#kabinety">Кабінети</a>
+          </div>
+          <div class="today">
+            <div class="today__head"><span class="label">Години роботи</span><p class="status" data-status><span class="status__dot"></span><span data-status-text></span></p></div>
+            <table class="hours" data-hours>
+              <caption class="sr">Години роботи клініки</caption>
+              <tr data-days="1,2,3,4,5"><th scope="row">Пн – Пт</th><td>8.00 – 17.45</td></tr>
+              <tr data-days="6"><th scope="row">Субота</th><td>9.00 – 16.00</td></tr>
+              <tr data-days="0"><th scope="row">Неділя</th><td>вихідний</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CABINETS -->
+  <section class="cabs" id="kabinety" aria-labelledby="cabs-h">
+    <div class="wrap cabs__grid">
+      <div class="cabs__intro rv">
+        <p class="label">Кабінети та послуги</p>
+        <h2 id="cabs-h">Який кабінет вам потрібен?</h2>
+        <p>Оберіть кабінет — він одразу з'явиться у формі запису, і вам залишиться вказати ім'я, телефон і зручну дату.</p>
+      </div>
+      <ul class="plates" data-plates></ul>
+    </div>
+  </section>
+
+  <!-- INSIDE -->
+  <section class="inside" aria-label="Фото клініки">
+    <div class="wrap inside__grid">
+      <figure class="inside__a rv">
+        <img src="photos/03.jpg" width="1350" height="700" loading="lazy" alt="Лікар-офтальмолог клініки біля діагностичного апарата">
+        <figcaption>Кабінет офтальмології</figcaption>
+      </figure>
+      <figure class="inside__b rv">
+        <img src="photos/02.jpg" width="1349" height="700" loading="lazy" alt="Лікар клініки оглядає пацієнта">
+        <figcaption>Огляд у клініці «Водолій»</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DOCTORS -->
+  <section class="docs" id="likari" aria-labelledby="docs-h">
+    <div class="wrap">
+      <div class="docs__head">
+        <div class="rv">
+          <p class="label">Наші лікарі</p>
+          <h2 id="docs-h">Знайомтеся з нашими фахівцями</h2>
+        </div>
+        <blockquote class="quote rv">
+          <p>«Усі фізичні хвороби є наслідком діяльності головного мозку, тому лікую своїх пацієнтів словом».</p>
+          <footer>— професор Михайло Орос</footer>
+        </blockquote>
+      </div>
+      <ul class="doclist">
+        <li class="doc rv"><div class="doc__ph"><img src="photos/04.jpg" width="370" height="370" loading="lazy" alt="Михайло Михайлович Орос"></div><h3>Михайло Михайлович Орос</h3><p>Професор, доктор медичних наук</p></li>
+        <li class="doc rv"><div class="doc__ph"><img src="photos/05.jpg" width="370" height="370" loading="lazy" alt="Олена Павлівна Орос"></div><h3>Олена Павлівна Орос</h3><p>Лікар-офтальмолог</p></li>
+        <li class="doc rv"><div class="doc__ph"><img src="photos/06.jpg" width="370" height="370" loading="lazy" alt="Олександр Васильович Клованич"></div><h3>Олександр Васильович Клованич</h3><p>Лікар</p></li>
+        <li class="doc rv"><div class="doc__ph"><img src="photos/07.jpg" width="370" height="370" loading="lazy" alt="Дмитро Валерійович Скиба під час процедури"></div><h3>Дмитро Валерійович Скиба</h3><p>Фахівець з фізичної реабілітації</p></li>
+        <li class="doc rv"><div class="doc__ph"><img src="photos/08.jpg" width="370" height="370" loading="lazy" alt="Василь Васильович Симулик"></div><h3>Василь Васильович Симулик</h3><p>Лікар</p></li>
+      </ul>
+      <div class="team rv">
+        <h3>Також у команді</h3>
+        <ul>
+          <li>Іван Іванович Гобан <span>лікар-педіатр</span></li>
+          <li>Людмила Анатолівна Хвойницька <span>лікар-офтальмолог</span></li>
+          <li>Вікторія Валеріївна Сичева <span>сестра медична</span></li>
+          <li>Діана Михалівна Кундря <span>сестра медична</span></li>
+          <li>Марія Іванівна Дівинець <span>сестра медична</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="book" id="zapys" aria-labelledby="book-h">
+    <div class="wrap book__grid">
+      <div class="book__intro rv">
+        <p class="label">Години і запис</p>
+        <h2 id="book-h">Записатися на прийом</h2>
+        <p>Залиште ім'я, телефон і бажану дату — адміністратор клініки зателефонує, щоб узгодити час.</p>
+        <ul class="bighours" data-hours>
+          <li data-days="1,2,3,4,5"><span>Понеділок – п'ятниця</span><b>8.00 – 17.45</b></li>
+          <li data-days="6"><span>Субота</span><b>9.00 – 16.00</b></li>
+          <li data-days="0"><span>Неділя</span><b>вихідний</b></li>
+        </ul>
+      </div>
+      <form class="form rv" novalidate data-form>
+        <div class="field"><label for="f-name">Ваше ім'я</label><input id="f-name" name="fullname" autocomplete="name" required><span class="err" id="e-name" aria-live="polite"></span></div>
+        <div class="field"><label for="f-tel">Номер телефону</label><input id="f-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="+38 (0__) ___ __ __" required><span class="err" id="e-tel" aria-live="polite"></span></div>
+        <div class="field"><label for="f-cab">Кабінет</label><select id="f-cab" name="cab"><option value="">Ще не знаю — підкажіть</option></select></div>
+        <div class="field"><label for="f-date">Бажана дата</label><input id="f-date" name="date" type="date" required><span class="err" id="e-date" aria-live="polite"></span></div>
+        <div class="field field--full"><label for="f-msg">Повідомлення <span style="font-weight:400">(необов'язково)</span></label><textarea id="f-msg" name="msg"></textarea></div>
+        <label class="consent"><input type="checkbox" name="ok" id="f-ok"> <span>Погоджуюся на обробку моїх даних для запису на прийом.</span></label>
+        <span class="err" id="e-ok" aria-live="polite" style="grid-column:1/-1;margin-top:-10px"></span>
+        <div class="form__foot">
+          <button class="btn" type="submit">Записатися на прийом <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <p class="form__note">Це концепт: форма відкриє лист на office@vodoliy.com у вашій пошті.</p>
+        </div>
+        <p class="form__ok" data-ok hidden>Готуємо лист у вашій пошті — надішліть його, і клініка отримає заявку.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="contacts" id="kontakty" aria-labelledby="ct-h">
+    <div class="wrap contacts__grid">
+      <div class="rv">
+        <h2 id="ct-h" class="label">Зателефонувати в клініку</h2>
+        <a class="contacts__tel" href="tel:+380314254249">(+3803142) 5-42-49</a>
+        <p class="contacts__urgent">Цей самий номер — для екстрених випадків.</p>
+        <div class="contacts__btns">
+          <a class="btn" href="#zapys">Записатися на прийом <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=%D0%B2%D1%83%D0%BB.+%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD%D0%B0+%D0%A0%D0%BE%D1%81%D0%BE%D1%85%D0%B8+1+%D0%A5%D1%83%D1%81%D1%82" target="_blank" rel="noopener">Маршрут у Google Maps</a>
+        </div>
+      </div>
+      <ul class="clist rv">
+        <li><span class="k">Адреса</span><span>90400, вул. С. Росохи, 1, м. Хуст, Закарпатська обл.</span></li>
+        <li><span class="k">Пошта</span><a href="mailto:office@vodoliy.com">office@vodoliy.com</a></li>
+        <li><span class="k">Facebook</span><a href="https://www.facebook.com/rtkkhust" target="_blank" rel="noopener">facebook.com/rtkkhust</a></li>
+        <li><span class="k">Години</span><span>Пн–Пт 8.00–17.45, Сб 9.00–16.00, Нд — вихідний</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr__in">
+    <a class="logo" href="#top">
+      <span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 12l4.5-4 4.5 4 4.5-4 4.5 4 4.5-4M4 22l4.5-4 4.5 4 4.5-4 4.5 4 4.5-4" fill="none" stroke="#12b5cb" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+      <span><span class="logo__name">Водолій</span><span class="logo__sub">клініка сучасних методів діагностики</span></span>
+    </a>
+    <nav aria-label="Нижнє меню">
+      <a href="#kabinety">Кабінети</a><a href="#likari">Лікарі</a><a href="#zapys">Запис</a><a href="#kontakty">Контакти</a>
+    </nav>
+    <div class="ftr__concept"><span>© Клініка «Водолій», Хуст</span><span>Попередній концепт від Doba Digital - не опублікований сайт</span></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(() => {
+  const arrow = '<svg class="plate__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
+  // Cabinets and notes come from the clinic's own site (vodoliy.com/uk).
+  const cabs = [
+    ['Неврологія і психотерапія', 'Лікування болю голови, захворювань хребта і міжхребцевих дисків, сеанс психотерапії'],
+    ['Офтальмологія', ''],
+    ['Отоларингологія', 'Діагностичний огляд і консультація лікаря-отоларинголога'],
+    ['УЗД', 'Ультразвукові дослідження, доплерографія судин головного мозку'],
+    ['Рентген', ''],
+    ['Фізіотерапія', 'Черезшкірна електронейростимуляція, КВЧ-терапія, ультразвукова терапія'],
+    ['Масаж', ''],
+    ['Лікар ЗПСМ', 'Загальна практика — сімейна медицина; комп\'ютерна діагностика за Накатані'],
+    ['Лабораторна діагностика', '']
+  ];
+  const plates = document.querySelector('[data-plates]');
+  const menu = document.querySelector('[data-cab-menu]');
+  const sel = document.getElementById('f-cab');
+  cabs.forEach(([name, note], i) => {
+    const n = String(i + 1).padStart(2, '0');
+    const li = document.createElement('li');
+    if (i === cabs.length - 1) li.className = 'plate--wide';
+    li.innerHTML = `<a class="plate" href="#zapys" data-cab="${name}"><span class="plate__n">${n}</span><h3>${name}</h3>${note ? `<p class="plate__note">${note}</p>` : ''}${arrow}</a>`;
+    plates.appendChild(li);
+    const mi = document.createElement('li');
+    mi.innerHTML = `<a href="#zapys" data-cab="${name}"><span>${n}</span>${name}</a>`;
+    menu.appendChild(mi);
+    sel.add(new Option(name, name));
+  });
+
+  // Smooth scroll (Lenis) with anchors offset under the sticky header.
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const lenis = (!reduce && window.Lenis) ? new Lenis() : null;
+  if (lenis) { const raf = (t) => { lenis.raf(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf); }
+  window.lenis = lenis;
+  const hdrH = () => document.querySelector('.hdr').offsetHeight;
+  function go(hash) {
+    const el = document.querySelector(hash);
+    if (!el) return;
+    if (lenis) lenis.scrollTo(el, { offset: -hdrH() });
+    else window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - hdrH() });
+  }
+
+  // Menu panel.
+  const btn = document.querySelector('.menu-btn');
+  const label = document.querySelector('[data-menu-label]');
+  const setMenu = (open) => {
+    document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', open);
+    label.textContent = open ? 'Закрити' : 'Меню';
+    if (lenis) open ? lenis.stop() : lenis.start();
+  };
+  btn.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) { setMenu(false); btn.focus(); } });
+
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const hash = a.getAttribute('href');
+    if (a.dataset.cab) sel.value = a.dataset.cab;
+    if (hash.length < 2) return;
+    e.preventDefault();
+    if (document.body.classList.contains('menu-open')) setMenu(false);
+    go(hash);
+    if (a.dataset.cab) setTimeout(() => document.getElementById('f-name').focus({ preventScroll: true }), reduce ? 0 : 900);
+  });
+
+  // Open / closed status and today's row, by Kyiv time.
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Kyiv', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date()).map(p => [p.type, p.value]));
+  const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(parts.weekday);
+  const mins = (+parts.hour % 24) * 60 + +parts.minute;
+  const sched = { 0: null, 6: [540, 960, '16.00'] };
+  const today = day in sched ? sched[day] : [480, 1065, '17.45'];
+  const open = today && mins >= today[0] && mins < today[1];
+  let text;
+  if (open) text = `Відчинено · до ${today[2]}`;
+  else if (today && mins < today[0]) text = `Зачинено · відкриємо о ${day === 6 ? '9.00' : '8.00'}`;
+  else text = day === 5 ? 'Зачинено · у суботу з 9.00' : (day === 6 || day === 0) ? 'Зачинено · у понеділок з 8.00' : 'Зачинено · завтра з 8.00';
+  document.querySelectorAll('[data-status]').forEach(s => { s.classList.toggle('is-open', !!open); s.querySelector('[data-status-text]').textContent = text; });
+  document.querySelectorAll('[data-hours] [data-days]').forEach(r => r.classList.toggle('is-today', r.dataset.days.split(',').includes(String(day))));
+
+  // Form: phone mask, inline validation, honest mail draft.
+  const form = document.querySelector('[data-form]');
+  const tel = document.getElementById('f-tel');
+  const date = document.getElementById('f-date');
+  const iso = new Date(Date.now() - new Date().getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+  date.min = iso;
+  const digits = (v) => { let d = v.replace(/\D/g, ''); if (d.startsWith('380')) d = d.slice(2); else if (d.startsWith('80')) d = d.slice(1); if (d && d[0] !== '0') d = '0' + d; return d.slice(0, 10); };
+  tel.addEventListener('input', () => {
+    const d = digits(tel.value);
+    if (!d) { tel.value = ''; return; }
+    let o = '+38 (' + d.slice(0, 3);
+    if (d.length > 3) o += ') ' + d.slice(3, 6);
+    if (d.length > 6) o += ' ' + d.slice(6, 8);
+    if (d.length > 8) o += ' ' + d.slice(8, 10);
+    tel.value = o;
+  });
+  const setErr = (id, msg) => { const e = document.getElementById('e-' + id); e.textContent = msg; const f = e.closest('.field'); if (f) f.classList.toggle('has-error', !!msg); };
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = form.fullname.value.trim();
+    const d = digits(tel.value);
+    let ok = true;
+    setErr('name', name.length < 2 ? 'Вкажіть, будь ласка, ім\'я.' : ''); ok = ok && name.length >= 2;
+    setErr('tel', d.length !== 10 ? 'Потрібен номер з 10 цифр, наприклад 067 123 45 67.' : ''); ok = ok && d.length === 10;
+    setErr('date', !date.value ? 'Оберіть бажану дату.' : (date.value < iso ? 'Дата вже минула.' : '')); ok = ok && date.value && date.value >= iso;
+    setErr('ok', !form.ok.checked ? 'Потрібна ваша згода на обробку даних.' : ''); ok = ok && form.ok.checked;
+    if (!ok) { form.querySelector('.has-error input, .has-error select')?.focus(); return; }
+    const body = `Ім'я: ${name}\nТелефон: ${tel.value}\nКабінет: ${sel.value || 'не обрано'}\nБажана дата: ${date.value}\n\n${form.msg.value.trim()}`;
+    document.querySelector('[data-ok]').hidden = false;
+    location.href = 'mailto:office@vodoliy.com?subject=' + encodeURIComponent('Запис на прийом') + '&body=' + encodeURIComponent(body);
+  });
+
+  // Scroll reveals.
+  const items = document.querySelectorAll('.rv');
+  if (reduce || !('IntersectionObserver' in window)) items.forEach(i => i.classList.add('in'));
+  else {
+    const io = new IntersectionObserver((es) => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    items.forEach(i => io.observe(i));
+  }
+})();
+</script>
+</body>
+</html>
